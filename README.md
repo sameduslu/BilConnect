@@ -1,4 +1,4 @@
-#**BilConnect**
+**#BilConnect**
 ##**Vision**
 	BilConnect’s vision is a Bilkent Campus that is connected both online and offline.
 
