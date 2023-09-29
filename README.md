@@ -2,7 +2,7 @@
 
 ## Our Team
 [Umut Bora Çakmak](https://github.com/UBoraCakmak)<br>
-[Samed Uslu](https://github.com/sameduslu)<br>
+[A. Samed Uslu](https://github.com/sameduslu)<br>
 [Murat Çağrı Kara](https://github.com/Murat-Cagri)<br>
 [Celal S. Türkmen](https://github.com/celaltrk)<br>
 [Emre Akgül](https://github.com/Emre-Akgul)<br>
