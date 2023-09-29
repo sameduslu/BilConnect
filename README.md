@@ -48,7 +48,21 @@ Users can share their feedback and experience about BilConnect with admins.
 Saved action logs help admins to catch bugs and improve BilConnect.
 
 #### Chatting Forum
-Our social platform will have a one-to-one conversation option for individual conversations and a thread function for groups. From a separate search function from the bazaar, the members will be able to search for each other and threads. Members will then be able to friend each other and chat. These chats will allow for voice, image and video transfer. Threads, on the other hand, will contain multiple people. They will initially be created by other members and be used by all who join the thread. Though the threads are open to everyone by default, we will allow the functionality to be private and restrict these threads. For example, threads with your friend group can be private, making it invisible by search and only joinable by invite. On the other hand, a thread used by a school club might be restricted, it will show in the search function, but the contents will not be visible unless your join application is approved by the admins. Messages in these threads can be liked and disliked. This voting procedure will show the community’s position on the subject and determine if the message will make it to your personal feed or not. Your feed is another way to interact with your threads. It will show you the most popular, controversial comments of the past 24 hours, which you can view in context by clicking them. 
+Our social platform offers a versatile chat system designed to facilitate both individual and group conversations. Users can engage in one-on-one chats and participate in threaded discussions. These discussions can serve various purposes, including casual conversations, interest-based groups, or community-wide discussions.
+
+##### Search and Connect:
+Easily discover and connect with other members through a dedicated search function, allowing you to initiate conversations and join discussions of interest.
+
+##### Friendship and Privacy: Connect with others and create private threads for exclusive conversations, ensuring that only invited members can participate.
+
+##### Multimedia Communication: Our chat system supports various forms of communication, including text, voice, images, and video sharing.
+
+##### Thread Moderation: Thread creators and administrators can control access to threads, making them open to all members or restricted to approved participants.
+
+##### Community Feedback and Interaction: Users can engage with messages by liking or disliking them, influencing their visibility in the community. This promotes meaningful discussions and interactions.
+
+##### Personalized Feed: The platform offers a personalized feed highlighting popular and controversial comments from the past 24 hours, fostering engagement within the community.
+
 
 ## Selling Points
 Bilconnect is specifically designed for Bilkent University's campus. Since the platform is exclusively for the Bilkent community, there's a high level of trust. Users know they are interacting with fellow students or staff, reducing the risk of scams or fraud. In addition, exclusiveness allows faster transaction times and even better, there is no need to worry about shipping and delivery fees. 
