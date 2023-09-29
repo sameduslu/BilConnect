@@ -31,9 +31,13 @@ Messages in these threads can be liked and disliked. This voting procedure will 
 
 ## Selling Points
 Bilconnect is specifically designed for Bilkent university's campus. Since the platform is exclusively for the Bilkent community, there's a high level of trust. Users know they are interacting with fellow students or staff, reducing the risk of scams or fraud. In addition exclusiveness allows faster transaction times and even better there is no need to worry about shipping and delivery fees. 
+
 Bilconnect offers a comprehensive solution to different problems. There is no need to visit different websites for selling, buying, renting and donating.
+
 Bilconnect try its best for ensuring safety by using verified profiles and showing user reviews.
+
 Bilconnect is more than second-hand selling app, it also serve for the purpose of connecting individuals on campus.
+
 Bilconnect encourages sustainable practices by promoting selling, renting and donating of items. It will be helpful for everyone by encouraging circular economy on campus.
 
 ## What Makes Us Special?
