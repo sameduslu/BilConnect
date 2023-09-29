@@ -1,97 +1,84 @@
-# BilConnect: Connecting the Bilkent Campus Online and Offline
+# BilConnect
 
-Welcome to BilConnect! We are a dedicated team of individuals who are passionate about enhancing the Bilkent University campus experience by creating an exclusive social platform for the Bilkent community. Our mission is to foster real-time communication, facilitate transactions, and promote a sense of belonging within the Bilkent family.
-
-## Meet Our Team
-- Umut Bora Çakmak
-- A. Samed Uslu
-- Murat Çağrı Kara
-- Celal S. Türkmen
-- Emre Akgül
+## Our Team
+[Umut Bora Çakmak](https://github.com/UBoraCakmak)<br>
+[A. Samed Uslu](https://github.com/sameduslu)<br>
+[Murat Çağrı Kara](https://github.com/Murat-Cagri)<br>
+[Celal S. Türkmen](https://github.com/celaltrk)<br>
+[Emre Akgül](https://github.com/Emre-Akgul)<br>
 
 ## Our Vision
-At BilConnect, we envision a Bilkent Campus where students, faculty, and staff are seamlessly connected both online and offline.
+BilConnect’s vision is a Bilkent Campus that is connected both online and offline.
 
 ## Our Mission
-Our mission is to create an exclusive social platform that realizes our vision. We aim to achieve this by providing a space for Bilkenters to engage in real-time communication and by establishing an open marketplace where members of the Bilkent community can enjoy exclusive deals and exchanges.
+Bilconnect’s mission is to create an exclusive social platform that enables our vision through threads for Bilkenters to communicate in real time and acts as an open bazaar where people can enjoy Bilkent’s exclusive market.
 
-## What Inspired Us
-Our journey began with a simple problem: the difficulty of selling highly specialized school equipment on generalized platforms like Let Go. On the other hand, not using such platforms left us with another challenge—the lack of effective communication channels on our campus. Instagram pages like "bilkent_itiraf_ediyor" attempted to bridge this gap but fell short as they lacked live chatting functionality and weren't student-controlled.
+## Our Motivation
+Our web app was inspired by our experiences selling our used books and equipment. Let Go, and similar apps were too generalized to sell our extremely specialized school equipment. Not using these apps, however, presented us with another problem: the lack of communication channels on our campus. Though Instagram pages such as bilkent_itiraf_ediyor try to fill that void, they fall short since they don’t permit live chatting and are not controlled by people from the student body.
 
-So, we decided to take matters into our own hands. BilConnect was born out of our desire to create a web app exclusively for Bilkenters, one that could address both the communication and transactional needs of our community.
+We at BilConnect decided on a web app exclusive to Bilkenters, and solving this issue could be beneficial to Bilkent. Our team decided to develop an app that will enable online communication and enhance campus life.
 
-## Key Features
-### Posts
-- Find and create posts for selling second-hand items.
-- Assist in finding lost items.
-- Borrow items for specific time periods.
-- Facilitate item donations.
-- Seek travel companions to split gas costs.
-- Request donations.
-- Adopt animals.
-- Buy or sell event tickets within the Bilkent community.
+## Features
 
-### Tag System
-- Categorize posts with main and sub-tags.
-- Personalize feeds and perform advanced searches.
+#### Posts: 
+Users can look for or create posts for **selling second-hand items**, **helping users to find their lost item**, **borrowing items for a specific time period**, **donating items**, **finding travel mate to split gas price**, **requesting donation**, **adopting animals**, and **selling or giving the event tickets** in the Bilkent community.
 
-### User Feed
-- View posts with followed tags.
-- Save posts for future reference.
+#### Tag System: 
+Each post will have the main tag like **second-hand items**, **lost items** etc. and a sub-tag like **CS223 Item**, **lost jewellery** etc. With the help of this tag system, users can personalize their feeds and make an advanced search among posts.
 
-### Search
-- Search using keywords, tags, and price filters.
-- Sort search results by various parameters.
+#### User Feed: 
+Users can see the posts containing the tag that they follow in their feed. Moreover, they can save the posts to find them later and access them on their saved feed page.
 
-### Messaging
-- Connect with post owners via private messaging.
+#### Search: 
+Users can search for the post by using keywords, filtering tags, and filtering prices and sort the results according to different parameters. They can easily find what they need and save them.
 
-### Security
-- Exclusive access for Bilkent University members.
-- User ratings to build trust within the community.
+#### Messaging: 
+Communication is the key tool for BilConnect. Users can easily connect with post owners by quickly messaging them privately.
 
-### User Profiles
-- Customize your profile.
-- Explore other users' past activity, active posts, and trust score.
+#### Security: 
+Only Bilkent University members can access BilConnect, and this provides security and trust in the user community. Users can rate the other user after the finished activity, and this rating point affects their trust score. 
 
-### User Feedback
-- Share feedback and experiences with admins.
+#### User Profiles: 
+Users can personalize their profiles. Also, they can check the other users' profiles to see their past activity, active posts and trust score.
 
-### Action Logs
-- Help admins catch bugs and improve BilConnect.
+#### User Feedback: 
+Users can share their feedback and experience about BilConnect with admins.
 
-## Chatting Forum
-Our versatile chat system enhances individual and group conversations. It facilitates one-on-one chats and threaded discussions, catering to various needs.
+#### Action Logs: 
+Saved action logs help admins to catch bugs and improve BilConnect.
 
-### Search and Connect
-- Discover and connect with other members.
-- Initiate conversations and join discussions of interest.
+#### Chatting Forum
+Our social platform offers a versatile chat system designed to facilitate both individual and group conversations. Users can engage in one-on-one chats and participate in threaded discussions. These discussions can serve various purposes, including casual conversations, interest-based groups, or community-wide discussions.
 
-### Friendship and Privacy
-- Create private threads for exclusive conversations.
+##### Search and Connect:
+Easily discover and connect with other members through a dedicated search function, allowing you to initiate conversations and join discussions of interest.
 
-### Multimedia Communication
-- Support for text, voice, images, and video sharing.
+##### Friendship and Privacy: 
+Connect with others and create private threads for exclusive conversations, ensuring that only invited members can participate.
 
-### Thread Moderation
-- Control access to threads, open or restricted.
+##### Multimedia Communication:
+Our chat system supports various forms of communication, including text, voice, images, and video sharing.
 
-### Community Feedback and Interaction
-- Influence message visibility through likes and dislikes.
-- Promote meaningful discussions.
+##### Thread Moderation:
+Thread creators and administrators can control access to threads, making them open to all members or restricted to approved participants.
 
-### Personalized Feed
-- A curated feed showcasing popular and controversial comments, fostering community engagement.
+##### Community Feedback and Interaction: 
+Users can engage with messages by liking or disliking them, influencing their visibility in the community. This promotes meaningful discussions and interactions.
+
+##### Personalized Feed: 
+The platform offers a personalized feed highlighting popular and controversial comments from the past 24 hours, fostering engagement within the community.
+
 
 ## Selling Points
-- Exclusivity for Bilkent University members ensures trust and reduces scams.
-- Streamlined transactions without shipping or delivery concerns.
-- Comprehensive solution for selling, buying, renting, and donating.
-- Safety through verified profiles and user reviews.
-- A platform that fosters connections on campus.
-- Encouragement of sustainable practices through item reuse.
+Bilconnect is specifically designed for Bilkent University's campus. Since the platform is exclusively for the Bilkent community, there's a high level of trust. Users know they are interacting with fellow students or staff, reducing the risk of scams or fraud. In addition, exclusiveness allows faster transaction times and even better, there is no need to worry about shipping and delivery fees. 
+
+Bilconnect offers a comprehensive solution to different problems. There is no need to visit different websites for selling, buying, renting and donating.
+
+Bilconnect tries its best to ensure safety by using verified profiles and showing user reviews.
+
+Bilconnect is more than a second-hand selling app, it also serves the purpose of connecting individuals on campus.
+
+Bilconnect encourages sustainable practices by promoting the selling, renting and donating of items. It will be helpful for everyone by encouraging a circular economy on campus.
 
 ## What Makes Us Special?
-BilConnect isn't just another web app—it's a fresh perspective on social media and an exclusive marketplace designed exclusively for the Bilkent community. It's a tool that empowers clubs and campus groups to coordinate effectively and facilitates seamless communication among Bilkenters.
-
-Join us on this exciting journey of connecting Bilkent Campus both online and offline!
+Our web app presents a fresh outlook on social media and an exclusive marketplace to buy from and sell to Bilkenters. An app is a tool that can help clubs coordinate, and other groups on the campus communicate.
