@@ -53,15 +53,20 @@ Our social platform offers a versatile chat system designed to facilitate both i
 ##### Search and Connect:
 Easily discover and connect with other members through a dedicated search function, allowing you to initiate conversations and join discussions of interest.
 
-##### Friendship and Privacy: Connect with others and create private threads for exclusive conversations, ensuring that only invited members can participate.
+##### Friendship and Privacy: 
+Connect with others and create private threads for exclusive conversations, ensuring that only invited members can participate.
 
-##### Multimedia Communication: Our chat system supports various forms of communication, including text, voice, images, and video sharing.
+##### Multimedia Communication:
+Our chat system supports various forms of communication, including text, voice, images, and video sharing.
 
-##### Thread Moderation: Thread creators and administrators can control access to threads, making them open to all members or restricted to approved participants.
+##### Thread Moderation:
+Thread creators and administrators can control access to threads, making them open to all members or restricted to approved participants.
 
-##### Community Feedback and Interaction: Users can engage with messages by liking or disliking them, influencing their visibility in the community. This promotes meaningful discussions and interactions.
+##### Community Feedback and Interaction: 
+Users can engage with messages by liking or disliking them, influencing their visibility in the community. This promotes meaningful discussions and interactions.
 
-##### Personalized Feed: The platform offers a personalized feed highlighting popular and controversial comments from the past 24 hours, fostering engagement within the community.
+##### Personalized Feed: 
+The platform offers a personalized feed highlighting popular and controversial comments from the past 24 hours, fostering engagement within the community.
 
 
 ## Selling Points
