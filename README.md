@@ -47,9 +47,6 @@ Users can share their feedback and experience about BilConnect with admins.
 #### Action Logs: 
 Saved action logs help admins to catch bugs and improve BilConnect.
 
-#### Posts: 
-You can create posts for **selling second-hand items**, **helping users to find their lost item**, **borrowing items for a specific time period**, **donating your items**, **finding travel mate to split gas price**, **requesting donation**, **adopting animals**, and **selling or giving the event tickets** in the Bilkent community.
-
 #### Chatting Forum
 Our social platform will have a one-to-one conversation option for individual conversations and a thread function for groups. From a separate search function from the bazaar, the members will be able to search for each other and threads. Members will then be able to friend each other and chat. These chats will allow for voice, image and video transfer. Threads, on the other hand, will contain multiple people. They will initially be created by other members and be used by all who join the thread. Though the threads are open to everyone by default, we will allow the functionality to be private and restrict these threads. For example, threads with your friend group can be private, making it invisible by search and only joinable by invite. On the other hand, a thread used by a school club might be restricted, it will show in the search function, but the contents will not be visible unless your join application is approved by the admins. Messages in these threads can be liked and disliked. This voting procedure will show the community’s position on the subject and determine if the message will make it to your personal feed or not. Your feed is another way to interact with your threads. It will show you the most popular, controversial comments of the past 24 hours, which you can view in context by clicking them. 
 
