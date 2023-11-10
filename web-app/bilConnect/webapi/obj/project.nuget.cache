@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "kRSD/Hz8bjd5gKCY31nyYoURx4mVTjD+1qiBecVGDCWEIqPmIR/lhSYGYrS69QvmEjsb/Uq9lmrs9x6YOdTEyg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Murat Çağrı Kara\\Desktop\\2023-2024\\CS319\\web-app\\bilConnect\\webapi\\webapi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Murat Çağrı Kara\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.13\\microsoft.aspnetcore.openapi.7.0.13.nupkg.sha512",
+    "C:\\Users\\Murat Çağrı Kara\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Murat Çağrı Kara\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\Murat Çağrı Kara\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\Murat Çağrı Kara\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Murat Çağrı Kara\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Murat Çağrı Kara\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
