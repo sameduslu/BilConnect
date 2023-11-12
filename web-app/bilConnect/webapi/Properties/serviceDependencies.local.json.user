@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2023-11-12T12:01:07.7325629Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2023-11-12T11:47:17.3432901Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "e8c3d94b-9a51-48d0-9408-5c1cbb8ed615"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "bilConnect"
+    }
+  }
+}
