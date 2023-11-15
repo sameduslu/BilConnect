@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Bilconnect First Version.props" />
+</Project>
