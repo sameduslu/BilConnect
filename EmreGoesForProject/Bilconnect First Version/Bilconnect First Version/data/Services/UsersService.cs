@@ -17,7 +17,7 @@ namespace Bilconnect_First_Version.data.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(string id)
         {
             var result = await _context.Users.FirstOrDefaultAsync(n => n.Id == id);
             _context.Users.Remove(result);
@@ -30,13 +30,13 @@ namespace Bilconnect_First_Version.data.Services
             return result;
         }
 
-        public async Task<User> GetByIdAsync(int id)
+        public async Task<User> GetByIdAsync(string id)
         {
             var result = await _context.Users.FirstOrDefaultAsync(n => n.Id == id);
             return result;
         }
 
-        public async Task<User> UpdateAsync(int id, User newUser)
+        public async Task<User> UpdateAsync(string id, User newUser)
         {
             newUser.Id = id;
             _context.Update(newUser);

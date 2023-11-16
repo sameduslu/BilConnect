@@ -5,12 +5,12 @@ namespace Bilconnect_First_Version.data.Services
     public interface IUsersService
     {
         Task<IEnumerable<User>> GetAllAsync();
-        Task<User> GetByIdAsync(int id);
+        Task<User> GetByIdAsync(string id);
 
         Task AddAsync(User post);
 
-        Task<User> UpdateAsync(int id, User newUser);
+        Task<User> UpdateAsync(string id, User newUser);
 
-        Task DeleteAsync(int id);
+        Task DeleteAsync(string id);
     }
 }

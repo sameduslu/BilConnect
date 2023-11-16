@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using BilConnect.Data.Static;
 using BilConnect.Data.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using BilConnect.Data.Services;
+using System.Security.Claims;
 
 namespace BilConnect.Controllers
 {
@@ -14,19 +16,19 @@ namespace BilConnect.Controllers
 
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly AppDbContext _context;
+        private readonly IApplicationUsersService _service;
         public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,
-                                    AppDbContext context)
+                                    IApplicationUsersService service)
         {
             _userManager = userManager;
             _signInManager = signInManager; 
-            _context = context;
+            _service = service;
         }
 
 
         public async Task<IActionResult> Users()
         {
-            var users = await _context.Users.ToListAsync();
+            var users = await _service.GetAllAsync();
             return View(users);
         }
 
@@ -97,5 +99,21 @@ namespace BilConnect.Controllers
         {
             return View();
         }
+
+
+        public async Task<IActionResult> SelfPosts()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Get the current user's ID
+            var userWithPosts = await _service.GetByIdAsync(userId); // Assuming this method exists and retrieves a user with their posts
+
+            if (userWithPosts == null)
+            {
+                // Handle the case where the user or their posts are not found
+                return NotFound(); // Or redirect to another view as per your logic
+            }
+
+            return View(userWithPosts); // Pass the user with the loaded posts to the view
+        }
+
     }
 }

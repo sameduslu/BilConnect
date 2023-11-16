@@ -27,7 +27,7 @@ namespace BilConnect.Models
         [ForeignKey("UserId")]
 
         // Navigation property for User
-        public virtual ApplicationUser User { get; set; }
+        public virtual ApplicationUser? User { get; set; }
 
     }
 }

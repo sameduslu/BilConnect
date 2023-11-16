@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Migrations"
+    "\\Migrations",
+    "\\Models"
   ],
   "SelectedNode": "\\BilConnect.sln",
   "PreviewInSolutionExplorer": false

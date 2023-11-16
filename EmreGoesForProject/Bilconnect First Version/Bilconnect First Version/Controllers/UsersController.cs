@@ -13,6 +13,7 @@ namespace Bilconnect_First_Version.Controllers
         {
             _context = context;
         }
+
         public async Task<IActionResult> Index()
         {
             var allCinemas = await _context.Users.ToListAsync();

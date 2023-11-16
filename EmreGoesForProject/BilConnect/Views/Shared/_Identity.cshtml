@@ -21,8 +21,10 @@ else
             <i class="bi bi-person-badge"></i> Hello @UserManager.GetUserName(User)
         </button>
         <ul class="dropdown-menu" aria-labelledby="profileDropdown">
-            <li><a class="dropdown-item" asp-controller="Home" asp-action="Index"><i class="bi bi-list"></i> Orders</a></li>
-
+            @if (User.IsInRole("User"))
+            {
+                <li><a class="dropdown-item" asp-controller="Account" asp-action="SelfPosts"><i class="bi bi-list"></i> Your Posts</a></li>
+            }
             @if (User.IsInRole("Admin"))
             {
                 <li><a class="dropdown-item" asp-controller="Account" asp-action="Users"><i class="bi bi-people"></i> Users</a></li>
