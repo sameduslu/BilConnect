@@ -55,8 +55,8 @@ namespace Bilconnect_First_Version.data
                 {
                     var newAppUser = new ApplicationUser()
                     {
-                        FullName = "Application User",
-                        UserName = "app-user",
+                        FullName = "Emre Akgül",
+                        UserName = "emre.akgul@ug.bilkent.edu.tr",
                         Email = appUserEmail,
                         EmailConfirmed = true
                     };
