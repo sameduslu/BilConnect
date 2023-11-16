@@ -47,7 +47,7 @@ namespace BilConnect.Controllers
                     var result = await _signInManager.PasswordSignInAsync(user, loginVM.Password, false, false);
                     if (result.Succeeded)
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Index", "Posts");
                     }
                 }
                 TempData["Error"] = "Wrong credentials. Please, try again!";

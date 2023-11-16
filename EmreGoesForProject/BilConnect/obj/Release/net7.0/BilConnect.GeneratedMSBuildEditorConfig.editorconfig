@@ -16,50 +16,54 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\90541\Documents\Bilkent-Connect\EmreGoesForProject\Bilconnect
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Account/Login.cshtml]
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/Bilconnect/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Account/Register.cshtml]
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/Bilconnect/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Account/RegisterCompleted.cshtml]
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/Bilconnect/Views/Account/RegisterCompleted.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RlckNvbXBsZXRlZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Account/Users.cshtml]
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/Bilconnect/Views/Account/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2Vycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Home/Index.cshtml]
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/Bilconnect/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Home/Privacy.cshtml]
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/Bilconnect/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Shared/Error.cshtml]
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/Bilconnect/Views/Posts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/Bilconnect/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Shared/_Identity.cshtml]
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/Bilconnect/Views/Shared/_Identity.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9JZGVudGl0eS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/Bilconnect/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/_ViewImports.cshtml]
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/Bilconnect/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/_ViewStart.cshtml]
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/Bilconnect/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Shared/_Layout.cshtml]
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/Bilconnect/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-xgzpi7gxzx

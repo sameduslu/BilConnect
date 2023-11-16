@@ -17,8 +17,6 @@ namespace Bilconnect_First_Version.Models
         public string Description { get; set; } 
 
         public List<Post> Posts { get; set; }
-
-
-
+        
     }
 }

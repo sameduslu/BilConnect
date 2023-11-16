@@ -5,6 +5,7 @@ using Bilconnect_First_Version.data;
 using BilConnect.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using BilConnect.data.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,7 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
 ));
 
 //Services Configuration
+builder.Services.AddScoped<IPostsService, PostsService>();
 
 //Authentication and Authorization
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();

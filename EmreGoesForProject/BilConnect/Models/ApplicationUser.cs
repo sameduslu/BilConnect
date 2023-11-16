@@ -8,6 +8,6 @@ namespace BilConnect.Models
         [Display(Name = "Full name")]
         public string FullName { get; set; }
 
-
+        public List<Post> Posts { get; set; }
     }
 }
