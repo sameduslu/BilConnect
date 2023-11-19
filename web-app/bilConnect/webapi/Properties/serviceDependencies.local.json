@@ -10,6 +10,10 @@
       "type": "mssql.azure",
       "connectionId": "database_db",
       "dynamicId": null
+    },
+    "apis1": {
+      "ignored": "true",
+      "type": "apis"
     }
   }
 }

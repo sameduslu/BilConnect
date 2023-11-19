@@ -6,6 +6,21 @@
     }
   },
   "parameters": {
+    "webapi20231112110715.resourceName": {
+      "Name": "webapi20231112110715.resourceName",
+      "Type": null,
+      "Value": "webapi20231112110715"
+    },
+    "apis1.resourceGroupLocation": {
+      "Name": "apis1.resourceGroupLocation",
+      "Type": "location",
+      "Value": "germanywestcentral"
+    },
+    "webapi20231112110715.subscriptionId": {
+      "Name": "webapi20231112110715.subscriptionId",
+      "Type": "subscription",
+      "Value": "e8c3d94b-9a51-48d0-9408-5c1cbb8ed615"
+    },
     "apis1.resourceGroupName": {
       "Name": "apis1.resourceGroupName",
       "Type": "resourceGroup",
@@ -15,6 +30,16 @@
       "Name": "apis1.subscriptionId",
       "Type": "subscription",
       "Value": "e8c3d94b-9a51-48d0-9408-5c1cbb8ed615"
+    },
+    "webapi20231112110715.resourceGroupName": {
+      "Name": "webapi20231112110715.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "bilConnect"
+    },
+    "webapi20231112110715.resourceGroupLocation": {
+      "Name": "webapi20231112110715.resourceGroupLocation",
+      "Type": null,
+      "Value": "germanywestcentral"
     }
   }
 }

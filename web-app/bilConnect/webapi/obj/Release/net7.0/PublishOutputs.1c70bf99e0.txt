@@ -1,5 +1,6 @@
-C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\assets\\index-04490b11.css
-C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\assets\\index-082c4086.js
+C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\assets\\index-add93e20.js
+C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\assets\\index-e5cf10cc.css
+C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\\BILCONNECT_LOGO.png
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\\index.html
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\\vite.svg
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\webapi.exe
