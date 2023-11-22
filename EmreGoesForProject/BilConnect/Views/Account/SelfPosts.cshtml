@@ -51,7 +51,8 @@
                         <div class="col-md-12">
                             <div class="card-footer">
                                 <a class="btn btn-outline-primary float-right" asp-controller="Posts" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-eye-fill"></i> Show Details</a>
-                                <a class="btn btn-outline-primary float-right" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-eye-fill"></i> Edit Post</a>
+                                <a class="btn btn-outline-primary float-right" asp-controller="Posts" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-eye-fill"></i> Edit Post</a>
+                                <a class="btn btn-outline-primary float-right" asp-controller="Posts" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-eye-fill"></i> Delete Post</a>
                             </div>
                         </div>
                     </div>

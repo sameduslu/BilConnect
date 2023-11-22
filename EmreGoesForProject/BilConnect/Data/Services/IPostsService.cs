@@ -1,4 +1,5 @@
-﻿using BilConnect.Models;
+﻿using BilConnect.Data.ViewModels;
+using BilConnect.Models;
 
 namespace BilConnect.data.Services
 {
@@ -12,5 +13,9 @@ namespace BilConnect.data.Services
         Task<Post> UpdateAsync(int id, Post newPost);
 
         Task DeleteAsync(int id);
+
+        Task AddNewPostAsync(NewPostVM data);
+        Task UpdatePostAsync(NewPostVM data);
+
     }
 }
