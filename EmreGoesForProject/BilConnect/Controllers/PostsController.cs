@@ -1,6 +1,8 @@
 ﻿using BilConnect.data.Services;
+using BilConnect.Data.Static;
 using BilConnect.Models;
 using Bilconnect_First_Version.data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +10,8 @@ using System.Security.Claims;
 
 namespace BilConnect.Controllers
 {
+    [Authorize(Roles = UserRoles.Admin + "," + UserRoles.User)]
+
     public class PostsController : Controller
     {
         private readonly IPostsService _service;

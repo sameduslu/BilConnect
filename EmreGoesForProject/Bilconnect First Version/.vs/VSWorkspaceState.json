@@ -5,10 +5,10 @@
     "\\Bilconnect First Version\\Controllers",
     "\\Bilconnect First Version\\data",
     "\\Bilconnect First Version\\data\\Services",
+    "\\Bilconnect First Version\\Models",
     "\\Bilconnect First Version\\Views",
-    "\\Bilconnect First Version\\Views\\Actors",
-    "\\Bilconnect First Version\\Views\\Producers"
+    "\\Bilconnect First Version\\Views\\Posts"
   ],
-  "SelectedNode": "\\Bilconnect First Version\\Controllers\\ActorsController.cs",
+  "SelectedNode": "\\Bilconnect First Version\\Models\\Post.cs",
   "PreviewInSolutionExplorer": false
 }

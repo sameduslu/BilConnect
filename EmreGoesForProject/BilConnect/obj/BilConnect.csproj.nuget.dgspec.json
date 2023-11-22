@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\90541\\Documents\\Bilkent-Connect\\EmreGoesForProject\\Bilconnect\\BilConnect.csproj": {}
+    "C:\\Users\\90541\\Documents\\Bilkent-Connect\\EmreGoesForProject\\BilConnect\\BilConnect.csproj": {}
   },
   "projects": {
-    "C:\\Users\\90541\\Documents\\Bilkent-Connect\\EmreGoesForProject\\Bilconnect\\BilConnect.csproj": {
+    "C:\\Users\\90541\\Documents\\Bilkent-Connect\\EmreGoesForProject\\BilConnect\\BilConnect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\EmreGoesForProject\\Bilconnect\\BilConnect.csproj",
+        "projectUniqueName": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\EmreGoesForProject\\BilConnect\\BilConnect.csproj",
         "projectName": "BilConnect",
-        "projectPath": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\EmreGoesForProject\\Bilconnect\\BilConnect.csproj",
+        "projectPath": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\EmreGoesForProject\\BilConnect\\BilConnect.csproj",
         "packagesPath": "C:\\Users\\90541\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\EmreGoesForProject\\Bilconnect\\obj\\",
+        "outputPath": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\EmreGoesForProject\\BilConnect\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\90541\\AppData\\Roaming\\NuGet\\NuGet.Config",
