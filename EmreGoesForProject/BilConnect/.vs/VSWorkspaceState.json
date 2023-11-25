@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Controllers",
     "\\Migrations",
-    "\\Models"
+    "\\Models",
+    "\\Views",
+    "\\Views\\Shared"
   ],
   "SelectedNode": "\\BilConnect.sln",
   "PreviewInSolutionExplorer": false

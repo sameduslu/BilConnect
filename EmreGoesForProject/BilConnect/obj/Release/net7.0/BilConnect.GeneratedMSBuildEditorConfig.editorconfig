@@ -9,11 +9,11 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BilConnect
 build_property.RootNamespace = BilConnect
-build_property.ProjectDir = C:\Users\90541\Documents\Bilkent-Connect\EmreGoesForProject\BilConnect\
+build_property.ProjectDir = C:\Users\90541\Documents\Bilkent-Connect\EmreGoesForProject\Bilconnect\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\90541\Documents\Bilkent-Connect\EmreGoesForProject\BilConnect
+build_property.MSBuildProjectDirectory = C:\Users\90541\Documents\Bilkent-Connect\EmreGoesForProject\Bilconnect
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Account/Login.cshtml]
@@ -48,8 +48,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Posts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Posts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Posts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/90541/Documents/Bilkent-Connect/EmreGoesForProject/BilConnect/Views/Posts/Index.cshtml]
