@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="IIS Web Application Name" description="" value="webapi20231112110715" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Murat\ Çağrı\ Kara\\Desktop\\2023-2024\\CS319\\web-app\\bilConnect\\webapi\\obj\\Release\\net7\.0\\PubTmp\\Out\\$" />
-  </parameter>
-</parameters>
