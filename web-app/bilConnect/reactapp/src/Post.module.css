@@ -1,0 +1,36 @@
+
+.post {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 40px;
+    overflow: hidden;
+    margin: 10px;
+    width: 400px !important; /* Set a fixed width for the post, adjust as needed */
+    height: 560px;
+}
+
+.postImage {
+    width: 100%; /* Take up the entire width of the post */
+    height: 70%; /* Set a fixed height for the image, adjust as needed */
+}
+
+.postContent {
+    padding: 10px;
+}
+
+.postTitle {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.postPrice {
+    color: #555;
+    font-weight: bold;
+}
+
+.postDescription {
+    font-size: 14px;
+    color: #555;
+}

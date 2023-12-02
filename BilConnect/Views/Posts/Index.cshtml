@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Post>
+
+@{
+    ViewData["Title"] = "List of Posts";
+}
+
+<style>
+    /* Added CSS for square images */
+    .img-square {
+        width: 150px; /* Set the width of the image */
+        height: 150px; /* Set the height of the image */
+        object-fit: cover; /* This will ensure the image covers the area nicely */
+    }
+</style>
+
+
+@*Define View Data*@
+
+@*Write Code*@
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 col-xs-6 border-primary mb-3 fixed-size-container">
+            <div class="card mb-3 fixed-size-card" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-header text-white bg-info">
+                            <h5 class="card-title">
+                                @item.Title
+                                <a class="text-white float-right"><i class="bi bi-pencil-square"></i></a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="@item.ImageURL" class="img-square fixed-size-image" alt="@item.Title">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <p class="card-text truncate-text">@item.Description</p>
+                            <p class="card-text"><b>Post Author: </b>@item.User.FullName</p>
+                            <p class="card-text"><b>Post Date: </b>@item.PostDate.ToString("dd MMM yy")</p>
+                            <p class="card-text">
+                                <b>Status: </b>
+                                <span class="badge bg-success text-white">Available</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card-footer d-flex justify-content-between">
+                            <a class="btn btn-success btn-lg" asp-action="Details" asp-route-id="@item.Id" aria-label="Show Details">
+                                <i class="bi bi-eye-fill align-middle"></i> Show Details
+                            </a>
+                            <a class="btn btn-warning btn-lg" aria-label="Buy Item">
+                                <i class="bi bi-cart-fill align-middle"></i> Buy for @item.Price TL
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@await Html.PartialAsync("_CreatePost", "Posts") 
