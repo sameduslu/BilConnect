@@ -1,19 +1,13 @@
-﻿using BilConnect.Data.ViewModels;
+﻿using BilConnect.Data.Base;
+using BilConnect.Data.ViewModels;
 using BilConnect.Models;
 
 namespace BilConnect.data.Services
 {
-    public interface IPostsService
+    public interface IPostsService : IEntityBaseRepository<Post>
     {
-        Task<IEnumerable<Post>> GetAllAsync();
-        Task<Post> GetByIdAsync(int id);
 
-        Task AddAsync(Post post);
-
-        Task<Post> UpdateAsync(int id, Post newPost);
-
-        Task DeleteAsync(int id);
-
+        Task<Post> GetPostByIdAsync(int id);
         Task AddNewPostAsync(NewPostVM data);
         Task UpdatePostAsync(NewPostVM data);
 

@@ -24,14 +24,14 @@ namespace BilConnect.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var data = await _service.GetAllAsync();
+            var data = await _service.GetAllAsync(n => n.User);
             return View(data);
         }
 
         //Get Actors/Details/1
         public async Task<IActionResult> Details(int id)
         {
-            var postDetails = await _service.GetByIdAsync(id);
+            var postDetails = await _service.GetPostByIdAsync(id);
 
             if (postDetails == null)
             {

@@ -5,7 +5,7 @@ namespace BilConnect.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        [Display(Name = "Full name")]
+        [Display(Name = "Users name")]
         public string FullName { get; set; }
 
         public List<Post>? Posts { get; set; }

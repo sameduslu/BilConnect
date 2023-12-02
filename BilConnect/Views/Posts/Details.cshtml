@@ -32,6 +32,12 @@
                 </div>
 
                 <div class="form-group">
+                    <label asp-for="User.FullName" class="control-label"></label>
+                    <input asp-for="User.FullName" class="form-control" readonly />
+                    <span asp-validation-for="User.FullName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
                     <label asp-for="PostDate" class="control-label"></label>
                     <input asp-for="PostDate" class="form-control" readonly />
                     <span asp-validation-for="PostDate" class="text-danger"></span>

@@ -1,10 +1,11 @@
-﻿using System.Collections.Concurrent;
+﻿using BilConnect.Data.Base;
+using System.Collections.Concurrent;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BilConnect.Models
 {
-    public class Post
+    public class Post : IEntityBase
     {
         [Key]
         public int Id { get; set; }
