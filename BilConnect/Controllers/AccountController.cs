@@ -105,16 +105,30 @@ namespace BilConnect.Controllers
 
         public async Task<IActionResult> SelfPosts()
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Get the current user's ID
-            var userWithPosts = await _service.GetByIdAsync(userId); // Assuming this method exists and retrieves a user with their posts
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); 
+            var userWithPosts = await _service.GetByIdAsync(userId); 
 
             if (userWithPosts == null)
             {
                 // Handle the case where the user or their posts are not found
-                return NotFound(); // Or redirect to another view as per your logic
+                return NotFound(); 
             }
 
-            return View(userWithPosts); // Pass the user with the loaded posts to the view
+            return View(userWithPosts);
+        }
+
+        public async Task<IActionResult> SelfReports()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Get the current user's ID
+            var userWithPosts = await _service.GetByIdAsync(userId); 
+
+            if (userWithPosts == null)
+            {
+                // Handle the case where the user or their posts are not found
+                return NotFound(); 
+            }
+
+            return View(userWithPosts); 
         }
 
     }

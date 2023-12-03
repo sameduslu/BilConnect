@@ -24,14 +24,23 @@
         <div class="col-md-4 col-xs-6 border-primary mb-3 fixed-size-container">
             <div class="card mb-3 fixed-size-card" style="max-width: 540px;">
                 <div class="row g-0">
-                    
+                    <div class="col-md-12">
+                        <div class="card-header text-white bg-info">
+                            <h5 class="card-title">
+                                Report for @item.ReportedPost.Title 
+                                <a class="text-white float-right"><i class="bi bi-pencil-square"></i></a>
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <img src="@item.ReportedPost.ImageURL" class="img-square fixed-size-image" alt="@item.ReportedPost.Title">
+                    </div>
 
                     <div class="col-md-6">
                         <div class="card-body">
-                            <p class="card-text truncate-text">@item.Description</p>
+                            <p class="card-text truncate-text">Complaint: @item.Description</p>
                             <p class="card-text">
-                                <b>Status: </b>
-                                <span class="badge bg-success text-white">Available</span>
                             </p>
                         </div>
                     </div>
