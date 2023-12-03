@@ -12,6 +12,7 @@ namespace BilConnect.Models
 
         public string Title { get; set; }
 
+        [Display(Name = "Post Description")]
         public string Description { get; set; }
 
         public double Price { get; set; }

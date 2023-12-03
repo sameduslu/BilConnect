@@ -16,15 +16,27 @@ namespace BilConnect.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configure the relationship between ApplicationUser and Post
+            // Existing configuration for Post and ApplicationUser
             modelBuilder.Entity<Post>()
                 .HasOne(p => p.User)
                 .WithMany(u => u.Posts)
                 .HasForeignKey(p => p.UserId)
                 .OnDelete(DeleteBehavior.Restrict); // Prevent cascading delete
 
-            
+            // Configure the relationship between PostReport, ApplicationUser, and Post
+            modelBuilder.Entity<PostReport>()
+                .HasOne(pr => pr.Reporter)
+                .WithMany()
+                .HasForeignKey(pr => pr.ReporterId)
+                .OnDelete(DeleteBehavior.Restrict); // Adjust as needed
+
+            modelBuilder.Entity<PostReport>()
+                .HasOne(pr => pr.ReportedPost)
+                .WithMany()
+                .HasForeignKey(pr => pr.ReportedPostId)
+                .OnDelete(DeleteBehavior.Restrict); // Adjust as needed
         }
+    
 
 
         public DbSet<Post> Posts { get; set; }

@@ -11,5 +11,6 @@ namespace BilConnect.Data.ViewModels
 
         public string? ReporterId { get; set; }
 
+        public int ReportedPostId { get; set; }
     }
 }

@@ -14,9 +14,10 @@ namespace BilConnect.Controllers
         {
             _service = service;
         }
+
         public async Task<IActionResult> Index()
         {
-            var data = await _service.GetAllAsync(n => n.Reporter);
+            var data = await _service.GetAllAsync();
             return View(data);
         }
 
@@ -37,7 +38,7 @@ namespace BilConnect.Controllers
         {
             var viewModel = new NewPostReportVM
             {
-
+                ReportedPostId = id
             };
 
             return View(viewModel);
@@ -54,7 +55,7 @@ namespace BilConnect.Controllers
             }
 
             await _service.AddNewPostReportAsync(post);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Details", "Posts", new { id = post.ReportedPostId });
         }
 
 

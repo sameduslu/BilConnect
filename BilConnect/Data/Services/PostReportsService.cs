@@ -20,6 +20,7 @@ namespace BilConnect.Data.Services
             {
                 Description = data.Description,
                 ReporterId = data.ReporterId,
+                ReportedPostId = data.ReportedPostId
             };
 
             await _context.PostReports.AddAsync(newPostReport);
@@ -30,6 +31,7 @@ namespace BilConnect.Data.Services
         {
             var postReportDetails = _context.PostReports
                   .Include(p => p.Reporter)
+                  .Include(r => r.ReportedPost)
                   .FirstOrDefaultAsync(n => n.Id == id);
 
             return await postReportDetails;
