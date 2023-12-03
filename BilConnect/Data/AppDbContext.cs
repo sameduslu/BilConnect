@@ -14,8 +14,5 @@ namespace BilConnect.Data
 
         public DbSet<Post> Posts { get; set; }
 
-        public DbSet<PostReport> PostReports { get; set; }
-
-
     }
 }

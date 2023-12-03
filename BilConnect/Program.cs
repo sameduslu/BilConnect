@@ -21,7 +21,6 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
 //Services Configuration
 builder.Services.AddScoped<IPostsService, PostsService>();
 builder.Services.AddScoped<IApplicationUsersService, ApplicationUsersService>();
-builder.Services.AddScoped<IReportsService<Post>, ReportsService<Post>>();
 
 
 //Authentication and Authorization
