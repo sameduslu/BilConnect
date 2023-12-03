@@ -48,6 +48,7 @@
                     <input asp-for="Price" class="form-control" readonly />
                     <span asp-validation-for="Price" class="text-danger"></span>
                 </div>
+                <a asp-controller="PostReports" asp-action="Create" asp-route-id="@Model.Id">Create New Post Report</a>
 
                 
                 
