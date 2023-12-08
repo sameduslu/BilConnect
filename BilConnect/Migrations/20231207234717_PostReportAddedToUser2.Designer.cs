@@ -4,6 +4,7 @@ using BilConnect.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231207234717_PostReportAddedToUser2")]
+    partial class PostReportAddedToUser2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -139,6 +142,9 @@ namespace BilConnect.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -154,6 +160,8 @@ namespace BilConnect.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
 
                     b.HasIndex("ReportedPostId");
 
@@ -308,6 +316,10 @@ namespace BilConnect.Migrations
 
             modelBuilder.Entity("BilConnect.Models.PostReport", b =>
                 {
+                    b.HasOne("BilConnect.Models.ApplicationUser", null)
+                        .WithMany("PostReports")
+                        .HasForeignKey("ApplicationUserId");
+
                     b.HasOne("BilConnect.Models.Post", "ReportedPost")
                         .WithMany()
                         .HasForeignKey("ReportedPostId")
@@ -315,7 +327,7 @@ namespace BilConnect.Migrations
                         .IsRequired();
 
                     b.HasOne("BilConnect.Models.ApplicationUser", "Reporter")
-                        .WithMany("PostReports")
+                        .WithMany()
                         .HasForeignKey("ReporterId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();

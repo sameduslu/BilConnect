@@ -4,6 +4,7 @@ using BilConnect.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231207214037_PostStatus")]
+    partial class PostStatus
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -149,9 +152,6 @@ namespace BilConnect.Migrations
                     b.Property<string>("ReporterId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -315,7 +315,7 @@ namespace BilConnect.Migrations
                         .IsRequired();
 
                     b.HasOne("BilConnect.Models.ApplicationUser", "Reporter")
-                        .WithMany("PostReports")
+                        .WithMany()
                         .HasForeignKey("ReporterId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -378,8 +378,6 @@ namespace BilConnect.Migrations
 
             modelBuilder.Entity("BilConnect.Models.ApplicationUser", b =>
                 {
-                    b.Navigation("PostReports");
-
                     b.Navigation("Posts");
                 });
 #pragma warning restore 612, 618

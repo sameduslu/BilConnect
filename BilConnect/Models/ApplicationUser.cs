@@ -9,5 +9,7 @@ namespace BilConnect.Models
         public string FullName { get; set; }
 
         public List<Post>? Posts { get; set; }
+
+        public List<PostReport>? PostReports { get; set; }
     }
 }

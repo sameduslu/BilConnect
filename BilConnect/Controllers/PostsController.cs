@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 using System.Security.Claims;
 
 namespace BilConnect.Controllers
@@ -78,6 +79,7 @@ namespace BilConnect.Controllers
                 Price = postDetails.Price,
                 ImageURL = postDetails.ImageURL,
                 PostDate = postDetails.PostDate,
+                PostStatus  = postDetails.PostStatus,
                 UserId = postDetails.UserId 
 
             };
@@ -117,6 +119,38 @@ namespace BilConnect.Controllers
 
             await _service.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
+        }
+
+        //Get: Posts/Suspend/1
+        public async Task<IActionResult> Suspend(int id)
+        {
+            var actorDetails = await _service.GetByIdAsync(id);
+            if (actorDetails == null) return View("NotFound");
+            return View(actorDetails);
+        }
+
+        //Get: Posts/Suspend/1
+        public async Task<IActionResult> SuspendConfirmed(int id)
+        {
+            var postDetails = await _service.GetByIdAsync(id);
+            if (postDetails == null) return View("NotFound");
+
+            var response = new NewPostVM()
+            {
+                Id = postDetails.Id,
+                Title = postDetails.Title,
+                Description = postDetails.Description,
+                Price = postDetails.Price,
+                ImageURL = postDetails.ImageURL,
+                PostDate = postDetails.PostDate,
+                PostStatus = Data.Enums.PostStatus.Suspended,
+                UserId = postDetails.UserId
+            };
+
+            await _service.UpdatePostAsync(response);
+
+
+            return RedirectToAction("UpdatePostReportsStatus", "PostReports", new { postId = id });
         }
     }
 }

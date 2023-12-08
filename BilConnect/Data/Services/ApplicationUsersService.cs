@@ -41,6 +41,7 @@ namespace BilConnect.Data.Services
         public async Task<ApplicationUser> GetByIdAsync(string id)
         {
             return await _context.Users
+                         .Include(p => p.PostReports)
                          .Include(u => u.Posts)
                          .FirstOrDefaultAsync(u => u.Id == id);
         }

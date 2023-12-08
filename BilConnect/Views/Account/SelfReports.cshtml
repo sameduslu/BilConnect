@@ -4,4 +4,62 @@
     ViewData["Title"] = "List of Posts";
 }
 
-<p>To be implemented</p>
+<style>
+    /* Added CSS for square images */
+    .img-square {
+        width: 150px; /* Set the width of the image */
+        height: 150px; /* Set the height of the image */
+        object-fit: cover; /* This will ensure the image covers the area nicely */
+    }
+</style>
+
+
+@*Define View Data*@
+
+@*Write Code*@
+
+<div class="row">
+    @if (Model.PostReports != null && Model.PostReports.Any())
+    {
+        foreach (var item in Model.PostReports)
+        {
+            <div class="col-md-4 col-xs-6 border-primary mb-3 fixed-size-container">
+                <div class="card mb-3 fixed-size-card" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-12">
+                            <div class="card-header text-white bg-info">
+                                <h5 class="card-title">
+                                    Report for @item.ReportedPost.Title
+                                    <a class="text-white float-right"><i class="bi bi-pencil-square"></i></a>
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <img src="@item.ReportedPost.ImageURL" class="img-square fixed-size-image" alt="@item.ReportedPost.Title">
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <p class="card-text truncate-text">Complaint: @item.Description</p>
+                                <p class="card-text">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card-footer d-flex justify-content-between">
+                                <a class="btn btn-success btn-lg" asp-action="Details" asp-route-id="@item.Id" aria-label="Show Details">
+                                    <i class="bi bi-eye-fill align-middle"></i> Show Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>You don't have any posts.</p>
+    }
+</div>

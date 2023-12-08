@@ -1,4 +1,5 @@
 ﻿using BilConnect.Data.Base;
+using BilConnect.Data.Enums;
 using System.Collections.Concurrent;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -21,6 +22,7 @@ namespace BilConnect.Models
 
         public DateTime PostDate { get; set; }
 
+        public PostStatus PostStatus { get; set; }
 
         //Relationshpis
 

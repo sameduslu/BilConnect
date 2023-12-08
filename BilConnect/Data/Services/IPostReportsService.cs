@@ -9,5 +9,9 @@ namespace BilConnect.Data.Services
         Task<PostReport> GetPostReportByIdAsync(int id);
         Task AddNewPostReportAsync(NewPostReportVM data);
         //Task UpdatePostReportAsync(NewPostReportVM data);
+
+        Task<IEnumerable<PostReport>> GetPostReportsByPostIdAsync(int postId);
+
+        Task UpdatePostReportsAsync(IEnumerable<PostReport> postReports);
     }
 }

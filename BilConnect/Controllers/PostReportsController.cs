@@ -77,5 +77,25 @@ namespace BilConnect.Controllers
             await _service.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
+
+        //Get: Posts/Delete/1
+        public async Task<IActionResult> Suspend(int id)
+        {
+            var postReportDetails = await _service.GetByIdAsync(id);
+            if (postReportDetails == null) return View("NotFound");
+            return View(postReportDetails);
+        }
+
+        public async Task<IActionResult> UpdatePostReportsStatus(int postId)
+        {
+            var relatedPostReports = await _service.GetPostReportsByPostIdAsync(postId);
+            foreach (var report in relatedPostReports)
+            {
+                report.Status = Data.Enums.PostReportStatus.Approved;
+            }
+            await _service.UpdatePostReportsAsync(relatedPostReports);
+
+            return RedirectToAction("Index", "PostReports");
+        }
     }
 }

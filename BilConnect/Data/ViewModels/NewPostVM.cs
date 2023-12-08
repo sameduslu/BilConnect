@@ -1,4 +1,5 @@
-﻿using BilConnect.Models;
+﻿using BilConnect.Data.Enums;
+using BilConnect.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BilConnect.Data.ViewModels
@@ -16,6 +17,7 @@ namespace BilConnect.Data.ViewModels
 
         public DateTime PostDate { get; set; }
 
+        public PostStatus PostStatus { get; set; }
 
         //Relationshpis
 

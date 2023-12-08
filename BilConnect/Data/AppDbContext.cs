@@ -26,7 +26,7 @@ namespace BilConnect.Data
             // Configure the relationship between PostReport, ApplicationUser, and Post
             modelBuilder.Entity<PostReport>()
                 .HasOne(pr => pr.Reporter)
-                .WithMany()
+                .WithMany(u => u.PostReports)
                 .HasForeignKey(pr => pr.ReporterId)
                 .OnDelete(DeleteBehavior.Restrict); // Adjust as needed
 

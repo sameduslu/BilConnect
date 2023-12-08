@@ -27,8 +27,9 @@ namespace BilConnect.data.Services
                 Price = data.Price,
                 ImageURL = data.ImageURL,
                 PostDate = DateTime.Now,
+                PostStatus = Data.Enums.PostStatus.Available,
                 UserId =  data.UserId // Set UserId first.FindFirstValue(ClaimTypes.NameIdentifier); // Set UserId first,
-        };
+            };
 
             await _context.Posts.AddAsync(newPost);
             await _context.SaveChangesAsync();
@@ -55,6 +56,7 @@ namespace BilConnect.data.Services
                 dbPost.Price = data.Price;
                 dbPost.ImageURL = data.ImageURL;
                 dbPost.PostDate = data.PostDate;
+                dbPost.PostStatus = data.PostStatus;
                 dbPost.UserId = data.UserId;
                 await _context.SaveChangesAsync();
 

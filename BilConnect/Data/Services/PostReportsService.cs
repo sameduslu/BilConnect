@@ -1,4 +1,5 @@
 ﻿using BilConnect.Data.Base;
+using BilConnect.Data.Enums;
 using BilConnect.Data.ViewModels;
 using BilConnect.Models;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,7 @@ namespace BilConnect.Data.Services
             var newPostReport = new PostReport()
             {
                 Description = data.Description,
+                Status = data.Status,
                 ReporterId = data.ReporterId,
                 ReportedPostId = data.ReportedPostId
             };
@@ -37,6 +39,26 @@ namespace BilConnect.Data.Services
             return await postReportDetails;
 
         }
+
+
+        public async Task<IEnumerable<PostReport>> GetPostReportsByPostIdAsync(int postId)
+        {
+            return await _context.PostReports
+                                 .Where(pr => pr.ReportedPostId == postId)
+                                 .ToListAsync();
+        }
+
+        public async Task UpdatePostReportsAsync(IEnumerable<PostReport> postReports)
+        {
+            foreach (var report in postReports)
+            {
+                report.Status = PostReportStatus.Approved; 
+                _context.Entry(report).State = EntityState.Modified; 
+            }
+        
+            await _context.SaveChangesAsync();
+        }
+
 
     }
 }
