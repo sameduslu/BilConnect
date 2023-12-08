@@ -152,5 +152,7 @@ namespace BilConnect.Controllers
 
             return RedirectToAction("UpdatePostReportsStatus", "PostReports", new { postId = id });
         }
+
+
     }
 }

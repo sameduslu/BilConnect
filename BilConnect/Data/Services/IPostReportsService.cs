@@ -13,5 +13,8 @@ namespace BilConnect.Data.Services
         Task<IEnumerable<PostReport>> GetPostReportsByPostIdAsync(int postId);
 
         Task UpdatePostReportsAsync(IEnumerable<PostReport> postReports);
+
+        Task UpdatePostReportStatusAsync(PostReport report, BilConnect.Data.Enums.PostReportStatus status);
+        Task UpdatePostReportAsync(NewPostReportVM post);
     }
 }

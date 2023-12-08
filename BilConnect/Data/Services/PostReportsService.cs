@@ -59,6 +59,29 @@ namespace BilConnect.Data.Services
             await _context.SaveChangesAsync();
         }
 
+        public async Task UpdatePostReportStatusAsync(PostReport report, BilConnect.Data.Enums.PostReportStatus status)
+        {
+            report.Status = Data.Enums.PostReportStatus.Rejected;
+            _context.Entry(report).State = EntityState.Modified;
+
+            await _context.SaveChangesAsync();
+
+        }
+
+        public async Task UpdatePostReportAsync(NewPostReportVM data)
+        {
+            var dbPostReport = await _context.PostReports.FirstOrDefaultAsync(n => n.Id == data.Id);
+
+            if (dbPostReport != null)
+            {
+
+                dbPostReport.Description = data.Description;
+
+                await _context.SaveChangesAsync();
+
+            }
+            await _context.SaveChangesAsync();
+        }
 
     }
 }

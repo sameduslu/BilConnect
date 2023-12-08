@@ -1,4 +1,5 @@
-﻿@model Post
+﻿@using System.Security.Claims;
+@model Post
 
 @{
     ViewData["Title"] = "Post Details";
@@ -24,7 +25,6 @@
                 </div>
 
                 
-
                 <div class="form-group">
                     <label asp-for="Description" class="control-label"></label>
                     <input asp-for="Description" class="form-control" readonly />
@@ -48,8 +48,11 @@
                     <input asp-for="Price" class="form-control" readonly />
                     <span asp-validation-for="Price" class="text-danger"></span>
                 </div>
-                <a asp-controller="PostReports" asp-action="Create" asp-route-id="@Model.Id">Create New Post Report</a>
 
+                @if (User.FindFirst(ClaimTypes.NameIdentifier)?.Value != Model.UserId) // Compare current user's ID with Model.UserId
+                {
+                    <a asp-controller="PostReports" asp-action="Create" asp-route-id="@Model.Id">Create New Post Report</a>
+                }
                 
                 
             </div>

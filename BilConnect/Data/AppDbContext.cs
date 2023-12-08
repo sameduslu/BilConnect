@@ -23,18 +23,14 @@ namespace BilConnect.Data
                 .HasForeignKey(p => p.UserId)
                 .OnDelete(DeleteBehavior.Restrict); // Prevent cascading delete
 
-            // Configure the relationship between PostReport, ApplicationUser, and Post
             modelBuilder.Entity<PostReport>()
-                .HasOne(pr => pr.Reporter)
-                .WithMany(u => u.PostReports)
-                .HasForeignKey(pr => pr.ReporterId)
-                .OnDelete(DeleteBehavior.Restrict); // Adjust as needed
+                    .HasOne(pr => pr.ReportedPost)
+                    .WithMany() // or .WithOne() if that's your model
+                    .HasForeignKey(pr => pr.ReportedPostId)
+                    .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<PostReport>()
-                .HasOne(pr => pr.ReportedPost)
-                .WithMany()
-                .HasForeignKey(pr => pr.ReportedPostId)
-                .OnDelete(DeleteBehavior.Restrict); // Adjust as needed
+
+
         }
     
 

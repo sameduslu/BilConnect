@@ -311,13 +311,13 @@ namespace BilConnect.Migrations
                     b.HasOne("BilConnect.Models.Post", "ReportedPost")
                         .WithMany()
                         .HasForeignKey("ReportedPostId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BilConnect.Models.ApplicationUser", "Reporter")
                         .WithMany("PostReports")
                         .HasForeignKey("ReporterId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("ReportedPost");

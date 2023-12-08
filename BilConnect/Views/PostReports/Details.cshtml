@@ -13,9 +13,18 @@
             <div class="col-md-8 offset-2">
                 
                 <div class="row">
-                    <div class="col text-center">
-                        <h1>Report for @Model.ReportedPost.Title</h1>
-                    </div>
+                    @if (Model.ReportedPost != null)
+                    {
+                        <div class="col text-center">
+                            <h1>Report for @Model.ReportedPost.Title</h1>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col text-center">
+                            <h1>Report for Deleted Report</h1>
+                        </div>
+                    }
                 </div>
 
                 <div class="form-group">
@@ -30,50 +39,50 @@
                     <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
 
-
-
-
                 <div class="form-group text-center">
                     <img id="ProfilePicturePreview" src="@Model.ReportedPost.ImageURL" alt="Profile Picture"
                          style="width: 150px; height: 150px; object-fit: cover;" class="border-info rounded-circle" />
                 </div>
 
 
+                @if(Model.ReportedPost != null)
+                {
+                    <div class="form-group">
+                        <label asp-for="@Model.ReportedPost.Description" class="control-label"></label>
+                        <input asp-for="@Model.ReportedPost.Description" class="form-control" readonly />
+                        <span asp-validation-for="@Model.ReportedPost.Description" class="text-danger"></span>
+                    </div>
 
-                <div class="form-group">
-                    <label asp-for="@Model.ReportedPost.Description" class="control-label"></label>
-                    <input asp-for="@Model.ReportedPost.Description" class="form-control" readonly />
-                    <span asp-validation-for="@Model.ReportedPost.Description" class="text-danger"></span>
-                </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.ReportedPost.User.FullName" class="control-label"></label>
+                        <input asp-for="@Model.ReportedPost.User.FullName" class="form-control" readonly />
+                        <span asp-validation-for="@Model.ReportedPost.User.FullName" class="text-danger"></span>
+                    </div>
 
-                <div class="form-group">
-                    <label asp-for="@Model.ReportedPost.User.FullName" class="control-label"></label>
-                    <input asp-for="@Model.ReportedPost.User.FullName" class="form-control" readonly />
-                    <span asp-validation-for="@Model.ReportedPost.User.FullName" class="text-danger"></span>
-                </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.ReportedPost.PostDate" class="control-label"></label>
+                        <input asp-for="@Model.ReportedPost.PostDate" class="form-control" readonly />
+                        <span asp-validation-for="@Model.ReportedPost.PostDate" class="text-danger"></span>
+                    </div>
 
-                <div class="form-group">
-                    <label asp-for="@Model.ReportedPost.PostDate" class="control-label"></label>
-                    <input asp-for="@Model.ReportedPost.PostDate" class="form-control" readonly />
-                    <span asp-validation-for="@Model.ReportedPost.PostDate" class="text-danger"></span>
-                </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.ReportedPost.Price" class="control-label"></label>
+                        <input asp-for="@Model.ReportedPost.Price" class="form-control" readonly />
+                        <span asp-validation-for="@Model.ReportedPost.Price" class="text-danger"></span>
+                    </div>
+                }
 
-                <div class="form-group">
-                    <label asp-for="@Model.ReportedPost.Price" class="control-label"></label>
-                    <input asp-for="@Model.ReportedPost.Price" class="form-control" readonly />
-                    <span asp-validation-for="@Model.ReportedPost.Price" class="text-danger"></span>
-                </div>
+                @if(User.IsInRole("Admin"))
+                {
+                    <form>
+                        <!-- Your form fields here... -->
+                        <!-- Submit button for approving the report -->
+                        <button type="submit" asp-controller="Posts" asp-action="Suspend" asp-route-id="@Model.ReportedPostId">Approve Report</button>
 
-                <form >
-                    <!-- Your form fields here... -->
-                    <!-- Submit button for approving the report -->
-                    <button type="submit" asp-controller="Posts" asp-action="Suspend" asp-route-id="@Model.ReportedPostId">Approve Report</button>
-
-                    <!-- Submit button for rejecting the report -->
-                    <button type="submit" asp-controller="PostReports" asp-action="Reject" asp-route-id="@Model.ReportedPostId">Reject Report</button>
-                </form>
-
-                
+                        <!-- Submit button for rejecting the report -->
+                        <button type="submit" asp-controller="PostReports" asp-action="Reject" asp-route-id="@Model.Id">Reject Report</button>
+                    </form>
+                }
             </div>
         </div>
     </div>

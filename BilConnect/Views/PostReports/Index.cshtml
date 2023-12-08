@@ -19,43 +19,47 @@
 @*Write Code*@
 
 <div class="row">
-    @foreach (var item in Model)
-    {   
-        @if(item.Status == BilConnect.Data.Enums.PostReportStatus.Waiting)
+    @if (Model != null && Model.Any())
+    {
+        @foreach (var item in Model)
         {
-            <div class="col-md-4 col-xs-6 border-primary mb-3 fixed-size-container">
-                <div class="card mb-3 fixed-size-card" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-12">
-                            <div class="card-header text-white bg-info">
-                                <h5 class="card-title">
-                                    Report for @item.ReportedPost.Title
-                                    <a class="text-white float-right"><i class="bi bi-pencil-square"></i></a>
-                                </h5>
+            @if (item.Status == BilConnect.Data.Enums.PostReportStatus.Waiting)
+            {
+                <div class="col-md-4 col-xs-6 border-primary mb-3 fixed-size-container">
+                    <div class="card mb-3 fixed-size-card" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-12">
+                                <div class="card-header text-white bg-info">
+                                    <h5 class="card-title">
+                                        Report for @item.ReportedPost.Title
+                                        <a class="text-white float-right"><i class="bi bi-pencil-square"></i></a>
+                                    </h5>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="col-md-6">
-                            <img src="@item.ReportedPost.ImageURL" class="img-square fixed-size-image" alt="@item.ReportedPost.Title">
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="card-body">
-                                <p class="card-text truncate-text">Complaint: @item.Description</p>
-                                <p class="card-text">
-                                </p>
+                            <div class="col-md-6">
+                                <img src="@item.ReportedPost.ImageURL" class="img-square fixed-size-image" alt="@item.ReportedPost.Title">
                             </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="card-footer d-flex justify-content-between">
-                                <a class="btn btn-success btn-lg" asp-action="Details" asp-route-id="@item.Id" aria-label="Show Details">
-                                    <i class="bi bi-eye-fill align-middle"></i> Show Details
-                                </a>
+
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <p class="card-text truncate-text">Complaint: @item.Description</p>
+                                    <p class="card-text">
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card-footer d-flex justify-content-between">
+                                    <a class="btn btn-success btn-lg" asp-action="Details" asp-route-id="@item.Id" aria-label="Show Details">
+                                        <i class="bi bi-eye-fill align-middle"></i> Show Details
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            }
+
         }
     }
 </div>

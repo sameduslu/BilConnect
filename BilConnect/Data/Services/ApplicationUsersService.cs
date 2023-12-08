@@ -42,6 +42,7 @@ namespace BilConnect.Data.Services
         {
             return await _context.Users
                          .Include(p => p.PostReports)
+                             .ThenInclude(pr => pr.ReportedPost) 
                          .Include(u => u.Posts)
                          .FirstOrDefaultAsync(u => u.Id == id);
         }

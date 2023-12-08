@@ -40,17 +40,25 @@
                         </div>
 
                         <div class="col-md-6">
+                            <p class="card-text">
+                                <b>Status: </b>
+                                <span class="badge bg-success text-white">@item.Status</span>
+                            </p>
+                        </div>
+
+                        <div class="col-md-6">
                             <div class="card-body">
                                 <p class="card-text truncate-text">Complaint: @item.Description</p>
                                 <p class="card-text">
                                 </p>
                             </div>
                         </div>
+
                         <div class="col-md-12">
-                            <div class="card-footer d-flex justify-content-between">
-                                <a class="btn btn-success btn-lg" asp-action="Details" asp-route-id="@item.Id" aria-label="Show Details">
-                                    <i class="bi bi-eye-fill align-middle"></i> Show Details
-                                </a>
+                            <div class="card-footer">
+                                <a class="btn btn-outline-primary float-right" asp-controller="PostReports" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-eye-fill"></i> Show Details</a>
+                                <a class="btn btn-outline-primary float-right" asp-controller="PostReports" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-eye-fill"></i> Edit Post Report</a>
+                                <a class="btn btn-outline-primary float-right" asp-controller="PostReports" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-eye-fill"></i> Delete Post Report</a>
                             </div>
                         </div>
                     </div>

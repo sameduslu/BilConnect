@@ -2,6 +2,7 @@
 using BilConnect.Data.Services;
 using BilConnect.Data.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace BilConnect.Controllers
@@ -63,7 +64,7 @@ namespace BilConnect.Controllers
         //Get: Posts/Delete/1
         public async Task<IActionResult> Delete(int id)
         {
-            var postReportDetails = await _service.GetByIdAsync(id);
+            var postReportDetails = await _service.GetPostReportByIdAsync(id);
             if (postReportDetails == null) return View("NotFound");
             return View(postReportDetails);
         }
@@ -78,14 +79,6 @@ namespace BilConnect.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        //Get: Posts/Delete/1
-        public async Task<IActionResult> Suspend(int id)
-        {
-            var postReportDetails = await _service.GetByIdAsync(id);
-            if (postReportDetails == null) return View("NotFound");
-            return View(postReportDetails);
-        }
-
         public async Task<IActionResult> UpdatePostReportsStatus(int postId)
         {
             var relatedPostReports = await _service.GetPostReportsByPostIdAsync(postId);
@@ -96,6 +89,63 @@ namespace BilConnect.Controllers
             await _service.UpdatePostReportsAsync(relatedPostReports);
 
             return RedirectToAction("Index", "PostReports");
+        }
+
+        //Get: Posts/Delete/1
+        public async Task<IActionResult> Reject(int id)
+        {
+            var postReportDetails = await _service.GetByIdAsync(id);
+            if (postReportDetails == null) return View("NotFound");
+            return View(postReportDetails);
+        }
+
+        //Get: Posts/Delete/1
+        public async Task<IActionResult> RejectConfirmed(int id)
+        {
+            var postReportDetails = await _service.GetPostReportByIdAsync(id);
+            if (postReportDetails == null) return View("NotFound");
+
+            await _service.UpdatePostReportStatusAsync(postReportDetails, Data.Enums.PostReportStatus.Rejected);
+
+            return View(nameof(Index));
+        }
+
+        //GET: Post/Edit/1
+        public async Task<IActionResult> Edit(int id)
+        {
+            var postReportDetails = await _service.GetByIdAsync(id);
+            if (postReportDetails == null)
+            {
+                return View("NotFound");
+            }
+
+            var response = new NewPostReportVM()
+            {
+                Id = postReportDetails.Id,
+                Description = postReportDetails.Description,
+                Status = postReportDetails.Status,
+                ReporterId = postReportDetails.ReporterId,
+                ReportedPostId = postReportDetails.ReportedPostId
+
+            };
+
+            return View(response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, NewPostReportVM post)
+        {
+
+            if (id != post.Id) return View("NotFound");
+
+            if (!ModelState.IsValid)
+            {
+                return View(post);
+            }
+
+            await _service.UpdatePostReportAsync(post);
+
+            return RedirectToAction("SelfReports", "Account");
         }
     }
 }
