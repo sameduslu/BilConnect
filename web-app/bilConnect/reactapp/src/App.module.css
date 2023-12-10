@@ -1,28 +1,29 @@
 #root {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 100%;
-    margin: 0px;
-    padding:0px;
+    margin: 0;
+    padding: 0;
     text-align: center;
     position: relative;
 }
 
 .header {
-    display: inline-flex;
+    display: flex;
     height: 50px;
     align-items: center;
     background-color: white;
     position: relative;
-    min-width: 100%;
+    width: 100%;
     margin-bottom: 0;
 }
 
 .logo {
-
 }
 
 .SearchBar {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     margin-left: auto;
     margin-right: 15px;
@@ -36,38 +37,28 @@
 }
 
 .animatedBlockWrapper {
-    margin-top: -35px;
     display: flex;
+    justify-content: center;
     align-items: center;
     overflow: hidden;
-    height: 600px;
+    height: 600px; /* Use viewport height to cover the entire screen */
     background-color: #e8e4e4;
 }
 
 .animatedImageWrapper {
-    width: 70%;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
 .animatedImage {
     transition: opacity 0.5s ease-out;
-    align-items: center;
     display: block;
-    margin: 50px 200px 50px 50px;
-    max-width: 70%;
-    max-height: 500px;
+    object-fit: cover; /* Cover the entire container without stretching */
+    width: 100%;
+    height: 100%;
 }
 
-.information {
-    width: 30%;
-    padding-left: 10px;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: black;
-}
 
 .fade {
     opacity: 0;
@@ -77,10 +68,11 @@
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
+
 .navigationButtons {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     margin-top: 10px;
 }
 
@@ -94,9 +86,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center; /* Center the posts horizontally */
+    justify-content: center;
+    /* Center the posts horizontally */
     gap: 45px;
 }
+
 .navigationButton {
     cursor: pointer;
     background: transparent;
@@ -106,5 +100,27 @@
     padding: 8px 16px;
     border-radius: 4px;
     outline: none;
-    margin: 0 5px; 
+    margin: 0 5px;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background-color: transparent;
+    border: 2px solid black; /* Border color */
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.activeDot {
+    background-color: black;
+    border-color: black; /* Border color for the active dot */
+}
+
+.centeredContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Optional: This ensures the container takes the full height of the viewport */
 }

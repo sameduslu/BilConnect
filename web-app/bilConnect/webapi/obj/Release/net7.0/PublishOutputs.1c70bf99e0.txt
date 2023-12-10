@@ -1,11 +1,13 @@
-C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\assets\\index-add93e20.js
-C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\assets\\index-e5cf10cc.css
+C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\assets\\index-32a5afcc.js
+C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\assets\\index-b39f0194.css
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\\BILCONNECT_LOGO.png
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\\index.html
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\\vite.svg
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\webapi.exe
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\appsettings.json
+C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\package-lock.json
+C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\package.json
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\webapi.dll
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\webapi.runtimeconfig.json
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\webapi.pdb

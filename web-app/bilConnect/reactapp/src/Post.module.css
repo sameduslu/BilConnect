@@ -1,27 +1,29 @@
-
 .post {
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
-    border-radius: 40px;
+    border-radius: 8px; /* Adjust border-radius for a softer look */
     overflow: hidden;
     margin: 10px;
     width: 400px !important; /* Set a fixed width for the post, adjust as needed */
     height: 560px;
+    background: #e8e4e4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust box shadow for a subtle effect */
 }
 
 .postImage {
-    width: 100%; /* Take up the entire width of the post */
-    height: 70%; /* Set a fixed height for the image, adjust as needed */
+    width: 100%;
+    height: 60%; /* Adjust the height based on your preference */
+    object-fit: cover;
 }
 
 .postContent {
-    padding: 10px;
+    padding: 15px; /* Increase padding for better spacing */
 }
 
 .postTitle {
-    color: #555;
-    font-size: 18px;
+    color: #333;
+    font-size: 20px; /* Slightly increase font size for better readability */
+    font-weight: 600;
     margin-bottom: 5px;
 }
 
@@ -33,4 +35,5 @@
 .postDescription {
     font-size: 14px;
     color: #555;
+    margin-top: 5px;
 }
