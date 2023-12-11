@@ -5,8 +5,9 @@ using Bilconnect_First_Version.data;
 using BilConnect.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using BilConnect.data.Services;
 using BilConnect.Data.Services;
+using BilConnect.Data.Services.PostServices;
+using BilConnect.Data.Services.ReportServices;
 
 var builder = WebApplication.CreateBuilder(args);
 

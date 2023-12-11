@@ -1,4 +1,6 @@
 ﻿using BilConnect.Models;
+using BilConnect.Models.PostModels;
+using BilConnect.Models.ReportModels;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -12,6 +14,7 @@ namespace BilConnect.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -24,19 +27,20 @@ namespace BilConnect.Data
                 .OnDelete(DeleteBehavior.Restrict); // Prevent cascading delete
 
             modelBuilder.Entity<PostReport>()
-                    .HasOne(pr => pr.ReportedPost)
-                    .WithMany() // or .WithOne() if that's your model
-                    .HasForeignKey(pr => pr.ReportedPostId)
-                    .OnDelete(DeleteBehavior.Cascade);
+                .HasOne(pr => pr.ReportedPost)
+                .WithMany() // or .WithOne() if that's your model
+                .HasForeignKey(pr => pr.ReportedPostId)
+                .OnDelete(DeleteBehavior.Cascade);
 
-
-
+            // Configure the SellingPost to be a separate table
+            modelBuilder.Entity<SellingPost>().ToTable("SellingPosts");
         }
-    
-
 
         public DbSet<Post> Posts { get; set; }
+        public DbSet<SellingPost> SellingPosts { get; set; } 
         public DbSet<PostReport> PostReports { get; set; }
 
+        
     }
+
 }
