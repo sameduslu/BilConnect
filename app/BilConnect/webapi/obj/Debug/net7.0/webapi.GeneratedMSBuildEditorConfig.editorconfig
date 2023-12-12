@@ -1,0 +1,37 @@
+<<<<<<< HEAD:web-app/bilConnect/webapi/obj/Debug/net7.0/webapi.GeneratedMSBuildEditorConfig.editorconfig
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = webapi
+build_property.RootNamespace = webapi
+build_property.ProjectDir = C:\Users\90541\Documents\Bilkent-Connect\web-app\bilConnect\webapi\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\90541\Documents\Bilkent-Connect\web-app\bilConnect\webapi
+build_property._RazorSourceGeneratorDebug = 
+=======
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = webapi
+build_property.RootNamespace = webapi
+build_property.ProjectDir = C:\Users\celal\Documents\Bilkent University\CS319\BilConnect\app\BilConnect\webapi\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\celal\Documents\Bilkent University\CS319\BilConnect\app\BilConnect\webapi
+build_property._RazorSourceGeneratorDebug = 
+>>>>>>> 863eac4968fe2b090f5a0b3351659855848852d2:app/BilConnect/webapi/obj/Debug/net7.0/webapi.GeneratedMSBuildEditorConfig.editorconfig
