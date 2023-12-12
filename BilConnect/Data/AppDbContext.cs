@@ -31,6 +31,11 @@ namespace BilConnect.Data
                 .WithMany() // or .WithOne() if that's your model
                 .HasForeignKey(pr => pr.ReportedPostId)
                 .OnDelete(DeleteBehavior.Cascade);
+          
+            modelBuilder.Entity<Chat>()
+                .HasOne(c => c.User)
+                .WithMany(u => u.Chats)
+                .HasForeignKey(c => c.UserId);
 
             // Configure the SellingPost to be a separate table
             modelBuilder.Entity<SellingPost>().ToTable("SellingPosts");
@@ -40,7 +45,9 @@ namespace BilConnect.Data
         public DbSet<SellingPost> SellingPosts { get; set; } 
         public DbSet<PostReport> PostReports { get; set; }
 
-        
+        public DbSet<Chat> Chats { get; set; }
+
+
     }
 
 }

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Chat>
+
+@{
+    ViewData["Title"] = "Chats";
+}
+
+@*Define View Data*@
+
+@* Write Code *@
+
+<div class="row">
+    @if (Model!=null&&  Model.Any())
+        @foreach (var chatItem in Model)
+        {
+            <div class="row g-0">
+                <div class="col-md-12">
+                    <a class="btn btn-success btn-lg" asp-action="Room" asp-controller="Chats" asp-route-id="@chatItem.Id" aria-label="GO TO CHAT: @chatItem.Id">
+                        <i class="bi bi-eye-fill align-middle"></i> GO TO CHAT: @chatItem.Id
+                    </a>
+                </div>
+            </div>
+        }
+    else
+    {
+        <div class="row g-0">
+            <div class="col-md-12">
+                <p>
+                    <strong>No chats available.</strong>
+                </p>
+            </div>
+        </div>
+
+    }
+</div>
+

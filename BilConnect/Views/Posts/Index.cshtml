@@ -51,9 +51,9 @@
                             <a class="btn btn-success btn-lg" asp-action="Details" asp-route-id="@item.Id" aria-label="Show Details">
                                 <i class="bi bi-eye-fill align-middle"></i> Show Details
                             </a>
-                            <a class="btn btn-warning btn-lg" aria-label="Buy Item">
-                                <i class="bi bi-cart-fill align-middle"></i> Buy for @item.Price TL
-                            </a>
+                             <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Buy Item">
+                                    <i class="bi bi-cart-fill align-middle"></i> Buy for @item.Price TL
+                             </a>
                         </div>
                     </div>
                 </div>

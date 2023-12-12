@@ -150,7 +150,10 @@ namespace BilConnect.Controllers.PostsControllers
 
             return RedirectToAction("UpdatePostReportsStatus", "PostReports", new { postId = id });
         }
-
-
+        public async Task<IActionResult> BuyItem(int id)
+        {
+            var postDetails = await _service.GetPostByIdAsync(id);
+            return RedirectToAction("Index", "Chats", new { postId = postDetails.Id, postOwner = postDetails.UserId });
+        }
     }
 }

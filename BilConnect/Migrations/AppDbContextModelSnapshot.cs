@@ -91,6 +91,32 @@ namespace BilConnect.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("BilConnect.Models.Chat", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ReceiverId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RelatedPostId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Chats");
+                });
+
             modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>
                 {
                     b.Property<int>("Id")
@@ -302,6 +328,17 @@ namespace BilConnect.Migrations
                     b.HasBaseType("BilConnect.Models.PostModels.Post");
 
                     b.ToTable("SellingPosts", (string)null);
+                });
+
+            modelBuilder.Entity("BilConnect.Models.Chat", b =>
+                {
+                    b.HasOne("BilConnect.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>

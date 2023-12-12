@@ -13,5 +13,7 @@ namespace BilConnect.Models
         public List<Post>? Posts { get; set; }
 
         public List<PostReport>? PostReports { get; set; }
+
+        public List<Chat>? Chats { get; set; }
     }
 }

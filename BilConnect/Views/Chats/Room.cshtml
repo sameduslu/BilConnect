@@ -1,0 +1,50 @@
+﻿@model Chat
+@{
+    ViewData["Title"] = "Chat Room";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div id="messageContainer" style="border: 1px solid #ccc; padding: 10px; max-height: 200px; overflow-y: auto;"></div>
+    <input type="text" id="txtMessage" placeholder="Type your message...">
+    <button id="btnSendMessage" type="button">Send Message From @Model.UserId to @Model.ReceiverId for the post @Model.RelatedPostId</button>   
+</div>
+@section Scripts {
+    <script>
+        const connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").configureLogging(signalR.LogLevel.Information).build();
+
+        async function start() {
+            try {
+                await connection.start();
+                console.log("SignalR connected.");
+            }
+            catch (err) {
+                console.error(err);
+                setTimeOut(start, 5000);
+            }
+        }
+        connection.onclose(async () => {
+            await start();
+        });
+
+        start();
+        $('#btnSendMessage').click(function () {
+            try {
+                const message = $('#txtMessage').val();
+                const userId = '@Model.UserId';
+                connection.invoke("SendMessage", userId, message);
+            } 
+            catch (err) {
+                console.error(err);
+            }
+        });
+        $().ready(function () {
+            connection.on("ReceiveMessage", (user, message) => {
+                console.log(user, message);
+                const messageContainer = $('#messageContainer');
+                messageContainer.append(`<p><strong>${user}:</strong> ${message}</p>`);
+                messageContainer.scrollTop(messageContainer.prop("scrollHeight"));
+            });
+        });
+    </script>
+}
