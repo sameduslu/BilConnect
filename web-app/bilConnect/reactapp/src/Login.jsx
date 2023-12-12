@@ -1,6 +1,8 @@
+// Login.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import styles from './Login.module.css';
+import './animation.css'
 
 const Login = () => {
     const [isSignIn, setIsSignIn] = useState(true);
@@ -24,79 +26,81 @@ const Login = () => {
     };
 
     return (
-        <div className="main">
-            <div className={`container ${isSignIn ? 'a-container' : 'b-container'}`}>
+        <div className={styles.main}>
+            <div className={`${styles.container} ${isSignIn ? styles.aContainer : styles.bContainer}`}>
                 <form
-                    className="form"
-                    id={isSignIn ? 'a-form' : 'b-form'}
+                    className={styles.form}
+                    id={isSignIn ? styles.aForm : styles.bForm}
                     method=""
                     action=""
                     onSubmit={handleSubmit}
                 >
-                    <h2 className="form_title title">
+                    <h2 className={`${styles.formTitle} ${styles.title}`}>
                         {isSignIn ? 'Sign in' : 'Create Account'}
                     </h2>
-                    <input className="form__input" type="text" placeholder="Email" />
+                    <input className={styles.formInput} type="text" placeholder="Email" name="email" />
                     {isSignIn ? (
                         <>
-                            
                             <input
-                                className="form__input"
+                                className={styles.formInput}
                                 type="password"
                                 placeholder="Password"
                             />
-                            <a className="form__link" href="#">
+                            <a className={styles.formLink} href="#">
                                 Forgot your password?
                             </a>
                         </>
                     ) : (
                         <>
-                            <input className="form__input" type="text" placeholder="Name" />
+                            <input className={styles.formInput} type="text" placeholder="Name" name="name"/>
                             <input
-                                className="form__input"
+                                className={styles.formInput}
                                 type="password"
-                                placeholder="Password"
+                                    placeholder="Password"
+                                name="password"
                             />
                         </>
                     )}
-                    <button className="form__button button submit" type="submit">
+                    <button className={`${styles.formButton} ${styles.button} ${styles.submit}`} type="submit">
                         {isSignIn ? 'SIGN IN' : 'SIGN UP'}
                     </button>
                 </form>
             </div>
 
-            <div className="switch" id="switch-cnt">
-                <div className="switch__circle"></div>
+            <div className={`${styles.switch}`} id="switch-cnt">
+                <div className={styles.switch__circle}></div>
                 <div
-                    className={`switch__circle switch__circle--t ${isSignIn ? '' : 'is-hidden'
-                        }`}
+                    className={`${styles.switch__circle} ${styles.switch__circular}`}
                 ></div>
-                <div
-                    className={`switch__container ${isSignIn ? 'is-txl' : 'is-txr'
-                        }`}
-                    id="switch-c1"
-                >
-                    <h2 className="switch__title title">Join Us!</h2>
-                    <button
-                        className="switch__button button switch-btn"
-                        onClick={switchForms}
+                {isSignIn ? (
+                    <div
+                        className={`${styles.switch__container}`}
+                        id="switch-c1"
+                        style={{ animation: `fade-out var(--transition)` }}
                     >
-                        SIGN UP
-                    </button>
-                </div>
-
-                <div
-                    className={`switch__container ${isSignIn ? 'is-txr' : ''}`}
-                    id="switch-c2"
-                >
-                    <h2 className="switch__title title">Welcome!</h2>
-                    <button
-                        className="switch__button button switch-btn"
-                        onClick={switchForms}
-                    >
-                        SIGN IN
-                    </button>
-                </div>
+                        <h2 className={`${styles.switch__title} ${styles.title}`}>Join Us!</h2>
+                        <button
+                            className={`${styles.switch__button} ${styles.button} ${styles.switchBtn}`}
+                            onClick={switchForms}
+                        >
+                            SIGN UP
+                        </button>
+                    </div>
+                ) : (
+                        <div
+                            className={`${styles.switch__container}`}
+                            id="switch-c1"
+                            style={{ animation: `fade-in var(--transition)` }}
+                        >
+                        <h2 className={`${styles.switch__title} ${styles.title}`}>Welcome!</h2>
+                        <button
+                            className={`${styles.switch__button} ${styles.button} ${styles.switchBtn}`}
+                            onClick={switchForms}
+                        >
+                            SIGN IN
+                        </button>
+                    </div>
+                )}
             </div>
         </div>
     );

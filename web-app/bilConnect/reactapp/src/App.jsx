@@ -5,6 +5,7 @@ import SearchBar from './SearchBar.jsx';
 import ActionsMenu from './ActionsMenu.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Post from './Post.jsx';
+import 'normalize.css';
 
 export default class App extends Component {
     state = {
@@ -91,7 +92,7 @@ export default class App extends Component {
     };
 
     render() {
-        const { currentIndex, isTransitioning, isContentVisible, isEntered=false } = this.state;
+        const { currentIndex, isTransitioning, isContentVisible, isEntered = false } = this.state;
         const dots = Array.from({ length: this.data.length }, (_, index) => (
             <span
                 key={index}
@@ -99,18 +100,22 @@ export default class App extends Component {
                 onClick={() => this.handleDotClick(index)}
             />
         ));
+
         return (
             <Router>
                 <Routes>
                     {!this.state.isEntered && (
-                        <Route path="/" element={<div className={styles.centeredContainer}><LoginPage onLogin={this.handleLogin} /></div>} />
+                        <Route
+                            path="/"
+                            element={<div className={`${styles.centeredContainer}`}><LoginPage onLogin={this.handleLogin} /></div>}
+                        />
                     )}
                     <Route
                         path="/main"
                         element={
                             <div className="ms-Grid" dir="ltr">
                                 <div className="ms-Grid-row">
-                                    <div className={styles.header}>
+                                    <div className={`${styles.header}`}>
                                         <button
                                             type="button"
                                             onClick={() => window.location.href = '/main'}
@@ -121,46 +126,45 @@ export default class App extends Component {
                                                 src={
                                                     'https://github.com/Murat-Cagri/bilconnectImages/blob/main/BILCONNECT_LOGO.png?raw=true'
                                                 }
-                                                className={styles.logo}
+                                                className={`${styles.logo}`}
                                             />
                                         </button>
-                                        <div className={styles.SearchBar}>
+                                        <div className={`${styles.SearchBar}`}>
                                             <SearchBar
                                                 isContentVisible={this.state.isContentVisible}
                                                 openTaskbar={this.openTaskbar}
                                             />
                                         </div>
-                                        <div className={styles.actionsMenu}>
-                                            {!this.state.isContentVisible && <ActionsMenu className={styles.actionsMenu} />}
+                                        <div className={`${styles.actionsMenu}`}>
+                                            {!this.state.isContentVisible && <ActionsMenu className={`${styles.actionsMenu}`} />}
                                         </div>
                                     </div>
-                                    <div className={styles.animatedBlockWrapper}>
-                                        <div className={styles.animatedImageWrapper}>
+                                    <div className={`${styles.animatedBlockWrapper}`}>
+                                        <div className={`${styles.animatedImageWrapper}`}>
                                             <img
                                                 src={this.data[currentIndex].image}
                                                 alt="Post Image"
-                                                className={`${styles.animatedImage} ${isTransitioning ? styles.fade : ''
-                                                    }`}
+                                                className={`${styles.animatedImage} ${isTransitioning ? styles.fade : ''}`}
                                             />
                                         </div>
                                     </div>
-                                    <div className={styles.navigationButtons}>
+                                    <div className={`${styles.navigationButtons}`}>
                                         <button
-                                            className={styles.navigationButton}
+                                            className={`${styles.navigationButton}`}
                                             onClick={() => this.handleAnimateClick('prev')}
                                         >
                                             {'<'}
                                         </button>
                                         {dots}
                                         <button
-                                            className={styles.navigationButton}
+                                            className={`${styles.navigationButton}`}
                                             onClick={() => this.handleAnimateClick('next')}
                                         >
                                             {'>'}
                                         </button>
                                     </div>
                                 </div>
-                                <div className={styles.postsContainer}>
+                                <div className={`${styles.postsContainer}`}>
                                     <Post
                                         image="https://basakgazetesi.com/resimler/2022-8/13/67785517318056.jpg"
                                         title="MURAT ÇAĞRI KARA"

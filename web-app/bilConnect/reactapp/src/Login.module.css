@@ -1,3 +1,5 @@
+/* Login.module.css */
+@import './animation.css';
 :root {
     --bg: #EDF2F0;
     --neu-1: #ecf0f3;
@@ -9,10 +11,8 @@
     --transition: 1.25s;
 }
 
-body,
-input,
-button,
-/* Add more elements as needed */
+
+*,
 *::after,
 *::before {
     margin: 0;
@@ -21,45 +21,35 @@ button,
     user-select: none;
 }
 
-/* Generic */
-body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    background-color: var(--neu-1);
-    color: var(--gray);
-}
 
 .main {
+    display: flex;
     position: relative;
     width: 1000px;
     min-width: 1000px;
-    min-height: 600px;
-    height: 600px;
+    min-height: 550px;
+    height: 550px;
     padding: 25px;
     background-color: var(--neu-1);
     box-shadow: 10px 10px 10px var(--neu-2), -10px -10px 10px var(--white);
     border-radius: 12px;
     overflow: hidden;
+    color: black;
 
     @media (max-width: 1200px) {
-        transform: scale(.7);
+        transform: scale(0.7);
     }
 
     @media (max-width: 1000px) {
-        transform: scale(.6);
+        transform: scale(0.6);
     }
 
     @media (max-width: 800px) {
-        transform: scale(.5);
+        transform: scale(0.5);
     }
 
     @media (max-width: 600px) {
-        transform: scale(.4);
+        transform: scale(0.4);
     }
 }
 
@@ -69,6 +59,7 @@ body {
     align-items: center;
     position: absolute;
     top: 0;
+    left: 375px;
     width: 600px;
     height: 100%;
     padding: 25px;
@@ -85,24 +76,18 @@ body {
     height: 100%;
 }
 
-.form__icon {
-    object-fit: contain;
-    width: 30px;
-    margin: 0 5px;
-    opacity: .5;
-    transition: .15s;
+.formTitle {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 3;
+    color: var(--black);
 }
 
-    .form__icon:hover {
-        opacity: 1;
-        transition: .15s;
-        cursor: pointer;
-    }
-
-.form__input {
+.formInput {
     width: 350px;
     height: 40px;
     margin: 4px 0;
+    color: black;
     padding-left: 25px;
     font-size: 13px;
     letter-spacing: .15px;
@@ -115,35 +100,16 @@ body {
     box-shadow: inset 2px 2px 4px var(--neu-2), inset -2px -2px 4px var(--white);
 }
 
-    .form__input:focus {
+    .formInput:focus {
         box-shadow: inset 4px 4px 4px var(--neu-2), inset -4px -4px 4px var(--white);
     }
 
-.form__span {
-    margin-top: 30px;
-    margin-bottom: 12px;
-}
-
-.form__link {
+.formLink {
     color: var(--black);
     font-size: 15px;
     margin-top: 25px;
     border-bottom: 1px solid var(--gray);
     line-height: 2;
-}
-
-.title {
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 3;
-    color: var(--black);
-}
-
-.description {
-    font-size: 14px;
-    letter-spacing: .25px;
-    text-align: center;
-    line-height: 1.6;
 }
 
 .button {
@@ -166,6 +132,7 @@ body {
     left: calc(100% - 600px);
 }
 
+
 .b-container {
     left: calc(100% - 600px);
     z-index: 0;
@@ -186,6 +153,7 @@ body {
     background-color: var(--neu-1);
     overflow: hidden;
     box-shadow: 4px 4px 10px var(--neu-2), -4px -4px 10px var(--white);
+
 }
 
 .switch__circle {
@@ -200,7 +168,7 @@ body {
     transition: var(--transition);
 }
 
-.switch__circle--t {
+.switch__circular {
     top: -30%;
     left: 60%;
     width: 300px;
@@ -215,7 +183,8 @@ body {
     position: absolute;
     width: 450px;
     padding: 50px 55px;
-    transition: var(--transition);
+    z-index: 1;
+    opacity: 1;
 }
 
 .switch__button {
@@ -236,10 +205,6 @@ body {
     }
 
 
-.is-txr {
-    transform: translateX(100%);
-}
-
 .is-z200 {
     z-index: 200;
     transition: var(--transition);
@@ -252,16 +217,5 @@ body {
     transition: var(--transition);
 }
 
-.is-gx {
-    animation: is-gx var(--transition);
-}
 
-@keyframes is-gx {
-    0%, 10%, 100% {
-        width: 400px;
-    }
 
-    30%, 50% {
-        width: 500px;
-    }
-}
