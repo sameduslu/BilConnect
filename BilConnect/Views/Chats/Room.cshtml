@@ -2,12 +2,95 @@
 @{
     ViewData["Title"] = "Chat Room";
 }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
+    .text-center {
+        text-align: center;
+        margin: 50px auto;
+        max-width: 600px;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #007bff;
+    }
+
+    #messageContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: 1px solid #ccc;
+        padding: 10px;
+        max-height: 200px;
+        overflow-y: auto;
+        margin-bottom: 20px;
+    }
+
+    .message {
+        margin-bottom: 10px;
+        padding: 8px;
+        border-radius: 8px;
+        max-width: 80%;
+    }
+
+    .sender {
+        background-color: #007bff;
+        color: #fff;
+        align-self: flex-end;
+    }
+
+    .receiver {
+        background-color: #eee;
+        color: #333;
+        align-self: flex-start;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+</style>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <div id="messageContainer" style="border: 1px solid #ccc; padding: 10px; max-height: 200px; overflow-y: auto;"></div>
+    <h1>Chat for @Model.RelatedPostId</h1>
+    <div id="messageContainer">
+        @if (Model.Messages != null)
+        @foreach (var message in Model.Messages)
+        {
+            <div class="message sender">@message.Content</div>
+        }
+    </div>
     <input type="text" id="txtMessage" placeholder="Type your message...">
-    <button id="btnSendMessage" type="button">Send Message From @Model.UserId to @Model.ReceiverId for the post @Model.RelatedPostId</button>   
+    <button id="btnSendMessage" type="button">Send Message From @Model.UserId to @Model.ReceiverId for the post @Model.RelatedPostId</button>
 </div>
 @section Scripts {
     <script>
@@ -30,9 +113,24 @@
         start();
         $('#btnSendMessage').click(function () {
             try {
-                const message = $('#txtMessage').val();
+                const message = $('#txtMessage').val().trim(); // Trim to remove leading and trailing whitespaces
+                if (message === '') {
+                    // If the message is blank, do not send
+                    return;
+                }
                 const userId = '@Model.UserId';
                 connection.invoke("SendMessage", userId, message);
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Create", "Messages")',
+                    data: { 
+                        content : message,
+                        userId : '@Model.UserId',
+                        chatId : @Model.Id
+                    },
+                });
+                // Clear the text box
+                $('#txtMessage').val('');
             } 
             catch (err) {
                 console.error(err);
@@ -42,9 +140,15 @@
             connection.on("ReceiveMessage", (user, message) => {
                 console.log(user, message);
                 const messageContainer = $('#messageContainer');
-                messageContainer.append(`<p><strong>${user}:</strong> ${message}</p>`);
+                const newMessage = `<div class="message sender">${message}</div>`;
+                messageContainer.append(newMessage);
                 messageContainer.scrollTop(messageContainer.prop("scrollHeight"));
             });
+        });
+        document.getElementById("txtMessage").addEventListener("keyup", function (event) {
+            if (event.key === "Enter") {
+                document.getElementById("btnSendMessage").click();
+            }
         });
     </script>
 }

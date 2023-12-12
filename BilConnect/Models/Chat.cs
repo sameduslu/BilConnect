@@ -10,15 +10,20 @@ namespace BilConnect.Models
         [Key]
         public int Id { get; set; }
 
-        //Relationshpis
-        public string UserId { get; set; }
-        [ForeignKey("UserId")] 
-        public string ReceiverId { get; set; }
-        //[ForeignKey("ReceiverId")]
+        //Relationships
         public int RelatedPostId { get; set; }
+        [ForeignKey("RelatedPostId")]
+
+        public string UserId { get; set; }
+
+        public string ReceiverId { get; set; }
         // Navigation properties
+        //public virtual List<UserChat>? UserChats { get; set; }
+        public virtual Post? RelatedPost { get; set; }
+        public virtual List<Message>? Messages { get; set;}
+
+        // delete below
         public virtual ApplicationUser? User { get; set; }
-       // public virtual ApplicationUser? Receiver { get; set; }
 
 
     }

@@ -112,9 +112,40 @@ namespace BilConnect.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("RelatedPostId");
+
                     b.HasIndex("UserId");
 
                     b.ToTable("Chats");
+                });
+
+            modelBuilder.Entity("BilConnect.Models.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ChatId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SenderUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChatId");
+
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>
@@ -332,13 +363,32 @@ namespace BilConnect.Migrations
 
             modelBuilder.Entity("BilConnect.Models.Chat", b =>
                 {
+                    b.HasOne("BilConnect.Models.PostModels.Post", "RelatedPost")
+                        .WithMany("Chats")
+                        .HasForeignKey("RelatedPostId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.HasOne("BilConnect.Models.ApplicationUser", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("RelatedPost");
+
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BilConnect.Models.Message", b =>
+                {
+                    b.HasOne("BilConnect.Models.Chat", "Chat")
+                        .WithMany("Messages")
+                        .HasForeignKey("ChatId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Chat");
                 });
 
             modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>
@@ -436,6 +486,16 @@ namespace BilConnect.Migrations
                     b.Navigation("PostReports");
 
                     b.Navigation("Posts");
+                });
+
+            modelBuilder.Entity("BilConnect.Models.Chat", b =>
+                {
+                    b.Navigation("Messages");
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>
+                {
+                    b.Navigation("Chats");
                 });
 #pragma warning restore 612, 618
         }

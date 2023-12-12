@@ -60,8 +60,7 @@ namespace BilConnect.Controllers
         }
         public async Task<IActionResult> Room(int id)
         {
-            var data = await _service.GetByIdAsync(id);
-            System.Diagnostics.Debug.WriteLine(data.Id);
+            var data = await _service.GetChatByIdAsync(id);
             return View(data);
         }
     }

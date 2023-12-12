@@ -25,13 +25,13 @@ namespace BilConnect.Models.PostModels
         public PostStatus PostStatus { get; set; }
 
         //Relationshpis
-
-        //User
         public string UserId { get; set; }
         [ForeignKey("UserId")]
 
-        // Navigation property for User
+
+        // Navigation properties
         public virtual ApplicationUser? User { get; set; }
+        public List<Chat>? Chats { get; set; }
 
     }
 }

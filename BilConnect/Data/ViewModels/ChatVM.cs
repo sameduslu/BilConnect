@@ -8,6 +8,7 @@ namespace BilConnect.Data.ViewModels
     {
         public int Id { get; set; }
         public int RelatedPostId { get; set; }
+        // delete below
         public string ReceiverId { get; set; }
         public string UserId { get; set; }
 
