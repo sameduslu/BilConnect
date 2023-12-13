@@ -42,6 +42,17 @@ namespace BilConnect.Controllers.PostsControllers
             return View(postDetails);
         }
 
+        public async Task<IActionResult> DetailsAfterReport(int id)
+        {
+            var postDetails = await _service.GetPostByIdAsync(id);
+
+            if (postDetails == null)
+            {
+                return View("NotFound");
+            }
+            return View(postDetails);
+        }
+
         // GET: Post/Create
         public async Task<IActionResult> Create()
         {

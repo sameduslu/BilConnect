@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BilConnect")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8210d669dd9dad9b5219b2a4c002aaf47c3f61d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("BilConnect")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BilConnect")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
