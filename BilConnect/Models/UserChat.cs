@@ -11,8 +11,8 @@ namespace BilConnect.Models
         [ForeignKey("UserId")]
         public int ChatId { get; set; }
         [ForeignKey("ChatId")]
-        public Chat Chat { get; set; }
-        public ApplicationUser User { get; set; }
+        public virtual Chat? Chat { get; set; }
+        public virtual ApplicationUser? User { get; set; }
 
     }
 }

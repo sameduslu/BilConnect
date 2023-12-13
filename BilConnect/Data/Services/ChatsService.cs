@@ -4,6 +4,7 @@ using BilConnect.Data.ViewModels;
 using BilConnect.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BilConnect.Data.Services
 {
@@ -20,35 +21,43 @@ namespace BilConnect.Data.Services
         {
             var newChat = new Chat()
             {
-                RelatedPostId = data.RelatedPostId,
-                ReceiverId = data.ReceiverId,
-                UserId = data.UserId
+                RelatedPostId = data.RelatedPostId
             };
             await _context.Chats.AddAsync(newChat);
+            await _context.SaveChangesAsync();
+            var newUserChat1 = new UserChat()
+            {
+                UserId = data.UserId,
+                ChatId = newChat.Id,
+            };
+            var newUserChat2 = new UserChat()
+            {
+                UserId = data.ReceiverId,
+                ChatId = newChat.Id,
+            };
+            await _context.UserChats.AddAsync(newUserChat1);
+            await _context.UserChats.AddAsync(newUserChat2);
             await _context.SaveChangesAsync();
         }
 
         public async Task<Chat> GetChatByIdAsync(int id)
         {
             var chatDetails = _context.Chats
-                  .Include(u => u.User)
+                  .Include(u => u.UserChats)
                   .Include(c => c.Messages)
+                  .Include(c => c.RelatedPost)
                   .FirstOrDefaultAsync(n => n.Id == id);
             return await chatDetails;
         }
-
-        public async Task UpdateChatAsync(ChatVM data)
+        public List<Chat> GetChatsForUser(string userId)
         {
-            var dbChat = await _context.Chats.FirstOrDefaultAsync(n => n.Id == data.Id);
-            if (dbChat != null)
-            {
-                dbChat.RelatedPostId = data.RelatedPostId;
-                dbChat.ReceiverId = data.ReceiverId;
-                dbChat.UserId = data.UserId;
+            var userChats = _context.UserChats
+                .Where(uc => uc.UserId == userId)
+                .Include(uc => uc.Chat)
+                .ToList();
 
-            }
-            await _context.SaveChangesAsync();
-
+            var chatsForUser = userChats.Select(uc => uc.Chat).ToList();
+            return chatsForUser;
         }
     }
 }

@@ -90,7 +90,7 @@
         }
     </div>
     <input type="text" id="txtMessage" placeholder="Type your message...">
-    <button id="btnSendMessage" type="button">Send Message From @Model.UserId to @Model.ReceiverId for the post @Model.RelatedPostId</button>
+    <button id="btnSendMessage" type="button">Send Message for the post @Model.RelatedPostId</button>
 </div>
 @section Scripts {
     <script>
@@ -118,14 +118,14 @@
                     // If the message is blank, do not send
                     return;
                 }
-                const userId = '@Model.UserId';
+                const userId = '@Model.UserChats[0].Id';
                 connection.invoke("SendMessage", userId, message);
                 $.ajax({
                     type: "POST",
                     url: '@Url.Action("Create", "Messages")',
                     data: { 
                         content : message,
-                        userId : '@Model.UserId',
+                        userId: '@Model.UserChats[0].User.FullName',
                         chatId : @Model.Id
                     },
                 });

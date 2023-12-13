@@ -16,39 +16,29 @@ namespace BilConnect.Controllers
 {
     [Authorize(Roles = UserRoles.Admin + "," + UserRoles.User)]
 
-    public class ChatsController : Controller
+    public class UserChatsController : Controller
     {
-        private readonly IChatsService _service;
-        public ChatsController(IChatsService service)
+        private readonly IUserChatsService _service;
+        public UserChatsController(IUserChatsService service)
         {
             _service = service;
         }
         [HttpPost]
         public async Task<IActionResult> Create(int postId, string postOwner)
         {
-            var data = await _service.GetAllAsync(n => n.UserChats);
-            ChatVM chat = new ChatVM
-            {
-                RelatedPostId = postId,
-                ReceiverId = postOwner,
-                UserId = User.FindFirstValue(ClaimTypes.NameIdentifier)
+            UserChatVM vm = new UserChatVM {
+                ChatId = chatId,
+                UserId = userId
             };
-            await _service.AddNewChatAsync(chat);
-            data = await _service.GetAllAsync(n => n.UserChats);   
-            return View(data);
+            await _service.AddNewUserChatAsync(vm);
+            return Json(new { success = true, message = "Data saved successfully" });
         }
         public async Task<IActionResult> Index(int postId, string postOwner)
         {
-
             if (!string.IsNullOrEmpty(postOwner))
                 return await Create(postId, postOwner);
             var chats = _service.GetAllAsync();
             return View(chats);
-        }
-        public async Task<IActionResult> Room(int id)
-        {
-            var data = await _service.GetChatByIdAsync(id);
-            return View(data);
         }
     }
 }

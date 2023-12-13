@@ -39,6 +39,7 @@ builder.Services.AddScoped<IApplicationUsersService, ApplicationUsersService>();
 builder.Services.AddScoped<IPostReportsService, PostReportsService>();
 builder.Services.AddScoped<IChatsService, ChatsService>();
 builder.Services.AddScoped<IMessagesService, MessagesService>();
+builder.Services.AddScoped<IUserChatsService, UserChatsService>();
 
 //Authentication and Authorization
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();

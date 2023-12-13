@@ -188,19 +188,11 @@ namespace BilConnect.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    RelatedPostId = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ReceiverId = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    RelatedPostId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Chats", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Chats_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Chats_Posts_RelatedPostId",
                         column: x => x.RelatedPostId,
@@ -275,6 +267,33 @@ namespace BilConnect.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "UserChats",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ChatId = table.Column<int>(type: "int", nullable: false),
+                    RelatedPostId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserChats", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserChats_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_UserChats_Chats_ChatId",
+                        column: x => x.ChatId,
+                        principalTable: "Chats",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -320,11 +339,6 @@ namespace BilConnect.Migrations
                 column: "RelatedPostId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Chats_UserId",
-                table: "Chats",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Messages_ChatId",
                 table: "Messages",
                 column: "ChatId");
@@ -342,6 +356,16 @@ namespace BilConnect.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Posts_UserId",
                 table: "Posts",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserChats_ChatId",
+                table: "UserChats",
+                column: "ChatId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserChats_UserId",
+                table: "UserChats",
                 column: "UserId");
         }
 
@@ -371,6 +395,9 @@ namespace BilConnect.Migrations
 
             migrationBuilder.DropTable(
                 name: "SellingPosts");
+
+            migrationBuilder.DropTable(
+                name: "UserChats");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

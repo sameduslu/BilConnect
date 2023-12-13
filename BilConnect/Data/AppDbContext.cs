@@ -13,7 +13,9 @@ namespace BilConnect.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
+
         }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,7 +34,7 @@ namespace BilConnect.Data
                 .HasForeignKey(pr => pr.ReportedPostId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-        /*    // Chat - UserChat
+            // Chat - UserChat
             modelBuilder.Entity<UserChat>()
                 .HasOne(uc => uc.Chat)
                 .WithMany(c => c.UserChats)
@@ -44,7 +46,7 @@ namespace BilConnect.Data
                 .HasOne(uc => uc.User)
                 .WithMany(u => u.UserChats)
                 .HasForeignKey(uc => uc.UserId)
-                .OnDelete(DeleteBehavior.Restrict);*/
+                .OnDelete(DeleteBehavior.Restrict);
 
             // Post - Chat
             modelBuilder.Entity<Post>()
@@ -71,6 +73,7 @@ namespace BilConnect.Data
         public DbSet<PostReport> PostReports { get; set; }
         public DbSet<Chat> Chats { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<UserChat> UserChats { get; set; }
 
 
     }

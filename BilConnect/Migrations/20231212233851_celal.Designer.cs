@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231212223316_celal")]
+    [Migration("20231212233851_celal")]
     partial class celal
     {
         /// <inheritdoc />
@@ -102,22 +102,12 @@ namespace BilConnect.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("ReceiverId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("RelatedPostId")
                         .HasColumnType("int");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("RelatedPostId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Chats");
                 });
@@ -222,6 +212,33 @@ namespace BilConnect.Migrations
                     b.HasIndex("ReporterId");
 
                     b.ToTable("PostReports");
+                });
+
+            modelBuilder.Entity("BilConnect.Models.UserChat", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ChatId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("RelatedPostId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChatId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserChats");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -372,15 +389,7 @@ namespace BilConnect.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("BilConnect.Models.ApplicationUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("RelatedPost");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("BilConnect.Models.Message", b =>
@@ -422,6 +431,25 @@ namespace BilConnect.Migrations
                     b.Navigation("ReportedPost");
 
                     b.Navigation("Reporter");
+                });
+
+            modelBuilder.Entity("BilConnect.Models.UserChat", b =>
+                {
+                    b.HasOne("BilConnect.Models.Chat", "Chat")
+                        .WithMany("UserChats")
+                        .HasForeignKey("ChatId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("BilConnect.Models.ApplicationUser", "User")
+                        .WithMany("UserChats")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Chat");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -489,11 +517,15 @@ namespace BilConnect.Migrations
                     b.Navigation("PostReports");
 
                     b.Navigation("Posts");
+
+                    b.Navigation("UserChats");
                 });
 
             modelBuilder.Entity("BilConnect.Models.Chat", b =>
                 {
                     b.Navigation("Messages");
+
+                    b.Navigation("UserChats");
                 });
 
             modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>

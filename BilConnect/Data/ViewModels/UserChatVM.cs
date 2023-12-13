@@ -4,12 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BilConnect.Data.ViewModels
 {
-    public class ChatVM
+    public class UserChatVM
     {
         public int Id { get; set; }
-        public int RelatedPostId { get; set; }
         public string UserId { get; set; }
-        public string ReceiverId { get; set; }
+        public int ChatId { get; set; }
 
     }
 }

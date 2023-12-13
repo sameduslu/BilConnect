@@ -9,7 +9,8 @@ namespace BilConnect.Data.Services
 
         Task<Chat> GetChatByIdAsync(int id);
         Task AddNewChatAsync(ChatVM data);
-        Task UpdateChatAsync(ChatVM data);
+
+        List<Chat> GetChatsForUser(string userId);
 
     }
 }
