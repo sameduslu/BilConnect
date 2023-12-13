@@ -14,6 +14,22 @@
 </style>
 
 
+@functions {
+    private string GetBadgeClass(BilConnect.Data.Enums.PostStatus status) // Replace 'YourEnumType' with the actual type of your enum
+    {
+        switch (status)
+        {
+            case BilConnect.Data.Enums.PostStatus.Available: 
+                return "bg-success";
+            case BilConnect.Data.Enums.PostStatus.Suspended: 
+                return "bg-danger";
+            default:
+                return "bg-secondary"; 
+        }
+    }
+}
+
+
 @*Define View Data*@
 
 @*Write Code*@
@@ -44,7 +60,7 @@
                                 <p class="card-text"><b>Post Date: </b>@item.PostDate.ToString("dd MMM yy")</p>
                                 <p class="card-text">
                                     <b>Status: </b>
-                                    <span class="badge bg-success text-white">Available</span>
+                                    <span class="badge @GetBadgeClass(@item.PostStatus) text-white">@item.PostStatus</span>
                                 </p>
                             </div>
                         </div>
