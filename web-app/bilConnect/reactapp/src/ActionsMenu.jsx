@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import './ActionsMenu.css'; 
 
 const ActionsMenu = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate();
 
     const handleToggleMenu = () => {
         setMenuOpen(!isMenuOpen);
@@ -12,6 +14,11 @@ const ActionsMenu = () => {
         setMenuOpen(false);
     };
 
+    const handleNavigate = (route) => {
+        localStorage.removeItem('isAuthenticated');
+        navigate(route);
+        handleCloseMenu(); // Close the menu after navigating
+    };
     return (
         <div className={`actions-menu ${isMenuOpen ? 'open' : ''}`}>
             <div className="menu-frame" onClick={handleCloseMenu}>
@@ -30,6 +37,10 @@ const ActionsMenu = () => {
                 <div className="action-button favorite-posts" onClick={() => window.location.href = '/favorite-posts'}>
                     <img src="https://github.com/Murat-Cagri/bilconnectImages/blob/main/fovorite_posts.png?raw=true" alt="Favorite Posts" className="button-image" />
                     Favorite Posts
+                </div>
+                <div className="action-button navigate-button" onClick={() => handleNavigate('/')}>
+                    <img src="https://github.com/Murat-Cagri/bilconnectImages/blob/main/logout.png?raw=true" alt="Navigate Button" className="button-logout" />
+                    Logout
                 </div>
             </div>
             <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`} onClick={handleToggleMenu}>

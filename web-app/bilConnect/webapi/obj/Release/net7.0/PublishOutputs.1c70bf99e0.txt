@@ -1,5 +1,5 @@
-C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\assets\\index-32a5afcc.js
-C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\assets\\index-b39f0194.css
+C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\assets\\index-1f2f35ce.js
+C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\assets\\index-8718a81e.css
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\\BILCONNECT_LOGO.png
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\\index.html
 C:\Users\Murat Çağrı Kara\Desktop\2023-2024\CS319\web-app\bilConnect\webapi\obj\Release\net7.0\PubTmp\Out\wwwroot\\vite.svg

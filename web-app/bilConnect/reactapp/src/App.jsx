@@ -1,5 +1,4 @@
 ﻿import React, { Component } from 'react';
-import LoginPage from './Login.jsx';
 import styles from './App.module.css';
 import SearchBar from './SearchBar.jsx';
 import ActionsMenu from './ActionsMenu.jsx';
@@ -17,14 +16,44 @@ export default class App extends Component {
     data = [
         {
             image:
-                'https://cdn.venngage.com/template/thumbnail/small/37de5deb-1ca7-4e60-b254-374b08708817.webp',
+                'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=1380&t=st=1702406519~exp=1702407119~hmac=4c2580ae8ce142a4d706d053b4585be156f9d3de90ff64dda184f41690d62fd0',
         },
         {
             image:
                 'https://images.squarespace-cdn.com/content/v1/5aadc54285ede1bd72181a3a/1521339647830-LKHTH62ZRY5TCGVCW81P/shutterstock_538256848.jpg?format=1500w',
         },
     ];
-
+    post = [
+        {
+            id: 1,
+            image: 'https://basakgazetesi.com/resimler/2022-8/13/67785517318056.jpg',
+            title: 'MURAT ÇAĞRI KARA',
+            price: '$INFINITY',
+            description: 'KARA MURAT İSTANBULDA YAKALANDI!!',
+        },
+        {
+            id: 2,
+            image: 'https://i.ytimg.com/vi/Kowjp9yccXo/maxresdefault.jpg',
+            title: 'DİNAZOR',
+            price: '$999999.99',
+            description: 'BU FIRSAT KAÇMAZZZ!!!!',
+        },
+        {
+            id: 3,
+            image: 'https://www.bestepekoleji.com/wp-content/uploads/ab8bbdd3-099c-4a47-9351-c26500a11e5d-300x225.jpg',
+            title: 'ŞOFÖR MURAT',
+            price: '$INFINITY',
+            quota: '40',
+            traveltime: '17.12.2023',
+            destination: 'hell',
+        },
+        {
+            id: 4,
+            image: 'https://pbs.twimg.com/media/D1IoV5vXgAA7wz_.jpg',
+            title: 'ÖMER BİR DONATION',
+            description: 'ÖMERİN BİR KUSURU VARDI',
+        },
+    ];
     imagePreloader = new Image();
 
     componentDidMount() {
@@ -87,12 +116,8 @@ export default class App extends Component {
         }));
     };
 
-    handleLogin = (username) => {
-        this.isEntered = true;
-    };
-
     render() {
-        const { currentIndex, isTransitioning, isContentVisible, isEntered = false } = this.state;
+        const { currentIndex, isTransitioning} = this.state;
         const dots = Array.from({ length: this.data.length }, (_, index) => (
             <span
                 key={index}
@@ -100,25 +125,14 @@ export default class App extends Component {
                 onClick={() => this.handleDotClick(index)}
             />
         ));
-
         return (
-            <Router>
-                <Routes>
-                    {!this.state.isEntered && (
-                        <Route
-                            path="/"
-                            element={<div className={`${styles.centeredContainer}`}><LoginPage onLogin={this.handleLogin} /></div>}
-                        />
-                    )}
-                    <Route
-                        path="/main"
-                        element={
+            
                             <div className="ms-Grid" dir="ltr">
                                 <div className="ms-Grid-row">
                                     <div className={`${styles.header}`}>
                                         <button
                                             type="button"
-                                            onClick={() => window.location.href = '/main'}
+                                            onClick={() => <script type="module" src="/src/main.jsx"></script>}
                                             style={{ background: 'transparent', border: 'none', outline: 'none' }}
                                         >
                                             <img
@@ -164,31 +178,10 @@ export default class App extends Component {
                                         </button>
                                     </div>
                                 </div>
-                                <div className={`${styles.postsContainer}`}>
-                                    <Post
-                                        image="https://basakgazetesi.com/resimler/2022-8/13/67785517318056.jpg"
-                                        title="MURAT ÇAĞRI KARA"
-                                        price="$INFINITY"
-                                        description="KARA MURAT İSTANBULDA YAKALANDI!!"
-                                    />
-                                    <Post
-                                        image="https://i.ytimg.com/vi/Kowjp9yccXo/maxresdefault.jpg"
-                                        title="DİNAZOR"
-                                        price="$999999.99"
-                                        description="BU FIRSAT KAÇMAZZZ!!!!"
-                                    />
-                                    <Post
-                                        image="https://www.bestepekoleji.com/wp-content/uploads/ab8bbdd3-099c-4a47-9351-c26500a11e5d-300x225.jpg"
-                                        title="Tarihten Murat"
-                                        price="$INFINITY"
-                                        description="BESTEPE KOLEJİ SÜRÜM 19 YAŞ!!"
-                                    />
+                                <div>
+                                    <Post posts={ this.post } />
                                 </div>
                             </div>
-                        }
-                    />
-                </Routes>
-            </Router>
         );
     }
 }

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@mui/styles": "^5.15.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.8.1"
   }

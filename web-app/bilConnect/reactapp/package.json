@@ -11,7 +11,12 @@
     "predev": "node aspnetcore-https.js"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@fluentui/react": "^8.112.8",
+    "@mui/icons-material": "^5.15.0",
+    "@mui/material": "^5.15.0",
+    "@mui/styles": "^5.15.0",
     "framer-motion": "^10.16.5",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.8.1",

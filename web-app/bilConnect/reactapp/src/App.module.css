@@ -7,6 +7,7 @@
     padding: 0;
     text-align: center;
     position: relative;
+    background-color: white;
 }
 
 .header {
@@ -82,14 +83,6 @@
     align-items: center;
 }
 
-.postsContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    /* Center the posts horizontally */
-    gap: 45px;
-}
 
 .navigationButton {
     cursor: pointer;
@@ -102,12 +95,18 @@
     outline: none;
     margin: 0 5px;
 }
+    .navigationButton:active, .navigationButton:focus {
+        outline: none;
+        border: none;
+    }
+
+
 
 .dot {
-    width: 4px;
-    height: 4px;
+    width: 8px;
+    height: 8px;
     background-color: transparent;
-    border: 2px solid black; /* Border color */
+    border: 1px solid black; /* Border color */
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
@@ -118,9 +117,3 @@
     border-color: black; /* Border color for the active dot */
 }
 
-.centeredContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Optional: This ensures the container takes the full height of the viewport */
-}

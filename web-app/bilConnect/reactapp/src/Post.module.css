@@ -1,39 +1,37 @@
-.post {
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px; /* Adjust border-radius for a softer look */
-    overflow: hidden;
-    margin: 10px;
-    width: 400px !important; /* Set a fixed width for the post, adjust as needed */
-    height: 560px;
-    background: #e8e4e4;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust box shadow for a subtle effect */
+/* DetailedPostPage.module.css */
+
+.postCard {
+  cursor: pointer;
 }
 
-.postImage {
-    width: 100%;
-    height: 60%; /* Adjust the height based on your preference */
-    object-fit: cover;
+.postCard:hover {
+  transform: scale(1.05);
 }
 
-.postContent {
-    padding: 15px; /* Increase padding for better spacing */
+.overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.postTitle {
-    color: #333;
-    font-size: 20px; /* Slightly increase font size for better readability */
-    font-weight: 600;
-    margin-bottom: 5px;
+.postCard:hover .overlay {
+  opacity: 1;
 }
 
-.postPrice {
-    color: #555;
-    font-weight: bold;
+.overlayButton {
+  background-color: #2196F3;
+  color: white;
+  padding: 12px 24px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.postDescription {
-    font-size: 14px;
-    color: #555;
-    margin-top: 5px;
+.overlayButton:hover {
+  background-color: #1565C0;
 }

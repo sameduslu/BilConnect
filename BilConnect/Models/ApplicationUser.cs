@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using BilConnect.Models.PostModels;
+using BilConnect.Models.ReportModels;
+using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
 namespace BilConnect.Models
@@ -9,5 +11,7 @@ namespace BilConnect.Models
         public string FullName { get; set; }
 
         public List<Post>? Posts { get; set; }
+
+        public List<PostReport>? PostReports { get; set; }
     }
 }

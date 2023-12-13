@@ -1,0 +1,180 @@
+:root {
+    --bg: #181818;
+    --neu-1: #1c1c1c;
+    --neu-2: #141414;
+    --white: #f9f9f9;
+    --gray: #a0a5a8;
+    --black: #f9f9f9;
+    --purple: #4B70E2;
+    --transition: 1.25s;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.main {
+    display: flex;
+    position: relative;
+    width: 1000px;
+    min-width: 1000px;
+    min-height: 550px;
+    height: 550px;
+    padding: 25px;
+    background-color: var(--neu-1); /* Consider using --neu-2 here */
+    box-shadow: 10px 10px 10px var(--neu-2), -10px -10px 10px var(--neu-2);
+    border-radius: 12px;
+    overflow: hidden;
+    color: var(--white);
+    /* ... (media queries) */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 375px;
+    width: 600px;
+    height: 100%;
+    padding: 25px;
+    background-color: var(--neu-1); /* Consider using --neu-2 here */
+    transition: var(--transition);
+}
+
+.formTitle {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 3;
+    color: var(--white);
+}
+
+.formInput {
+    width: 350px;
+    height: 40px;
+    margin: 4px 0;
+    color: var(--white);
+    padding-left: 25px;
+    font-size: 13px;
+    letter-spacing: .15px;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--neu-2);
+    transition: .25s ease;
+    border-radius: 8px;
+    box-shadow: inset 2px 2px 4px var(--neu-1), inset -2px -2px 4px var(--neu-1);
+}
+
+    .formInput:focus {
+        box-shadow: inset 4px 4px 4px var(--neu-1), inset -4px -4px 4px var(--neu-1);
+    }
+
+.formLink {
+    color: var(--white);
+    font-size: 15px;
+    margin-top: 25px;
+    border-bottom: 1px solid var(--gray);
+    line-height: 2;
+}
+
+.button {
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.15px;
+    background-color: var(--purple);
+    color: var(--white);
+    box-shadow: 8px 8px 16px var(--neu-1), -8px -8px 16px var(--neu-1);
+    border: none;
+    outline: none;
+}
+
+.a-container {
+    z-index: 100;
+    left: calc(100% - 600px);
+}
+
+.b-container {
+    left: calc(100% - 600px);
+    z-index: 0;
+}
+
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 370px;
+    padding: 50px;
+    z-index: 200;
+    transition: var(--transition);
+    background-color: var(--neu-1);
+    overflow: hidden;
+    box-shadow: 4px 4px 10px var(--neu-2), -4px -4px 10px var(--neu-2);
+}
+
+.switch__circle {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: var(--neu-1);
+    box-shadow: inset 8px 8px 12px var(--neu-2), inset -8px -8px 12px var(--neu-2);
+    bottom: -60%;
+    left: -60%;
+    transition: var(--transition);
+}
+
+.switch__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 450px;
+    padding: 50px 55px;
+    z-index: 1;
+    opacity: 1;
+}
+
+.switch__button {
+    cursor: pointer;
+}
+
+    .switch__button:hover {
+        box-shadow: 6px 6px 10px var(--neu-2), -6px -6px 10px var(--neu-2);
+        transform: scale(.985);
+        transition: .25s;
+    }
+
+    .switch__button:active,
+    .switch__button:focus {
+        box-shadow: 2px 2px 6px var(--neu-2), -2px -2px 6px var(--neu-2);
+        transform: scale(.97);
+        transition: .25s;
+    }
+
+.is-z200 {
+    z-index: 200;
+    transition: var(--transition);
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: var(--transition);
+}

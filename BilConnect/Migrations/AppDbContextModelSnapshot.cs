@@ -91,7 +91,7 @@ namespace BilConnect.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("BilConnect.Models.Post", b =>
+            modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -110,6 +110,9 @@ namespace BilConnect.Migrations
                     b.Property<DateTime>("PostDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("PostStatus")
+                        .HasColumnType("int");
+
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
@@ -126,6 +129,39 @@ namespace BilConnect.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Posts");
+
+                    b.UseTptMappingStrategy();
+                });
+
+            modelBuilder.Entity("BilConnect.Models.ReportModels.PostReport", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ReportedPostId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ReporterId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReportedPostId");
+
+                    b.HasIndex("ReporterId");
+
+                    b.ToTable("PostReports");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -261,15 +297,41 @@ namespace BilConnect.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("BilConnect.Models.Post", b =>
+            modelBuilder.Entity("BilConnect.Models.PostModels.SellingPost", b =>
+                {
+                    b.HasBaseType("BilConnect.Models.PostModels.Post");
+
+                    b.ToTable("SellingPosts", (string)null);
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>
                 {
                     b.HasOne("BilConnect.Models.ApplicationUser", "User")
                         .WithMany("Posts")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BilConnect.Models.ReportModels.PostReport", b =>
+                {
+                    b.HasOne("BilConnect.Models.PostModels.Post", "ReportedPost")
+                        .WithMany()
+                        .HasForeignKey("ReportedPostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BilConnect.Models.ApplicationUser", "Reporter")
+                        .WithMany("PostReports")
+                        .HasForeignKey("ReporterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ReportedPost");
+
+                    b.Navigation("Reporter");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -323,8 +385,19 @@ namespace BilConnect.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("BilConnect.Models.PostModels.SellingPost", b =>
+                {
+                    b.HasOne("BilConnect.Models.PostModels.Post", null)
+                        .WithOne()
+                        .HasForeignKey("BilConnect.Models.PostModels.SellingPost", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("BilConnect.Models.ApplicationUser", b =>
                 {
+                    b.Navigation("PostReports");
+
                     b.Navigation("Posts");
                 });
 #pragma warning restore 612, 618
