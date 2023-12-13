@@ -32,8 +32,20 @@ namespace BilConnect.Data.Services
         {
             var chatDetails = _context.Chats
                   .Include(u => u.User)
+                  .Include(u => u.Receiver)
                   .Include(c => c.Messages)
+                  .Include(c => c.RelatedPost)
                   .FirstOrDefaultAsync(n => n.Id == id);
+            return await chatDetails;
+        }
+
+        public async Task<List<Chat>> GetAllChatsAsync()
+        {
+            var chatDetails = _context.Chats
+                  .Include(u => u.User)
+                  .Include(u => u.Receiver)
+                  .Include(c => c.Messages)
+                  .Include(c => c.RelatedPost).ToListAsync();
             return await chatDetails;
         }
 

@@ -33,8 +33,9 @@ namespace BilConnect.Data.Services
         {
             var messageDetails = _context.Messages
                   .Include(m => m.Id)
+                  .Include(m => m.Chat)
+                  .Include(m => m.Sender)
                   .FirstOrDefaultAsync(n => n.Id == id);
-
             return await messageDetails;
         }
     }

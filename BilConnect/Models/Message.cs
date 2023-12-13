@@ -15,11 +15,12 @@ namespace BilConnect.Models
         public DateTime Timestamp { get; set; }
 
         public string SenderUserId { get; set; }
-   
+        [ForeignKey("SenderId")]
         public int ChatId { get; set; }
         [ForeignKey("ChatId")]
         
         public virtual Chat? Chat { get; set; }
+        public virtual ApplicationUser? Sender { get; set; }
 
 
     }

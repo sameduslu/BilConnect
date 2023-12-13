@@ -9,14 +9,22 @@
 @* Write Code *@
 
 <div class="row">
-    @if (Model!=null&&  Model.Any())
+    @if (Model != null && Model.Any())
         @foreach (var chatItem in Model)
         {
-            <div class="row g-0">
-                <div class="col-md-12">
-                    <a class="btn btn-success btn-lg" asp-action="Room" asp-controller="Chats" asp-route-id="@chatItem.Id" aria-label="GO TO CHAT: @chatItem.Id">
-                        <i class="bi bi-eye-fill align-middle"></i> GO TO CHAT: @chatItem.Id
-                    </a>
+            <div class="row g-0 chat-item">
+                <div class="col-md-1">
+                    <img src="@chatItem.RelatedPost.ImageURL" alt="Post Image" class="img-fluid rounded-circle chat-item-image">
+                </div>
+                <div class="col-md-11">
+                    <div class="chat-item-content">
+                        <h4>@chatItem.RelatedPost.Title</h4>
+                        <p><strong>Post Owner:</strong> @chatItem.RelatedPost.User.FullName</p>
+                        <a class="btn btn-success btn-lg" asp-action="Room" asp-controller="Chats" asp-route-id="@chatItem.Id" aria-label="GO TO CHAT: @chatItem.Id">
+                            <i class="material-icons align-middle">visibility</i> GO TO CHAT
+                        </a>
+
+                    </div>
                 </div>
             </div>
         }
@@ -29,7 +37,7 @@
                 </p>
             </div>
         </div>
-
     }
 </div>
+
 

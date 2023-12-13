@@ -1,16 +1,17 @@
-﻿@model Chat
+﻿@model ChatViewer
 @{
     ViewData["Title"] = "Chat Room";
 }
 <style>
-    body {
+
+    html, body {
         font-family: Arial, sans-serif;
         background-color: #f8f9fa;
+        height: 100%;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-
     .text-center {
         text-align: center;
         margin: 50px auto;
@@ -34,9 +35,39 @@
         align-items: flex-start;
         border: 1px solid #ccc;
         padding: 10px;
-        max-height: 200px;
+        max-height: 400px;
         overflow-y: auto;
         margin-bottom: 20px;
+    }
+
+
+    #contentContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+    }
+
+    #postInfo {
+        flex: 1; 
+        max-width: 100%; 
+    }
+
+    #chatContainer {
+        flex: 1;
+        max-width: 100%; 
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+
+    #messageContainer::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    #messageContainer::-webkit-scrollbar-thumb {
+        background-color: #007bff;
+        border-radius: 4px;
     }
 
     .message {
@@ -53,8 +84,8 @@
     }
 
     .receiver {
-        background-color: #eee;
-        color: #333;
+        background-color: #333;
+        color: #eee;
         align-self: flex-start;
     }
 
@@ -62,9 +93,14 @@
         width: calc(100% - 22px);
         padding: 10px;
         margin-bottom: 10px;
-        border: 1px solid #ccc;
+        border: 1px solid #007bff; 
         border-radius: 4px;
         box-sizing: border-box;
+        outline: none;
+    }
+
+    input[type="text"]:focus {
+        border-color: #0056b3;
     }
 
     button {
@@ -74,28 +110,68 @@
         padding: 10px 20px;
         border-radius: 4px;
         cursor: pointer;
+        transition: background-color 0.3s ease;
     }
 
-        button:hover {
-            background-color: #0056b3;
-        }
+    button:hover {
+        background-color: #0056b3;
+    }
+
 </style>
 <div class="text-center">
-    <h1>Chat for @Model.RelatedPostId</h1>
-    <div id="messageContainer">
-        @if (Model.Messages != null)
-        @foreach (var message in Model.Messages)
-        {
-            <div class="message sender">@message.Content</div>
-        }
+    <h1>Chat for @Model.RelatedPost.Title</h1>
+    <h2>@Model.RelatedPost.Price TL</h2>
+    <div id="contentContainer">
+        <!-- Left half: Related post information -->
+        <div id="postInfo">
+            <img src="@Model.RelatedPost.ImageURL" alt="Post Image" style="max-width: 100%;">
+            <h2>@Model.RelatedPost.Title</h2>
+            <p>@Model.RelatedPost.Description</p>
+            <p>Posted by: @Model.RelatedPost.User.FullName</p>
+        </div>
+
+        <!-- Right half: Chat messages -->
+        <div id="chatContainer">
+            <div id="messageContainer">
+                @if (Model.Messages != null)
+                {
+                    // Load previous messages from the model
+
+                    @foreach (var message in Model.Messages)
+                    {
+                        // If the user is sender
+                        @if (message.SenderUserId == Model.User.Id)
+                        {
+                            <div class="message sender">
+                                <p>@message.Content</p>
+                                <small class="timestamp">@message.Timestamp.ToString("HH:mm")</small>
+                            </div>
+
+                        }
+                        else // If the user is receiver
+                        {
+                            <div class="message receiver">
+                                <p>@message.Content</p>
+                                <small class="timestamp">@message.Timestamp.ToString("HH:mm")</small>
+                            </div>
+                            
+                        }
+
+                    }
+                }
+            </div>
+            <input type="text" id="txtMessage" placeholder="Type your message...">
+            <button id="btnSendMessage" type="button" class="mdc-button mdc-button--raised mdc-button--dense mdc-ripple-upgraded">
+                <i class="material-icons">send</i>
+            </button>
+        </div>
     </div>
-    <input type="text" id="txtMessage" placeholder="Type your message...">
-    <button id="btnSendMessage" type="button">Send Message From @Model.UserId to @Model.ReceiverId for the post @Model.RelatedPostId</button>
 </div>
 @section Scripts {
     <script>
+       
+        // Connecting to SignalR
         const connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").configureLogging(signalR.LogLevel.Information).build();
-
         async function start() {
             try {
                 await connection.start();
@@ -109,8 +185,13 @@
         connection.onclose(async () => {
             await start();
         });
-
         start();
+        
+        // Scroll to bottom
+        var mc = document.getElementById("messageContainer");
+        mc.scrollTop = mc.scrollHeight;
+        
+        // Send message button
         $('#btnSendMessage').click(function () {
             try {
                 const message = $('#txtMessage').val().trim(); // Trim to remove leading and trailing whitespaces
@@ -118,14 +199,14 @@
                     // If the message is blank, do not send
                     return;
                 }
-                const userId = '@Model.UserId';
+                var userId = '@Model.User.Id';
                 connection.invoke("SendMessage", userId, message);
                 $.ajax({
                     type: "POST",
                     url: '@Url.Action("Create", "Messages")',
                     data: { 
                         content : message,
-                        userId : '@Model.UserId',
+                        userId : userId,
                         chatId : @Model.Id
                     },
                 });
@@ -136,15 +217,46 @@
                 console.error(err);
             }
         });
+
+        // Receive message in real-time
         $().ready(function () {
             connection.on("ReceiveMessage", (user, message) => {
-                console.log(user, message);
+                // Determine if the message is from the current user
+                const isCurrentUser = user === '@Model.User.Id';
+
+                // Create a new message element accordingly
+                function getCurrentTimestamp() {
+                    const now = new Date();
+                    const hours = String(now.getHours()).padStart(2, '0');
+                    const minutes = String(now.getMinutes()).padStart(2, '0');
+                    return `${hours}:${minutes}`;
+                }
+                let newMessage;
+                if (isCurrentUser) {
+                    newMessage = `
+                        <div class="message sender">
+                            <p>${message}</p>
+                            <small class="timestamp">${getCurrentTimestamp()}</small>
+                        </div>`;
+                } else {
+                    newMessage = `
+                        <div class="message receiver">
+                            <p>${message}</p>
+                            <small class="timestamp">${getCurrentTimestamp()}</small>
+                        </div>`;
+                }
+
+                // Add the message to the container
                 const messageContainer = $('#messageContainer');
-                const newMessage = `<div class="message sender">${message}</div>`;
                 messageContainer.append(newMessage);
-                messageContainer.scrollTop(messageContainer.prop("scrollHeight"));
+                
+                // Scroll to bottom
+                var mc = document.getElementById("messageContainer");
+                mc.scrollTop = mc.scrollHeight;
             });
         });
+
+        // Send message by pressing Enter
         document.getElementById("txtMessage").addEventListener("keyup", function (event) {
             if (event.key === "Enter") {
                 document.getElementById("btnSendMessage").click();

@@ -31,15 +31,15 @@ namespace BilConnect.Controllers
         {
             try
             {
+                // Create a new message
                 MessageVM msg = new MessageVM
                 {
                     Content = content,
-                    Timestamp = DateTime.Now,
+                    Timestamp = DateTime.Now.AddHours(3),
                     SenderUserId = userId,
                     ChatId = chatId
                 };
                 await _service.AddNewMessageAsync(msg);
-                System.Diagnostics.Debug.WriteLine("Message saved: " + content);
 
                 // Success
                 return Json(new { success = true, message = "Data saved successfully" });

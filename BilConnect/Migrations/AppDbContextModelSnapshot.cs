@@ -101,7 +101,7 @@ namespace BilConnect.Migrations
 
                     b.Property<string>("ReceiverId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("RelatedPostId")
                         .HasColumnType("int");
@@ -111,6 +111,8 @@ namespace BilConnect.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ReceiverId");
 
                     b.HasIndex("RelatedPostId");
 
@@ -363,17 +365,25 @@ namespace BilConnect.Migrations
 
             modelBuilder.Entity("BilConnect.Models.Chat", b =>
                 {
+                    b.HasOne("BilConnect.Models.ApplicationUser", "Receiver")
+                        .WithMany("ReceiverChats")
+                        .HasForeignKey("ReceiverId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("BilConnect.Models.PostModels.Post", "RelatedPost")
                         .WithMany("Chats")
                         .HasForeignKey("RelatedPostId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("BilConnect.Models.ApplicationUser", "User")
-                        .WithMany()
+                        .WithMany("SenderChats")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("Receiver");
 
                     b.Navigation("RelatedPost");
 
@@ -486,6 +496,10 @@ namespace BilConnect.Migrations
                     b.Navigation("PostReports");
 
                     b.Navigation("Posts");
+
+                    b.Navigation("ReceiverChats");
+
+                    b.Navigation("SenderChats");
                 });
 
             modelBuilder.Entity("BilConnect.Models.Chat", b =>
