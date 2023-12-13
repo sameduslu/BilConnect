@@ -2,7 +2,7 @@
   "dependencies": {
     "apis1": {
       "restored": true,
-      "restoreTime": "2023-11-12T08:11:34.1214785Z"
+      "restoreTime": "2023-12-13T20:57:31.0258841Z"
     }
   },
   "parameters": {
@@ -11,20 +11,15 @@
       "Type": null,
       "Value": "webapi20231112110715"
     },
-    "apis1.resourceGroupLocation": {
-      "Name": "apis1.resourceGroupLocation",
-      "Type": "location",
-      "Value": "germanywestcentral"
+    "apis1.resourceGroupName": {
+      "Name": "apis1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "bilConnect"
     },
     "webapi20231112110715.subscriptionId": {
       "Name": "webapi20231112110715.subscriptionId",
       "Type": "subscription",
       "Value": "e8c3d94b-9a51-48d0-9408-5c1cbb8ed615"
-    },
-    "apis1.resourceGroupName": {
-      "Name": "apis1.resourceGroupName",
-      "Type": "resourceGroup",
-      "Value": "bilConnect"
     },
     "apis1.subscriptionId": {
       "Name": "apis1.subscriptionId",

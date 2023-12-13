@@ -1,8 +1,5 @@
 {
   "dependencies": {
-    "apis1": {
-      "type": "apis"
-    },
     "secrets1": {
       "type": "secrets"
     },
@@ -10,6 +7,9 @@
       "type": "mssql",
       "connectionId": "database_db",
       "dynamicId": null
+    },
+    "apis1": {
+      "type": "apis"
     }
   }
 }
