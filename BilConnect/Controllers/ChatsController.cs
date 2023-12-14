@@ -2,6 +2,7 @@
 using BilConnect.Data.Static;
 using BilConnect.Data.ViewModels;
 using BilConnect.Models;
+using BilConnect.Models.PostModels;
 using Bilconnect_First_Version.data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors.Infrastructure;
@@ -11,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Hosting;
 using System.Security.Claims;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BilConnect.Controllers
 {
@@ -53,7 +55,9 @@ namespace BilConnect.Controllers
                 {
                     RelatedPostId = postId,
                     ReceiverId = postOwner,
-                    UserId = currentUserId
+                    UserId = currentUserId,
+                    SenderLastSeen = DateTime.UtcNow,
+                    ReceiverLastSeen = DateTime.UtcNow,
                 };
 
                 await _service.AddNewChatAsync(chat);
@@ -70,17 +74,45 @@ namespace BilConnect.Controllers
             var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var allChats = await _service.GetAllChatsAsync();
             var userChats = allChats.Where(c => c.UserId == currentUserId || c.ReceiverId == currentUserId);
-            return View(userChats);
+            var sortedChats = userChats.ToList();
+            sortedChats.Sort();
+            var chatViews = new List<ChatViewer>();
+            foreach (var data in sortedChats)
+            {
+                // Use a ChatViewer class to show the chat in a perspective of the current user
+                ChatViewer cv = new ChatViewer();
+                cv.RelatedPost = data.RelatedPost;
+                cv.Messages = data.Messages;
+                cv.Id = data.Id;
+                var lastMessage = (data.Messages != null && data.Messages.Count > 0) ? data.Messages[data.Messages.Count - 1] : null;
+                if (currentUserId == data.UserId)
+                {
+                    cv.User = data.User;
+                    cv.Receiver = data.Receiver;
+                    cv.Unread = lastMessage == null ? true : data.Messages == null || data.Messages.Count == 0 || lastMessage.SenderUserId == data.ReceiverId && lastMessage.Timestamp.CompareTo(data.SenderLastSeen) > 0;
+                }
+                else
+                {
+                    cv.User = data.Receiver;
+                    cv.Receiver = data.User;
+                    cv.Unread = lastMessage == null ? true : data.Messages == null || data.Messages.Count == 0 || lastMessage.SenderUserId == data.UserId && lastMessage.Timestamp.CompareTo(data.ReceiverLastSeen) > 0;
+                }
+                chatViews.Add(cv);
+            }
+
+            return View(chatViews);
         }
         public async Task<IActionResult> Room(int id)
         {
             var data = await _service.GetChatByIdAsync(id);
             var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
+            
             // Use a ChatViewer class to show the chat in a perspective of the current user
             ChatViewer cv = new ChatViewer();
             cv.RelatedPost = data.RelatedPost;
             cv.Messages = data.Messages;
+            cv.Id = data.Id;
+            cv.Unread = false;
             if (currentUserId == data.UserId)
             {
                 cv.User = data.User;
@@ -91,7 +123,25 @@ namespace BilConnect.Controllers
                 cv.User = data.Receiver;
                 cv.Receiver = data.User;
             }
-            cv.Id = data.Id;
+            // Updating last seen of the chat
+            ChatVM vm = new ChatVM
+            {
+                RelatedPostId = data.RelatedPostId,
+                ReceiverId = data.ReceiverId,
+                UserId = data.UserId,
+                Id = data.Id,
+            };
+            if (currentUserId == data.UserId)
+            {
+                vm.SenderLastSeen = DateTime.UtcNow;
+            }
+            if (currentUserId== data.ReceiverId)
+            {
+                vm.ReceiverLastSeen = DateTime.UtcNow;
+            }
+            await _service.UpdateChatAsync(vm);
+
+            // Return ChatViewer
             return View(cv);
         }
     }

@@ -149,7 +149,7 @@
                         @if (message.Timestamp.Date != prevDate)
                         {
                             <div class="message dateLabel">
-                                <small>@message.Timestamp.ToString("dd MMM yyyy")</small>
+                                <small>@message.Timestamp.ToLocalTime().ToString("dd MMM yyyy")</small>
                             </div>
                         }
                         prevDate = message.Timestamp.Date;
@@ -159,7 +159,7 @@
                         {
                             <div class="message sender">
                                 <p>@message.Content</p>
-                                <small class="timestamp">@message.Timestamp.ToString("HH:mm")</small>
+                                <small class="timestamp">@message.Timestamp.ToLocalTime().ToString("HH:mm")</small>
                             </div>
 
                         }
@@ -167,7 +167,7 @@
                         {
                             <div class="message receiver">
                                 <p>@message.Content</p>
-                                <small class="timestamp">@message.Timestamp.ToString("HH:mm")</small>
+                                <small class="timestamp">@message.Timestamp.ToLocalTime().ToString("HH:mm")</small>
                             </div>
                             
                         }

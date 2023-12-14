@@ -1,13 +1,22 @@
-﻿@model IEnumerable<Chat>
+﻿@model IEnumerable<ChatViewer>
 
 @{
     ViewData["Title"] = "Chats";
 }
 
-@*Define View Data*@
+<style>
+    .chat-item-content {
+        background-color: #fff;
+    }
 
-@* Write Code *@
-
+    .unread-dot {
+        width: 10px; /* Adjust the size of the dot as needed */
+        height: 10px;
+        background-color: red; /* Choose the color you want for the unread dot */
+        border-radius: 50%; /* Makes the element circular */
+        display: inline-block; /* Ensures it doesn't break the line */
+    }
+</style>
 <div class="row">
     @if (Model != null && Model.Any())
         @foreach (var chatItem in Model)
@@ -17,15 +26,30 @@
                     <img src="@chatItem.RelatedPost.ImageURL" alt="Post Image" class="img-fluid rounded-circle chat-item-image">
                 </div>
                 <div class="col-md-11">
-                    <div class="chat-item-content">
-                        <h4>@chatItem.RelatedPost.Title</h4>
-                        <p><strong>Owner:</strong> @chatItem.Receiver.FullName</p>
-                        <p><strong>Buyer:</strong> @chatItem.User.FullName</p>
-                        <a class="btn btn-success btn-lg" asp-action="Room" asp-controller="Chats" asp-route-id="@chatItem.Id" aria-label="GO TO CHAT: @chatItem.Id">
-                            <i class="material-icons align-middle">visibility</i> GO TO CHAT
-                        </a>
+                    @if (chatItem.Unread)
+                    {
+                        <div class="chat-item-content">
+                            <h4>@chatItem.RelatedPost.Title</h4>
+                            <div class="unread-dot"></div>
+                            <p><strong>with </strong> @chatItem.Receiver.FullName</p>
+                            <a class="btn btn-success btn-lg" asp-action="Room" asp-controller="Chats" asp-route-id="@chatItem.Id" aria-label="GO TO CHAT: @chatItem.Id">
+                                <i class="material-icons align-middle">visibility</i> GO TO CHAT
+                            </a>
 
-                    </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="chat-item-content">
+                            <h4>@chatItem.RelatedPost.Title</h4>
+                            <p><strong>with </strong> @chatItem.Receiver.FullName</p>
+                            <a class="btn btn-success btn-lg" asp-action="Room" asp-controller="Chats" asp-route-id="@chatItem.Id" aria-label="GO TO CHAT: @chatItem.Id">
+                                <i class="material-icons align-middle">visibility</i> GO TO CHAT
+                            </a>
+
+                        </div>
+                    }
+
                 </div>
             </div>
         }

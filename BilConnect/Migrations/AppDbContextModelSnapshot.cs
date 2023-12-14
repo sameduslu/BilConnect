@@ -103,8 +103,14 @@ namespace BilConnect.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<DateTime>("ReceiverLastSeen")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("RelatedPostId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("SenderLastSeen")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -138,7 +144,7 @@ namespace BilConnect.Migrations
 
                     b.Property<string>("SenderUserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("Timestamp")
                         .HasColumnType("datetime2");
@@ -146,6 +152,8 @@ namespace BilConnect.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ChatId");
+
+                    b.HasIndex("SenderUserId");
 
                     b.ToTable("Messages");
                 });
@@ -398,7 +406,15 @@ namespace BilConnect.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("BilConnect.Models.ApplicationUser", "Sender")
+                        .WithMany("Messages")
+                        .HasForeignKey("SenderUserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.Navigation("Chat");
+
+                    b.Navigation("Sender");
                 });
 
             modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>
@@ -493,6 +509,8 @@ namespace BilConnect.Migrations
 
             modelBuilder.Entity("BilConnect.Models.ApplicationUser", b =>
                 {
+                    b.Navigation("Messages");
+
                     b.Navigation("PostReports");
 
                     b.Navigation("Posts");

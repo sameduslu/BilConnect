@@ -35,7 +35,7 @@ namespace BilConnect.Controllers
                 MessageVM msg = new MessageVM
                 {
                     Content = content,
-                    Timestamp = DateTime.Now,
+                    Timestamp = DateTime.UtcNow,
                     SenderUserId = userId,
                     ChatId = chatId
                 };
