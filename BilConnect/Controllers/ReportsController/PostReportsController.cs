@@ -146,5 +146,8 @@ namespace BilConnect.Controllers.ReportsController
 
             return RedirectToAction("SelfReports", "Account");
         }
+
+
+
     }
 }
