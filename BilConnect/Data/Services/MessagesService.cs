@@ -21,7 +21,7 @@ namespace BilConnect.Data.Services
             var newMessage = new Message()
             {
                 Content = data.Content,
-                Timestamp = DateTime.UtcNow,
+                Timestamp = data.Timestamp,
                 ChatId = data.ChatId,
                 SenderUserId = data.SenderUserId,
             };

@@ -19,7 +19,8 @@
                 <div class="col-md-11">
                     <div class="chat-item-content">
                         <h4>@chatItem.RelatedPost.Title</h4>
-                        <p><strong>Post Owner:</strong> @chatItem.RelatedPost.User.FullName</p>
+                        <p><strong>Owner:</strong> @chatItem.Receiver.FullName</p>
+                        <p><strong>Buyer:</strong> @chatItem.User.FullName</p>
                         <a class="btn btn-success btn-lg" asp-action="Room" asp-controller="Chats" asp-route-id="@chatItem.Id" aria-label="GO TO CHAT: @chatItem.Id">
                             <i class="material-icons align-middle">visibility</i> GO TO CHAT
                         </a>

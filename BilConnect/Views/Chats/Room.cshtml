@@ -89,6 +89,12 @@
         align-self: flex-start;
     }
 
+    .dateLabel {
+        background-color: #ccc;
+        color: #333;
+        align-self: center;
+    }
+
     input[type="text"] {
         width: calc(100% - 22px);
         padding: 10px;
@@ -127,7 +133,7 @@
             <img src="@Model.RelatedPost.ImageURL" alt="Post Image" style="max-width: 100%;">
             <h2>@Model.RelatedPost.Title</h2>
             <p>@Model.RelatedPost.Description</p>
-            <p>Posted by: @Model.RelatedPost.User.FullName</p>
+            <p>Chat with @Model.Receiver.FullName</p>
         </div>
 
         <!-- Right half: Chat messages -->
@@ -135,10 +141,19 @@
             <div id="messageContainer">
                 @if (Model.Messages != null)
                 {
+                    var prevDate = DateTime.Now.Date.AddDays(1);
                     // Load previous messages from the model
-
                     @foreach (var message in Model.Messages)
                     {
+                        // Date label
+                        @if (message.Timestamp.Date != prevDate)
+                        {
+                            <div class="message dateLabel">
+                                <small>@message.Timestamp.ToString("dd MMM yyyy")</small>
+                            </div>
+                        }
+                        prevDate = message.Timestamp.Date;
+                        
                         // If the user is sender
                         @if (message.SenderUserId == Model.User.Id)
                         {
