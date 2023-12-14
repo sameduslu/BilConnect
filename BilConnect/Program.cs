@@ -20,6 +20,7 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
 ));
 
 //Services Configuration
+builder.Services.AddScoped<IPostFactory, PostFactory>();
 builder.Services.AddScoped<IPostsService, PostsService>();
 builder.Services.AddScoped<IApplicationUsersService, ApplicationUsersService>();
 builder.Services.AddScoped<IPostReportsService, PostReportsService>();

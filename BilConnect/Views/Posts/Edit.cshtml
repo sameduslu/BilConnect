@@ -1,4 +1,5 @@
 ﻿@using BilConnect.Data.ViewModels.PostViewModels;
+@using BilConnect.Data.Enums
 @model NewPostVM
 
 @{
@@ -40,6 +41,113 @@
                                 <input asp-for="Description" class="form-control" />
                                 <span asp-validation-for="Description" class="text-danger"></span>
                             </div>
+
+
+                            @if (Model.PostType == PostType.SellingPost)
+                            {
+                                <div class="form-group">
+                                    <label asp-for="PriceS" class="control-label"></label>
+                                    <input asp-for="PriceS" class="form-control" />
+                                    <span asp-validation-for="PriceS" class="text-danger"></span>
+                                </div>
+                            }else if(Model.PostType == PostType.DonationPost)
+                            {
+
+                            }else if(Model.PostType == PostType.BorrowingPost)
+                            {
+                                <!-- Price field -->
+                                <div class="form-group">
+                                    <label asp-for="PriceB" class="control-label"></label>
+                                    <input asp-for="PriceB" class="form-control" />
+                                    <span asp-validation-for="PriceB" class="text-danger"></span>
+                                </div>
+
+                                <!-- Return Date field -->
+                                <div class="form-group">
+                                    <label asp-for="ReturnDate" class="control-label"></label>
+                                    <input asp-for="ReturnDate" class="form-control" type="text" />
+                                    <span asp-validation-for="ReturnDate" class="text-danger"></span>
+                                </div>
+                            }else if(Model.PostType == PostType.EventTicketPost)
+                            {
+                                <div class="form-group">
+                                    <label asp-for="EventTime" class="control-label"></label>
+                                    <input asp-for="EventTime" class="form-control" type="text" />
+                                    <span asp-validation-for="EventTime" class="text-danger"></span>
+                                </div>
+
+                                <!-- Event Place field -->
+                                <div class="form-group">
+                                    <label asp-for="EventPlace" class="control-label"></label>
+                                    <input asp-for="EventPlace" class="form-control" />
+                                    <span asp-validation-for="EventPlace" class="text-danger"></span>
+                                </div>
+
+                                <!-- Price field -->
+                                <div class="form-group">
+                                    <label asp-for="PriceE" class="control-label"></label>
+                                    <input asp-for="PriceE" class="form-control" />
+                                    <span asp-validation-for="PriceE" class="text-danger"></span>
+                                </div>
+                            }else if(Model.PostType == PostType.FoundItemPost)
+                            {
+
+                            }else if(Model.PostType == PostType.LostItemPost)
+                            {
+                                <!-- Place field -->
+                                <div class="form-group">
+                                    <label asp-for="Place" class="control-label"></label>
+                                    <input asp-for="Place" class="form-control" />
+                                    <span asp-validation-for="Place" class="text-danger"></span>
+                                </div>
+                            }else if(Model.PostType == PostType.PetAdoptionPost)
+                            {
+                                <div class="form-group">
+                                    <label asp-for="IsFullyVaccinated" class="control-label"></label>
+                                    <select asp-for="IsFullyVaccinated" class="form-control">
+                                        <option value="">Select Vaccination Status</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                    <span asp-validation-for="IsFullyVaccinated" class="text-danger"></span>
+                                </div>
+
+                                <!-- AgeInMonths field -->
+                                <div class="form-group">
+                                    <label asp-for="AgeInMonths" class="control-label"></label>
+                                    <input asp-for="AgeInMonths" class="form-control" type="number" />
+                                    <span asp-validation-for="AgeInMonths" class="text-danger"></span>
+                                </div>
+                            }else if(Model.PostType == PostType.TravellingPost)
+                            {
+                                <!-- Origin field -->
+                                <div class="form-group">
+                                    <label asp-for="Origin" class="control-label"></label>
+                                    <input asp-for="Origin" class="form-control" />
+                                    <span asp-validation-for="Origin" class="text-danger"></span>
+                                </div>
+
+                                <!-- Destination field -->
+                                <div class="form-group">
+                                    <label asp-for="Destination" class="control-label"></label>
+                                    <input asp-for="Destination" class="form-control" />
+                                    <span asp-validation-for="Destination" class="text-danger"></span>
+                                </div>
+
+                                <!-- TravelTime field -->
+                                <div class="form-group">
+                                    <label asp-for="TravelTime" class="control-label"></label>
+                                    <input asp-for="TravelTime" class="form-control" type="text" />
+                                    <span asp-validation-for="TravelTime" class="text-danger"></span>
+                                </div>
+
+                                <!-- Price field -->
+                                <div class="form-group">
+                                    <label asp-for="PriceT" class="control-label"></label>
+                                    <input asp-for="PriceT" class="form-control" />
+                                    <span asp-validation-for="PriceT" class="text-danger"></span>
+                                </div>
+                            }
 
                         </div>
                     </div>

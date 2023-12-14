@@ -2,7 +2,7 @@
 {
     public class PetAdoptionPost : Post
     {
-        bool IsFullyVaccinated { get; set; }
-        int AgeInMonths { get; set; }
+        public string IsFullyVaccinated { get; set; }
+        public int AgeInMonths { get; set; }
     }
 }

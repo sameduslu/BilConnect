@@ -16,8 +16,6 @@ namespace BilConnect.Models.PostModels
         [Display(Name = "Post Description")]
         public string Description { get; set; }
 
-        public double Price { get; set; }
-
         public string ImageURL { get; set; }
 
         public DateTime PostDate { get; set; }

@@ -2,7 +2,7 @@
 {
     public class LostItemPost : Post
     {
-        string Place { get; set; }
+        public string Place { get; set; }
 
 
     }
