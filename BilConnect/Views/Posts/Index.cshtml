@@ -54,48 +54,48 @@
 
                                 @if (item is SellingPost sellingPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" aria-label="Buy Item">
+                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Buy Item">
                                         <i class="bi bi-cart-fill align-middle"></i> Buy for @sellingPost.Price
                                     </a>
                                 }else if(item is DonationPost donationPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" aria-label="Volunteer to Donation">
+                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Volunteer to Donation">
                                         <i class="bi bi-cart-fill align-middle"></i> Volunteer to Donation
                                     </a>
                                 }
                                 else if (item is BorrowingPost borrowingPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" aria-label="Borrow Post">
+                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Borrow Post">
                                         <i class="bi bi-cart-fill align-middle"></i> Borrow Post
                                     </a>
                                 }
                                 else if (item is EventTicketPost eventTicketPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" aria-label="Buy Event Ticket">
+                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Buy Event Ticket">
                                         <i class="bi bi-cart-fill align-middle"></i> Buy Event Ticket
                                     </a>
                                 }
                                 else if (item is FoundItemPost foundItemPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" aria-label="Learn Details">
+                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Learn Details">
                                         <i class="bi bi-cart-fill align-middle"></i> Learn Details
                                     </a>
                                 }
                                 else if (item is LostItemPost lostItemPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" aria-label="Give Information">
+                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Give Information">
                                         <i class="bi bi-cart-fill align-middle"></i> Give Information
                                     </a>
                                 }
                                 else if (item is PetAdoptionPost petAdoptionPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" aria-label="Adopt Pet">
+                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id"  aria-label="Adopt Pet">
                                         <i class="bi bi-cart-fill align-middle"></i> Adopt Pet
                                     </a>
                                 }
                                 else if (item is TravellingPost travellingPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" aria-label="Travel Together">
+                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Travel Together">
                                         <i class="bi bi-cart-fill align-middle"></i> Travel Together
                                     </a>
                                 }

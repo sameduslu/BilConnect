@@ -61,12 +61,12 @@ namespace BilConnect.Controllers.PostsControllers
                 ModelState.Remove("Price");
             }
 
-            if(post.PostType != PostType.BorrowingPost)
+            if (post.PostType != PostType.BorrowingPost)
             {
                 ModelState.Remove("ReturnDate");
             }
 
-            if(post.PostType != PostType.EventTicketPost)
+            if (post.PostType != PostType.EventTicketPost)
             {
                 ModelState.Remove("EventTime");
                 ModelState.Remove("EventPlace");
@@ -138,7 +138,8 @@ namespace BilConnect.Controllers.PostsControllers
                     UserId = donationPost.UserId,
                     PostType = PostType.DonationPost
                 };
-            }else if (postDetails is BorrowingPost borrowingPost)
+            }
+            else if (postDetails is BorrowingPost borrowingPost)
             {
                 response = new NewPostVM
                 {
@@ -154,7 +155,8 @@ namespace BilConnect.Controllers.PostsControllers
                     ReturnDate = borrowingPost.ReturnDate,
                 };
             }
-            else if (postDetails is EventTicketPost eventTicketPost){
+            else if (postDetails is EventTicketPost eventTicketPost)
+            {
                 response = new NewPostVM
                 {
                     Id = eventTicketPost.Id,
@@ -170,7 +172,8 @@ namespace BilConnect.Controllers.PostsControllers
                     PriceE = eventTicketPost.Price,
                 };
             }
-            else if (postDetails is FoundItemPost foundItemPost){
+            else if (postDetails is FoundItemPost foundItemPost)
+            {
                 response = new NewPostVM
                 {
                     Id = foundItemPost.Id,
@@ -196,10 +199,10 @@ namespace BilConnect.Controllers.PostsControllers
                     UserId = lostItemPost.UserId,
                     PostType = PostType.LostItemPost,
                     Place = lostItemPost.Place,
-                   
+
                 };
             }
-            else if(postDetails is PetAdoptionPost petAdoptionPost)
+            else if (postDetails is PetAdoptionPost petAdoptionPost)
             {
                 response = new NewPostVM
                 {
@@ -215,7 +218,7 @@ namespace BilConnect.Controllers.PostsControllers
                     AgeInMonths = petAdoptionPost.AgeInMonths,
                 };
             }
-            else if(postDetails is TravellingPost travellingPost)
+            else if (postDetails is TravellingPost travellingPost)
             {
                 response = new NewPostVM
                 {
@@ -301,6 +304,13 @@ namespace BilConnect.Controllers.PostsControllers
             return RedirectToAction("UpdatePostReportsStatus", "PostReports", new { postId = id });
 
         }
+
+        public async Task<IActionResult> BuyItem(int id)
+        {
+            var postDetails = await _service.GetPostByIdAsync(id);
+            return RedirectToAction("Index", "Chats", new { postId = postDetails.Id, postOwner = postDetails.UserId });
+        }
+
     }
 
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231214012327_allModelsAdded")]
-    partial class allModelsAdded
+    [Migration("20231214131831_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -92,6 +92,73 @@ namespace BilConnect.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("BilConnect.Models.Chat", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ReceiverId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("ReceiverLastSeen")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("RelatedPostId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("SenderLastSeen")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReceiverId");
+
+                    b.HasIndex("RelatedPostId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Chats");
+                });
+
+            modelBuilder.Entity("BilConnect.Models.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ChatId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SenderUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChatId");
+
+                    b.HasIndex("SenderUserId");
+
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>
@@ -378,6 +445,77 @@ namespace BilConnect.Migrations
                     b.ToTable("SellingPosts", (string)null);
                 });
 
+            modelBuilder.Entity("BilConnect.Models.PostModels.TravellingPost", b =>
+                {
+                    b.HasBaseType("BilConnect.Models.PostModels.Post");
+
+                    b.Property<string>("Destination")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Origin")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<int>("Quota")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TravelTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("TravellingPost", (string)null);
+                });
+
+            modelBuilder.Entity("BilConnect.Models.Chat", b =>
+                {
+                    b.HasOne("BilConnect.Models.ApplicationUser", "Receiver")
+                        .WithMany("ReceiverChats")
+                        .HasForeignKey("ReceiverId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("BilConnect.Models.PostModels.Post", "RelatedPost")
+                        .WithMany("Chats")
+                        .HasForeignKey("RelatedPostId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("BilConnect.Models.ApplicationUser", "User")
+                        .WithMany("SenderChats")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Receiver");
+
+                    b.Navigation("RelatedPost");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BilConnect.Models.Message", b =>
+                {
+                    b.HasOne("BilConnect.Models.Chat", "Chat")
+                        .WithMany("Messages")
+                        .HasForeignKey("ChatId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("BilConnect.Models.ApplicationUser", "Sender")
+                        .WithMany("Messages")
+                        .HasForeignKey("SenderUserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Chat");
+
+                    b.Navigation("Sender");
+                });
+
             modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>
                 {
                     b.HasOne("BilConnect.Models.ApplicationUser", "User")
@@ -522,11 +660,36 @@ namespace BilConnect.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("BilConnect.Models.PostModels.TravellingPost", b =>
+                {
+                    b.HasOne("BilConnect.Models.PostModels.Post", null)
+                        .WithOne()
+                        .HasForeignKey("BilConnect.Models.PostModels.TravellingPost", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("BilConnect.Models.ApplicationUser", b =>
                 {
+                    b.Navigation("Messages");
+
                     b.Navigation("PostReports");
 
                     b.Navigation("Posts");
+
+                    b.Navigation("ReceiverChats");
+
+                    b.Navigation("SenderChats");
+                });
+
+            modelBuilder.Entity("BilConnect.Models.Chat", b =>
+                {
+                    b.Navigation("Messages");
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>
+                {
+                    b.Navigation("Chats");
                 });
 #pragma warning restore 612, 618
         }
