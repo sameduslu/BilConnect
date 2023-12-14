@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231214115850_lastseenupdate")]
-    partial class lastseenupdate
+    [Migration("20231214012327_allModelsAdded")]
+    partial class allModelsAdded
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -94,73 +94,6 @@ namespace BilConnect.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("BilConnect.Models.Chat", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ReceiverId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("ReceiverLastSeen")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("RelatedPostId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("SenderLastSeen")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ReceiverId");
-
-                    b.HasIndex("RelatedPostId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Chats");
-                });
-
-            modelBuilder.Entity("BilConnect.Models.Message", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ChatId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SenderUserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("Timestamp")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ChatId");
-
-                    b.HasIndex("SenderUserId");
-
-                    b.ToTable("Messages");
-                });
-
             modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>
                 {
                     b.Property<int>("Id")
@@ -182,9 +115,6 @@ namespace BilConnect.Migrations
 
                     b.Property<int>("PostStatus")
                         .HasColumnType("int");
-
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -367,57 +297,85 @@ namespace BilConnect.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("BilConnect.Models.PostModels.BorrowingPost", b =>
+                {
+                    b.HasBaseType("BilConnect.Models.PostModels.Post");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<string>("ReturnDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("BorrowingPost", (string)null);
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.DonationPost", b =>
+                {
+                    b.HasBaseType("BilConnect.Models.PostModels.Post");
+
+                    b.ToTable("DonationPosts", (string)null);
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.EventTicketPost", b =>
+                {
+                    b.HasBaseType("BilConnect.Models.PostModels.Post");
+
+                    b.Property<string>("EventPlace")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EventTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.ToTable("EventTicketPost", (string)null);
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.FoundItemPost", b =>
+                {
+                    b.HasBaseType("BilConnect.Models.PostModels.Post");
+
+                    b.ToTable("FoundItemPost", (string)null);
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.LostItemPost", b =>
+                {
+                    b.HasBaseType("BilConnect.Models.PostModels.Post");
+
+                    b.Property<string>("Place")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("LostItemPost", (string)null);
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.PetAdoptionPost", b =>
+                {
+                    b.HasBaseType("BilConnect.Models.PostModels.Post");
+
+                    b.Property<int>("AgeInMonths")
+                        .HasColumnType("int");
+
+                    b.Property<string>("IsFullyVaccinated")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("PetAdoptionPost", (string)null);
+                });
+
             modelBuilder.Entity("BilConnect.Models.PostModels.SellingPost", b =>
                 {
                     b.HasBaseType("BilConnect.Models.PostModels.Post");
 
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
                     b.ToTable("SellingPosts", (string)null);
-                });
-
-            modelBuilder.Entity("BilConnect.Models.Chat", b =>
-                {
-                    b.HasOne("BilConnect.Models.ApplicationUser", "Receiver")
-                        .WithMany("ReceiverChats")
-                        .HasForeignKey("ReceiverId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("BilConnect.Models.PostModels.Post", "RelatedPost")
-                        .WithMany("Chats")
-                        .HasForeignKey("RelatedPostId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("BilConnect.Models.ApplicationUser", "User")
-                        .WithMany("SenderChats")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Receiver");
-
-                    b.Navigation("RelatedPost");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("BilConnect.Models.Message", b =>
-                {
-                    b.HasOne("BilConnect.Models.Chat", "Chat")
-                        .WithMany("Messages")
-                        .HasForeignKey("ChatId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("BilConnect.Models.ApplicationUser", "Sender")
-                        .WithMany("Messages")
-                        .HasForeignKey("SenderUserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Chat");
-
-                    b.Navigation("Sender");
                 });
 
             modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>
@@ -501,6 +459,60 @@ namespace BilConnect.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("BilConnect.Models.PostModels.BorrowingPost", b =>
+                {
+                    b.HasOne("BilConnect.Models.PostModels.Post", null)
+                        .WithOne()
+                        .HasForeignKey("BilConnect.Models.PostModels.BorrowingPost", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.DonationPost", b =>
+                {
+                    b.HasOne("BilConnect.Models.PostModels.Post", null)
+                        .WithOne()
+                        .HasForeignKey("BilConnect.Models.PostModels.DonationPost", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.EventTicketPost", b =>
+                {
+                    b.HasOne("BilConnect.Models.PostModels.Post", null)
+                        .WithOne()
+                        .HasForeignKey("BilConnect.Models.PostModels.EventTicketPost", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.FoundItemPost", b =>
+                {
+                    b.HasOne("BilConnect.Models.PostModels.Post", null)
+                        .WithOne()
+                        .HasForeignKey("BilConnect.Models.PostModels.FoundItemPost", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.LostItemPost", b =>
+                {
+                    b.HasOne("BilConnect.Models.PostModels.Post", null)
+                        .WithOne()
+                        .HasForeignKey("BilConnect.Models.PostModels.LostItemPost", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.PetAdoptionPost", b =>
+                {
+                    b.HasOne("BilConnect.Models.PostModels.Post", null)
+                        .WithOne()
+                        .HasForeignKey("BilConnect.Models.PostModels.PetAdoptionPost", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("BilConnect.Models.PostModels.SellingPost", b =>
                 {
                     b.HasOne("BilConnect.Models.PostModels.Post", null)
@@ -512,25 +524,9 @@ namespace BilConnect.Migrations
 
             modelBuilder.Entity("BilConnect.Models.ApplicationUser", b =>
                 {
-                    b.Navigation("Messages");
-
                     b.Navigation("PostReports");
 
                     b.Navigation("Posts");
-
-                    b.Navigation("ReceiverChats");
-
-                    b.Navigation("SenderChats");
-                });
-
-            modelBuilder.Entity("BilConnect.Models.Chat", b =>
-                {
-                    b.Navigation("Messages");
-                });
-
-            modelBuilder.Entity("BilConnect.Models.PostModels.Post", b =>
-                {
-                    b.Navigation("Chats");
                 });
 #pragma warning restore 612, 618
         }

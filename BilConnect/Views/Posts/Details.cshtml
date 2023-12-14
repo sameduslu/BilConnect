@@ -6,6 +6,7 @@
     ViewData["Title"] = "Post Details";
 }
 
+
 <div class="row text">
     <div class="col-md-8 offset-2">
         <p>
@@ -44,11 +45,89 @@
                     <span asp-validation-for="PostDate" class="text-danger"></span>
                 </div>
                 
-                <div class="form-group">
-                    <label asp-for="Price" class="control-label"></label>
-                    <input asp-for="Price" class="form-control" readonly />
-                    <span asp-validation-for="Price" class="text-danger"></span>
-                </div>
+                @if (Model is SellingPost sellingPost)
+                {
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input class="form-control" value="@sellingPost.Price" readonly />
+                    </div>
+                }else if(Model is DonationPost donationPost)
+                {
+
+                }else if(Model is BorrowingPost borrowingPost)
+                {
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input class="form-control" value="@borrowingPost.Price" readonly />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Return Date</label>
+                        <input class="form-control" value="@borrowingPost.ReturnDate" readonly />
+                    </div>
+                }else if(Model is EventTicketPost eventTicketPost)
+                {
+                    <div class="form-group">
+                        <label>Event Place</label>
+                        <input class="form-control" value="@eventTicketPost.EventPlace" readonly />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Event Time</label>
+                        <input class="form-control" value="@eventTicketPost.EventTime" readonly />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input class="form-control" value="@eventTicketPost.Price" readonly />
+                    </div>
+                }else if(Model is FoundItemPost foundItemPost)
+                {
+                    
+                }else if(Model is LostItemPost lostItemPost)
+                {
+                    <div class="form-group">
+                        <label>Place</label>
+                        <input class="form-control" value="@lostItemPost.Place" readonly />
+                    </div>
+                }else if(Model is PetAdoptionPost petAdoptionPost)
+                {
+                    <div class="form-group">
+                        <label>Event Time</label>
+                        <input class="form-control" value="@petAdoptionPost.IsFullyVaccinated" readonly />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input class="form-control" value="@petAdoptionPost.AgeInMonths" readonly />
+                    </div>
+                }else if(Model is TravellingPost travellingPost)
+                {
+                    <div class="form-group">
+                        <label>Origin</label>
+                        <input class="form-control" value="@travellingPost.Origin" readonly />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Destinatione</label>
+                        <input class="form-control" value="@travellingPost.Destination" readonly />
+                    </div>
+
+                    <div class="form-group">
+                        <label>TravelTime</label>
+                        <input class="form-control" value="@travellingPost.TravelTime" readonly />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input class="form-control" value="@travellingPost.Price" readonly />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Quota</label>
+                        <input class="form-control" value="@travellingPost.Quota" readonly />
+                    </div>
+                }
 
                 @if (User.FindFirst(ClaimTypes.NameIdentifier)?.Value != Model.UserId) // Compare current user's ID with Model.UserId
                 {
