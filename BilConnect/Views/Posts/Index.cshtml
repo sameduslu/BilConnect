@@ -43,7 +43,7 @@
                         <div class="card-body">
                             <p class="card-text truncate-text">@item.Description</p>
                             <p class="card-text"><b>Post Author: </b>@item.User.FullName</p>
-                            <p class="card-text"><b>Post Date: </b>@item.PostDate.ToString("dd MMM yy")</p>
+                            <p class="card-text"><b>Post Date: </b>@item.PostDate.ToLocalTime().ToString("dd MMM yy")</p>
                         </div>
                     </div>
                     <div class="col-md-12">

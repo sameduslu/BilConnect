@@ -57,7 +57,7 @@
                             <div class="card-body">
                                 <p class="card-text">@item.Description</p>
                                 <p class="card-text"><b>Post Author: </b>@item.User.FullName</p>
-                                <p class="card-text"><b>Post Date: </b>@item.PostDate.ToString("dd MMM yy")</p>
+                                <p class="card-text"><b>Post Date: </b>@item.PostDate.ToLocalTime().ToString("dd MMM yy")</p>
                                 <p class="card-text">
                                     <b>Status: </b>
                                     <span class="badge @GetBadgeClass(@item.PostStatus) text-white">@item.PostStatus</span>

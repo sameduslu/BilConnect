@@ -13,7 +13,7 @@ namespace BilConnect.Data.Services.PostServices
                 post.Title = vm.Title;
                 post.Description = vm.Description;
                 post.ImageURL = vm.ImageURL;
-                post.PostDate = DateTime.Now;
+                post.PostDate = DateTime.UtcNow;
                 post.PostStatus = vm.PostStatus;
                 post.UserId = vm.UserId;
             }

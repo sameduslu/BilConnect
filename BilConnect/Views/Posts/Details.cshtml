@@ -40,10 +40,11 @@
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="PostDate" class="control-label"></label>
-                    <input asp-for="PostDate" class="form-control" readonly />
-                    <span asp-validation-for="PostDate" class="text-danger"></span>
+                    <label for="PostDate" class="control-label">Post Date</label>
+                    <input id="PostDate" type="text" class="form-control" readonly value="@Model.PostDate.ToLocalTime().ToString("dd MMM yy HH:mm")" />
+                    <span class="text-danger"></span>
                 </div>
+
                 
                 @if (Model is SellingPost sellingPost)
                 {
