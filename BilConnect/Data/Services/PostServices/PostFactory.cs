@@ -16,6 +16,8 @@ namespace BilConnect.Data.Services.PostServices
                 post.PostDate = DateTime.Now;
                 post.PostStatus = vm.PostStatus;
                 post.UserId = vm.UserId;
+                post.AdditionalImagesJson = vm.AdditionalImagesJson;
+                post.AdditionalImages = vm.AdditionalImages;
             }
 
             Post newPost = null;

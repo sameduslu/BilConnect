@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Hosting;
+using System.Text.Json;
 
 namespace BilConnect.Controllers.PostsControllers
 {
@@ -53,11 +54,9 @@ namespace BilConnect.Controllers.PostsControllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(NewPostVM post, IFormFile photoUpload)
+        public async Task<IActionResult> Create(NewPostVM post, IFormFile photoUpload, List<IFormFile> additionalImagesUpload)
         {
             post.UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-
 
             // Handle the image upload
             if (photoUpload != null && photoUpload.Length > 0)
@@ -75,6 +74,38 @@ namespace BilConnect.Controllers.PostsControllers
             else
             {
                 ModelState.AddModelError("photoUpload", "Please upload a photo.");
+            }
+
+
+            if (post.AdditionalImages == null)
+            {
+                post.AdditionalImages = new List<string>();
+            }
+
+            // Handle additional images
+            if (additionalImagesUpload != null && additionalImagesUpload.Count > 0)
+            {
+                foreach (var file in additionalImagesUpload)
+                {
+                    if (file.Length > 0)
+                    {
+                        var imageName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                        var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "images", imageName);
+
+                        using (var stream = new FileStream(imagePath, FileMode.Create))
+                        {
+                            await file.CopyToAsync(stream);
+                        }
+
+                        post.AdditionalImages.Add(Url.Content("~/images/" + imageName));
+                    }
+                }
+            }
+
+            // Ensure AdditionalImagesJson is not null or empty
+            if (string.IsNullOrEmpty(post.AdditionalImagesJson))
+            {
+                post.AdditionalImagesJson = JsonSerializer.Serialize(post.AdditionalImages);
             }
 
             // Bypass Price validation for non-selling posts
@@ -116,7 +147,7 @@ namespace BilConnect.Controllers.PostsControllers
 
             if (!ModelState.IsValid)
             {   
-                /*
+                
                 foreach (var modelStateKey in ModelState.Keys)
                 {
                     var modelStateVal = ModelState[modelStateKey];
@@ -127,9 +158,16 @@ namespace BilConnect.Controllers.PostsControllers
                         // You can log this or return it as part of your response
                     }
                 }
-                */
+                
                 return View(post);
             }
+
+            // Before saving the post object
+            if (string.IsNullOrEmpty(post.AdditionalImagesJson))
+            {
+                post.AdditionalImagesJson = "[]"; // Set default value as empty JSON array
+            }
+
             await _service.AddNewPostAsync(post);
             return RedirectToAction(nameof(Index));
         }

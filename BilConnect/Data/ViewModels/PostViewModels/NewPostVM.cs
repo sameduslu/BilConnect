@@ -16,6 +16,8 @@ namespace BilConnect.Data.ViewModels.PostViewModels
 
         public string? ImageURL { get; set; }
 
+        public string? AdditionalImagesJson { get; set; }
+        public List<string>? AdditionalImages { get; set; }
         public DateTime PostDate { get; set; }
 
         [Required(ErrorMessage = "Post Status is required.")]
