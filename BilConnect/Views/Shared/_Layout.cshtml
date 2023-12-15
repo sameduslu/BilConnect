@@ -23,6 +23,59 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #555; /* Color when hovering over the thumb */
         }
+        /* General Navbar Styles */
+    .navbar {
+        background-color: #ffffff; /* White background */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        padding: 0.5rem 1rem; /* Padding for aesthetic spacing */
+        border-bottom: 1px solid #e0e0e0; /* Light border for subtle separation */
+
+    }
+
+
+.navbar-brand {
+    color: #007bff; /* Brand color - you can choose any */
+    font-size: 1.5rem; /* Larger font size for brand */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+.navbar-toggler {
+    border-color: #007bff; /* Toggler icon color */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23007bff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Navbar Links */
+.nav-link {
+    color: #555555; /* Dark grey for normal state */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #007bff; /* Highlight color on hover/focus */
+}
+
+/* Navbar Items */
+.nav-item {
+    margin-left: 1rem; /* Spacing between nav items */
+}
+
+.container-fluid {
+    max-width: 90%; /* Limiting max width for better readability on larger screens */
+    margin: auto; /* Centering the navbar content */
+}
+
+/* Responsive Adjustments */
+@@media (max-width: 576px) {
+    .navbar {
+        padding: 0.5rem; /* Reduced padding on smaller screens */
+    }
+}
+
+/* Additional styles as needed */
+
     </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +83,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9B0CFKgtP6EDpq8lFQf413e2nB6p6gT9Ft" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtzkrz3u75bfEYOEi3jeNhiRwVBK07pP4j65t9qG+IRyJnSLTU6Rj" crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BilConnect.styles.css" asp-append-version="true" />

@@ -90,7 +90,6 @@
     }
 
 
-
     .post-card-header {
         background-color: #e5ddd5;
         color: black;
@@ -124,6 +123,10 @@
 
     .btn-secondary {
         background-color: #757575;
+    }
+
+    .btn-yourpost {
+        background-color: transparent;
     }
 
     .search-container {
@@ -208,7 +211,7 @@
                             else
                             {
                                 <div class="your-post">
-                                    Your post
+                                    <a class="btn btn-yourpost" asp-action="Details" asp-route-id="@item.Id">Your Post</a>
                                 </div>
                             }
                         </div>
