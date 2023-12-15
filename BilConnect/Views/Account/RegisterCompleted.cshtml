@@ -1,8 +1,101 @@
-﻿<div class="row">
-    <div class="col-md-6 offset-3 alert alert-success text-center">
-        <h2>Your account was created successfully</h2>
-        <p>You can now log in to your account using your credentials.</p>
-        <hr />
-        <p>Thank you!</p>
-    </div>
+﻿@using BilConnect.Data.ViewModels;
+@model RegisterVM;
+@{
+    ViewData["Title"] = "Verify your email";
+}
+<style>
+    /* Base settings */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: rgb(240,224,209);
+        background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
+        color: #333;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content:center;
+        align-self: center;
+        flex-direction: column;
+        height: 100vh;
+        min-height: 100vh;
+    }
+
+    /* Card for the verification form */
+    .verification-card {
+        background: white;
+        padding: 40px 60px;
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        width: 100%;
+        background-size: cover;
+    }
+
+    /* Styling the heading */
+    h2 {
+        color: #2193b0;
+        margin-bottom: 20px;
+    }
+
+    /* Styling the form input */
+    .verification-input {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+    }
+
+    /* Button for form submission */
+    .verify-btn {
+        background-color: #075E54;
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .verify-btn:hover {
+            background-color: #075E54;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+
+<div class="verification-card">
+    <h2>Verify your email</h2>
+    <p>Please enter the 6-digit code sent to your email.</p>
+
+    <form action="/verify-email" method="post">
+        <!-- Update action as needed -->
+        <div class="form-group">
+            <input max="999999" type="number" class="verification-input" id="verificationCode" name="verificationCode" placeholder="Enter 6-digit code" pattern="\d{6}" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="verify-btn">Verify Email</button>
+        </div>
+    </form>
 </div>
+<script>
+    function hideNavbar() {
+        document.getElementById('navbarheader').style.display = 'none';
+    }
+    hideNavbar();
+</script>

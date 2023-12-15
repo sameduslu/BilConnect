@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\icons\\bilconnect.ico",
+      "PackagePath": "staticwebassets\\icons\\bilconnect.ico"
+    },
+    {
       "Id": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\0558fc70-85bb-4d6a-bc1c-e6ea2da5a947.jpg",
       "PackagePath": "staticwebassets\\images\\0558fc70-85bb-4d6a-bc1c-e6ea2da5a947.jpg"
     },
@@ -55,6 +59,10 @@
     {
       "Id": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\395db5ae-9527-4ad6-b4c9-17848556ad90.png",
       "PackagePath": "staticwebassets\\images\\395db5ae-9527-4ad6-b4c9-17848556ad90.png"
+    },
+    {
+      "Id": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\40c46ec2-b84e-4a61-ba5a-3ffadc40a3cf.jpg",
+      "PackagePath": "staticwebassets\\images\\40c46ec2-b84e-4a61-ba5a-3ffadc40a3cf.jpg"
     },
     {
       "Id": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\53930e6b-c791-4e56-92dd-951ebf97beac.jpg",

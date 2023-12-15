@@ -5,51 +5,165 @@
     ViewData["Title"] = "Sign up for a new account";
 }
 
-<div class="row">
-    <div class="col-md-6 offset-3">
-        <p>
-            <h4>Sign up for a new account</h4>
-        </p>
+<style>
+    /* Login Container */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* WhatsApp font style */
+        margin: 0;
+        padding: 0;
+        background: rgb(240,224,209);
+        background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
-        @if(TempData["Error"] != null)
-            {
-                <div class="col-md-12 alert alert-danger">
-                    <span><b>Sorry!</b> - @TempData["Error"] </span>
-                </div>
-            }
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-size: cover;
+    }
 
-        <div class="row">
-            <div class="col-md-8 offset-2">
-                <form asp-action="Register">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    /* Login Box with subtle entrance animation */
+    .login-box {
+        background-color: rgba(255, 255, 255, 0.95); /* More pronounced transparency */
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 450px; /* Slightly larger max-width */
+        animation: fadeIn 0.6s ease-out forwards;
+    }
 
-                    <div class="form-group">
-                        <label asp-for="FullName" class="control-label"></label>
-                        <input asp-for="FullName" class="form-control" />
-                        <span asp-validation-for="FullName" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="EmailAddress" class="control-label"></label>
-                        <input asp-for="EmailAddress" class="form-control" />
-                        <span asp-validation-for="EmailAddress" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Password" class="control-label"></label>
-                        <input asp-for="Password" class="form-control" />
-                        <span asp-validation-for="Password" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="ConfirmPassword" class="control-label"></label>
-                        <input asp-for="ConfirmPassword" class="form-control" />
-                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                    </div>
+    /* Keyframes for fadeIn animation */
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
 
-                    <div class="form-group">
-                        <input class="btn btn-outline-success float-right" type="submit" value="Sign up" />
-                        <a class="btn btn-outline-secondary" asp-controller="Home" asp-action="Index">Cancel</a>
-                    </div>
-                </form>
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Form Elements with improved focus state */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 12px 18px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+    }
+
+        .form-control:focus {
+            border-color: #4364F7; /* Focus state color */
+            box-shadow: 0 0 8px rgba(67, 100, 247, 0.6);
+        }
+
+    /* Button Styles with subtle shadow */
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .login-btn {
+        background-color: #25D366;
+        color: white;
+    }
+
+        .login-btn:hover {
+            background-color: #128C7E;
+            box-shadow: 0 4px 8px rgba(18, 140, 126, 0.4);
+        }
+
+    .register-btn {
+        background-color: #34B7F1;
+        color: white;
+        margin-top: 10px; /* Added margin for spacing */
+    }
+
+        .register-btn:hover {
+            background-color: #2A8FBD;
+            box-shadow: 0 4px 8px rgba(42, 143, 189, 0.4);
+        }
+
+    /* Custom Styles for Validation Messages */
+    .text-danger {
+        color: #ff3860;
+        font-size: 14px; /* Smaller font size for error messages */
+    }
+
+    /* Adjustments to icon styling */
+    .bi-person-plus {
+        margin-right: 5px;
+    }
+
+    .divider {
+        height: 20px;
+        background-color: transparent;
+        margin: 0 20px;
+    }
+</style>
+<div class="login-container">
+    <div class="login-box">
+        <h1 style="text-align: center;">BilConnect</h1>
+        <h4>Sign up</h4>
+        @if (TempData["Error"] != null)
+        {
+            <div class="col-md-12 alert alert-danger">
+                <span><b>Sorry!</b> - @TempData["Error"] </span>
             </div>
-        </div>
+        }
+        <form asp-action="Register">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="FullName" class="control-label"></label>
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailAddress" class="control-label"></label>
+                <input asp-for="EmailAddress" class="form-control" />
+                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassword" class="control-label"></label>
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+
+            <div class="form-group" style="display: flex; justify-content: flex-end; gap: 10px;">
+                <input class="btn btn-outline-success float-right" type="submit" value="Sign up" />
+                <a class="btn btn-outline-secondary float-end" asp-controller="Account" asp-action="Login">Cancel</a>
+            </div>
+        </form>
     </div>
 </div>
+
+<script>
+    function hideNavbar() {
+        document.getElementById('navbarheader').style.display = 'none';
+    }
+    hideNavbar();
+</script>
