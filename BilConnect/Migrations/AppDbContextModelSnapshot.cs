@@ -103,14 +103,8 @@ namespace BilConnect.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime>("ReceiverLastSeen")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("RelatedPostId")
                         .HasColumnType("int");
-
-                    b.Property<DateTime>("SenderLastSeen")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -478,7 +472,7 @@ namespace BilConnect.Migrations
                     b.HasOne("BilConnect.Models.PostModels.Post", "RelatedPost")
                         .WithMany("Chats")
                         .HasForeignKey("RelatedPostId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BilConnect.Models.ApplicationUser", "User")

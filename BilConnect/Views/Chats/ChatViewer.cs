@@ -13,8 +13,5 @@ namespace BilConnect.Models
         public List<Message>? Messages { get; set; }
         public ApplicationUser? User { get; set; }
         public ApplicationUser? Receiver { get; set; }
-
-        public bool Unread { get; set; }
-
     }
 }

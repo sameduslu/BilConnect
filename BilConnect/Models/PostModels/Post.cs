@@ -1,12 +1,13 @@
 ﻿using BilConnect.Data.Base;
 using BilConnect.Data.Enums;
+using BilConnect.Data.ViewModels;
 using System.Collections.Concurrent;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BilConnect.Models.PostModels
 {
-    public class Post : IEntityBase
+    public class Post : IEntityBase, IComparable<Post>
     {
         [Key]
         public int Id { get; set; }
@@ -31,5 +32,14 @@ namespace BilConnect.Models.PostModels
         public virtual ApplicationUser? User { get; set; }
         public List<Chat>? Chats { get; set; }
 
+        // Compares posts based on the time.
+        public int CompareTo(Post other)
+        {
+            if (other == null)
+            {
+                return 1; // If the other object is null, this instance is greater.
+            }
+            return other.PostDate.CompareTo(PostDate);
+        }
     }
 }

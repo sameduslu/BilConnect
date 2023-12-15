@@ -5,64 +5,160 @@
 }
 
 <style>
-    .chat-item-content {
-        background-color: #fff;
+    @@keyframes jumpIn {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* WhatsApp font style */
+        margin: 0;
+        padding: 0;
+        background-color: #e5ddd5; /* WhatsApp background color */
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
-    .unread-dot {
-        width: 10px; /* Adjust the size of the dot as needed */
-        height: 10px;
-        background-color: red; /* Choose the color you want for the unread dot */
-        border-radius: 50%; /* Makes the element circular */
-        display: inline-block; /* Ensures it doesn't break the line */
+    .centered-heading {
+        position: relative;
+        text-align: center;
+        font-size: 24px;
     }
+
+    .centered-heading::before,
+    .centered-heading::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 50%;
+        height: 1px;
+        background-color: #000;
+    }
+
+    .centered-heading::before {
+        left: 0;
+        transform: translateX(-50%);
+    }
+
+    .centered-heading::after {
+        right: 0;
+        transform: translateX(50%);
+    }
+    .chat-list {
+        background-color: #e5ddd5; /* WhatsApp background color */
+        padding: 10px;
+    }
+
+    .chat-item {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        animation: jumpIn 0.6s ease-out;
+    }
+
+    .chat-item:hover {
+        background-color: #f0f0f0;
+    }
+
+    .chat-item-image {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .chat-item-content {
+        flex: 1;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* WhatsApp font style */
+    }
+
+    .chat-title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #000;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .chat-with {
+        color: #555;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .go-to-chat-btn {
+        background-color: #25d366;
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .material-icons {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+
+    .divider {
+        height: 20px;
+        background-color: #e5ddd5;
+        margin: 0 20px;
+    }
+
 </style>
-<div class="row">
+<div class="chat-list">
+    <div class="inbox-header">
+        <h1 class="centered-heading">Inbox</h1>
+        <div class="divider"></div>
+    </div>
     @if (Model != null && Model.Any())
+    {
         @foreach (var chatItem in Model)
         {
-            <div class="row g-0 chat-item">
-                <div class="col-md-1">
-                    <img src="@chatItem.RelatedPost.ImageURL" alt="Post Image" class="img-fluid rounded-circle chat-item-image">
+            <div class="chat-item" onclick="location.href='@Url.Action("Room", "Chats", new { id = chatItem.Id })'">
+                <img src="@chatItem.RelatedPost.ImageURL" alt="Post Image" class="img-fluid rounded-circle chat-item-image">
+                <div class="chat-item-content">
+                    <h4 class="chat-title">
+                        @chatItem.RelatedPost.Title
+                    </h4>
+                    <p class="chat-with">
+                        <strong>with </strong> @chatItem.Receiver.FullName
+                    </p>
                 </div>
-                <div class="col-md-11">
-                    @if (chatItem.Unread)
-                    {
-                        <div class="chat-item-content">
-                            <h4>@chatItem.RelatedPost.Title</h4>
-                            <div class="unread-dot"></div>
-                            <p><strong>with </strong> @chatItem.Receiver.FullName</p>
-                            <a class="btn btn-success btn-lg" asp-action="Room" asp-controller="Chats" asp-route-id="@chatItem.Id" aria-label="GO TO CHAT: @chatItem.Id">
-                                <i class="material-icons align-middle">visibility</i> GO TO CHAT
-                            </a>
-
-                        </div>
-                    }
-                    else
-                    {
-                        <div class="chat-item-content">
-                            <h4>@chatItem.RelatedPost.Title</h4>
-                            <p><strong>with </strong> @chatItem.Receiver.FullName</p>
-                            <a class="btn btn-success btn-lg" asp-action="Room" asp-controller="Chats" asp-route-id="@chatItem.Id" aria-label="GO TO CHAT: @chatItem.Id">
-                                <i class="material-icons align-middle">visibility</i> GO TO CHAT
-                            </a>
-
-                        </div>
-                    }
-
-                </div>
+                <a class="go-to-chat-btn" asp-action="Room" asp-controller="Chats" asp-route-id="@chatItem.Id" aria-label="GO TO CHAT: @chatItem.Id">
+                    <i class="material-icons align-middle">visibility</i> GO TO CHAT
+                </a>
             </div>
         }
+        <h1 class="centered-heading"></h1>
+    }
     else
     {
-        <div class="row g-0">
-            <div class="col-md-12">
-                <p>
-                    <strong>No chats available.</strong>
-                </p>
-            </div>
-        </div>
+        <h1 class="centered-heading">No chats available.</h1>
     }
 </div>
-
-

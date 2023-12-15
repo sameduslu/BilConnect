@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231214145129_init")]
-    partial class init
+    [Migration("20231214230744_cel")]
+    partial class cel
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -481,7 +481,7 @@ namespace BilConnect.Migrations
                     b.HasOne("BilConnect.Models.PostModels.Post", "RelatedPost")
                         .WithMany("Chats")
                         .HasForeignKey("RelatedPostId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BilConnect.Models.ApplicationUser", "User")

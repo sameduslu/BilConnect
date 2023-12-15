@@ -6,13 +6,124 @@
 @{
     ViewData["Title"] = "Create Post";
 }
+<style>
+    @@keyframes jumpIn {
+    0%
+    {
+        transform: translateY(50px);
+        opacity: 0;
+    }
 
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    }
+    /* General Styles */
+    html, body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: rgb(240,224,209);
+        background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
+        color: #4A4A4A;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Container */
+    .details-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        animation: jumpIn 1s ease-out;
+    }
+
+    .btn-secondary {
+        background-color: #757575;
+        align-self: center;
+    }
+
+
+    /* Titles */
+    .details-title, .item-title {
+        color: #075E54;
+        text-align: center;
+    }
+
+    .details-title {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .item-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+
+
+    .form-group {
+        background-color: #fff;
+        padding: 10px 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+
+        .form-group label {
+            color: #075E54; /* Dark Green */
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+    .form-control {
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 1px solid #E6E6E6;
+        background-color: #fff;
+    }
+
+    .text-danger {
+        color: #ff5252; /* Red color for validation messages */
+    }
+
+    .btn-submit {
+        background-color: #075E54; /* Dark Green */
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .btn-submit:hover {
+            background-color: #048654; /* Slightly darker green */
+        }
+
+    /* Style for conditional fields */
+    .conditional-fields {
+        display: none; /* Initially hidden */
+    }
+
+    /* Additional styling as needed */
+
+</style>
+<div class="form-group">
 <form asp-action="Create">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
     <!-- Post Type Selection -->
     <div class="form-group">
-        <label asp-for="PostType" class="control-label"></label>
+        <label asp-for="PostType" class="control-label">Post Type</label>
         <select asp-for="PostType" class="form-control" id="PostType">
             <option value="@PostType.SellingPost">Selling Post</option>
             <option value="@PostType.DonationPost">Donation Post</option>
@@ -25,6 +136,11 @@
         </select>
     </div>
 
+    <!-- Common Fields -->
+    <!-- Replace with similar structure for Title, Description, ImageURL -->
+    <!-- Conditional Fields -->
+    <!-- Replace with similar structure for each conditional field section -->
+    <!-- Submit Button -->
     <!-- Common Fields -->
     <div class="form-group">
         <label asp-for="Title" class="control-label"></label>
@@ -43,8 +159,6 @@
         <input asp-for="ImageURL" class="form-control" />
         <span asp-validation-for="ImageURL" class="text-danger"></span>
     </div>
-
-
 
     <!-- Selling  Post Fields -->
     <div id="sellingPostFields" class="conditional-fields" style="display:none">
@@ -161,11 +275,11 @@
     </div>
 
     <!-- Submit Button -->
-    <div class="form-group">
-        <input type="submit" value="Create" class="btn btn-primary" />
+    <div class="form-group" value="Create" >
+        <a class="btn btn-secondary" asp-action="Create">CREATE POST</a>
     </div>
 </form>
-
+</div>
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");

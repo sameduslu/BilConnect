@@ -23,8 +23,6 @@ namespace BilConnect.Data.Services
                 RelatedPostId = data.RelatedPostId,
                 ReceiverId = data.ReceiverId,
                 UserId = data.UserId,
-                SenderLastSeen = data.SenderLastSeen,
-                ReceiverLastSeen = data.ReceiverLastSeen
             };
             await _context.Chats.AddAsync(newChat);
             await _context.SaveChangesAsync();
@@ -59,8 +57,6 @@ namespace BilConnect.Data.Services
                 dbChat.RelatedPostId = data.RelatedPostId;
                 dbChat.ReceiverId = data.ReceiverId;
                 dbChat.UserId = data.UserId;
-                dbChat.SenderLastSeen = data.SenderLastSeen;
-                dbChat.ReceiverLastSeen = data.ReceiverLastSeen;
             }
             await _context.SaveChangesAsync();
 

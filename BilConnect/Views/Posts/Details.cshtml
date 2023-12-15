@@ -5,139 +5,264 @@
 @{
     ViewData["Title"] = "Post Details";
 }
+<style>
+    @@keyframes jumpIn {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    /* General Styles */
+    html, body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: rgb(240,224,209);
+        background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
+        color: #4A4A4A;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Container */
+    .details-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        animation: jumpIn 1s ease-out;
+    }
+
+    /* Titles */
+    .details-title, .item-title {
+        color: #075E54;
+        text-align: center;
+    }
+
+    .details-title {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .item-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 3px solid #075E54;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        background-color: transparent;
+        padding: 10px 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        color: #4A4A4A; /* Darker text for readability */
+        font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #075E54; /* Dark Green */
+            font-weight: bold;
+        }
+
+        .form-group div {
+            padding: 8px 12px;
+            background-color: #fff; /* White background for contrast */
+            border-radius: 5px;
+            border: 1px solid #E6E6E6; /* Light grey border */
+            word-wrap: break-word; /* Ensures text wraps inside the box */
+        }
 
 
+    .form-control {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 8px 12px;
+    }
+
+        .form-control[readonly] {
+            background-color: #e9e9e9;
+            color: #666;
+            cursor: default;
+        }
+
+    /* Reporting Link */
+    .report-link {
+        color: #075E54;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+        .report-link:hover {
+            text-decoration: underline;
+        }
+
+</style>
 <div class="row text">
-    <div class="col-md-8 offset-2">
-        <p>
-            <h1>Details</h1>
-        </p>
-        <div class="row">
-            <div class="col-md-8 offset-2">
-                
-                <<div class="row">
-                    <div class="col text-center">
-                        <h1>@Model.Title</h1>
-                    </div>
-                </div>
+    <div class="col-md-8 offset-2 details-container">
+        <div class="form-group text-center">
+            <h1 class="details-title">Details</h1>
+            <h2 class="item-title">@Model.Title</h2>
 
-                <div class="form-group text-center">
-                    <img id="ProfilePicturePreview" src="@Model.ImageURL" alt="Profile Picture"
-                         style="width: 150px; height: 150px; object-fit: cover;" class="border-info rounded-circle" />
-                </div>
+            <img id="ProfilePicturePreview" src="@Model.ImageURL" alt="Profile Picture" class="profile-pic" />
+        </div>
 
-                
-                <div class="form-group">
-                    <label asp-for="Description" class="control-label"></label>
-                    <input asp-for="Description" class="form-control" readonly />
-                    <span asp-validation-for="Description" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label asp-for="User.FullName" class="control-label"></label>
-                    <input asp-for="User.FullName" class="form-control" readonly />
-                    <span asp-validation-for="User.FullName" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="PostDate" class="control-label">Post Date</label>
-                    <input id="PostDate" type="text" class="form-control" readonly value="@Model.PostDate.ToLocalTime().ToString("dd MMM yy HH:mm")" />
-                    <span class="text-danger"></span>
-                </div>
-
-                
-                @if (Model is SellingPost sellingPost)
-                {
-                    <div class="form-group">
-                        <label>Price</label>
-                        <input class="form-control" value="@sellingPost.Price" readonly />
-                    </div>
-                }else if(Model is DonationPost donationPost)
-                {
-
-                }else if(Model is BorrowingPost borrowingPost)
-                {
-                    <div class="form-group">
-                        <label>Price</label>
-                        <input class="form-control" value="@borrowingPost.Price" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Return Date</label>
-                        <input class="form-control" value="@borrowingPost.ReturnDate" readonly />
-                    </div>
-                }else if(Model is EventTicketPost eventTicketPost)
-                {
-                    <div class="form-group">
-                        <label>Event Place</label>
-                        <input class="form-control" value="@eventTicketPost.EventPlace" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Event Time</label>
-                        <input class="form-control" value="@eventTicketPost.EventTime" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Price</label>
-                        <input class="form-control" value="@eventTicketPost.Price" readonly />
-                    </div>
-                }else if(Model is FoundItemPost foundItemPost)
-                {
-                    
-                }else if(Model is LostItemPost lostItemPost)
-                {
-                    <div class="form-group">
-                        <label>Place</label>
-                        <input class="form-control" value="@lostItemPost.Place" readonly />
-                    </div>
-                }else if(Model is PetAdoptionPost petAdoptionPost)
-                {
-                    <div class="form-group">
-                        <label>Event Time</label>
-                        <input class="form-control" value="@petAdoptionPost.IsFullyVaccinated" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Price</label>
-                        <input class="form-control" value="@petAdoptionPost.AgeInMonths" readonly />
-                    </div>
-                }else if(Model is TravellingPost travellingPost)
-                {
-                    <div class="form-group">
-                        <label>Origin</label>
-                        <input class="form-control" value="@travellingPost.Origin" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Destinatione</label>
-                        <input class="form-control" value="@travellingPost.Destination" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>TravelTime</label>
-                        <input class="form-control" value="@travellingPost.TravelTime" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Price</label>
-                        <input class="form-control" value="@travellingPost.Price" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Quota</label>
-                        <input class="form-control" value="@travellingPost.Quota" readonly />
-                    </div>
-                }
-
-                @if (User.FindFirst(ClaimTypes.NameIdentifier)?.Value != Model.UserId) // Compare current user's ID with Model.UserId
-                {
-                    <a asp-controller="PostReports" asp-action="Create" asp-route-id="@Model.Id">Create New Post Report</a>
-                }
-                
-                
+        <div class="form-group">
+            <label for="Description" class="control-label">Description</label>
+            <div class="form-group-content">
+                @Model.Description
             </div>
         </div>
+        <div class="form-group">
+            <label for="UserFullName" class="control-label">Owner</label>
+            <div class="form-group-content">
+                @Model.User.FullName
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="PostDate" class="control-label">Posted at</label>
+            <div class="form-group-content">
+                @Model.PostDate.ToLocalTime().ToString("dd MMMM yyyy, HH:mm") @TimeZoneInfo.Local
+            </div>
+        </div>
+        <!-- Additional sections for different post types -->
+        @if (Model is SellingPost sellingPost)
+        {
+            <div class="form-group">
+                <label for="Price" class="control-label">Price</label>
+                <div class="form-group-content">
+                    @sellingPost.Price TL
+                </div>
+            </div>
+        }
+        else if (Model is DonationPost donationPost)
+        {
+            <!-- Fields specific to DonationPost -->
+        }
+        else if (Model is BorrowingPost borrowingPost)
+        {
+            <div class="form-group">
+                <label for="Price" class="control-label">Price</label>
+                <div class="form-group-content">
+                    @borrowingPost.Price TL
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ReturnDate" class="control-label">Return Date</label>
+                <div class="form-group-content">
+                    @borrowingPost.ReturnDate
+                </div>
+            </div>
+        }
+        else if (Model is EventTicketPost eventTicketPost)
+        {
+            <div class="form-group">
+                <label for="EventPlace" class="control-label">Event Place</label>
+                <div class="form-group-content">
+                    @eventTicketPost.EventPlace
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="EventTime" class="control-label">Event Date & time</label>
+                <div class="form-group-content">
+                    @eventTicketPost.EventTime
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="TicketPrice" class="control-label">Ticket Price</label>
+                <div class="form-group-content">
+                    @eventTicketPost.Price TL
+                </div>
+            </div>
+        }
+        else if (Model is FoundItemPost foundItemPost)
+        {
+            <!-- Fields specific to FoundItemPost -->
+        }
+        else if (Model is LostItemPost lostItemPost)
+        {
+            <div class="form-group">
+                <label for="LostPlace" class="control-label">Place</label>
+                <div class="form-group-content">
+                    @lostItemPost.Place
+                </div>
+            </div>
+        }
+        else if (Model is PetAdoptionPost petAdoptionPost)
+        {
+            <div class="form-group">
+                <label for="IsVaccinated" class="control-label">Is Fully Vaccinated?</label>
+                <div class="form-group-content">
+                    @petAdoptionPost.IsFullyVaccinated
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="PetAge" class="control-label">Age in Months</label>
+                <div class="form-group-content">
+                    @petAdoptionPost.AgeInMonths
+                </div>
+            </div>
+        }
+        else if (Model is TravellingPost travellingPost)
+        {
+            <div class="form-group">
+                <label for="Origin" class="control-label">Origin</label>
+                <div class="form-group-content">
+                    @travellingPost.Origin
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Destination" class="control-label">Destination</label>
+                <div class="form-group-content">
+                    @travellingPost.Destination
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="TravelTime" class="control-label">Travel Time</label>
+                <div class="form-group-content">
+                    @travellingPost.TravelTime
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="TravelPrice" class="control-label">Price</label>
+                <div class="form-group-content">
+                    @travellingPost.Price TL
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Quota" class="control-label">Quota</label>
+                <div class="form-group-content">
+                    @travellingPost.Quota people
+                </div>
+            </div>
+        }
+
+        @if (User.FindFirst(ClaimTypes.NameIdentifier)?.Value != Model.UserId)
+        {
+            <a href="@Url.Action("Create", "PostReports", new { id = Model.Id })" class="report-link">Create New Post Report</a>
+        }
     </div>
 </div>
-

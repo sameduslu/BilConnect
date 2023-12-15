@@ -17,8 +17,6 @@ namespace BilConnect.Models
         public string ReceiverId { get; set; }
         [ForeignKey("ReceiverId")]
 
-        public DateTime SenderLastSeen { get; set; }
-        public DateTime ReceiverLastSeen { get; set; }
         public virtual Post? RelatedPost { get; set; }
         public virtual List<Message>? Messages { get; set;}
         public virtual ApplicationUser? User { get; set; }

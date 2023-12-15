@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Identity;
-@inject UserManager<ApplicationUser> UserManager; 
+@inject UserManager<ApplicationUser> UserManager;
 
 @if (!User.Identity.IsAuthenticated)
 {
@@ -40,4 +40,3 @@ else
         </button>
     </form>
 }
-

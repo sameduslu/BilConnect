@@ -1,6 +1,31 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        /* Style the scrollbar - works on Chrome, Edge, and Safari */
+        ::-webkit-scrollbar {
+            width: 12px; /* Adjust the width of the scrollbar */
+        }
+
+        /* Style the track (background) of the scrollbar */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Color of the track */
+            border-radius: 10px; /* Roundness of the track */
+        }
+
+        /* Style the thumb (the draggable part) of the scrollbar */
+        ::-webkit-scrollbar-thumb {
+            background: #888; /* Color of the thumb */
+            border-radius: 10px; /* Roundness of the thumb */
+        }
+
+        /* Style the thumb on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Color when hovering over the thumb */
+        }
+
+    </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BilConnect</title>
@@ -46,11 +71,6 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - BilConnect - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
