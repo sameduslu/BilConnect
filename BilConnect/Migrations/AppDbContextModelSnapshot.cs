@@ -478,7 +478,7 @@ namespace BilConnect.Migrations
                     b.HasOne("BilConnect.Models.PostModels.Post", "RelatedPost")
                         .WithMany("Chats")
                         .HasForeignKey("RelatedPostId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BilConnect.Models.ApplicationUser", "User")
@@ -499,7 +499,7 @@ namespace BilConnect.Migrations
                     b.HasOne("BilConnect.Models.Chat", "Chat")
                         .WithMany("Messages")
                         .HasForeignKey("ChatId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BilConnect.Models.ApplicationUser", "Sender")

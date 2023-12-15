@@ -31,7 +31,7 @@ namespace BilConnect.Data
                 .WithMany() // or .WithOne() if that's your model
                 .HasForeignKey(pr => pr.ReportedPostId)
                 .OnDelete(DeleteBehavior.Cascade);
-            
+
             modelBuilder.Entity<Chat>()
                .HasOne(c => c.User)
                .WithMany(u => u.SenderChats)
@@ -44,33 +44,19 @@ namespace BilConnect.Data
                 .HasForeignKey(c => c.ReceiverId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            /*    // Chat - UserChat
-                modelBuilder.Entity<UserChat>()
-                    .HasOne(uc => uc.Chat)
-                    .WithMany(c => c.UserChats)
-                    .HasForeignKey(uc => uc.ChatId)
-                    .OnDelete(DeleteBehavior.Restrict);
-
-                // User - UserChat
-                modelBuilder.Entity<UserChat>()
-                    .HasOne(uc => uc.User)
-                    .WithMany(u => u.UserChats)
-                    .HasForeignKey(uc => uc.UserId)
-                    .OnDelete(DeleteBehavior.Restrict);*/
-
             // Post - Chat
             modelBuilder.Entity<Chat>()
                 .HasOne(c => c.RelatedPost)
                 .WithMany(p => p.Chats)
                 .HasForeignKey(c => c.RelatedPostId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             // Chat - Message
             modelBuilder.Entity<Message>()
                 .HasOne(m => m.Chat)
                 .WithMany(c => c.Messages)
                 .HasForeignKey(m => m.ChatId)
-                .OnDelete(DeleteBehavior.Restrict); // Prevent cascading delete
+                .OnDelete(DeleteBehavior.Cascade); // Prevent cascading delete
 
             // User - Message
             modelBuilder.Entity<Message>()
