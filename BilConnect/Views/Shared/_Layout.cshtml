@@ -1,18 +1,104 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="~/icons/bilconnect.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="~/icons/bilconnect.ico" type="image/x-icon">
+    <style>
+        /* Style the scrollbar - works on Chrome, Edge, and Safari */
+        ::-webkit-scrollbar {
+            width: 12px; /* Adjust the width of the scrollbar */
+        }
+
+        /* Style the track (background) of the scrollbar */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Color of the track */
+            border-radius: 10px; /* Roundness of the track */
+        }
+
+        /* Style the thumb (the draggable part) of the scrollbar */
+        ::-webkit-scrollbar-thumb {
+            background: #888; /* Color of the thumb */
+            border-radius: 10px; /* Roundness of the thumb */
+        }
+
+        /* Style the thumb on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Color when hovering over the thumb */
+        }
+        /* General Navbar Styles */
+    .navbar {
+        background-color: #ffffff; /* White background */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        padding: 0.5rem 1rem; /* Padding for aesthetic spacing */
+        border-bottom: 1px solid #e0e0e0; /* Light border for subtle separation */
+
+    }
+
+
+.navbar-brand {
+    color: #007bff; /* Brand color - you can choose any */
+    font-size: 1.5rem; /* Larger font size for brand */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+.navbar-toggler {
+    border-color: #007bff; /* Toggler icon color */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23007bff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Navbar Links */
+.nav-link {
+    color: #555555; /* Dark grey for normal state */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #007bff; /* Highlight color on hover/focus */
+}
+
+/* Navbar Items */
+.nav-item {
+    margin-left: 1rem; /* Spacing between nav items */
+}
+
+.container-fluid {
+    max-width: 90%; /* Limiting max width for better readability on larger screens */
+    margin: auto; /* Centering the navbar content */
+}
+
+/* Responsive Adjustments */
+@@media (max-width: 576px) {
+    .navbar {
+        padding: 0.5rem; /* Reduced padding on smaller screens */
+    }
+}
+
+/* Additional styles as needed */
+
+    </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BilConnect</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9B0CFKgtP6EDpq8lFQf413e2nB6p6gT9Ft" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtzkrz3u75bfEYOEi3jeNhiRwVBK07pP4j65t9qG+IRyJnSLTU6Rj" crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BilConnect.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <header>
+    <header id="navbarheader">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BilConnect</a>
@@ -23,7 +109,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Events</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Posts" asp-action="Index">Feed</a>
@@ -45,12 +131,6 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - BilConnect - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>

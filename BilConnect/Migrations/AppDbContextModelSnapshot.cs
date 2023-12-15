@@ -103,14 +103,8 @@ namespace BilConnect.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime>("ReceiverLastSeen")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("RelatedPostId")
                         .HasColumnType("int");
-
-                    b.Property<DateTime>("SenderLastSeen")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
                         .IsRequired()

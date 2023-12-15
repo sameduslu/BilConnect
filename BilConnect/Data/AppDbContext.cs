@@ -1,4 +1,4 @@
-﻿using BilConnect.Models;
+using BilConnect.Models;
 using BilConnect.Models.PostModels;
 using BilConnect.Models.ReportModels;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -63,7 +63,7 @@ namespace BilConnect.Data
                 .HasOne(m => m.Sender)
                 .WithMany(c => c.Messages)
                 .HasForeignKey(m => m.SenderUserId)
-                .OnDelete(DeleteBehavior.Restrict); // Prevent cascading delete
+                .OnDelete(DeleteBehavior.Restrict); 
 
 
             // Configure the SellingPost to be a separate table

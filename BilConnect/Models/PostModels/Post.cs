@@ -7,7 +7,7 @@ using System.Text.Json;
 
 namespace BilConnect.Models.PostModels
 {
-    public class Post : IEntityBase
+    public class Post : IEntityBase, IComparable<Post>
     {
 
         [Key]
@@ -43,6 +43,16 @@ namespace BilConnect.Models.PostModels
         // Navigation properties
         public virtual ApplicationUser? User { get; set; }
         public List<Chat>? Chats { get; set; }
+
+        // Compares posts based on the time.
+        public int CompareTo(Post other)
+        {
+            if (other == null)
+            {
+                return 1; // If the other object is null, this instance is greater.
+            }
+            return other.PostDate.CompareTo(PostDate);
+        }
 
     }
 }

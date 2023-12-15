@@ -56,8 +56,6 @@ namespace BilConnect.Controllers
                     RelatedPostId = postId,
                     ReceiverId = postOwner,
                     UserId = currentUserId,
-                    SenderLastSeen = DateTime.UtcNow,
-                    ReceiverLastSeen = DateTime.UtcNow,
                 };
 
                 await _service.AddNewChatAsync(chat);
@@ -89,13 +87,11 @@ namespace BilConnect.Controllers
                 {
                     cv.User = data.User;
                     cv.Receiver = data.Receiver;
-                    cv.Unread = lastMessage == null ? true : data.Messages == null || data.Messages.Count == 0 || lastMessage.SenderUserId == data.ReceiverId && lastMessage.Timestamp.CompareTo(data.SenderLastSeen) > 0;
                 }
                 else
                 {
                     cv.User = data.Receiver;
                     cv.Receiver = data.User;
-                    cv.Unread = lastMessage == null ? true : data.Messages == null || data.Messages.Count == 0 || lastMessage.SenderUserId == data.UserId && lastMessage.Timestamp.CompareTo(data.ReceiverLastSeen) > 0;
                 }
                 chatViews.Add(cv);
             }
@@ -112,7 +108,6 @@ namespace BilConnect.Controllers
             cv.RelatedPost = data.RelatedPost;
             cv.Messages = data.Messages;
             cv.Id = data.Id;
-            cv.Unread = false;
             if (currentUserId == data.UserId)
             {
                 cv.User = data.User;
@@ -123,23 +118,6 @@ namespace BilConnect.Controllers
                 cv.User = data.Receiver;
                 cv.Receiver = data.User;
             }
-            // Updating last seen of the chat
-            ChatVM vm = new ChatVM
-            {
-                RelatedPostId = data.RelatedPostId,
-                ReceiverId = data.ReceiverId,
-                UserId = data.UserId,
-                Id = data.Id,
-            };
-            if (currentUserId == data.UserId)
-            {
-                vm.SenderLastSeen = DateTime.UtcNow;
-            }
-            if (currentUserId== data.ReceiverId)
-            {
-                vm.ReceiverLastSeen = DateTime.UtcNow;
-            }
-            await _service.UpdateChatAsync(vm);
 
             // Return ChatViewer
             return View(cv);

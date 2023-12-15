@@ -11,8 +11,6 @@ namespace BilConnect.Data.ViewModels
         // delete below
         public string ReceiverId { get; set; }
         public string UserId { get; set; }
-        public DateTime SenderLastSeen { get; set; }
-        public DateTime ReceiverLastSeen { get; set; }
 
     }
 }
