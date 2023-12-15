@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231215172142_additionalimages")]
-    partial class additionalimages
+    [Migration("20231215234255_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -106,14 +106,8 @@ namespace BilConnect.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime>("ReceiverLastSeen")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("RelatedPostId")
                         .HasColumnType("int");
-
-                    b.Property<DateTime>("SenderLastSeen")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
                         .IsRequired()
