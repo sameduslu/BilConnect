@@ -7,7 +7,7 @@
     ViewData["Title"] = "Create Post";
 }
 
-<form asp-action="Create">
+<form asp-action="Create" method="post" enctype="multipart/form-data">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
     <!-- Post Type Selection -->
@@ -39,9 +39,8 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="ImageURL" class="control-label"></label>
-        <input asp-for="ImageURL" class="form-control" />
-        <span asp-validation-for="ImageURL" class="text-danger"></span>
+        <label for="photoUpload">Upload Photo</label>
+        <input type="file" name="photoUpload" class="form-control" accept="image/*" />
     </div>
 
 

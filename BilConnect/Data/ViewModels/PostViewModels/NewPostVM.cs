@@ -11,7 +11,7 @@ namespace BilConnect.Data.ViewModels.PostViewModels
 
         public string Description { get; set; }
 
-        public string ImageURL { get; set; }
+        public string? ImageURL { get; set; }
 
         public DateTime PostDate { get; set; }
 

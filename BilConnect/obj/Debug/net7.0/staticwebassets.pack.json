@@ -13,6 +13,34 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\09a44ad2-e9bc-44b6-991f-56fd8eaf95ca.jpeg",
+      "PackagePath": "staticwebassets\\images\\09a44ad2-e9bc-44b6-991f-56fd8eaf95ca.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\395db5ae-9527-4ad6-b4c9-17848556ad90.png",
+      "PackagePath": "staticwebassets\\images\\395db5ae-9527-4ad6-b4c9-17848556ad90.png"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\7e62c8ae-5240-4733-a1b9-9d65782be566.PNG",
+      "PackagePath": "staticwebassets\\images\\7e62c8ae-5240-4733-a1b9-9d65782be566.PNG"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\804192c1-003d-49f5-92d0-4dd95594dd5c.PNG",
+      "PackagePath": "staticwebassets\\images\\804192c1-003d-49f5-92d0-4dd95594dd5c.PNG"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\83306c47-2fa7-4ba9-93db-23ec43047337.PNG",
+      "PackagePath": "staticwebassets\\images\\83306c47-2fa7-4ba9-93db-23ec43047337.PNG"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\859c47be-8c91-459d-8ec2-fcd894fb6ecf.PNG",
+      "PackagePath": "staticwebassets\\images\\859c47be-8c91-459d-8ec2-fcd894fb6ecf.PNG"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\b5442322-ac4f-4ced-94f1-c47e51c70132.PNG",
+      "PackagePath": "staticwebassets\\images\\b5442322-ac4f-4ced-94f1-c47e51c70132.PNG"
+    },
+    {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

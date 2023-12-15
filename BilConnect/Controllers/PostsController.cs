@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Hosting;
 
 namespace BilConnect.Controllers.PostsControllers
 {
@@ -22,10 +23,12 @@ namespace BilConnect.Controllers.PostsControllers
     public class PostsController : Controller
     {
         private readonly IPostsService _service;
+        private readonly IWebHostEnvironment _hostingEnvironment;
 
-        public PostsController(IPostsService service)
+        public PostsController(IPostsService service, IWebHostEnvironment hostingEnvironment)
         {
             _service = service;
+            _hostingEnvironment = hostingEnvironment;
         }
 
         public async Task<IActionResult> Index()
@@ -50,10 +53,24 @@ namespace BilConnect.Controllers.PostsControllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(NewPostVM post)
+        public async Task<IActionResult> Create(NewPostVM post, IFormFile photoUpload)
         {
             post.UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
+
+            // Handle the image upload
+            if (photoUpload != null && photoUpload.Length > 0)
+            {
+                var imageName = Guid.NewGuid().ToString() + Path.GetExtension(photoUpload.FileName); // Generate a unique name
+                var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "images", imageName); // Save to /wwwroot/images/
+
+                using (var stream = new FileStream(imagePath, FileMode.Create))
+                {
+                    await photoUpload.CopyToAsync(stream);
+                }
+
+                post.ImageURL = Url.Content("~/images/" + imageName); // Update the ImageURL property
+            }
 
             // Bypass Price validation for non-selling posts
             if (post.PostType != PostType.SellingPost && post.PostType != PostType.BorrowingPost && post.PostType != PostType.EventTicketPost && post.PostType != PostType.TravellingPost)
@@ -93,7 +110,19 @@ namespace BilConnect.Controllers.PostsControllers
 
 
             if (!ModelState.IsValid)
-            {
+            {   
+                /*
+                foreach (var modelStateKey in ModelState.Keys)
+                {
+                    var modelStateVal = ModelState[modelStateKey];
+                    foreach (var error in modelStateVal.Errors)
+                    {
+                        // Log these details or return them in the response
+                        var errorMessage = error.ErrorMessage;
+                        // You can log this or return it as part of your response
+                    }
+                }
+                */
                 return View(post);
             }
             await _service.AddNewPostAsync(post);
