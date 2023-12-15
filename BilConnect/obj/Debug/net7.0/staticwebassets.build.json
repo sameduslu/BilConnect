@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yFRsRGRPmpmHQnPF4viaTms6MTYjlsvyKZX5CWGqegU=",
+  "Hash": "ytxxoo7tp7vauQCRYrl/ERdBJbBOCWg5a7nF8Qz3pYA=",
   "Source": "BilConnect",
   "BasePath": "_content/BilConnect",
   "Mode": "Default",
@@ -119,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\images\\09a44ad2-e9bc-44b6-991f-56fd8eaf95ca.jpeg"
     },
     {
+      "Identity": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\1053436b-90a6-48d9-81b9-c862d4fcebe2.png",
+      "SourceId": "BilConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\",
+      "BasePath": "_content/BilConnect",
+      "RelativePath": "images/1053436b-90a6-48d9-81b9-c862d4fcebe2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1053436b-90a6-48d9-81b9-c862d4fcebe2.png"
+    },
+    {
       "Identity": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\1a0e3dff-0ec6-4553-8bdd-0d7d7593a796.jpg",
       "SourceId": "BilConnect",
       "SourceType": "Discovered",
@@ -168,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\277088dc-3317-4f5a-b8c9-4f5d24cf90d8.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\2ce86a50-c219-4d7c-9b04-ae1f6d8af54e.jpg",
+      "SourceId": "BilConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\",
+      "BasePath": "_content/BilConnect",
+      "RelativePath": "images/2ce86a50-c219-4d7c-9b04-ae1f6d8af54e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\2ce86a50-c219-4d7c-9b04-ae1f6d8af54e.jpg"
     },
     {
       "Identity": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\395db5ae-9527-4ad6-b4c9-17848556ad90.png",
@@ -355,6 +389,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\b5442322-ac4f-4ced-94f1-c47e51c70132.PNG"
+    },
+    {
+      "Identity": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\c15c9078-1b05-4927-9711-e205c5f6a304.jpg",
+      "SourceId": "BilConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\",
+      "BasePath": "_content/BilConnect",
+      "RelativePath": "images/c15c9078-1b05-4927-9711-e205c5f6a304.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\c15c9078-1b05-4927-9711-e205c5f6a304.jpg"
     },
     {
       "Identity": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\c434dc0c-597e-43fe-98cb-7cebef7cfeab.jpg",
