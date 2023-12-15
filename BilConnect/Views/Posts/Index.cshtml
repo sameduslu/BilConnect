@@ -1,113 +1,242 @@
 @using BilConnect.Models.PostModels;
-
+@using System.Security.Claims;
 @model IEnumerable<Post>
 
 @{
     ViewData["Title"] = "List of Posts";
+    ((List<Post>)Model).Sort();
 }
 
 <style>
-    /* Added CSS for square images */
-    .img-square {
-        width: 150px; /* Set the width of the image */
-        height: 150px; /* Set the height of the image */
-        object-fit: cover; /* This will ensure the image covers the area nicely */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* WhatsApp font style */
+        margin: 0;
+        padding: 0;
+        background: rgb(240,224,209);
+        background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
+
+    .post-card {
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        overflow: hidden;
+        height: 400px; /* Fixed height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distributes space inside the card */
+        background-color: #e5ddd5;
+        animation: jumpIn 0.6s ease-out;
+    }
+
+    @@keyframes jumpIn {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .post-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        color: black; /* Set the text color to gray */
+    }
+
+        /* To specifically target links within .post-info to ensure they are gray too */
+        .post-info a {
+            color: black;
+        }
+
+            /* Change color on hover for links, if desired */
+            .post-info a:hover {
+                color: lightgray; /* Replace with a darker shade of gray if you wish */
+            }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .material-icons {
+        color: #757575; /* WhatsApp green */
+    }
+
+
+    .info-label {
+        font-weight: bold;
+        color: #555;
+        margin-right: 5px;
+    }
+
+    .your-post {
+        font-weight: bold;
+        color: #555;
+        align-items: center;
+        text-decoration: none;
+    }
+
+
+
+    .post-card-header {
+        background-color: #e5ddd5;
+        color: black;
+        text-align: center;
+        font-family: "Segoe UI", Arial, sans-serif;
+        padding: 10px;
+        font-size: 25px;
+    }
+
+    .post-card-body {
+        padding: 10px;
+        background-color: #e5ddd5;
+    }
+
+    .post-img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .post-card-footer {
+        padding: 10px;
+        background-color: #d4ccc4;
+        text-align: center;
+    }
+
+    .btn-whatsapp {
+        background-color: #757575;
+        color: white;
+    }
+
+    .btn-secondary {
+        background-color: #757575;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .search-input {
+        width: 70%;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid #757575;
+        outline: none;
+    }
+
 </style>
 
+<div class="container">
+    <div class="search-container" id="searchField">
+        <input type="text" class="search-input" placeholder="Search posts..." maxlength="100">
+    </div>
 
-@*Define View Data*@
-
-@*Write Code*@
-
-<div class="row">
-    @foreach (var item in Model)
-    {
-        if (item.PostStatus == BilConnect.Data.Enums.PostStatus.Available) // Check if the status is "Available"
+    <div class="row">
+        @foreach (var item in Model)
         {
-            <div class="col-md-4 col-xs-6 border-primary mb-3 fixed-size-container">
-                <div class="card mb-3 fixed-size-card" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-12">
-                        <div class="card-header text-white bg-info">
-                            <h5 class="card-title">
-                                @item.Title
-                                <a class="text-white float-right"><i class="bi bi-pencil-square"></i></a>
-                            </h5>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="@Url.Action("Details", new { id = item.Id })" class="text-decoration-none">
+                    <div class="post-card" data-title="@item.Title">
+                        <div class="post-card-header">
+                            @item.Title
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="@item.ImageURL" class="img-square fixed-size-image" alt="@item.Title">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card-body">
-                            <p class="card-text truncate-text">@item.Description</p>
-                            <p class="card-text"><b>Post Author: </b>@item.User.FullName</p>
-                            <p class="card-text"><b>Post Date: </b>@item.PostDate.ToString("dd MMM yy")</p>
+                        <img src="@item.ImageURL" alt="@item.Title" class="post-img">
+                        <div class="post-card-body">
+                            <div class="post-info">
+                                <p class="info-item">
+                                    <i class="material-icons">person_outline</i>
+                                    <span>Author: @item.User.FullName</span>
+                                </p>
+                                <p class="info-item">
+                                    <i class="material-icons">event</i>
+                                    <span>Date: @item.PostDate.ToLocalTime().ToString("dd MMM yyyy")</span>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="card-footer d-flex justify-content-between">
-                            <a class="btn btn-success btn-lg" asp-action="Details" asp-route-id="@item.Id" aria-label="Show Details">
-                                <i class="bi bi-eye-fill align-middle"></i> Show Details
-                            </a>
-
+                        <div class="post-card-footer">
+                            @if (item.UserId != User.FindFirstValue(ClaimTypes.NameIdentifier))
+                            {
                                 @if (item is SellingPost sellingPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Buy Item">
-                                        <i class="bi bi-cart-fill align-middle"></i> Buy for @sellingPost.Price
-                                    </a>
-                                }else if(item is DonationPost donationPost)
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-controller="Posts" asp-route-id="@item.Id">Buy for @sellingPost.Price TL</a>
+                                }
+                                else if (item is DonationPost donationPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Volunteer to Donation">
-                                        <i class="bi bi-cart-fill align-middle"></i> Volunteer to Donation
-                                    </a>
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Volunteer</a>
                                 }
                                 else if (item is BorrowingPost borrowingPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Borrow Post">
-                                        <i class="bi bi-cart-fill align-middle"></i> Borrow Post
-                                    </a>
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Borrow</a>
                                 }
                                 else if (item is EventTicketPost eventTicketPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Buy Event Ticket">
-                                        <i class="bi bi-cart-fill align-middle"></i> Buy Event Ticket
-                                    </a>
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Buy Event Ticket</a>
                                 }
                                 else if (item is FoundItemPost foundItemPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Learn Details">
-                                        <i class="bi bi-cart-fill align-middle"></i> Learn Details
-                                    </a>
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Learn Details</a>
                                 }
                                 else if (item is LostItemPost lostItemPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Give Information">
-                                        <i class="bi bi-cart-fill align-middle"></i> Give Information
-                                    </a>
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Give Information</a>
                                 }
                                 else if (item is PetAdoptionPost petAdoptionPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id"  aria-label="Adopt Pet">
-                                        <i class="bi bi-cart-fill align-middle"></i> Adopt Pet
-                                    </a>
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Adopt Pet</a>
                                 }
                                 else if (item is TravellingPost travellingPost)
                                 {
-                                    <a class="btn btn-warning btn-lg" asp-action="BuyItem" asp-route-id="@item.Id" aria-label="Travel Together">
-                                        <i class="bi bi-cart-fill align-middle"></i> Travel Together
-                                    </a>
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Travel Together</a>
                                 }
-
-
-                            </div>
+                            }
+                            else
+                            {
+                                <div class="your-post">
+                                    Your post
+                                </div>
+                            }
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
-        </div>
         }
-    }
+    </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById("searchField").addEventListener('input', function (e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const posts = document.querySelectorAll('.col-md-4.col-sm-6.mb-4'); // Update the selector to target the grid column
 
-@await Html.PartialAsync("_CreatePost", "Posts") 
+            posts.forEach(col => {
+                const post = col.querySelector('.post-card');
+                const title = post.getAttribute('data-title').toLowerCase();
+
+                if (searchTerm === '' || title.includes(searchTerm)) {
+                    col.style.display = ''; // Show the post column
+                } else {
+                    col.style.display = 'none'; // Hide the post column
+                }
+            });
+        });
+    });
+
+
+</script>
+@await Html.PartialAsync("_CreatePost", "Posts")

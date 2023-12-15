@@ -290,15 +290,8 @@ namespace BilConnect.Controllers.PostsControllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpPost]
         public async Task<IActionResult> Delete(int id)
-        {
-            var postDetails = await _service.GetByIdAsync(id);
-            if (postDetails == null) return View("NotFound");
-            return View(postDetails);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var postDetails = await _service.GetByIdAsync(id);
             if (postDetails == null) return View("NotFound");

@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <Folder Include="Controllers\PostsControllers\" />
-    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231214131831_init")]
-    partial class init
+    [Migration("20231215155050_csdgd")]
+    partial class csdgd
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -106,14 +106,8 @@ namespace BilConnect.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime>("ReceiverLastSeen")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("RelatedPostId")
                         .HasColumnType("int");
-
-                    b.Property<DateTime>("SenderLastSeen")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -481,7 +475,7 @@ namespace BilConnect.Migrations
                     b.HasOne("BilConnect.Models.PostModels.Post", "RelatedPost")
                         .WithMany("Chats")
                         .HasForeignKey("RelatedPostId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BilConnect.Models.ApplicationUser", "User")
@@ -502,7 +496,7 @@ namespace BilConnect.Migrations
                     b.HasOne("BilConnect.Models.Chat", "Chat")
                         .WithMany("Messages")
                         .HasForeignKey("ChatId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BilConnect.Models.ApplicationUser", "Sender")

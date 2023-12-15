@@ -1,10 +1,27 @@
 ﻿@model string;
+<style>
+    .btn-add-post {
+        background-color: gray; /* Gray background */
+        color: white; /* White text/icon */
+        border-radius: 50%; /* Circle shape */
+        width: 50px; /* Fixed width */
+        height: 50px; /* Fixed height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none; /* Remove underline from link */
+    }
 
+        .btn-add-post .material-icons {
+            font-size: 24px; /* Icon size */
+            color: white;
+        }
+</style>
 @if (User.Identity.IsAuthenticated && User.IsInRole("User"))
 {
     <div style="position: fixed; right: 25px; bottom: 70px;" class="text-white">
-        <a asp-controller="@Model" asp-action="Create" class="btn btn-success">
-            <i class="bi bi-plus-circle"></i> Add New Post
+        <a asp-controller="@Model" asp-action="Create" class="btn-add-post">
+            <i class="material-icons">add</i>
         </a>
     </div>
 }
