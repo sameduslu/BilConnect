@@ -901,3 +901,6 @@ C:\Users\90541\Documents\Bilkent-Connect\BilConnect\bin\Debug\net7.0\ru\Microsof
 C:\Users\90541\Documents\Bilkent-Connect\BilConnect\bin\Debug\net7.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\90541\Documents\Bilkent-Connect\BilConnect\bin\Debug\net7.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\90541\Documents\Bilkent-Connect\BilConnect\bin\Debug\net7.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\90541\Documents\Bilkent-Connect\BilConnect\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\90541\Documents\Bilkent-Connect\BilConnect\bin\Debug\net7.0\SendGrid.dll
+C:\Users\90541\Documents\Bilkent-Connect\BilConnect\bin\Debug\net7.0\StarkbankEcdsa.dll

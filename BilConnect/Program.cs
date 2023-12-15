@@ -40,9 +40,14 @@ builder.Services.AddScoped<IApplicationUsersService, ApplicationUsersService>();
 builder.Services.AddScoped<IPostReportsService, PostReportsService>();
 builder.Services.AddScoped<IChatsService, ChatsService>();
 builder.Services.AddScoped<IMessagesService, MessagesService>();
+builder.Services.AddSingleton<IEmailService, SendGridEmailService>();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
+
 
 //Authentication and Authorization
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+//builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 builder.Services.AddMemoryCache();
 builder.Services.AddSession();
 builder.Services.AddAuthentication(options =>

@@ -16,16 +16,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\90541\Documents\Bilkent-Connect\BilConnect
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/CheckYourEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGVja1lvdXJFbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/RegisterCompleted.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RlckNvbXBsZXRlZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/SelfPosts.cshtml]
@@ -38,6 +38,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/VerificationError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWZXJpZmljYXRpb25FcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/VerificationSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWZXJpZmljYXRpb25TdWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Chats/Index.cshtml]
