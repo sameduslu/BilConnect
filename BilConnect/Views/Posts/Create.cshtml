@@ -41,6 +41,10 @@
     <div class="form-group">
         <label for="photoUpload">Upload Photo</label>
         <input type="file" name="photoUpload" class="form-control" accept="image/*" />
+        @if (ViewData.ModelState["photoUpload"] != null && ViewData.ModelState["photoUpload"].Errors.Count > 0)
+        {
+            <span class="text-danger">@ViewData.ModelState["photoUpload"].Errors[0].ErrorMessage</span>
+        }
     </div>
 
 

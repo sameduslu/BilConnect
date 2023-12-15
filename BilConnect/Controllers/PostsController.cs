@@ -58,6 +58,7 @@ namespace BilConnect.Controllers.PostsControllers
             post.UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
 
+
             // Handle the image upload
             if (photoUpload != null && photoUpload.Length > 0)
             {
@@ -70,6 +71,10 @@ namespace BilConnect.Controllers.PostsControllers
                 }
 
                 post.ImageURL = Url.Content("~/images/" + imageName); // Update the ImageURL property
+            }
+            else
+            {
+                ModelState.AddModelError("photoUpload", "Please upload a photo.");
             }
 
             // Bypass Price validation for non-selling posts
