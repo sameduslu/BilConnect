@@ -1,4 +1,4 @@
-﻿using BilConnect.Data.Static;
+using BilConnect.Data.Static;
 using BilConnect.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

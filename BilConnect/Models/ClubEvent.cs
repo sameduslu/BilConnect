@@ -1,4 +1,4 @@
-﻿using BilConnect.Data.Base;
+using BilConnect.Data.Base;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;

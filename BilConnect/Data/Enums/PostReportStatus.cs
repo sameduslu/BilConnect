@@ -1,4 +1,4 @@
-﻿namespace BilConnect.Data.Enums
+namespace BilConnect.Data.Enums
 {
     public enum PostReportStatus
     {

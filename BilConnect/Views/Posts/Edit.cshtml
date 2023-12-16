@@ -6,25 +6,76 @@
     ViewData["Title"] = "Update Edit";
 }
 
-<div class="row">
-    <div class="col-md-8 offset-2">
-        <p>
-            <h4>Update Edit</h4>
-        </p>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* WhatsApp font style */
+        margin: 0;
+        padding: 0;
+        background: rgb(240,224,209);
+        background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
-        <div class="row">
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .post-card {
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        overflow: hidden;
+        width: 1000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distributes space inside the card */
+        background-color: #e5ddd5;
+        animation: jumpIn 0.6s ease-out;
+        padding: 20px;
+    }
+
+    @@keyframes jumpIn {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="post-card">
+        <div class="row mt-1 mb-1">
             <div class="col-md-8 offset-2">
-                <form asp-action="Edit">
-                    <input type="hidden" asp-for="Id" />
-                    <input type="hidden" asp-for="UserId" />
-                    <input type="hidden" asp-for="PostDate" />
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div class="col-md-4 offset-4 text-center">
-                        <img width="100%" id="ImageUrlPreview" />
-                    </div>
+                <div align="center">
+                    <h1>Edit Post</h1>
+                </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-8 offset-2">
+                        <form asp-action="Edit">
+                            <input type="hidden" asp-for="Id" />
+                            <input type="hidden" asp-for="UserId" />
+                            <input type="hidden" asp-for="PostDate" />
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="col-md-4 offset-4 text-center">
+                                <img width="100%" id="ImageUrlPreview" />
+                            </div>
+
                             <div class="form-group">
                                 <label asp-for="ImageURL" class="control-label"></label>
                                 <input asp-for="ImageURL" class="form-control" />
@@ -42,6 +93,15 @@
                                 <span asp-validation-for="Description" class="text-danger"></span>
                             </div>
 
+                            <div class="form-group">
+                                <label for="photoUpload">Upload Photo</label>
+                                <input type="file" name="photoUpload" class="form-control" accept="image/*" language="en" title="Select a File" />
+                                @if (ViewData.ModelState["photoUpload"] != null && ViewData.ModelState["photoUpload"].Errors.Count > 0)
+                                {
+                                    <span class="text-danger">@ViewData.ModelState["photoUpload"].Errors[0].ErrorMessage</span>
+                                }
+                            </div>
+
 
                             @if (Model.PostType == PostType.SellingPost)
                             {
@@ -50,10 +110,12 @@
                                     <input asp-for="PriceS" class="form-control" />
                                     <span asp-validation-for="PriceS" class="text-danger"></span>
                                 </div>
-                            }else if(Model.PostType == PostType.DonationPost)
+                            }
+                            else if (Model.PostType == PostType.DonationPost)
                             {
 
-                            }else if(Model.PostType == PostType.BorrowingPost)
+                            }
+                            else if (Model.PostType == PostType.BorrowingPost)
                             {
                                 <!-- Price field -->
                                 <div class="form-group">
@@ -68,7 +130,8 @@
                                     <input asp-for="ReturnDate" class="form-control" type="text" />
                                     <span asp-validation-for="ReturnDate" class="text-danger"></span>
                                 </div>
-                            }else if(Model.PostType == PostType.EventTicketPost)
+                            }
+                            else if (Model.PostType == PostType.EventTicketPost)
                             {
                                 <div class="form-group">
                                     <label asp-for="EventTime" class="control-label"></label>
@@ -89,10 +152,12 @@
                                     <input asp-for="PriceE" class="form-control" />
                                     <span asp-validation-for="PriceE" class="text-danger"></span>
                                 </div>
-                            }else if(Model.PostType == PostType.FoundItemPost)
+                            }
+                            else if (Model.PostType == PostType.FoundItemPost)
                             {
 
-                            }else if(Model.PostType == PostType.LostItemPost)
+                            }
+                            else if (Model.PostType == PostType.LostItemPost)
                             {
                                 <!-- Place field -->
                                 <div class="form-group">
@@ -100,7 +165,8 @@
                                     <input asp-for="Place" class="form-control" />
                                     <span asp-validation-for="Place" class="text-danger"></span>
                                 </div>
-                            }else if(Model.PostType == PostType.PetAdoptionPost)
+                            }
+                            else if (Model.PostType == PostType.PetAdoptionPost)
                             {
                                 <div class="form-group">
                                     <label asp-for="IsFullyVaccinated" class="control-label"></label>
@@ -118,7 +184,8 @@
                                     <input asp-for="AgeInMonths" class="form-control" type="number" />
                                     <span asp-validation-for="AgeInMonths" class="text-danger"></span>
                                 </div>
-                            }else if(Model.PostType == PostType.TravellingPost)
+                            }
+                            else if (Model.PostType == PostType.TravellingPost)
                             {
                                 <!-- Origin field -->
                                 <div class="form-group">
@@ -149,21 +216,17 @@
                                 </div>
                             }
 
-                        </div>
+                            <div class="form-group">
+                                <input type="submit" value="Update" class="btn btn-outline-success float-right" />
+                                <a class="btn btn-outline-secondary" asp-action="Index">Show all</a>
+                            </div>
+
+                        </form>
                     </div>
-
-                    
-
-                    <div class="form-group">
-                        <input type="submit" value="Update" class="btn btn-outline-success float-right" />
-                        <a class="btn btn-outline-secondary" asp-action="Index">Show all</a>
-                    </div>
-
-                </form>
-
+                </div>
             </div>
-        </div>
 
+        </div>
     </div>
 </div>
 

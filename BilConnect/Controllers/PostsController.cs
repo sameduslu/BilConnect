@@ -1,4 +1,4 @@
-﻿using BilConnect.Data.Enums;
+using BilConnect.Data.Enums;
 using BilConnect.Data.Services.PostServices;
 using BilConnect.Data.Static;
 using BilConnect.Data.ViewModels;
@@ -34,9 +34,13 @@ namespace BilConnect.Controllers.PostsControllers
 
         public async Task<IActionResult> Index()
         {
-            var data = await _service.GetAllAsync(n => n.User);
+            var data = await _service.GetAllAsync(
+                post => !post.User.IsSuspended && post.PostStatus == PostStatus.Available, 
+                n => n.User
+            );
             return View(data);
         }
+
         public async Task<IActionResult> Details(int id)
         {
             var postDetails = await _service.GetPostByIdAsync(id);
@@ -338,7 +342,7 @@ namespace BilConnect.Controllers.PostsControllers
             var postDetails = await _service.GetByIdAsync(id);
             if (postDetails == null) return View("NotFound");
             await _service.DeleteAsync(id);
-            return RedirectToAction("SelfPosts", "Account");
+            return RedirectToAction(nameof(Index));
         }
 
         public async Task<IActionResult> Suspend(int id)
@@ -374,6 +378,37 @@ namespace BilConnect.Controllers.PostsControllers
             var postDetails = await _service.GetPostByIdAsync(id);
             return RedirectToAction("Index", "Chats", new { postId = postDetails.Id, postOwner = postDetails.UserId });
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Inactivate(int id)
+        {
+            var postDetails = await _service.GetByIdAsync(id);
+            if (postDetails == null) return View("NotFound");
+
+            var updateViewModel = PostViewModelFactory.CreateViewModel(postDetails);
+            updateViewModel.PostStatus = PostStatus.Inactivated; // Set the suspended status
+
+            await _service.UpdatePostAsync(updateViewModel);
+
+            return RedirectToAction("SelfPosts", "Account"); // Or redirect to a suitable page
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Activate(int id)
+        {
+            var postDetails = await _service.GetByIdAsync(id);
+            if (postDetails == null) return View("NotFound");
+
+            var updateViewModel = PostViewModelFactory.CreateViewModel(postDetails);
+            updateViewModel.PostStatus = PostStatus.Available; // Set the suspended status
+
+            await _service.UpdatePostAsync(updateViewModel);
+
+            return RedirectToAction("SelfPosts", "Account"); // Or redirect to a suitable page
+        }
+
+
+
 
     }
 

@@ -1,4 +1,4 @@
-﻿using BilConnect.Models;
+using BilConnect.Models;
 using BilConnect.Models.PostModels;
 using BilConnect.Models.ReportModels;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -91,6 +91,7 @@ namespace BilConnect.Data
         public DbSet<Message> Messages { get; set; }
         public DbSet<ClubEvent> ClubEvents { get; set; }
         public DbSet<BilConnect.Data.ViewModels.NewClubEventVM> NewClubEventVM { get; set; } = default!;
+
 
     }
 

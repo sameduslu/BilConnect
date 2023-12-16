@@ -1,4 +1,4 @@
-﻿namespace BilConnect.Data.Static
+namespace BilConnect.Data.Static
 {
     public class UserRoles
     {

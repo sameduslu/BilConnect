@@ -1,5 +1,7 @@
 @using BilConnect.Models.PostModels;
 @using System.Security.Claims;
+@using BilConnect.Data.Enums;
+@using System.Text.RegularExpressions;
 @model IEnumerable<Post>
 
 @{
@@ -143,19 +145,159 @@
         outline: none;
     }
 
-</style>
+    /* Initially hide the filter container off-screen */
+    .filter-container {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%; /* Adjust the width as needed */
+        height: 100%;
+        background-color: white;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
 
+    /* Show the filter container when it's open */
+    .filter-container.open {
+            position: fixed;
+            top: 0;
+            left: 0;
+            max-width: 300px; /* Set a maximum width to avoid being too wide */
+            width: auto; /* Let the width be determined by the content */
+            height: 100%;
+            background-color: white;
+            transition: left 0.3s ease;
+            z-index: 1000;
+    }
+
+
+    .filter-btn {
+        padding: 10px;
+        background-color: #757575;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .filter-dropdown {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: transparent;
+        z-index: 1;
+    }
+
+    .filter-item {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .filter-checkbox {
+        margin-right: 5px;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        border: 1px solid #ccc;
+        background-color: #c3bbb3;
+        padding-top: 20px;
+        transition: width 0.5s ease;
+        visibility: hidden;
+    }
+
+    .animated {
+        transition: width 0.5s ease;
+    }
+
+    .sidenav a {
+        padding: 15px 20px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .closebtn {
+        font-size: 30px;
+        background-color: transparent;
+        color: black;
+        margin-right: 15px;
+        right: 15px !important;
+        padding: 5px 10px; /* Adjust the padding to create the hit area */
+        border: none; /* Remove borders */
+        cursor: pointer;
+        transition: 0.5s; /* Updated transition property */
+    }
+    .content {
+        margin-left: 250px;
+        padding: 16px;
+    }
+
+    .sidenav a {
+        padding: 8px 16px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    #openFilterBtn {
+        width: 40px; /* Set the width and height to create a circle */
+        height: 40px;
+        border-radius: 50%; /* Make it a circle */
+        background-color: ghostwhite; /* Set your preferred background color */
+        color: #fff; /* Set the text/icon color */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Add a smooth transition effect */
+        margin-right: 10px;
+    }
+
+        #openFilterBtn:hover {
+            background-color: #1565C0; /* Change the background color on hover */
+        }
+
+
+</style>
+<div class="sidenav">
+    <button class="closebtn" onclick="closeNav()">×</button>
+    <div class="filter-dropdown" id="filterDropdown">
+        @foreach (var postType in Model.Select(p => p.GetType()).Distinct())
+        {
+            <div class="filter-item">
+                <input type="checkbox" id="@postType" class="filter-checkbox" onchange="filterPosts()">
+                <label for="@postType" class="filter-label" label-post-type="@postType">@postType.ToString().Substring(29)</label>
+            </div>
+        }
+    </div>
+</div>
 <div class="container">
     <div class="search-container" id="searchField">
-        <input type="text" class="search-input" placeholder="Search posts..." maxlength="100">
+        <button type="button" id="openFilterBtn" class="mdc-button mdc-button--raised mdc-button--dense mdc-ripple-upgraded" onclick="openNav()">
+            <i class="material-icons">filter_alt</i>
+        </button>
+        <input type="text" class="search-input" id="searchQuery" placeholder="Search posts..." maxlength="100">
     </div>
-
     <div class="row">
         @foreach (var item in Model)
         {
             <div class="col-md-4 col-sm-6 mb-4">
                 <a href="@Url.Action("Details", new { id = item.Id })" class="text-decoration-none">
-                    <div class="post-card" data-title="@item.Title">
+                    <div class="post-card" data-title="@item.Title" data-post-type="@item.GetType()">
                         <div class="post-card-header">
                             @item.Title
                         </div>
@@ -210,9 +352,7 @@
                             }
                             else
                             {
-                                <div class="your-post">
-                                    <a class="btn btn-yourpost" asp-action="Details" asp-route-id="@item.Id">Your Post</a>
-                                </div>
+                                    <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">See Details of Your Post</a>
                             }
                         </div>
                     </div>
@@ -232,14 +372,54 @@
                 const title = post.getAttribute('data-title').toLowerCase();
 
                 if (searchTerm === '' || title.includes(searchTerm)) {
-                    col.style.display = ''; // Show the post column
+                    col.style.display = ''; // ...
                 } else {
                     col.style.display = 'none'; // Hide the post column
                 }
             });
         });
     });
+    function filterPosts() {
+        const filterDropdown = document.getElementById("filterDropdown");
+        const checkboxes = filterDropdown.querySelectorAll('.filter-checkbox');
+        const labels = filterDropdown.querySelectorAll('.filter-label');
+        const posts = document.querySelectorAll('.col-md-4.col-sm-6.mb-4');
 
+        posts.forEach(col => {
+            const postType = col.querySelector('.post-card').getAttribute('data-post-type');
+
+            if (Array.from(checkboxes).some(checkbox => checkbox.id === postType && checkbox.checked)) {
+                col.style.display = ''; // ...
+            } else {
+                col.style.display = 'none'; // Hide the post column
+            }
+        });
+    }
+    function openNav() {
+        var sideNav = document.querySelector('.sidenav');
+        document.getElementById("searchQuery").textContent = "";
+        sideNav.classList.add('animated');
+        sideNav.style.visibility = 'visible';
+        document.querySelector('.closebtn').style.display = 'block';
+        document.querySelector('.filter-dropdown').style.display = 'block';
+    }
+
+    function closeNav() {
+        var sideNav = document.querySelector('.sidenav');
+        sideNav.classList.add('animated');
+        sideNav.style.visibility = 'hidden';
+        document.querySelector('.closebtn').style.display = 'none';
+        document.querySelector('.filter-dropdown').style.display = 'none';
+        
+    }
+    document.addEventListener('focusout', (event) => {
+        const navContainer = document.getElementById('.sidenav');
+
+        // Check if the event target is not a child of the navigation container
+        if (!navContainer.contains(event.relatedTarget)) {
+            closeNav();
+        }
+    });
 
 </script>
 @await Html.PartialAsync("_CreatePost", "Posts")

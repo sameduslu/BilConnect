@@ -1,4 +1,4 @@
-﻿using BilConnect.Models.PostModels;
+using BilConnect.Models.PostModels;
 using BilConnect.Models.ReportModels;
 using Microsoft.AspNetCore.Identity;
 using System.ComponentModel;
@@ -8,8 +8,13 @@ namespace BilConnect.Models
 {
     public class ApplicationUser : IdentityUser
     {
+
+        public bool IsSuspended { get; set; }
+
         [Display(Name = "Users name")]
         public string FullName { get; set; }
+
+        public string? ImageURL { get; set; }
 
         public List<Post>? Posts { get; set; }
         [DisplayName("Post Reports")]

@@ -1,4 +1,4 @@
-﻿using BilConnect.Data.Services.ReportServices;
+using BilConnect.Data.Services.ReportServices;
 using BilConnect.Data.ViewModels.PostReportViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -17,7 +17,7 @@ namespace BilConnect.Controllers.ReportsController
 
         public async Task<IActionResult> Index()
         {
-            var data = await _service.GetAllAsync(n => n.Reporter, u => u.ReportedPost);
+            var data = await _service.GetAllAsync(null, n => n.Reporter, u => u.ReportedPost);
             return View(data);
         }
 

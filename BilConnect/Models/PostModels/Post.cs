@@ -1,4 +1,4 @@
-﻿using BilConnect.Data.Base;
+using BilConnect.Data.Base;
 using BilConnect.Data.Enums;
 using System.Collections.Concurrent;
 using System.ComponentModel.DataAnnotations;
@@ -30,7 +30,7 @@ namespace BilConnect.Models.PostModels
             get => string.IsNullOrEmpty(AdditionalImagesJson) ? new List<string>() : JsonSerializer.Deserialize<List<string>>(AdditionalImagesJson);
             set => AdditionalImagesJson = JsonSerializer.Serialize(value);
         }
-        [DataType(DataType.DateTime)]
+
         public DateTime PostDate { get; set; }
 
         public PostStatus PostStatus { get; set; }

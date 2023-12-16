@@ -1,9 +1,11 @@
-﻿namespace BilConnect.Data.Enums
+namespace BilConnect.Data.Enums
 {
     public enum PostStatus
     {
         Available,
         Sold,
-        Suspended
+        Suspended,
+        Expired,
+        Inactivated
     }
 }
