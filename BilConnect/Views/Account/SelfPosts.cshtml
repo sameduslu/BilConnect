@@ -181,12 +181,16 @@
                                 </div>
                             </div>
                             <div class="post-card-footer">
-                                <div>
-
-                                </div>
                                 <div class="btn-group" role="group">
                                     <a class="btn btn-secondary" asp-action="Edit" asp-controller="Posts" asp-route-id="@item.Id">Edit</a>
                                 </div>
+
+                                <div class="btn-group" role="group">
+                                    <form asp-action="Inactivate" asp-controller="Posts" asp-route-id="@item.Id" method="post">
+                                        <button type="submit" class="btn btn-warning">Inactivate</button>
+                                    </form>
+                                </div>
+
                                 <div class="btn-group" role="group">
                                     <button type="button" class="btn btn-danger delete-btn" data-post-id="@item.Id">Delete</button>
                                 </div>

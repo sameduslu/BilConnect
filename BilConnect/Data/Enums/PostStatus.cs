@@ -4,6 +4,8 @@
     {
         Available,
         Sold,
-        Suspended
+        Suspended,
+        Expired,
+        Inactivated
     }
 }

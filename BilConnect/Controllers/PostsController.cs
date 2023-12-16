@@ -35,10 +35,9 @@ namespace BilConnect.Controllers.PostsControllers
         public async Task<IActionResult> Index()
         {
             var data = await _service.GetAllAsync(
-                post => !post.User.IsSuspended, // Do not get suspended posts.
+                post => !post.User.IsSuspended && post.PostStatus == PostStatus.Available, 
                 n => n.User
             );
-            return View(data);
             return View(data);
         }
 
@@ -378,6 +377,20 @@ namespace BilConnect.Controllers.PostsControllers
         {
             var postDetails = await _service.GetPostByIdAsync(id);
             return RedirectToAction("Index", "Chats", new { postId = postDetails.Id, postOwner = postDetails.UserId });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Inactivate(int id)
+        {
+            var postDetails = await _service.GetByIdAsync(id);
+            if (postDetails == null) return View("NotFound");
+
+            var updateViewModel = PostViewModelFactory.CreateViewModel(postDetails);
+            updateViewModel.PostStatus = PostStatus.Inactivated; // Set the suspended status
+
+            await _service.UpdatePostAsync(updateViewModel);
+
+            return RedirectToAction("SelfPosts", "Account"); // Or redirect to a suitable page
         }
 
     }
