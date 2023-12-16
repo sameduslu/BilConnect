@@ -393,6 +393,20 @@ namespace BilConnect.Controllers.PostsControllers
             return RedirectToAction("SelfPosts", "Account"); // Or redirect to a suitable page
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Activate(int id)
+        {
+            var postDetails = await _service.GetByIdAsync(id);
+            if (postDetails == null) return View("NotFound");
+
+            var updateViewModel = PostViewModelFactory.CreateViewModel(postDetails);
+            updateViewModel.PostStatus = PostStatus.Available; // Set the suspended status
+
+            await _service.UpdatePostAsync(updateViewModel);
+
+            return RedirectToAction("SelfPosts", "Account"); // Or redirect to a suitable page
+        }
+
     }
 
 }

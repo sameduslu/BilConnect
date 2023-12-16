@@ -1,4 +1,5 @@
-﻿@model ApplicationUser
+﻿@using BilConnect.Data.Enums;
+@model ApplicationUser
 
 @{
     ViewData["Title"] = "List of Posts";
@@ -185,11 +186,22 @@
                                     <a class="btn btn-secondary" asp-action="Edit" asp-controller="Posts" asp-route-id="@item.Id">Edit</a>
                                 </div>
 
-                                <div class="btn-group" role="group">
-                                    <form asp-action="Inactivate" asp-controller="Posts" asp-route-id="@item.Id" method="post">
-                                        <button type="submit" class="btn btn-warning">Inactivate</button>
-                                    </form>
-                                </div>
+                                @if (item.PostStatus == PostStatus.Available)
+                                {
+                                    <div class="btn-group" role="group">
+                                        <form asp-action="Inactivate" asp-controller="Posts" asp-route-id="@item.Id" method="post">
+                                            <button type="submit" class="btn btn-warning">Inactivate</button>
+                                        </form>
+                                    </div>
+                                }
+                                else if (item.PostStatus == PostStatus.Inactivated)
+                                {
+                                    <div class="btn-group" role="group">
+                                        <form asp-action="Activate" asp-controller="Posts" asp-route-id="@item.Id" method="post">
+                                            <button type="submit" class="btn btn-success">Activate</button>
+                                        </form>
+                                    </div>
+                                }
 
                                 <div class="btn-group" role="group">
                                     <button type="button" class="btn btn-danger delete-btn" data-post-id="@item.Id">Delete</button>
