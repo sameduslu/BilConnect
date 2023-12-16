@@ -1,0 +1,418 @@
+@model ChatViewer
+@{
+    ViewData["Title"] = "Chat Room";
+}
+<style>
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* General settings */
+    html, body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background-color: #ECE5DD;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Chat container */
+    .text-center {
+        text-align: center;
+        margin: 50px auto;
+        max-width: 90%;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #075E54;
+    }
+
+    /* Message container */
+    #messageContainer {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        padding: 10px;
+        max-height: 400px;
+        overflow-y: auto;
+        margin-bottom: 20px;
+        background-color: #fff;
+        transition: transform 0.5s ease-in-out;
+    }
+
+
+    @@keyframes jump {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+    /* Layout */
+    #contentContainer {
+        display: flex;
+        flex-direction: column-reverse; /* Swap positions */
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        animation: fadeIn 1s ease-out;
+    }
+
+    #messageContainer.new-message {
+    }
+
+
+    #postInfo, #chatContainer {
+        max-width: 100%;
+        box-sizing: border-box;
+        flex: 1;
+        padding: 0 20px;
+        border-radius: 10px;
+    }
+
+    .centered-heading {
+        position: relative;
+        text-align: center;
+        font-size: 24px;
+    }
+
+        .centered-heading::before,
+        .centered-heading::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 50%;
+            height: 1px;
+            background-color: #000;
+        }
+
+        .centered-heading::before {
+            left: 0;
+            transform: translateX(-50%);
+        }
+
+        .centered-heading::after {
+            right: 0;
+            transform: translateX(50%);
+        }
+
+    /* Scrollbar style */
+    #messageContainer::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    #messageContainer::-webkit-scrollbar-thumb {
+        background-color: #075E54;
+        border-radius: 4px;
+    }
+
+    /* Message bubble styles */
+    .message {
+        max-width: 60%;
+        padding: 8px 10px;
+        border-radius: 7.5px;
+        margin-bottom: 8px;
+        word-wrap: break-word;
+        clear: both;
+        line-height: 1.4;
+        position: relative;
+        font-size: 14px;
+        border: 1px solid #ccc;
+    }
+
+    .sender {
+        background-color: #DCF8C6;
+        align-self: flex-end;
+        border-bottom-right-radius: 2px;
+    }
+
+    .receiver {
+        background-color: #fff;
+        align-self: flex-start;
+        border-bottom-left-radius: 2px;
+        border: 1px solid #ccc;
+    }
+
+    .dateLabel {
+        background-color: #777;
+        color: #fff; /* Improved visibility */
+        border: 1px solid #ccc;
+        text-align: center; /* Center text within the label */
+        padding: 5px 10px; /* Padding around the text */
+        margin: 10px auto; /* Margin for spacing and auto for horizontal centering */
+        border-radius: 5px; /* Rounded corners */
+        display: inline-block; /* Only as wide as its content */
+    }
+    /* Input and button styles */
+    input[type="text"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        border: 1px solid #075E54;
+        border-radius: 18px;
+        box-sizing: border-box;
+        outline: none;
+        margin-right: 10px;
+        background-color: #fff;
+    }
+
+        input[type="text"]:focus {
+            border-color: #34B7F1;
+        }
+
+    button {
+        background-color: #075E54;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        outline: none;
+    }
+
+        button:hover {
+            background-color: #34B7F1;
+        }
+
+    /* Icon style */
+    .material-icons {
+        font-size: 24px;
+    }
+
+    .divider {
+        height: 20px;
+        background-color: #fff;
+        margin: 0 20px;
+    }
+
+    .image-container {
+        border-radius: 10px; /* Adjust the value to control the roundness of corners */
+        overflow: hidden;
+        border: 1px solid #ccc; /* Thin gray border */
+        width: 100%;
+        height: auto;
+        display: block;
+        min-width: 700px; /* Minimum width */
+        min-height: 100px; /* Minimum height */
+        object-fit: cover; /* This will ensure the image covers the area nicely */
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        min-width: 700px; /* Minimum width */
+        min-height: 100px; /* Minimum height */
+        object-fit: cover; /* This will ensure the image covers the area nicely */
+    }
+
+    .header h1 {
+        margin: 0;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .user {
+        margin-top: 20px;
+    }
+
+    #btnSendMessage {
+        vertical-align: middle; /* Align the button vertically in the middle */
+    }
+
+        #btnSendMessage i {
+            vertical-align: middle; /* Align the icon vertically in the middle */
+        }
+
+</style>
+<div class="text-center">
+    <h1>Chat for @Model.RelatedPost.Title</h1>
+    <h2>Price TL</h2>
+    <div id="contentContainer">
+        <!-- Left half: Related post information -->
+        <div id="postInfo">
+            <div class="image-container">
+                <img src="@Model.RelatedPost.ImageURL" alt="Post Image" style="max-width: 100%;">
+                <div class="content">
+                    <div class="related-post">
+                        <div class="divider"></div>
+                        <div class="header">
+                            <h1>@Model.RelatedPost.Title</h1>
+                        </div>
+                        <div class="divider"></div>
+                        <p>@Model.RelatedPost.Description</p>
+                    </div>
+                </div>
+                <div class="divider"></div>
+
+                <!-- Right half: Chat messages -->
+                <div id="chatContainer">
+                    <div class="centered-heading">Chat with @Model.Receiver.FullName</div>
+                    <div class="divider"></div>
+                    <div id="messageContainer">
+                        @if (Model.Messages != null && Model.Messages.Count > 0)
+                        {
+                            var prevDate = DateTime.MaxValue.ToLocalTime().Date;
+                            // Load previous messages from the model
+                            @foreach (var message in Model.Messages)
+                            {
+                                // Date label
+                                @if (message.Timestamp.ToLocalTime().Date != prevDate.ToLocalTime().Date)
+                                {
+                                    <div class="message dateLabel">
+                                        <small>@message.Timestamp.ToLocalTime().ToString("dd MMM yyyy")</small>
+                                    </div>
+                                }
+                                prevDate = message.Timestamp.ToLocalTime().Date;
+
+                                // If the user is sender
+                                @if (message.SenderUserId == Model.User.Id)
+                                {
+                                    <div class="message sender">
+                                        <p>@message.Content</p>
+                                        <small class="timestamp">@message.Timestamp.ToLocalTime().ToString("HH:mm")</small>
+                                    </div>
+
+                                }
+                                else // If the user is receiver
+                                {
+                                    <div class="message receiver">
+                                        <p>@message.Content</p>
+                                        <small class="timestamp">@message.Timestamp.ToLocalTime().ToString("HH:mm")</small>
+                                    </div>
+                                }
+
+                            }
+                        }
+                        else
+                        {
+                            <p3>Start the chat by sending a message!</p3>
+                        }
+                    </div>
+                    <input type="text" maxlength="500" id="txtMessage" placeholder="Type your message...">
+                    <button id="btnSendMessage" type="button" class="mdc-button mdc-button--raised mdc-button--dense mdc-ripple-upgraded">
+                        <i class="material-icons">send</i>
+                    </button>
+                    <div class="divider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+
+        // Connecting to SignalR
+        const connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").configureLogging(signalR.LogLevel.Information).build();
+        async function start() {
+            try {
+                await connection.start();
+                console.log("SignalR connected.");
+            }
+            catch (err) {
+                console.error(err);
+                setTimeOut(start, 5000);
+            }
+        }
+        connection.onclose(async () => {
+            await start();
+        });
+        start();
+
+        // Scroll to bottom
+        var mc = document.getElementById("messageContainer");
+        mc.scrollTop = mc.scrollHeight;
+
+        // Send message button
+        $('#btnSendMessage').click(function () {
+            try {
+                const message = $('#txtMessage').val().trim(); // Trim to remove leading and trailing whitespaces
+                if (message === '') {
+                    // If the message is blank, do not send
+                    return;
+                }
+                var userId = '@Model.User.Id';
+                connection.invoke("SendMessage", userId, message);
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Create", "Messages")',
+                    data: {
+                        content: message,
+                        userId: userId,
+                        chatId: @Model.Id
+                            },
+                });
+                // Clear the text box
+                $('#txtMessage').val('');
+            }
+            catch (err) {
+                console.error(err);
+            }
+        });
+
+        // Receive message in real-time
+        $().ready(function () {
+            connection.on("ReceiveMessage", (user, message) => {
+                // Determine if the message is from the current user
+                const isCurrentUser = user === '@Model.User.Id';
+
+                // Create a new message element accordingly
+                function getCurrentTimestamp() {
+                    const now = new Date();
+                    const hours = String(now.getHours()).padStart(2, '0');
+                    const minutes = String(now.getMinutes()).padStart(2, '0');
+                    return `${hours}:${minutes}`;
+                }
+                let newMessage;
+                if (isCurrentUser) {
+                    newMessage = `
+                                <div class="message sender new-message">
+                                    <p>${message}</p>
+                                    <small class="timestamp">${getCurrentTimestamp()}</small>
+                                </div>`;
+                } else {
+                    newMessage = `
+                                <div class="message receiver new-message">
+                                    <p>${message}</p>
+                                    <small class="timestamp">${getCurrentTimestamp()}</small>
+                                </div>`;
+                }
+
+                // Add the message to the container
+                const messageContainer = $('#messageContainer');
+                if (messageContainer.html().trim() === "<p3>Start the chat by sending a message!</p3>") {
+                    messageContainer.empty();
+                }
+                messageContainer.append(newMessage);
+
+                // Scroll to bottom
+                var mc = document.getElementById("messageContainer");
+                mc.scrollTop = mc.scrollHeight;
+            });
+        });
+
+        // Send message by pressing Enter
+        document.getElementById("txtMessage").addEventListener("keyup", function (event) {
+            if (event.key === "Enter") {
+                document.getElementById("btnSendMessage").click();
+            }
+        });
+    </script>
+}

@@ -1,0 +1,315 @@
+﻿@using BilConnect.Data.ViewModels;
+@using BilConnect.Models.PostModels;
+@using System.Security.Claims;
+@model UserProfileVM
+
+@{
+    ViewData["Title"] = $"{Model.User.FullName}'s Profile";
+}
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* WhatsApp font style */
+        margin: 0;
+        padding: 0;
+        background: rgb(240,224,209);
+        background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .post-card {
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        overflow: hidden;
+        height: 400px; /* Fixed height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distributes space inside the card */
+        background-color: #e5ddd5;
+        animation: jumpIn 0.6s ease-out;
+    }
+
+    @@keyframes jumpIn {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .post-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        color: black; /* Set the text color to gray */
+    }
+
+        /* To specifically target links within .post-info to ensure they are gray too */
+        .post-info a {
+            color: black;
+        }
+
+            /* Change color on hover for links, if desired */
+            .post-info a:hover {
+                color: lightgray; /* Replace with a darker shade of gray if you wish */
+            }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .material-icons {
+        color: #757575; /* WhatsApp green */
+    }
+
+
+    .info-label {
+        font-weight: bold;
+        color: #555;
+        margin-right: 5px;
+    }
+
+    .your-post {
+        font-weight: bold;
+        color: #555;
+        align-items: center;
+        text-decoration: none;
+    }
+
+
+    .post-card-header {
+        background-color: #e5ddd5;
+        color: black;
+        text-align: center;
+        font-family: "Segoe UI", Arial, sans-serif;
+        padding: 10px;
+        font-size: 25px;
+    }
+
+    .post-card-body {
+        padding: 10px;
+        background-color: #e5ddd5;
+    }
+
+    .post-img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .post-card-footer {
+        padding: 10px;
+        background-color: #d4ccc4;
+        text-align: center;
+    }
+
+    .btn-whatsapp {
+        background-color: #757575;
+        color: white;
+    }
+
+    .btn-secondary {
+        background-color: #757575;
+    }
+
+    .btn-yourpost {
+        background-color: transparent;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .search-input {
+        width: 70%;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid #757575;
+        outline: none;
+
+    }
+
+    .change-password-section {
+        text-align: center;
+        margin: 20px 0;
+        padding: 15px;
+        background-color: #f2f2f2;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .change-password-button {
+        background-color: #4CAF50; /* Green color */
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .change-password-button:hover {
+        background-color: #45a049; /* Darker green */
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ddd;
+        margin: 0 auto 20px;
+    }
+
+    .change-photo-button {
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+        .change-photo-button:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+<div class="container">
+
+    <div class="text-center">
+        <img src="@(!string.IsNullOrEmpty(Model.User.ImageURL) ? Model.User.ImageURL : Url.Content("~/staticimages/emptyprofilephoto.webp"))"
+             alt="Profile Picture"
+             class="profile-picture">
+    </div>
+
+    @if (Model.Id == User.FindFirstValue(ClaimTypes.NameIdentifier))
+    {
+        <div class="text-center">
+            <form id="updateProfilePictureForm" method="post" enctype="multipart/form-data">
+                <input type="file" name="photoUpload" class="form-control" accept="image/*" />
+                <button type="submit" class="change-photo-button">Change Profile Picture</button>
+            </form>
+        </div>
+
+
+        <div class="change-password-section">
+            <h3>Account Settings</h3>
+            <a href="@Url.Action("ChangePassword", "Account")" class="change-password-button">Change Password</a>
+        </div>
+    }
+
+
+    <h2>@Model.User.FullName's Posts</h2>
+
+    <div class="row">
+        @foreach (var item in Model.Posts)
+        {
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="@Url.Action("Details", new { id = item.Id })" class="text-decoration-none">
+                    <div class="post-card" data-title="@item.Title">
+                        <div class="post-card-header">
+                            @item.Title
+                        </div>
+                        <img src="@item.ImageURL" alt="@item.Title" class="post-img">
+                        <div class="post-card-body">
+                            <div class="post-info">
+                                <p class="info-item">
+                                    <i class="material-icons">person_outline</i>
+                                    <span>Author: @item.User.FullName</span>
+                                </p>
+                                <p class="info-item">
+                                    <i class="material-icons">event</i>
+                                    <span>Date: @item.PostDate.ToLocalTime().ToString("dd MMM yyyy")</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="post-card-footer">
+                            @if (item.UserId != User.FindFirstValue(ClaimTypes.NameIdentifier))
+                            {
+                                @if (item is SellingPost sellingPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-controller="Posts" asp-route-id="@item.Id">Buy for @sellingPost.Price TL</a>
+                                }
+                                else if (item is DonationPost donationPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Volunteer</a>
+                                }
+                                else if (item is BorrowingPost borrowingPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Borrow</a>
+                                }
+                                else if (item is EventTicketPost eventTicketPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Buy Event Ticket</a>
+                                }
+                                else if (item is FoundItemPost foundItemPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Learn Details</a>
+                                }
+                                else if (item is LostItemPost lostItemPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Give Information</a>
+                                }
+                                else if (item is PetAdoptionPost petAdoptionPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Adopt Pet</a>
+                                }
+                                else if (item is TravellingPost travellingPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Travel Together</a>
+                                }
+                            }
+                            else
+                            {
+                                <div class="your-post">
+                                    <a class="btn btn-yourpost" asp-action="Details" asp-route-id="@item.Id">Your Post</a>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
+<script>
+    document.getElementById('updateProfilePictureForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var formData = new FormData(this);
+        fetch('@Url.Action("UpdateProfilePicture", "Account")', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Update the profile picture on the page
+                    document.querySelector('.profile-picture').src = data.newImageUrl;
+                } else {
+                    // Handle errors
+                    alert('Error updating profile picture.');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    });
+</script>

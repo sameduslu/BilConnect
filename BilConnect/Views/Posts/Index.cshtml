@@ -1,65 +1,425 @@
-﻿@model IEnumerable<Post>
+@using BilConnect.Models.PostModels;
+@using System.Security.Claims;
+@using BilConnect.Data.Enums;
+@using System.Text.RegularExpressions;
+@model IEnumerable<Post>
 
 @{
     ViewData["Title"] = "List of Posts";
+    ((List<Post>)Model).Sort();
 }
 
 <style>
-    /* Added CSS for square images */
-    .img-square {
-        width: 150px; /* Set the width of the image */
-        height: 150px; /* Set the height of the image */
-        object-fit: cover; /* This will ensure the image covers the area nicely */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* WhatsApp font style */
+        margin: 0;
+        padding: 0;
+        background: rgb(240,224,209);
+        background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
+
+    .post-card {
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        overflow: hidden;
+        height: 400px; /* Fixed height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distributes space inside the card */
+        background-color: #e5ddd5;
+        animation: jumpIn 0.6s ease-out;
+    }
+
+    @@keyframes jumpIn {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .post-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        color: black; /* Set the text color to gray */
+    }
+
+        /* To specifically target links within .post-info to ensure they are gray too */
+        .post-info a {
+            color: black;
+        }
+
+            /* Change color on hover for links, if desired */
+            .post-info a:hover {
+                color: lightgray; /* Replace with a darker shade of gray if you wish */
+            }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .material-icons {
+        color: #757575; /* WhatsApp green */
+    }
+
+
+    .info-label {
+        font-weight: bold;
+        color: #555;
+        margin-right: 5px;
+    }
+
+    .your-post {
+        font-weight: bold;
+        color: #555;
+        align-items: center;
+        text-decoration: none;
+    }
+
+
+    .post-card-header {
+        background-color: #e5ddd5;
+        color: black;
+        text-align: center;
+        font-family: "Segoe UI", Arial, sans-serif;
+        padding: 10px;
+        font-size: 25px;
+    }
+
+    .post-card-body {
+        padding: 10px;
+        background-color: #e5ddd5;
+    }
+
+    .post-img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .post-card-footer {
+        padding: 10px;
+        background-color: #d4ccc4;
+        text-align: center;
+    }
+
+    .btn-whatsapp {
+        background-color: #757575;
+        color: white;
+    }
+
+    .btn-secondary {
+        background-color: #757575;
+    }
+
+    .btn-yourpost {
+        background-color: transparent;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .search-input {
+        width: 70%;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid #757575;
+        outline: none;
+    }
+
+    /* Initially hide the filter container off-screen */
+    .filter-container {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%; /* Adjust the width as needed */
+        height: 100%;
+        background-color: white;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* Show the filter container when it's open */
+    .filter-container.open {
+            position: fixed;
+            top: 0;
+            left: 0;
+            max-width: 300px; /* Set a maximum width to avoid being too wide */
+            width: auto; /* Let the width be determined by the content */
+            height: 100%;
+            background-color: white;
+            transition: left 0.3s ease;
+            z-index: 1000;
+    }
+
+
+    .filter-btn {
+        padding: 10px;
+        background-color: #757575;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .filter-dropdown {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: transparent;
+        z-index: 1;
+    }
+
+    .filter-item {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .filter-checkbox {
+        margin-right: 5px;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        border: 1px solid #ccc;
+        background-color: #c3bbb3;
+        padding-top: 20px;
+        transition: width 0.5s ease;
+        visibility: hidden;
+    }
+
+    .animated {
+        transition: width 0.5s ease;
+    }
+
+    .sidenav a {
+        padding: 15px 20px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .closebtn {
+        font-size: 30px;
+        background-color: transparent;
+        color: black;
+        margin-right: 15px;
+        right: 15px !important;
+        padding: 5px 10px; /* Adjust the padding to create the hit area */
+        border: none; /* Remove borders */
+        cursor: pointer;
+        transition: 0.5s; /* Updated transition property */
+    }
+    .content {
+        margin-left: 250px;
+        padding: 16px;
+    }
+
+    .sidenav a {
+        padding: 8px 16px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    #openFilterBtn {
+        width: 40px; /* Set the width and height to create a circle */
+        height: 40px;
+        border-radius: 50%; /* Make it a circle */
+        background-color: ghostwhite; /* Set your preferred background color */
+        color: #fff; /* Set the text/icon color */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Add a smooth transition effect */
+        margin-right: 10px;
+    }
+
+        #openFilterBtn:hover {
+            background-color: #1565C0; /* Change the background color on hover */
+        }
+
+
 </style>
-
-
-@*Define View Data*@
-
-@*Write Code*@
-
-<div class="row">
-    @foreach (var item in Model)
-    {
-        <div class="col-md-4 col-xs-6 border-primary mb-3">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-12">
-                        <div class="card-header text-white bg-info">
-                            <p class="card-text">
-                                <h5 class="card-title">
-                                    @item.Title
-                                    <a class="text-white float-right"><i class="bi bi-pencil-square"></i></a>
-                                </h5>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="@item.ImageURL" class="img-square" alt="@item.Title">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card-body">
-                            <p class="card-text">@item.Description</p>
-                            <p class="card-text"><b>Post Author: </b>@item.User.FullName</p>
-                            <p class="card-text"><b>Post Date: </b>@item.PostDate.ToString("dd MMM yy")</p>
-                            <p class="card-text ">
-                                <b>Status: </b>
-                                <span class="badge bg-success text-white">Available</span>
-                                </p>
-
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="card-footer ">
-                            <p class="card-text">
-                                <a class="btn btn-outline-primary float-right" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-eye-fill"></i> Show Details</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+<div class="sidenav">
+    <button class="closebtn" onclick="closeNav()">×</button>
+    <div class="filter-dropdown" id="filterDropdown">
+        @foreach (var postType in Model.Select(p => p.GetType()).Distinct())
+        {
+            <div class="filter-item">
+                <input type="checkbox" id="@postType" class="filter-checkbox" onchange="filterPosts()">
+                <label for="@postType" class="filter-label" label-post-type="@postType">@postType.ToString().Substring(29)</label>
             </div>
-        </div>
-    }
+        }
+    </div>
 </div>
+<div class="container">
+    <div class="search-container" id="searchField">
+        <button type="button" id="openFilterBtn" class="mdc-button mdc-button--raised mdc-button--dense mdc-ripple-upgraded" onclick="openNav()">
+            <i class="material-icons">filter_alt</i>
+        </button>
+        <input type="text" class="search-input" id="searchQuery" placeholder="Search posts..." maxlength="100">
+    </div>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="@Url.Action("Details", new { id = item.Id })" class="text-decoration-none">
+                    <div class="post-card" data-title="@item.Title" data-post-type="@item.GetType()">
+                        <div class="post-card-header">
+                            @item.Title
+                        </div>
+                        <img src="@item.ImageURL" alt="@item.Title" class="post-img">
+                        <div class="post-card-body">
+                            <div class="post-info">
+                                <p class="info-item">
+                                    <i class="material-icons">person_outline</i>
+                                    <span>Author: @item.User.FullName</span>
+                                </p>
+                                <p class="info-item">
+                                    <i class="material-icons">event</i>
+                                    <span>Date: @item.PostDate.ToLocalTime().ToString("dd MMM yyyy")</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="post-card-footer">
+                            @if (item.UserId != User.FindFirstValue(ClaimTypes.NameIdentifier))
+                            {
+                                @if (item is SellingPost sellingPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-controller="Posts" asp-route-id="@item.Id">Buy for @sellingPost.Price TL</a>
+                                }
+                                else if (item is DonationPost donationPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Volunteer</a>
+                                }
+                                else if (item is BorrowingPost borrowingPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Borrow</a>
+                                }
+                                else if (item is EventTicketPost eventTicketPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Buy Event Ticket</a>
+                                }
+                                else if (item is FoundItemPost foundItemPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Learn Details</a>
+                                }
+                                else if (item is LostItemPost lostItemPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Give Information</a>
+                                }
+                                else if (item is PetAdoptionPost petAdoptionPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Adopt Pet</a>
+                                }
+                                else if (item is TravellingPost travellingPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Travel Together</a>
+                                }
+                            }
+                            else
+                            {
+                                    <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">See Details of Your Post</a>
+                            }
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById("searchField").addEventListener('input', function (e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const posts = document.querySelectorAll('.col-md-4.col-sm-6.mb-4'); // Update the selector to target the grid column
 
-@await Html.PartialAsync("_CreatePost", "Posts") 
+            posts.forEach(col => {
+                const post = col.querySelector('.post-card');
+                const title = post.getAttribute('data-title').toLowerCase();
+
+                if (searchTerm === '' || title.includes(searchTerm)) {
+                    col.style.display = ''; // ...
+                } else {
+                    col.style.display = 'none'; // Hide the post column
+                }
+            });
+        });
+    });
+    function filterPosts() {
+        const filterDropdown = document.getElementById("filterDropdown");
+        const checkboxes = filterDropdown.querySelectorAll('.filter-checkbox');
+        const labels = filterDropdown.querySelectorAll('.filter-label');
+        const posts = document.querySelectorAll('.col-md-4.col-sm-6.mb-4');
+
+        posts.forEach(col => {
+            const postType = col.querySelector('.post-card').getAttribute('data-post-type');
+
+            if (Array.from(checkboxes).some(checkbox => checkbox.id === postType && checkbox.checked)) {
+                col.style.display = ''; // ...
+            } else {
+                col.style.display = 'none'; // Hide the post column
+            }
+        });
+    }
+    function openNav() {
+        var sideNav = document.querySelector('.sidenav');
+        document.getElementById("searchQuery").textContent = "";
+        sideNav.classList.add('animated');
+        sideNav.style.visibility = 'visible';
+        document.querySelector('.closebtn').style.display = 'block';
+        document.querySelector('.filter-dropdown').style.display = 'block';
+    }
+
+    function closeNav() {
+        var sideNav = document.querySelector('.sidenav');
+        sideNav.classList.add('animated');
+        sideNav.style.visibility = 'hidden';
+        document.querySelector('.closebtn').style.display = 'none';
+        document.querySelector('.filter-dropdown').style.display = 'none';
+        
+    }
+    document.addEventListener('focusout', (event) => {
+        const navContainer = document.getElementById('.sidenav');
+
+        // Check if the event target is not a child of the navigation container
+        if (!navContainer.contains(event.relatedTarget)) {
+            closeNav();
+        }
+    });
+
+</script>
+@await Html.PartialAsync("_CreatePost", "Posts")

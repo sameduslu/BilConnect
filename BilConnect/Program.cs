@@ -5,13 +5,28 @@ using Bilconnect_First_Version.data;
 using BilConnect.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using BilConnect.data.Services;
 using BilConnect.Data.Services;
+using BilConnect.Data.Services.PostServices;
+using BilConnect.Data.Services.ReportServices;
+using BilConnect.Hubs;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add SignalR.
+builder.Services.AddSignalR();
+builder.Services.AddCors(options=>{
+    options.AddDefaultPolicy(
+        builder => {
+            builder.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+        }
+    );
+});
+
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
 // Configure the database context with the SQL Server
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
@@ -19,11 +34,21 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
 ));
 
 //Services Configuration
+builder.Services.AddScoped<IPostFactory, PostFactory>();
 builder.Services.AddScoped<IPostsService, PostsService>();
 builder.Services.AddScoped<IApplicationUsersService, ApplicationUsersService>();
+builder.Services.AddScoped<IPostReportsService, PostReportsService>();
+builder.Services.AddScoped<IChatsService, ChatsService>();
+builder.Services.AddScoped<IMessagesService, MessagesService>();
+builder.Services.AddScoped<IClubEventsService, ClubEventsService>();
+builder.Services.AddSingleton<IEmailService, SendGridEmailService>();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
+
 
 //Authentication and Authorization
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+//builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 builder.Services.AddMemoryCache();
 builder.Services.AddSession();
 builder.Services.AddAuthentication(options =>
@@ -49,13 +74,14 @@ app.UseRouting();
 
 //Authentication
 app.UseAuthentication();
-
+app.UseCors();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Login}/{id?}");
 
+app.MapHub<ChatHub>("/chatHub");
 AppDbInitializer.Seed(app);
 AppDbInitializer.SeedUsersAndRolesAsync(app).Wait();
 app.Run();

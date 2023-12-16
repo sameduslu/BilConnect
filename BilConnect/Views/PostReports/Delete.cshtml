@@ -1,0 +1,171 @@
+﻿@using BilConnect.Models.ReportModels;
+@using BilConnect.Models.PostModels;
+@model PostReport
+
+@{
+    ViewData["Title"] = "Delete Post";
+}
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <div class="row">
+                @if (Model.ReportedPost != null)
+                {
+                    <div class="col text-center">
+                        <h1>Delete Confirmation for Report for @Model.ReportedPost.Title</h1>
+                    </div>
+                }
+                else
+                {
+                    <div class="col text-center">
+                        <h1>Delete Confirmation for Report for Deleted Report</h1>
+                    </div>
+                }
+            </div>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <div class="form-group">
+                    <label asp-for="@Model.Reporter" class="control-label"></label>
+                    <input asp-for="@Model.Reporter" class="form-control" readonly />
+                    <span asp-validation-for="@Model.Reporter" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" readonly />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                @if (Model.ReportedPost != null)
+                {
+                    <div class="form-group text-center">
+                        <img id="ProfilePicturePreview" src="@Model.ReportedPost.ImageURL" alt="Profile Picture"
+                             style="width: 150px; height: 150px; object-fit: cover;" class="border-info rounded-circle" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="@Model.ReportedPost.Description" class="control-label"></label>
+                        <input asp-for="@Model.ReportedPost.Description" class="form-control" readonly />
+                        <span asp-validation-for="@Model.ReportedPost.Description" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="@Model.ReportedPost.User.FullName" class="control-label"></label>
+                        <input asp-for="@Model.ReportedPost.User.FullName" class="form-control" readonly />
+                        <span asp-validation-for="@Model.ReportedPost.User.FullName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="@Model.ReportedPost.PostDate" class="control-label"></label>
+                        <input asp-for="@Model.ReportedPost.PostDate" class="form-control" readonly />
+                        <span asp-validation-for="@Model.ReportedPost.PostDate" class="text-danger"></span>
+                    </div>
+
+
+                    @if (Model.ReportedPost is SellingPost sellingPost)
+                    {
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input class="form-control" value="@sellingPost.Price" readonly />
+                        </div>
+                    }
+                    else if (Model.ReportedPost is DonationPost donationPost)
+                    {
+
+                    }
+                    else if (Model.ReportedPost is BorrowingPost borrowingPost)
+                    {
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input class="form-control" value="@borrowingPost.Price" readonly />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Return Date</label>
+                            <input class="form-control" value="@borrowingPost.ReturnDate" readonly />
+                        </div>
+                    }
+                    else if (Model.ReportedPost is EventTicketPost eventTicketPost)
+                    {
+                        <div class="form-group">
+                            <label>Event Place</label>
+                            <input class="form-control" value="@eventTicketPost.EventPlace" readonly />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Event Time</label>
+                            <input class="form-control" value="@eventTicketPost.EventTime" readonly />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input class="form-control" value="@eventTicketPost.Price" readonly />
+                        </div>
+                    }
+                    else if (Model.ReportedPost is FoundItemPost foundItemPost)
+                    {
+
+                    }
+                    else if (Model.ReportedPost is LostItemPost lostItemPost)
+                    {
+                        <div class="form-group">
+                            <label>Place</label>
+                            <input class="form-control" value="@lostItemPost.Place" readonly />
+                        </div>
+                    }
+                    else if (Model.ReportedPost is PetAdoptionPost petAdoptionPost)
+                    {
+                        <div class="form-group">
+                            <label>Event Time</label>
+                            <input class="form-control" value="@petAdoptionPost.IsFullyVaccinated" readonly />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input class="form-control" value="@petAdoptionPost.AgeInMonths" readonly />
+                        </div>
+                    }
+                    else if (Model.ReportedPost is TravellingPost travellingPost)
+                    {
+                        <div class="form-group">
+                            <label>Origin</label>
+                            <input class="form-control" value="@travellingPost.Origin" readonly />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Destinatione</label>
+                            <input class="form-control" value="@travellingPost.Destination" readonly />
+                        </div>
+
+                        <div class="form-group">
+                            <label>TravelTime</label>
+                            <input class="form-control" value="@travellingPost.TravelTime" readonly />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input class="form-control" value="@travellingPost.Price" readonly />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Quota</label>
+                            <input class="form-control" value="@travellingPost.Quota" readonly />
+                        </div>
+                    }
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            var output = document.getElementById('ProfilePicturePreview');
+            output.src = $("#ProfilePictureURL").val();
+        })
+    </script>
+}

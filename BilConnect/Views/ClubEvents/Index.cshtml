@@ -1,0 +1,220 @@
+﻿@model IEnumerable<BilConnect.Models.ClubEvent>
+
+@* @if (User.IsInRole("ClubAccount"))
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+} *@
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* WhatsApp font style */
+        margin: 0;
+        padding: 0;
+        background: rgb(240,224,209);
+        background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .post-card {
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        overflow: hidden;
+        height: 620px; /* Fixed height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distributes space inside the card */
+        background-color: #e5ddd5;
+        animation: jumpIn 0.6s ease-out;
+    }
+
+    @@keyframes jumpIn {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .post-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        color: black; /* Set the text color to gray */
+    }
+
+        /* To specifically target links within .post-info to ensure they are gray too */
+        .post-info a {
+            color: black;
+        }
+
+            /* Change color on hover for links, if desired */
+            .post-info a:hover {
+                color: lightgray; /* Replace with a darker shade of gray if you wish */
+            }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .material-icons {
+        color: #757575; /* WhatsApp green */
+    }
+
+
+    .info-label {
+        font-weight: bold;
+        color: #555;
+        margin-right: 5px;
+    }
+
+    .your-post {
+        font-weight: bold;
+        color: #555;
+        align-items: center;
+        text-decoration: none;
+    }
+
+
+    .post-card-header {
+        background-color: #e5ddd5;
+        color: black;
+        text-align: center;
+        font-family: "Segoe UI", Arial, sans-serif;
+        padding: 10px;
+        font-size: 25px;
+    }
+
+    .post-card-body {
+        padding: 10px;
+        background-color: #e5ddd5;
+    }
+
+    .post-img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .post-card-footer {
+        padding: 10px;
+        background-color: #d4ccc4;
+        text-align: center;
+    }
+
+    .btn-whatsapp {
+        background-color: #757575;
+        color: white;
+    }
+
+    .btn-secondary {
+        background-color: #757575;
+    }
+
+    .btn-yourpost {
+        background-color: transparent;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .search-input {
+        width: 70%;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid #757575;
+        outline: none;
+    }
+</style>
+
+<div class="container">
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="@Url.Action("Details", new { id = item.Id })" class="text-decoration-none">
+                    <div class="post-card" data-title="@item.Name">
+                        <div class="post-card-header">
+                            @item.Name
+                        </div>
+                        <img src="@item.ImageURL" alt="@item.Name" class="post-img">
+                        <div class="post-card-body">
+                            <div class="post-info">
+                                <p class="info-item">
+                                    <i class="material-icons">event</i>
+                                    <span>Description: @item.Description</span>
+                                </p>
+                                <p class="info-item">
+                                    <i class="material-icons">event</i>
+                                    <span>Start Time: @item.startTime</span>
+                                </p>
+                                <p class="info-item">
+                                    <i class="material-icons">event</i>
+                                    <span>End Time: @item.endTime</span>
+                                </p>
+                                <p class="info-item">
+                                    <i class="material-icons">event</i>
+                                    @if (item.GE250_251Status)
+                                    {
+                                        <span>GE250/251: YES</span>
+                                    }
+                                    else
+                                    {
+                                        <span>GE250/251: NO</span>
+                                    }
+                                    
+                                </p>
+                                @if (@item.GE250_251Status)
+                                {
+                                    <p class="info-item">
+                                        <i class="material-icons">event</i>
+                                        <span>Points: @item.GE250_251Points</span>
+                                    </p>
+                                }                                
+                                <p class="info-item">
+                                    <i class="material-icons">people</i>
+                                    <span>Quota: @item.quota</span>
+                                </p>
+                                <p class="info-item">
+                                    <i class="material-icons">person</i>
+                                    <span>Organizing Club: @item.ownerClub.FullName</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="post-card-footer">
+                            
+                            <a asp-controller="ClubEvents" asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Details</a>
+                           
+                       @*      @if (User.IsInRole("ClubAccount"))
+                            {
+                                <a asp-controller="ClubEvents" asp-action="Edit" class="btn btn-primary">Edit</a>
+                               
+                                <a asp-controller="ClubEvents" asp-action="Delete" class="btn btn-danger">Delete</a>
+                                
+                            } *@
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
+@await Html.PartialAsync("_CreateClubEvent", "ClubEvents")

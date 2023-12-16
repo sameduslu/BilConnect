@@ -1,65 +1,301 @@
-﻿@using BilConnect.Data.ViewModels;
+@using BilConnect.Data.ViewModels;
+@using BilConnect.Data.ViewModels.PostViewModels;
+@using BilConnect.Data.Enums
 @model NewPostVM
 
 @{
-    ViewData["Title"] = "Add a new post";
+    ViewData["Title"] = "Create Post";
 }
 
-<div class="row text">
-    <div class="col-md-8 offset-2">
-        <p>
-            <h1>Add a New Post</h1>
-        </p>
-        <div class="row">
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* WhatsApp font style */
+        margin: 0;
+        padding: 0;
+        background: rgb(240,224,209);
+        background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-secondary {
+        background-color: #757575;
+    }
+
+    .post-card {
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        overflow: hidden;
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distributes space inside the card */
+        background-color: #e5ddd5;
+        animation: jumpIn 0.6s ease-out;
+        padding: 20px;
+    }
+
+    @@keyframes jumpIn {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="post-card">
+        <div class="row mt-1 mb-1">
             <div class="col-md-8 offset-2">
-                <form asp-action="Create">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div align="center">
+                    <h1>Create Post</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 offset-2">
+                        <form asp-action="Create" method="post" enctype="multipart/form-data">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                    <div class="form-group text-center">
-                        <img id="ProfilePicturePreview" class="border-info rounded-circle" style="max-width: 150px" />
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="ImageURL" class="control-label"></label>
-                        <input asp-for="ImageURL" class="form-control" />
-                        <span asp-validation-for="ImageURL" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Title" class="control-label"></label>
-                        <input asp-for="Title" class="form-control" />
-                        <span asp-validation-for="Title" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Description" class="control-label"></label>
-                        <input asp-for="Description" class="form-control" />
-                        <span asp-validation-for="Description" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Price" class="control-label"></label>
-                        <input asp-for="Price" class="form-control" />
-                        <span asp-validation-for="Price" class="text-danger"></span>
-                    </div>
+                            <!-- Post Type Selection -->
+                            <div class="form-group">
+                                <label asp-for="PostType" class="control-label">Post Type</label>
+                                <select asp-for="PostType" class="form-control" id="PostType">
+                                    <option value="@PostType.SellingPost">Selling Post</option>
+                                    <option value="@PostType.DonationPost">Donation Post</option>
+                                    <option value="@PostType.BorrowingPost">Borrowing Post</option>
+                                    <option value="@PostType.EventTicketPost">Event Ticket Post</option>
+                                    <option value="@PostType.FoundItemPost">Found Item Post</option>
+                                    <option value="@PostType.LostItemPost">Lost Item Post</option>
+                                    <option value="@PostType.PetAdoptionPost">Pet Adoption Post</option>
+                                    <option value="@PostType.TravellingPost">Travelling Post</option>
+                                </select>
+                            </div>
 
-                    <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-outline-success float-right" />
-                        <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+                            <!-- Common Fields -->
+                            <div class="form-group">
+                                <label asp-for="Title" class="control-label">Title</label>
+                                <input asp-for="Title" class="form-control" />
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Description" class="control-label">Description</label>
+                                <textarea asp-for="Description" class="form-control"></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="photoUpload">Upload Photo</label>
+                                <input type="file" name="photoUpload" class="form-control" accept="image/*" language="en" title="Select a File" />
+                                @if (ViewData.ModelState["photoUpload"] != null && ViewData.ModelState["photoUpload"].Errors.Count > 0)
+                                {
+                                    <span class="text-danger">@ViewData.ModelState["photoUpload"].Errors[0].ErrorMessage</span>
+                                }
+                            </div>
+
+                            <div class="form-group">
+                                <label for="additionalImagesUpload">Upload Additional Images</label>
+                                <input type="file" name="additionalImagesUpload" class="form-control" accept="image/*" multiple />
+                                @if (ViewData.ModelState["additionalImagesUpload"] != null && ViewData.ModelState["additionalImagesUpload"].Errors.Count > 0)
+                                {
+                                    <span class="text-danger">@ViewData.ModelState["additionalImagesUpload"].Errors[0].ErrorMessage</span>
+                                }
+                            </div>
+
+
+
+                            <!-- Selling  Post Fields -->
+                            <div id="sellingPostFields" class="conditional-fields" style="display:none">
+                                <label asp-for="PriceS" class="control-label"></label>
+                                <div class="input-group">
+                                    <!-- Wrap input and addon in an input-group -->
+                                    <input asp-for="PriceS" class="form-control" />
+                                    <span class="input-group-text">TL</span> <!-- Addon with "TL" text -->
+                                </div>
+                                <span asp-validation-for="PriceS" class="text-danger"></span>
+                            </div>
+
+
+                            <!-- Borrowing Post Fields -->
+                            <div id="borrowingPostFields" class="conditional-fields" style="display:none">
+                                <!-- Price field -->
+                                <div class="form-group">
+                                    <label asp-for="PriceS" class="control-label"></label>
+                                    <div class="input-group">
+                                        <!-- Wrap input and addon in an input-group -->
+                                        <input asp-for="PriceS" class="form-control" />
+                                        <span class="input-group-text">TL</span> <!-- Addon with "TL" text -->
+                                    </div>
+                                    <span asp-validation-for="PriceS" class="text-danger"></span>
+                                </div>
+
+
+                                <!-- Return Date field -->
+                                <div class="form-group">
+                                    <label asp-for="ReturnDate" class="control-label"></label>
+                                    <input asp-for="ReturnDate" class="form-control" type="text" />
+                                    <span asp-validation-for="ReturnDate" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <!-- Event Ticket Post Fields -->
+                            <div id="eventTicketPostFields" class="conditional-fields" style="display:none">
+                                <!-- Event Time field -->
+                                <div class="form-group">
+                                    <label asp-for="EventTime" class="control-label"></label>
+                                    <input asp-for="EventTime" class="form-control" type="text" />
+                                    <span asp-validation-for="EventTime" class="text-danger"></span>
+                                </div>
+
+                                <!-- Event Place field -->
+                                <div class="form-group">
+                                    <label asp-for="EventPlace" class="control-label"></label>
+                                    <input asp-for="EventPlace" class="form-control" />
+                                    <span asp-validation-for="EventPlace" class="text-danger"></span>
+                                </div>
+
+                                <!-- Price field -->
+                                <div class="form-group">
+                                    <label asp-for="PriceS" class="control-label"></label>
+                                    <div class="input-group">
+                                        <!-- Wrap input and addon in an input-group -->
+                                        <input asp-for="PriceS" class="form-control" />
+                                        <span class="input-group-text">TL</span> <!-- Addon with "TL" text -->
+                                    </div>
+                                    <span asp-validation-for="PriceS" class="text-danger"></span>
+                                </div>
+
+                            </div>
+
+                            <!-- Lost Item Post Fields -->
+                            <div id="lostItemPostFields" class="conditional-fields" style="display:none">
+                                <!-- Place field -->
+                                <div class="form-group">
+                                    <label asp-for="Place" class="control-label"></label>
+                                    <input asp-for="Place" class="form-control" />
+                                    <span asp-validation-for="Place" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <!-- Pet Adoption Post Fields -->
+                            <div id="petAdoptionPostFields" class="conditional-fields" style="display:none">
+                                <!-- IsFullyVaccinated field -->
+                                <div class="form-group">
+                                    <label asp-for="IsFullyVaccinated" class="control-label"></label>
+                                    <select asp-for="IsFullyVaccinated" class="form-control">
+                                        <option value="">Select Vaccination Status</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                    <span asp-validation-for="IsFullyVaccinated" class="text-danger"></span>
+                                </div>
+
+                                <!-- AgeInMonths field -->
+                                <div class="form-group">
+                                    <label asp-for="AgeInMonths" class="control-label"></label>
+                                    <input asp-for="AgeInMonths" class="form-control" type="number" />
+                                    <span asp-validation-for="AgeInMonths" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <!-- Travelling Post Fields -->
+                            <div id="travellingPostFields" class="conditional-fields" style="display:none">
+                                <!-- Origin field -->
+                                <div class="form-group">
+                                    <label asp-for="Origin" class="control-label"></label>
+                                    <input asp-for="Origin" class="form-control" />
+                                    <span asp-validation-for="Origin" class="text-danger"></span>
+                                </div>
+
+                                <!-- Destination field -->
+                                <div class="form-group">
+                                    <label asp-for="Destination" class="control-label"></label>
+                                    <input asp-for="Destination" class="form-control" />
+                                    <span asp-validation-for="Destination" class="text-danger"></span>
+                                </div>
+
+                                <!-- TravelTime field -->
+                                <div class="form-group">
+                                    <label asp-for="TravelTime" class="control-label"></label>
+                                    <input asp-for="TravelTime" class="form-control" type="text" />
+                                    <span asp-validation-for="TravelTime" class="text-danger"></span>
+                                </div>
+
+                                <!-- Price field -->
+                                <div class="form-group">
+                                    <label asp-for="PriceS" class="control-label"></label>
+                                    <div class="input-group">
+                                        <!-- Wrap input and addon in an input-group -->
+                                        <input asp-for="PriceS" class="form-control" />
+                                        <span class="input-group-text">TL</span> <!-- Addon with "TL" text -->
+                                    </div>
+                                    <span asp-validation-for="PriceS" class="text-danger"></span>
+                                </div>
+
+
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="form-group">
+                                <input type="submit" value="Create" class="btn btn-secondary" />
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</>
 
-@section Scripts{
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
     <script>
-
         $(document).ready(function () {
-            var output = document.getElementById('ProfilePicturePreview');
-            output.src = $("#ImageURL").val();
-        })
+            function toggleFields() {
+                var selectedType = $('#PostType').val();
+                $('.conditional-fields').hide(); // Hide all conditional fields
 
-        $("#ImageURL").on("change", function () {
-            var output = document.getElementById('ProfilePicturePreview');
-            output.src = $(this).val();
-        })
+
+                if (selectedType === '@(PostType.SellingPost)') {
+                    $('#sellingPostFields').show();
+                } else if (selectedType === '@(PostType.BorrowingPost)') {
+                    $('#borrowingPostFields').show();
+                } else if (selectedType === '@(PostType.EventTicketPost)') {
+                    $('#eventTicketPostFields').show();
+                } else if (selectedType === '@(PostType.LostItemPost)') {
+                    $('#lostItemPostFields').show();
+                } else if (selectedType === '@(PostType.PetAdoptionPost)') {
+                    $('#petAdoptionPostFields').show();
+                } else if (selectedType === '@(PostType.TravellingPost)') {
+                    $('#travellingPostFields').show();
+                }
+
+            }
+
+            $('#PostType').change(toggleFields);
+            toggleFields(); 
+        });
     </script>
 }
+
+

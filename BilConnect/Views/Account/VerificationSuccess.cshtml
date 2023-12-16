@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Email Verification Successful";
+}
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* WhatsApp font style */
+        margin: 0;
+        padding: 0;
+        background: rgb(240,224,209);
+        background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2>Email Verification Successful</h2>
+            <p>Your email has been successfully verified. Thank you for confirming your email address.</p>
+            <a class="btn btn-primary" href="@Url.Action("Index", "Home")">Go to Home Page</a>
+        </div>
+    </div>
+</div>

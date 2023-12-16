@@ -1,9 +1,12 @@
-﻿using BilConnect.Models;
+using BilConnect.Data.Static;
+using BilConnect.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace BilConnect.Controllers
 {
+    [Authorize(Roles = UserRoles.Admin + "," + UserRoles.User + "," + UserRoles.ClubAccount)]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
