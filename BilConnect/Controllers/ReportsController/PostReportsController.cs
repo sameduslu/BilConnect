@@ -17,7 +17,7 @@ namespace BilConnect.Controllers.ReportsController
 
         public async Task<IActionResult> Index()
         {
-            var data = await _service.GetAllAsync(n => n.Reporter, u => u.ReportedPost);
+            var data = await _service.GetAllAsync(null, n => n.Reporter, u => u.ReportedPost);
             return View(data);
         }
 

@@ -7,6 +7,9 @@ namespace BilConnect.Models
 {
     public class ApplicationUser : IdentityUser
     {
+
+        public bool IsSuspended { get; set; }
+
         [Display(Name = "Users name")]
         public string FullName { get; set; }
 

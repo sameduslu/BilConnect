@@ -55,6 +55,12 @@ namespace BilConnect.Controllers
                     return View(loginVM);
                 }
 
+                if (user.IsSuspended)
+                {
+                    TempData["Error"] = "Your account has been suspended. Please contact support.";
+                    return View(loginVM);
+                }
+
                 var passwordCheck = await _userManager.CheckPasswordAsync(user, loginVM.Password);
                 if (passwordCheck)
                 {
@@ -101,11 +107,12 @@ namespace BilConnect.Controllers
             }
 
             var newUser = new ApplicationUser()
-            {
+            {   
                 FullName = registerVM.FullName,
                 Email = registerVM.EmailAddress,
                 UserName = registerVM.EmailAddress,
-                EmailConfirmed = false // User's email is not confirmed initially
+                EmailConfirmed = false, // User's email is not confirmed initially
+                IsSuspended = false,
             };
 
             var newUserResponse = await _userManager.CreateAsync(newUser, registerVM.Password);
@@ -199,5 +206,49 @@ namespace BilConnect.Controllers
         {
             return View();
         }
+
+
+        public async Task<IActionResult> SuspendUser(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            user.IsSuspended = true;
+            var result = await _userManager.UpdateAsync(user);
+
+            if (result.Succeeded)
+            {
+                // Optionally add logic here to notify the user of suspension
+                return RedirectToAction("Users");
+            }
+
+            // Handle errors here
+            return View("Error"); // Replace with appropriate error handling
+        }
+
+        public async Task<IActionResult> UnsuspendUser(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            user.IsSuspended = false;
+            var result = await _userManager.UpdateAsync(user);
+
+            if (result.Succeeded)
+            {
+                // Optionally add logic here to notify the user of unsuspension
+                return RedirectToAction("Users");
+            }
+
+            // Handle errors here
+            return View("Error"); // Replace with appropriate error handling
+        }
+
     }
 }

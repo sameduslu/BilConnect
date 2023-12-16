@@ -31,6 +31,20 @@
                     <td class="align-middle">
                         @Html.DisplayFor(modelItem => item.Email)
                     </td>
+                    <td class="align-middle text-center">
+                        @if (item.IsSuspended)
+                        {
+                            <form asp-action="UnsuspendUser" asp-route-userId="@item.Id" method="post">
+                                <button type="submit" class="btn btn-success">Unsuspend</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <form asp-action="SuspendUser" asp-route-userId="@item.Id" method="post">
+                                <button type="submit" class="btn btn-warning">Suspend</button>
+                            </form>
+                        }
+                    </td>
                 </tr>
                 }
             </tbody>

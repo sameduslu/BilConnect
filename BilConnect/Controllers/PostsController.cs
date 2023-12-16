@@ -34,7 +34,11 @@ namespace BilConnect.Controllers.PostsControllers
 
         public async Task<IActionResult> Index()
         {
-            var data = await _service.GetAllAsync(n => n.User);
+            var data = await _service.GetAllAsync(
+                post => !post.User.IsSuspended, // Do not get suspended posts.
+                n => n.User
+            );
+            return View(data);
             return View(data);
         }
 
