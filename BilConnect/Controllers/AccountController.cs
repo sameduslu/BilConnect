@@ -180,6 +180,19 @@ namespace BilConnect.Controllers
             return View(userWithPosts);
         }
 
+        public async Task<IActionResult> SelfClubEvents()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userWithClubEvents = await _service.GetByIdAsync(userId);
+
+            if (userWithClubEvents == null)
+            {
+                return NotFound();
+            }
+
+            return View(userWithClubEvents);
+        }
+
         public async Task<IActionResult> SelfReports()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Get the current user's ID

@@ -44,6 +44,7 @@ namespace BilConnect.Data.Services
                          .Include(p => p.PostReports)
                              .ThenInclude(pr => pr.ReportedPost) 
                          .Include(u => u.Posts)
+                         .Include(u => u.ClubEvents)
                          .FirstOrDefaultAsync(u => u.Id == id);
         }
 
