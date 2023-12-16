@@ -6,150 +6,329 @@
     ViewData["Title"] = "Post Details";
 }
 
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* WhatsApp font style */
+        margin: 0;
+        padding: 0;
+        background: rgb(240,224,209);
+        background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
-<div class="row text">
-    <div class="col-md-8 offset-2">
-        <p>
-            <h1>Details</h1>
-        </p>
-        <div class="row">
+    .container {
+        width: auto; /* Allow the container to adjust width based on content */
+        height: auto; /* Allow the container to adjust height based on content */
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .post-card {
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        overflow: hidden;
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distributes space inside the card */
+        background-color: #e5ddd5;
+        animation: jumpIn 0.6s ease-out;
+        padding: 20px;
+    }
+
+    @@keyframes jumpIn {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .image-slider {
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: row;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .image-frame {
+        display: flex;
+        width: 300px;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        margin: 0 5px; /* Adjust the margin between images */
+        position: relative;
+    }
+
+    .slider-image {
+        max-width: 100%;
+        max-height: 100%;
+        background-color: transparent;
+        display: block;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        cursor: pointer;
+        padding: 16px;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+        border: none;
+        outline: none;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="post-card">
+        <div class="row mt-1 mb-1">
             <div class="col-md-8 offset-2">
-                
-                <<div class="row">
-                    <div class="col text-center">
-                        <h1>@Model.Title</h1>
-                    </div>
+                <div align="center">
+                    <h1>Details</h1>
                 </div>
+                <div class="row">
+                    <div class="col-md-8 offset-2">
 
-                <div class="form-group text-center">
-                    <img id="ProfilePicturePreview" src="@Model.ImageURL" alt="Profile Picture"
-                         style="width: 150px; height: 150px; object-fit: cover;" class="border-info rounded-circle" />
-                </div>
-
-                @if (Model.AdditionalImages != null && Model.AdditionalImages.Any())
-                {
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h3>Additional Images</h3>
-                            @foreach (var imageUrl in Model.AdditionalImages)
-                            {
-                                <img src="@imageUrl" alt="Additional Image" style="max-width: 100%; height: auto;" />
-                            }
+                        <div class="row">
+                            <div class="col text-center">
+                                <h1><small>@Model.Title</small></h1>
+                            </div>
                         </div>
-                    </div>
-                }
 
-                
-                <div class="form-group">
-                    <label asp-for="Description" class="control-label"></label>
-                    <input asp-for="Description" class="form-control" readonly />
-                    <span asp-validation-for="Description" class="text-danger"></span>
+                        @if ((Model.AdditionalImages != null && Model.AdditionalImages.Any()) || Model.ImageURL != null)
+                        {
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="image-slider">
+                                        <div class="image-container">
+                                            <div class="image-frame">
+                                                <img src="@Model.ImageURL" alt="Additional Image" class="slider-image" />
+                                            </div>
+                                            @foreach (var imageUrl in Model.AdditionalImages)
+                                            {
+                                                <div class="image-frame">
+                                                    <img src="@imageUrl" alt="Additional Image" class="slider-image" />
+                                                </div>
+                                            }
+                                        </div>
+                                        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                                        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+
+                        <div class="form-group">
+                            <label asp-for="Description" class="control-label"></label>
+                            <input asp-for="Description" class="form-control" disabled />
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="User.FullName" class="control-label">Post Owner</label>
+                            <input asp-for="User.FullName" class="form-control" disabled />
+                            <span asp-validation-for="User.FullName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="PostDate" class="control-label">Post Date</label>
+                            <input asp-for="PostDate" class="form-control" value="@Model.PostDate" disabled />
+                            <span asp-validation-for="PostDate" class="text-danger"></span>
+                        </div>
+
+                        @if (Model is SellingPost sellingPost)
+                        {
+                            <div class="form-group">
+                                <label>Price</label>
+                                <div class="input-group">
+                                    <input class="form-control" value="@sellingPost.Price" id="priceInput" disabled />
+                                </div>
+                            </div>
+                        }
+                        else if (Model is DonationPost donationPost)
+                        {
+
+                        }
+                        else if (Model is BorrowingPost borrowingPost)
+                        {
+                            <div class="form-group">
+                                <label>Price</label>
+                                <div class="input-group">
+                                    <input class="form-control" value="@borrowingPost.Price" id="priceInput" disabled />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Return Date</label>
+                                <input class="form-control" value="@borrowingPost.ReturnDate" disabled />
+                            </div>
+                        }
+                        else if (Model is EventTicketPost eventTicketPost)
+                        {
+                            <div class="form-group">
+                                <label>Event Place</label>
+                                <input class="form-control" value="@eventTicketPost.EventPlace" disabled />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Event Time</label>
+                                <input class="form-control" value="@eventTicketPost.EventTime" disabled />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Price</label>
+                                <div class="input-group">
+                                    <input class="form-control" value="@eventTicketPost.Price" id="priceInput" disabled />
+                                </div>
+                            </div>
+                        }
+                        else if (Model is FoundItemPost foundItemPost)
+                        {
+
+                        }
+                        else if (Model is LostItemPost lostItemPost)
+                        {
+                            <div class="form-group">
+                                <label>Place</label>
+                                <input class="form-control" value="@lostItemPost.Place" disabled />
+                            </div>
+                        }
+                        else if (Model is PetAdoptionPost petAdoptionPost)
+                        {
+                            <div class="form-group">
+                                <label>Event Time</label>
+                                <input class="form-control" value="@petAdoptionPost.IsFullyVaccinated" disabled />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Age in Months</label>
+                                <input class="form-control" value="@petAdoptionPost.AgeInMonths" disabled />
+                            </div>
+                        }
+                        else if (Model is TravellingPost travellingPost)
+                        {
+                            <div class="form-group">
+                                <label>Origin</label>
+                                <input class="form-control" value="@travellingPost.Origin" disabled />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Destinatione</label>
+                                <input class="form-control" value="@travellingPost.Destination" disabled />
+                            </div>
+
+                            <div class="form-group">
+                                <label>TravelTime</label>
+                                <input class="form-control" value="@travellingPost.TravelTime" disabled />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Price</label>
+                                <div class="input-group">
+                                    <input class="form-control" value="@travellingPost.Price" id="priceInput" disabled />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Quota</label>
+                                <input class="form-control" value="@travellingPost.Quota" disabled />
+                            </div>
+                        }
+
+                        @if (User.FindFirst(ClaimTypes.NameIdentifier)?.Value != Model.UserId)
+                        {
+                            <a asp-controller="PostReports" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-secondary">Create New Post Report</a>
+                        }
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label asp-for="User.FullName" class="control-label"></label>
-                    <input asp-for="User.FullName" class="form-control" readonly />
-                    <span asp-validation-for="User.FullName" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label asp-for="PostDate" class="control-label"></label>
-                    <input asp-for="PostDate" class="form-control" readonly />
-                    <span asp-validation-for="PostDate" class="text-danger"></span>
-                </div>
-                
-                @if (Model is SellingPost sellingPost)
-                {
-                    <div class="form-group">
-                        <label>Price</label>
-                        <input class="form-control" value="@sellingPost.Price" readonly />
-                    </div>
-                }else if(Model is DonationPost donationPost)
-                {
-
-                }else if(Model is BorrowingPost borrowingPost)
-                {
-                    <div class="form-group">
-                        <label>Price</label>
-                        <input class="form-control" value="@borrowingPost.Price" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Return Date</label>
-                        <input class="form-control" value="@borrowingPost.ReturnDate" readonly />
-                    </div>
-                }else if(Model is EventTicketPost eventTicketPost)
-                {
-                    <div class="form-group">
-                        <label>Event Place</label>
-                        <input class="form-control" value="@eventTicketPost.EventPlace" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Event Time</label>
-                        <input class="form-control" value="@eventTicketPost.EventTime" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Price</label>
-                        <input class="form-control" value="@eventTicketPost.Price" readonly />
-                    </div>
-                }else if(Model is FoundItemPost foundItemPost)
-                {
-                    
-                }else if(Model is LostItemPost lostItemPost)
-                {
-                    <div class="form-group">
-                        <label>Place</label>
-                        <input class="form-control" value="@lostItemPost.Place" readonly />
-                    </div>
-                }else if(Model is PetAdoptionPost petAdoptionPost)
-                {
-                    <div class="form-group">
-                        <label>Event Time</label>
-                        <input class="form-control" value="@petAdoptionPost.IsFullyVaccinated" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Price</label>
-                        <input class="form-control" value="@petAdoptionPost.AgeInMonths" readonly />
-                    </div>
-                }else if(Model is TravellingPost travellingPost)
-                {
-                    <div class="form-group">
-                        <label>Origin</label>
-                        <input class="form-control" value="@travellingPost.Origin" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Destinatione</label>
-                        <input class="form-control" value="@travellingPost.Destination" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>TravelTime</label>
-                        <input class="form-control" value="@travellingPost.TravelTime" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Price</label>
-                        <input class="form-control" value="@travellingPost.Price" readonly />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Quota</label>
-                        <input class="form-control" value="@travellingPost.Quota" readonly />
-                    </div>
-                }
-
-                @if (User.FindFirst(ClaimTypes.NameIdentifier)?.Value != Model.UserId) // Compare current user's ID with Model.UserId
-                {
-                    <a asp-controller="PostReports" asp-action="Create" asp-route-id="@Model.Id">Create New Post Report</a>
-                }
-                
-                
             </div>
         </div>
     </div>
-</div>
+</>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var priceInput = document.getElementById('priceInput');
+            priceInput.value += ' TL';
+        });
+    </script>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.querySelectorAll('.image-container .image-frame');
+            var prevButton = document.querySelector('.prev');
+            var nextButton = document.querySelector('.next');
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slides[slideIndex - 1].style.display = 'block';
+
+            // Manage arrow visibility
+            if (slideIndex === 1) {
+                prevButton.style.display = 'none';
+            } else {
+                prevButton.style.display = 'block';
+            }
+            if (slideIndex === slides.length) {
+                nextButton.style.display = 'none';
+            } else {
+                nextButton.style.display = 'block';
+            }
+        }
+    </script>
 

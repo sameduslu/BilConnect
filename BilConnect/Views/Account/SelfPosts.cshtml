@@ -160,6 +160,9 @@
     <div class="row">
         @if (Model != null && Model.Posts != null && Model.Posts.Count > 0)
         {
+            <div id="noMatchMessage" style="display: none;">
+                <p>There are no posts that match the description.</p>
+            </div>
             @foreach (var item in Model.Posts)
             {
                 <div class="col-md-4 col-sm-6 mb-4">
@@ -253,12 +256,27 @@
                 const post = col.querySelector('.post-card');
                 const title = post.getAttribute('data-title').toLowerCase();
 
+                found = false;
                 if (searchTerm === '' || title.includes(searchTerm)) {
                     col.style.display = ''; // Show the post column
+                    found = true;
                 } else {
                     col.style.display = 'none'; // Hide the post column
                 }
             });
+
+            // Display a message when no posts match the search term
+            if (!found) {
+                const noMatchMessage = document.getElementById('noMatchMessage');
+                if (noMatchMessage) {
+                    noMatchMessage.style.display = 'block'; // Show the message
+                }
+            } else {
+                const noMatchMessage = document.getElementById('noMatchMessage');
+                if (noMatchMessage) {
+                    noMatchMessage.style.display = 'none'; // Hide the message if posts are found
+                }
+            }
         });
 
         // Handling delete button click to show modal
