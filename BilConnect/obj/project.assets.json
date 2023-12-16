@@ -11518,32 +11518,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\borau\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\90541\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\BilConnect.csproj",
+      "projectUniqueName": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\BilConnect.csproj",
       "projectName": "BilConnect",
-      "projectPath": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\BilConnect.csproj",
-      "packagesPath": "C:\\Users\\borau\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\obj\\",
+      "projectPath": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\BilConnect.csproj",
+      "packagesPath": "C:\\Users\\90541\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\borau\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\90541\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11608,7 +11601,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "m1tLGwpSjmOcxE2VlxmCC26WH3KMmJru08c1nmJ0jPKiw1HV4/DHH4rsC6B9GK3tlgSLNOL0xFHe+5dYJQDM+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\BilConnect.csproj",
+  "projectFilePath": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\BilConnect.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\90541\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\90541\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
