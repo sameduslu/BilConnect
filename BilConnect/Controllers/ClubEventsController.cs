@@ -24,7 +24,7 @@ namespace BilConnect.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var data = await _service.GetAllAsync(n => n.ownerClub);
+            var data = await _service.GetAllAsync(null, n => n.ownerClub);
             return View(data);
         }
 
