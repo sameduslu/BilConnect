@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebApplication1.Models.Product>
+
+<p>
+    <a asp-action="CreateProduct" class="btn btn-primary">Create New</a>
+</p> 
+
+@* <p>
+    <a asp-action="ListSortedProducts" class="btn btn-primary">Sort Products by Price</a>
+</p> *@
+
+<div class="container d-flex  flex-wrap">
+    @foreach(var item in Model)
+    {
+        <div class="card" style="width: 18rem;">
+            <img src="https://picsum.photos/id/@item.Id/200/200" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@item.Name</h5>
+                <p class="card-text">@Html.DisplayFor(m => item.Price)</p>
+                <p class="card-desc">@item.Description</p>
+                <a href="/product/ShowDetails?productId=@item.Id" class="btn btn-primary">Show Details</a>
+                <a href="/product/Edit?productId=@item.Id" class="btn btn-primary">Edit</a>
+                <a href="/product/Delete?productId=@item.Id" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    }
+    
+</div>
+
