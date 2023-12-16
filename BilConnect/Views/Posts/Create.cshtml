@@ -123,7 +123,7 @@
 
 
                             <!-- Selling  Post Fields -->
-                            <div class="form-group">
+                            <div id="sellingPostFields" class="conditional-fields" style="display:none">
                                 <label asp-for="PriceS" class="control-label"></label>
                                 <div class="input-group">
                                     <!-- Wrap input and addon in an input-group -->
@@ -289,11 +289,11 @@
                 } else if (selectedType === '@(PostType.TravellingPost)') {
                     $('#travellingPostFields').show();
                 }
-,
+
             }
 
             $('#PostType').change(toggleFields);
-            toggleFields(); ,
+            toggleFields(); 
         });
     </script>
 }
