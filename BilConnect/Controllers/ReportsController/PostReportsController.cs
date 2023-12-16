@@ -55,7 +55,7 @@ namespace BilConnect.Controllers.ReportsController
             }
 
             await _service.AddNewPostReportAsync(post);
-            return RedirectToAction("DetailsAfterReport", "Posts", new { id = post.ReportedPostId });
+            return RedirectToAction("Details", "Posts", new { id = post.ReportedPostId });
         }
 
 
@@ -75,9 +75,7 @@ namespace BilConnect.Controllers.ReportsController
             if (postReportDetails == null) return View("NotFound");
 
             await _service.DeleteAsync(id);
-            //return View ("SelfReports");
-            return RedirectToAction("SelfReports", "Account");
-            //return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index));
         }
 
         public async Task<IActionResult> UpdatePostReportsStatus(int postId)
@@ -148,5 +146,8 @@ namespace BilConnect.Controllers.ReportsController
 
             return RedirectToAction("SelfReports", "Account");
         }
+
+
+
     }
 }

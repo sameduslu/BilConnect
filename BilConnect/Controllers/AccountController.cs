@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using BilConnect.Data.Services;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using System.Net.Mail;
 
 namespace BilConnect.Controllers
 {
@@ -19,12 +20,14 @@ namespace BilConnect.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IApplicationUsersService _service;
+        private readonly IEmailService _emailService;
         public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,
-                                    IApplicationUsersService service)
+                                    IApplicationUsersService service, IEmailService emailService)
         {
             _userManager = userManager;
             _signInManager = signInManager; 
             _service = service;
+            _emailService = emailService;
         }
 
 
@@ -45,6 +48,13 @@ namespace BilConnect.Controllers
             var user = await _userManager.FindByEmailAsync(loginVM.EmailAddress);
             if (user != null)
             {
+                if (!user.EmailConfirmed)
+                {
+                    // If email is not confirmed, inform the user
+                    TempData["Error"] = "You must confirm your email before logging in.";
+                    return View(loginVM);
+                }
+
                 var passwordCheck = await _userManager.CheckPasswordAsync(user, loginVM.Password);
                 if (passwordCheck)
                 {
@@ -54,15 +64,29 @@ namespace BilConnect.Controllers
                         return RedirectToAction("Index", "Posts");
                     }
                 }
+
+                // If password check fails
                 TempData["Error"] = "Wrong credentials. Please, try again!";
                 return View(loginVM);
             }
 
+            // If user is not found
             TempData["Error"] = "Wrong credentials. Please, try again!";
             return View(loginVM);
         }
 
         public IActionResult Register() => View(new RegisterVM());
+
+
+
+        private async Task SendEmailConfirmationAsync(string email, string token)
+        {
+            var callbackUrl = Url.Action("ConfirmEmail", "Account",
+                                         new { email, token }, protocol: HttpContext.Request.Scheme);
+            await _emailService.SendEmailAsync(email, "Confirm Your Email",
+                                               $"Please confirm your account by clicking the following link: <a href='{callbackUrl}'>Confirm Email</a>.");
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> Register(RegisterVM registerVM)
@@ -80,14 +104,53 @@ namespace BilConnect.Controllers
             {
                 FullName = registerVM.FullName,
                 Email = registerVM.EmailAddress,
-                UserName = registerVM.EmailAddress
+                UserName = registerVM.EmailAddress,
+                EmailConfirmed = false // User's email is not confirmed initially
             };
+
             var newUserResponse = await _userManager.CreateAsync(newUser, registerVM.Password);
 
             if (newUserResponse.Succeeded)
+            {
                 await _userManager.AddToRoleAsync(newUser, UserRoles.User);
 
-            return View("RegisterCompleted");
+                // Generate email confirmation token
+                var token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
+
+                // Send email with this token
+                await SendEmailConfirmationAsync(newUser.Email, token);
+
+                // Redirect to a page that instructs the user to check their email
+                return RedirectToAction("CheckYourEmail");
+            }
+            else
+            {
+                foreach (var error in newUserResponse.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+                return View(registerVM);
+            }
+        }
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> ConfirmEmail(string email, string token)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                return View("VerificationError");
+            }
+
+            var result = await _userManager.ConfirmEmailAsync(user, token);
+            if (result.Succeeded)
+            {
+                return View("VerificationSuccess");
+            }
+
+            return View("VerificationError");
         }
 
         [HttpPost]
@@ -131,5 +194,10 @@ namespace BilConnect.Controllers
             return View(userWithPosts); 
         }
 
+
+        public IActionResult CheckYourEmail()
+        {
+            return View();
+        }
     }
 }

@@ -5,11 +5,11 @@ namespace BilConnect.Models.PostModels
 {
     public class EventTicketPost : Post
     {
-        DateTime EventTime { get; set; }
+        public string EventTime { get; set; }
 
-        string EventPlace { get; set; }
+        public string EventPlace { get; set; }
 
-        double Price { get; set; }
+        public double Price { get; set; }
 
     }
 }

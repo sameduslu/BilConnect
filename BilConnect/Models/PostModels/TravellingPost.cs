@@ -2,15 +2,15 @@
 {
     public class TravellingPost : Post
     {
-        string Origin { get; set; }
+        public  string Origin { get; set; }
 
-        string Destination { get; set; }
+        public string Destination { get; set; }
 
-        DateTime TravelTime { get; set; }
+        public string TravelTime { get; set; }
 
-        double Price { get; set; }
+        public double Price { get; set; }
 
-        int Quota { get; set; }
+        public int Quota { get; set; }
 
     }
 }
