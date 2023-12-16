@@ -37,6 +37,7 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         //Selling Post
         [Display(Name = "Price")]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a non-negative number.")]
+        [RegularExpression(@"^\d+(\.\d{0,2})?$", ErrorMessage = "Price can have at most 2 decimal places.")]
         public double? PriceS { get; set; }
 
         //Borrowing Post
@@ -44,6 +45,7 @@ namespace BilConnect.Data.ViewModels.PostViewModels
 
         [Display(Name = "Price")]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a non-negative number.")]
+        [RegularExpression(@"^\d+(\.\d{0,2})?$", ErrorMessage = "Price can have at most 2 decimal places.")]
         public double? PriceB { get; set; }
 
         //EventTicketPost
@@ -53,6 +55,7 @@ namespace BilConnect.Data.ViewModels.PostViewModels
 
         [Display(Name = "Price")]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a non-negative number.")]
+        [RegularExpression(@"^\d+(\.\d{0,2})?$", ErrorMessage = "Price can have at most 2 decimal places.")]
         public double? PriceE { get; set; }
 
         //LostItemPost
@@ -73,6 +76,7 @@ namespace BilConnect.Data.ViewModels.PostViewModels
 
         [Display(Name = "Price")]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a non-negative number.")]
+        [RegularExpression(@"^\d+(\.\d{0,2})?$", ErrorMessage = "Price can have at most 2 decimal places.")]
         public double? PriceT { get; set; }
     }
 }
