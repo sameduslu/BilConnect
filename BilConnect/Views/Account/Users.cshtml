@@ -23,7 +23,9 @@
                 {
                 <tr>
                     <td class="align-middle">
-                        @Html.DisplayFor(modelItem => item.FullName)
+                        <a href="@Url.Action("Profile", "Account", new { id = item.Id })">
+                            @Html.DisplayFor(modelItem => item.FullName)
+                        </a>
                     </td>
                     <td class="align-middle">
                         @Html.DisplayFor(modelItem => item.UserName)

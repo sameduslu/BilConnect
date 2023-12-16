@@ -10,6 +10,9 @@ using BilConnect.Data.Services;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using System.Net.Mail;
+using BilConnect.Data.Services.PostServices;
+using BilConnect.Data.Enums;
+using Microsoft.Extensions.Hosting.Internal;
 
 namespace BilConnect.Controllers
 {
@@ -21,13 +24,18 @@ namespace BilConnect.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IApplicationUsersService _service;
         private readonly IEmailService _emailService;
+        private readonly IPostsService _postsService;
+        private readonly IWebHostEnvironment _hostingEnvironment;
         public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,
-                                    IApplicationUsersService service, IEmailService emailService)
+                                    IApplicationUsersService service, IEmailService emailService, IPostsService postsService,
+                                    IWebHostEnvironment hostingEnvironment)
         {
             _userManager = userManager;
-            _signInManager = signInManager; 
+            _signInManager = signInManager;
             _service = service;
             _emailService = emailService;
+            _postsService = postsService;
+            _hostingEnvironment = hostingEnvironment;
         }
 
 
@@ -250,5 +258,78 @@ namespace BilConnect.Controllers
             return View("Error"); // Replace with appropriate error handling
         }
 
+
+        public async Task<IActionResult> Profile(string? id)
+        {
+            string userId;
+            if(id == null)
+            {
+                userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            }
+            else
+            {
+                userId = id;
+            }
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return View("Error"); // or any appropriate error view
+            }
+
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return View("Error"); // User not found, return an error view
+            }
+
+            // Fetch posts made by the user
+            var userPosts = await _postsService.GetAllAsync(
+                post => post.UserId == userId && post.PostStatus != PostStatus.Inactivated // Modify the filter as needed
+            );
+
+            var viewModel = new UserProfileVM
+            {
+                Id = userId,
+                User = user,
+                Posts = userPosts
+            };
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateProfilePicture(IFormFile photoUpload)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+            {
+                return Json(new { success = false, message = "User not found." });
+            }
+
+            if (photoUpload != null && photoUpload.Length > 0)
+            {
+                var imageName = Guid.NewGuid().ToString() + Path.GetExtension(photoUpload.FileName);
+                var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "images", imageName);
+
+                using (var stream = new FileStream(imagePath, FileMode.Create))
+                {
+                    await photoUpload.CopyToAsync(stream);
+                }
+
+                user.ImageURL = Url.Content("~/images/" + imageName);
+                var updateResult = await _userManager.UpdateAsync(user);
+
+                if (updateResult.Succeeded)
+                {
+                    return Json(new { success = true, newImageUrl = user.ImageURL });
+                }
+
+                return Json(new { success = false, message = "Error updating user." });
+            }
+
+            return Json(new { success = false, message = "Please upload a photo." });
+        }
     }
 }

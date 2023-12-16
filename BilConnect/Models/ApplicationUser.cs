@@ -13,6 +13,8 @@ namespace BilConnect.Models
         [Display(Name = "Users name")]
         public string FullName { get; set; }
 
+        public string? ImageURL { get; set; }
+
         public List<Post>? Posts { get; set; }
 
         public List<PostReport>? PostReports { get; set; }

@@ -93,6 +93,10 @@
       "PackagePath": "staticwebassets\\images\\2d854e97-e10c-4d66-af95-59ce80a30e44.jpg"
     },
     {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\33622826-48e5-4849-8be8-0f5774c05e7f.jfif",
+      "PackagePath": "staticwebassets\\images\\33622826-48e5-4849-8be8-0f5774c05e7f.jfif"
+    },
+    {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\3377c59b-24e9-4aed-b55c-ded687351d38.PNG",
       "PackagePath": "staticwebassets\\images\\3377c59b-24e9-4aed-b55c-ded687351d38.PNG"
     },
@@ -129,6 +133,10 @@
       "PackagePath": "staticwebassets\\images\\5919ff19-ad50-44d6-a7ef-4359499ff1d8.PNG"
     },
     {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\59c23e63-a792-4fc4-b6b3-91fef2b30660.PNG",
+      "PackagePath": "staticwebassets\\images\\59c23e63-a792-4fc4-b6b3-91fef2b30660.PNG"
+    },
+    {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\5af21716-e3f6-436a-b92e-20551fae09cd.PNG",
       "PackagePath": "staticwebassets\\images\\5af21716-e3f6-436a-b92e-20551fae09cd.PNG"
     },
@@ -151,6 +159,10 @@
     {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\617672af-7aa7-4644-902d-72f590a3e433.PNG",
       "PackagePath": "staticwebassets\\images\\617672af-7aa7-4644-902d-72f590a3e433.PNG"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\61b243d3-7e37-41e4-bc1b-bc4d06dc66f6.jpg",
+      "PackagePath": "staticwebassets\\images\\61b243d3-7e37-41e4-bc1b-bc4d06dc66f6.jpg"
     },
     {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\7024bc5c-f425-4d5a-85ea-ac1d1abc98aa.PNG",
@@ -247,6 +259,10 @@
     {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\a9b627c1-c813-41a8-9e1f-e7fecf2776fd.jpg",
       "PackagePath": "staticwebassets\\images\\a9b627c1-c813-41a8-9e1f-e7fecf2776fd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\ab50440f-ee3d-43a9-9367-86f41adf5e39.png",
+      "PackagePath": "staticwebassets\\images\\ab50440f-ee3d-43a9-9367-86f41adf5e39.png"
     },
     {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\ae34037c-479a-4bb5-921a-20b9bcd0abdd.PNG",
@@ -1471,6 +1487,10 @@
     {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\third-party-notices.txt",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\third-party-notices.txt"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\staticimages\\emptyprofilephoto.webp",
+      "PackagePath": "staticwebassets\\staticimages\\emptyprofilephoto.webp"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BilConnect.Microsoft.AspNetCore.StaticWebAssets.props",

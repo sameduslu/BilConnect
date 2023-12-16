@@ -186,9 +186,9 @@
         $(document).ready(function () {
             function toggleFields() {
                 var selectedType = $('#PostType').val();
-                $('.conditional-fields').hide(); // Hide all conditional fields
+                $('.conditional-fields').hide(); 
 
-                // Match the selected type and show corresponding fields
+
                 if (selectedType === '@(PostType.SellingPost)') {
                     $('#sellingPostFields').show();
                 } else if (selectedType === '@(PostType.BorrowingPost)') {
@@ -202,11 +202,11 @@
                 } else if (selectedType === '@(PostType.TravellingPost)') {
                     $('#travellingPostFields').show();
                 }
-                // Continue with other post types...
+,
             }
 
             $('#PostType').change(toggleFields);
-            toggleFields(); // Initial call to set the correct display state
+            toggleFields(); ,
         });
     </script>
 }

@@ -45,6 +45,9 @@ namespace BilConnect.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageURL")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsSuspended")
                         .HasColumnType("bit");
 
