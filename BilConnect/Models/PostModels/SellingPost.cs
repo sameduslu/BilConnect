@@ -1,4 +1,4 @@
-﻿namespace BilConnect.Models.PostModels
+namespace BilConnect.Models.PostModels
 {
     public class SellingPost : Post
     {

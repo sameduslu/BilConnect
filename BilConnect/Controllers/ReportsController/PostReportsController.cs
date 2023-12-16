@@ -1,4 +1,4 @@
-﻿using BilConnect.Data.Services.ReportServices;
+using BilConnect.Data.Services.ReportServices;
 using BilConnect.Data.ViewModels.PostReportViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

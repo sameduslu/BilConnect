@@ -1,4 +1,4 @@
-﻿namespace BilConnect.Data.Base
+namespace BilConnect.Data.Base
 {
     public interface IEntityBase
     {

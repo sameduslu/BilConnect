@@ -1,4 +1,4 @@
-﻿@using BilConnect.Data.ViewModels;
+@using BilConnect.Data.ViewModels;
 @using BilConnect.Data.ViewModels.PostViewModels;
 @using BilConnect.Data.Enums
 @model NewPostVM
@@ -186,7 +186,7 @@
         $(document).ready(function () {
             function toggleFields() {
                 var selectedType = $('#PostType').val();
-                $('.conditional-fields').hide(); 
+                $('.conditional-fields').hide(); // Hide all conditional fields
 
 
                 if (selectedType === '@(PostType.SellingPost)') {

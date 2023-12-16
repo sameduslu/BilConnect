@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Reflection.Emit;
+using BilConnect.Data.ViewModels;
 
 namespace BilConnect.Data
 {
@@ -63,8 +64,14 @@ namespace BilConnect.Data
                 .HasOne(m => m.Sender)
                 .WithMany(c => c.Messages)
                 .HasForeignKey(m => m.SenderUserId)
-                .OnDelete(DeleteBehavior.Restrict); 
+                .OnDelete(DeleteBehavior.Restrict);
 
+            // 
+            modelBuilder.Entity<ClubEvent>()
+                .HasOne(p => p.ownerClub)
+                .WithMany(u => u.ClubEvents)
+                .HasForeignKey(p => p.ownerClubId)
+                .OnDelete(DeleteBehavior.Restrict); // Prevent cascading delete
 
             // Configure the SellingPost to be a separate table
             modelBuilder.Entity<SellingPost>().ToTable("SellingPosts");
@@ -82,6 +89,8 @@ namespace BilConnect.Data
         public DbSet<PostReport> PostReports { get; set; }
         public DbSet<Chat> Chats { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<ClubEvent> ClubEvents { get; set; }
+        public DbSet<BilConnect.Data.ViewModels.NewClubEventVM> NewClubEventVM { get; set; } = default!;
 
 
     }

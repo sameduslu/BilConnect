@@ -1,4 +1,4 @@
-﻿using BilConnect.Data.Base;
+using BilConnect.Data.Base;
 using BilConnect.Data.Enums;
 using System.Collections.Concurrent;
 using System.ComponentModel.DataAnnotations;

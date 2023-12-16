@@ -1,4 +1,4 @@
-﻿using BilConnect.Data;
+using BilConnect.Data;
 using BilConnect.Data.Base;
 using BilConnect.Data.Enums;
 using BilConnect.Data.ViewModels.PostViewModels;
