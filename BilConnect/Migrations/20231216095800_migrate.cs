@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BilConnect.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class migrate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

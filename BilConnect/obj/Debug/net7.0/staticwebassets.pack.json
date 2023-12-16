@@ -1,1455 +1,1531 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BilConnect.bundle.scp.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BilConnect.bundle.scp.css",
       "PackagePath": "staticwebassets\\BilConnect.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\icons\\bilconnect.ico",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\icons\\bilconnect.ico",
       "PackagePath": "staticwebassets\\icons\\bilconnect.ico"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\0558fc70-85bb-4d6a-bc1c-e6ea2da5a947.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\0558fc70-85bb-4d6a-bc1c-e6ea2da5a947.jpg",
       "PackagePath": "staticwebassets\\images\\0558fc70-85bb-4d6a-bc1c-e6ea2da5a947.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\0940843b-7934-4d91-be4b-0ce03bba33dd.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\0940843b-7934-4d91-be4b-0ce03bba33dd.PNG",
       "PackagePath": "staticwebassets\\images\\0940843b-7934-4d91-be4b-0ce03bba33dd.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\09a44ad2-e9bc-44b6-991f-56fd8eaf95ca.jpeg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\09a44ad2-e9bc-44b6-991f-56fd8eaf95ca.jpeg",
       "PackagePath": "staticwebassets\\images\\09a44ad2-e9bc-44b6-991f-56fd8eaf95ca.jpeg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\0f41567f-64a3-4bcb-9463-1847a6969253.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\0a08f598-413b-4aee-b6d9-8f8d86d1272d.jpeg",
+      "PackagePath": "staticwebassets\\images\\0a08f598-413b-4aee-b6d9-8f8d86d1272d.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\0d9303bc-c725-4005-8d1a-5cdccf440efe.PNG",
+      "PackagePath": "staticwebassets\\images\\0d9303bc-c725-4005-8d1a-5cdccf440efe.PNG"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\0f41567f-64a3-4bcb-9463-1847a6969253.PNG",
       "PackagePath": "staticwebassets\\images\\0f41567f-64a3-4bcb-9463-1847a6969253.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\0f4f4e02-ab17-46ee-ac13-f10211462936.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\0f4f4e02-ab17-46ee-ac13-f10211462936.jpg",
       "PackagePath": "staticwebassets\\images\\0f4f4e02-ab17-46ee-ac13-f10211462936.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\1053436b-90a6-48d9-81b9-c862d4fcebe2.png",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\1053436b-90a6-48d9-81b9-c862d4fcebe2.png",
       "PackagePath": "staticwebassets\\images\\1053436b-90a6-48d9-81b9-c862d4fcebe2.png"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\1192dc29-ed4a-4763-8065-b4bff3d75038.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\1192dc29-ed4a-4763-8065-b4bff3d75038.PNG",
       "PackagePath": "staticwebassets\\images\\1192dc29-ed4a-4763-8065-b4bff3d75038.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\11da0c43-c223-44a6-8ad1-2888cf4b0a78.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\11da0c43-c223-44a6-8ad1-2888cf4b0a78.PNG",
       "PackagePath": "staticwebassets\\images\\11da0c43-c223-44a6-8ad1-2888cf4b0a78.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\1697b66f-627f-4229-a870-df3b07d50ad5.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\1697b66f-627f-4229-a870-df3b07d50ad5.jpg",
       "PackagePath": "staticwebassets\\images\\1697b66f-627f-4229-a870-df3b07d50ad5.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\1a0e3dff-0ec6-4553-8bdd-0d7d7593a796.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\1a0e3dff-0ec6-4553-8bdd-0d7d7593a796.jpg",
       "PackagePath": "staticwebassets\\images\\1a0e3dff-0ec6-4553-8bdd-0d7d7593a796.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\1e39d8d8-ea74-4497-ad3b-75ec144a4e5e.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\1d697c1a-4a00-4e3f-9f56-8e5fba9558b0.jfif",
+      "PackagePath": "staticwebassets\\images\\1d697c1a-4a00-4e3f-9f56-8e5fba9558b0.jfif"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\1d6a139b-ffa7-49c3-b10b-3b817ef63a34.jpeg",
+      "PackagePath": "staticwebassets\\images\\1d6a139b-ffa7-49c3-b10b-3b817ef63a34.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\1e39d8d8-ea74-4497-ad3b-75ec144a4e5e.jpg",
       "PackagePath": "staticwebassets\\images\\1e39d8d8-ea74-4497-ad3b-75ec144a4e5e.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\256d3054-8b53-4b03-a093-2d1e0be04c99.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\24794fb6-2f3a-45cd-8bf6-6f28674d175e.jpeg",
+      "PackagePath": "staticwebassets\\images\\24794fb6-2f3a-45cd-8bf6-6f28674d175e.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\256d3054-8b53-4b03-a093-2d1e0be04c99.PNG",
       "PackagePath": "staticwebassets\\images\\256d3054-8b53-4b03-a093-2d1e0be04c99.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\25cc4c88-3615-4afb-9656-b25697e30e03.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\25cc4c88-3615-4afb-9656-b25697e30e03.PNG",
       "PackagePath": "staticwebassets\\images\\25cc4c88-3615-4afb-9656-b25697e30e03.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\277088dc-3317-4f5a-b8c9-4f5d24cf90d8.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\277088dc-3317-4f5a-b8c9-4f5d24cf90d8.jpg",
       "PackagePath": "staticwebassets\\images\\277088dc-3317-4f5a-b8c9-4f5d24cf90d8.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\28082a66-1740-43c1-a470-556e2171b64a.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\28082a66-1740-43c1-a470-556e2171b64a.PNG",
       "PackagePath": "staticwebassets\\images\\28082a66-1740-43c1-a470-556e2171b64a.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\29e5f4e7-e9f4-4584-a153-92a396ee3a7e.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\29e5f4e7-e9f4-4584-a153-92a396ee3a7e.PNG",
       "PackagePath": "staticwebassets\\images\\29e5f4e7-e9f4-4584-a153-92a396ee3a7e.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\2ce86a50-c219-4d7c-9b04-ae1f6d8af54e.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\2b6fc60e-d403-4839-9652-0804e0e0670b.PNG",
+      "PackagePath": "staticwebassets\\images\\2b6fc60e-d403-4839-9652-0804e0e0670b.PNG"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\2ce86a50-c219-4d7c-9b04-ae1f6d8af54e.jpg",
       "PackagePath": "staticwebassets\\images\\2ce86a50-c219-4d7c-9b04-ae1f6d8af54e.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\2d854e97-e10c-4d66-af95-59ce80a30e44.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\2d854e97-e10c-4d66-af95-59ce80a30e44.jpg",
       "PackagePath": "staticwebassets\\images\\2d854e97-e10c-4d66-af95-59ce80a30e44.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\3377c59b-24e9-4aed-b55c-ded687351d38.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\3377c59b-24e9-4aed-b55c-ded687351d38.PNG",
       "PackagePath": "staticwebassets\\images\\3377c59b-24e9-4aed-b55c-ded687351d38.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\34165e2b-ded4-450a-93da-67e71f3b851b.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\34165e2b-ded4-450a-93da-67e71f3b851b.jpg",
       "PackagePath": "staticwebassets\\images\\34165e2b-ded4-450a-93da-67e71f3b851b.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\365a591c-86ff-472c-9615-3fca7be13475.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\34785242-eeb6-4ad8-b470-e71b1e1ec406.png",
+      "PackagePath": "staticwebassets\\images\\34785242-eeb6-4ad8-b470-e71b1e1ec406.png"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\365a591c-86ff-472c-9615-3fca7be13475.PNG",
       "PackagePath": "staticwebassets\\images\\365a591c-86ff-472c-9615-3fca7be13475.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\395db5ae-9527-4ad6-b4c9-17848556ad90.png",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\395db5ae-9527-4ad6-b4c9-17848556ad90.png",
       "PackagePath": "staticwebassets\\images\\395db5ae-9527-4ad6-b4c9-17848556ad90.png"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\40c46ec2-b84e-4a61-ba5a-3ffadc40a3cf.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\40c46ec2-b84e-4a61-ba5a-3ffadc40a3cf.jpg",
       "PackagePath": "staticwebassets\\images\\40c46ec2-b84e-4a61-ba5a-3ffadc40a3cf.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\53930e6b-c791-4e56-92dd-951ebf97beac.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\50a86f97-826f-4e0c-82cf-7c737269cd4c.PNG",
+      "PackagePath": "staticwebassets\\images\\50a86f97-826f-4e0c-82cf-7c737269cd4c.PNG"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\53930e6b-c791-4e56-92dd-951ebf97beac.jpg",
       "PackagePath": "staticwebassets\\images\\53930e6b-c791-4e56-92dd-951ebf97beac.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\5604dbf4-336d-4d3d-aa4e-90a3ec88213c.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\5604dbf4-336d-4d3d-aa4e-90a3ec88213c.jpg",
       "PackagePath": "staticwebassets\\images\\5604dbf4-336d-4d3d-aa4e-90a3ec88213c.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\57a4f8a4-3b4b-4730-a807-148061a35920.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\57a4f8a4-3b4b-4730-a807-148061a35920.jpg",
       "PackagePath": "staticwebassets\\images\\57a4f8a4-3b4b-4730-a807-148061a35920.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\5af21716-e3f6-436a-b92e-20551fae09cd.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\5af21716-e3f6-436a-b92e-20551fae09cd.PNG",
       "PackagePath": "staticwebassets\\images\\5af21716-e3f6-436a-b92e-20551fae09cd.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\5bfaec1e-c6b0-4036-8058-737a6bd3da0f.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\5bfaec1e-c6b0-4036-8058-737a6bd3da0f.jpg",
       "PackagePath": "staticwebassets\\images\\5bfaec1e-c6b0-4036-8058-737a6bd3da0f.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\5db9a9ab-135d-4a9a-b91e-e121f6ee96fa.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\5db9a9ab-135d-4a9a-b91e-e121f6ee96fa.jpg",
       "PackagePath": "staticwebassets\\images\\5db9a9ab-135d-4a9a-b91e-e121f6ee96fa.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\5ec990bb-191c-40ec-a220-3fa3f3e98511.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\5ec990bb-191c-40ec-a220-3fa3f3e98511.jpg",
       "PackagePath": "staticwebassets\\images\\5ec990bb-191c-40ec-a220-3fa3f3e98511.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\5f60edde-42ee-41f4-a032-6728f19605a7.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\5f60edde-42ee-41f4-a032-6728f19605a7.jpg",
       "PackagePath": "staticwebassets\\images\\5f60edde-42ee-41f4-a032-6728f19605a7.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\617672af-7aa7-4644-902d-72f590a3e433.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\5f70842d-7aea-41e4-916e-ee27c025af7c.PNG",
+      "PackagePath": "staticwebassets\\images\\5f70842d-7aea-41e4-916e-ee27c025af7c.PNG"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\617672af-7aa7-4644-902d-72f590a3e433.PNG",
       "PackagePath": "staticwebassets\\images\\617672af-7aa7-4644-902d-72f590a3e433.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\7024bc5c-f425-4d5a-85ea-ac1d1abc98aa.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\660ef72c-8651-49c8-9570-346c27125bdc.jpeg",
+      "PackagePath": "staticwebassets\\images\\660ef72c-8651-49c8-9570-346c27125bdc.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\67f4151c-2923-4f1e-b640-b1e55cf91734.jpeg",
+      "PackagePath": "staticwebassets\\images\\67f4151c-2923-4f1e-b640-b1e55cf91734.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\68671719-1ffb-4e92-9014-b47702bb1f31.jpeg",
+      "PackagePath": "staticwebassets\\images\\68671719-1ffb-4e92-9014-b47702bb1f31.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\7024bc5c-f425-4d5a-85ea-ac1d1abc98aa.PNG",
       "PackagePath": "staticwebassets\\images\\7024bc5c-f425-4d5a-85ea-ac1d1abc98aa.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\76fcaacc-6114-4544-b52c-e4d969d46a93.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\76fcaacc-6114-4544-b52c-e4d969d46a93.PNG",
       "PackagePath": "staticwebassets\\images\\76fcaacc-6114-4544-b52c-e4d969d46a93.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\79a80e13-3cfd-4689-b31e-094a883e3ab6.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\79a80e13-3cfd-4689-b31e-094a883e3ab6.PNG",
       "PackagePath": "staticwebassets\\images\\79a80e13-3cfd-4689-b31e-094a883e3ab6.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\7e62c8ae-5240-4733-a1b9-9d65782be566.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\7bea0cf5-658d-433f-84dd-f63b9f9b5c32.jpeg",
+      "PackagePath": "staticwebassets\\images\\7bea0cf5-658d-433f-84dd-f63b9f9b5c32.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\7e62c8ae-5240-4733-a1b9-9d65782be566.PNG",
       "PackagePath": "staticwebassets\\images\\7e62c8ae-5240-4733-a1b9-9d65782be566.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\801de83a-bd20-4711-9cf6-cb2f4db88642.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\7e665a23-7f6d-4eab-af3e-c8c54e5f09c2.jpeg",
+      "PackagePath": "staticwebassets\\images\\7e665a23-7f6d-4eab-af3e-c8c54e5f09c2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\801de83a-bd20-4711-9cf6-cb2f4db88642.jpg",
       "PackagePath": "staticwebassets\\images\\801de83a-bd20-4711-9cf6-cb2f4db88642.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\804192c1-003d-49f5-92d0-4dd95594dd5c.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\804192c1-003d-49f5-92d0-4dd95594dd5c.PNG",
       "PackagePath": "staticwebassets\\images\\804192c1-003d-49f5-92d0-4dd95594dd5c.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\81e070cf-f6c5-4501-8162-382771507078.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\81e070cf-f6c5-4501-8162-382771507078.PNG",
       "PackagePath": "staticwebassets\\images\\81e070cf-f6c5-4501-8162-382771507078.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\8316141c-7d1f-4726-b65b-318ccd280ccb.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\8316141c-7d1f-4726-b65b-318ccd280ccb.jpg",
       "PackagePath": "staticwebassets\\images\\8316141c-7d1f-4726-b65b-318ccd280ccb.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\83306c47-2fa7-4ba9-93db-23ec43047337.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\83306c47-2fa7-4ba9-93db-23ec43047337.PNG",
       "PackagePath": "staticwebassets\\images\\83306c47-2fa7-4ba9-93db-23ec43047337.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\84c09762-01ee-48ae-9c87-f63cdb1a0f02.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\84c09762-01ee-48ae-9c87-f63cdb1a0f02.jpg",
       "PackagePath": "staticwebassets\\images\\84c09762-01ee-48ae-9c87-f63cdb1a0f02.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\859c47be-8c91-459d-8ec2-fcd894fb6ecf.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\859c47be-8c91-459d-8ec2-fcd894fb6ecf.PNG",
       "PackagePath": "staticwebassets\\images\\859c47be-8c91-459d-8ec2-fcd894fb6ecf.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\8745125a-b919-4751-b59d-4bcc965a9b9c.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\8745125a-b919-4751-b59d-4bcc965a9b9c.jpg",
       "PackagePath": "staticwebassets\\images\\8745125a-b919-4751-b59d-4bcc965a9b9c.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\8bb2365d-6eda-4452-acd1-0160b7bb338d.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\8bb2365d-6eda-4452-acd1-0160b7bb338d.PNG",
       "PackagePath": "staticwebassets\\images\\8bb2365d-6eda-4452-acd1-0160b7bb338d.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\8c0ded52-fe25-448e-ab2e-f4dd79ff61ca.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\8c0ded52-fe25-448e-ab2e-f4dd79ff61ca.jpg",
       "PackagePath": "staticwebassets\\images\\8c0ded52-fe25-448e-ab2e-f4dd79ff61ca.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\8f2d5798-40ba-40df-bbcd-c5eb66a402e9.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\8f2d5798-40ba-40df-bbcd-c5eb66a402e9.PNG",
       "PackagePath": "staticwebassets\\images\\8f2d5798-40ba-40df-bbcd-c5eb66a402e9.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\907e1441-d0dd-4e1e-926b-7380bb77b15f.png",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\907e1441-d0dd-4e1e-926b-7380bb77b15f.png",
       "PackagePath": "staticwebassets\\images\\907e1441-d0dd-4e1e-926b-7380bb77b15f.png"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\919e8873-d24a-4d3c-9ba1-3a4e1c4e1fbd.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\919e8873-d24a-4d3c-9ba1-3a4e1c4e1fbd.PNG",
       "PackagePath": "staticwebassets\\images\\919e8873-d24a-4d3c-9ba1-3a4e1c4e1fbd.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\933110ab-99ef-48ae-87f9-acb01cc54e66.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\933110ab-99ef-48ae-87f9-acb01cc54e66.PNG",
       "PackagePath": "staticwebassets\\images\\933110ab-99ef-48ae-87f9-acb01cc54e66.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\a00d14fe-1163-425a-a658-76e15413ddb4.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\a00d14fe-1163-425a-a658-76e15413ddb4.PNG",
       "PackagePath": "staticwebassets\\images\\a00d14fe-1163-425a-a658-76e15413ddb4.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\a0fe12a8-c10f-4e4f-b2e0-5e077e5a8200.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\a0fe12a8-c10f-4e4f-b2e0-5e077e5a8200.PNG",
       "PackagePath": "staticwebassets\\images\\a0fe12a8-c10f-4e4f-b2e0-5e077e5a8200.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\a159fa00-b590-4ed4-b524-2bbdf1158a0b.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\a159fa00-b590-4ed4-b524-2bbdf1158a0b.PNG",
       "PackagePath": "staticwebassets\\images\\a159fa00-b590-4ed4-b524-2bbdf1158a0b.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\a7eb24f2-0e2a-42ae-acfb-8643a3c2c232.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\a7eb24f2-0e2a-42ae-acfb-8643a3c2c232.PNG",
       "PackagePath": "staticwebassets\\images\\a7eb24f2-0e2a-42ae-acfb-8643a3c2c232.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\a847d368-85af-4791-bfa7-e2fcc3aa45bd.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\a847d368-85af-4791-bfa7-e2fcc3aa45bd.PNG",
       "PackagePath": "staticwebassets\\images\\a847d368-85af-4791-bfa7-e2fcc3aa45bd.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\a9b627c1-c813-41a8-9e1f-e7fecf2776fd.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\a9b627c1-c813-41a8-9e1f-e7fecf2776fd.jpg",
       "PackagePath": "staticwebassets\\images\\a9b627c1-c813-41a8-9e1f-e7fecf2776fd.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\ae34037c-479a-4bb5-921a-20b9bcd0abdd.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\ae34037c-479a-4bb5-921a-20b9bcd0abdd.PNG",
       "PackagePath": "staticwebassets\\images\\ae34037c-479a-4bb5-921a-20b9bcd0abdd.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\b06f1d0e-1a48-4c93-8000-927364086981.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\b06f1d0e-1a48-4c93-8000-927364086981.jpg",
       "PackagePath": "staticwebassets\\images\\b06f1d0e-1a48-4c93-8000-927364086981.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\b47d3780-0ca8-446a-af39-0f1ba1bdd1cc.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\b3e3e0cc-8e75-4c5f-8048-b56f42584bb0.PNG",
+      "PackagePath": "staticwebassets\\images\\b3e3e0cc-8e75-4c5f-8048-b56f42584bb0.PNG"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\b47d3780-0ca8-446a-af39-0f1ba1bdd1cc.jpg",
       "PackagePath": "staticwebassets\\images\\b47d3780-0ca8-446a-af39-0f1ba1bdd1cc.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\b5442322-ac4f-4ced-94f1-c47e51c70132.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\b5442322-ac4f-4ced-94f1-c47e51c70132.PNG",
       "PackagePath": "staticwebassets\\images\\b5442322-ac4f-4ced-94f1-c47e51c70132.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\b8d87152-5fb9-4b36-87c4-4dffa504acdb.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\b8d87152-5fb9-4b36-87c4-4dffa504acdb.jpg",
       "PackagePath": "staticwebassets\\images\\b8d87152-5fb9-4b36-87c4-4dffa504acdb.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\c0d10828-8295-4780-a880-870bce150f94.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\bf0c5d66-1542-4224-bd6b-460f75898e1e.PNG",
+      "PackagePath": "staticwebassets\\images\\bf0c5d66-1542-4224-bd6b-460f75898e1e.PNG"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\c0d10828-8295-4780-a880-870bce150f94.PNG",
       "PackagePath": "staticwebassets\\images\\c0d10828-8295-4780-a880-870bce150f94.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\c15c9078-1b05-4927-9711-e205c5f6a304.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\c15c9078-1b05-4927-9711-e205c5f6a304.jpg",
       "PackagePath": "staticwebassets\\images\\c15c9078-1b05-4927-9711-e205c5f6a304.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\c1af9f27-7abc-4b7f-a050-ea3e43c3fb0e.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\c1af9f27-7abc-4b7f-a050-ea3e43c3fb0e.jpg",
       "PackagePath": "staticwebassets\\images\\c1af9f27-7abc-4b7f-a050-ea3e43c3fb0e.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\c434dc0c-597e-43fe-98cb-7cebef7cfeab.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\c434dc0c-597e-43fe-98cb-7cebef7cfeab.jpg",
       "PackagePath": "staticwebassets\\images\\c434dc0c-597e-43fe-98cb-7cebef7cfeab.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\c7aeaec9-3983-4ec6-86a6-169cda40164b.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\c7aeaec9-3983-4ec6-86a6-169cda40164b.jpg",
       "PackagePath": "staticwebassets\\images\\c7aeaec9-3983-4ec6-86a6-169cda40164b.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\cd6f431f-906e-406b-9736-cc0f5dc79c76.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\cd6f431f-906e-406b-9736-cc0f5dc79c76.PNG",
       "PackagePath": "staticwebassets\\images\\cd6f431f-906e-406b-9736-cc0f5dc79c76.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\cdbd0faf-605f-4db1-af8b-2a11f0b69251.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\cdbd0faf-605f-4db1-af8b-2a11f0b69251.jpg",
       "PackagePath": "staticwebassets\\images\\cdbd0faf-605f-4db1-af8b-2a11f0b69251.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\cf357984-ab7f-441c-8563-01b4db8d8f82.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\cf357984-ab7f-441c-8563-01b4db8d8f82.jpg",
       "PackagePath": "staticwebassets\\images\\cf357984-ab7f-441c-8563-01b4db8d8f82.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\d5a1e21b-fcd2-4488-9000-7dbca7584d37.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\d0972b5a-b7ff-40bb-a7dc-8b4c8631a1ff.jfif",
+      "PackagePath": "staticwebassets\\images\\d0972b5a-b7ff-40bb-a7dc-8b4c8631a1ff.jfif"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\d5a1e21b-fcd2-4488-9000-7dbca7584d37.PNG",
       "PackagePath": "staticwebassets\\images\\d5a1e21b-fcd2-4488-9000-7dbca7584d37.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\d8d3f2b1-2e11-4f43-b038-bb5b1e70329b.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\d8d3f2b1-2e11-4f43-b038-bb5b1e70329b.PNG",
       "PackagePath": "staticwebassets\\images\\d8d3f2b1-2e11-4f43-b038-bb5b1e70329b.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\d902695d-9af6-4ed3-9792-2df163d5a4eb.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\d902695d-9af6-4ed3-9792-2df163d5a4eb.PNG",
       "PackagePath": "staticwebassets\\images\\d902695d-9af6-4ed3-9792-2df163d5a4eb.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\dddf683f-2d54-456d-a84f-abad9ba1a111.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\d949e3c6-d2ea-4102-86a1-27fe8d1da312.jpeg",
+      "PackagePath": "staticwebassets\\images\\d949e3c6-d2ea-4102-86a1-27fe8d1da312.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\dddf683f-2d54-456d-a84f-abad9ba1a111.jpg",
       "PackagePath": "staticwebassets\\images\\dddf683f-2d54-456d-a84f-abad9ba1a111.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\e6cd9973-ad16-49a0-b7eb-33d24386edb8.png",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\e6cd9973-ad16-49a0-b7eb-33d24386edb8.png",
       "PackagePath": "staticwebassets\\images\\e6cd9973-ad16-49a0-b7eb-33d24386edb8.png"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\ea85a33a-a39f-4bd2-b65b-2eedeb5f10d1.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\ea85a33a-a39f-4bd2-b65b-2eedeb5f10d1.PNG",
       "PackagePath": "staticwebassets\\images\\ea85a33a-a39f-4bd2-b65b-2eedeb5f10d1.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\f0424359-59e7-4b91-a321-516fafe31444.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\ec12d918-072d-4b85-ab4c-3caaba4abd9b.PNG",
+      "PackagePath": "staticwebassets\\images\\ec12d918-072d-4b85-ab4c-3caaba4abd9b.PNG"
+    },
+    {
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\f0424359-59e7-4b91-a321-516fafe31444.PNG",
       "PackagePath": "staticwebassets\\images\\f0424359-59e7-4b91-a321-516fafe31444.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\f0518f9a-907f-4517-8590-2322c44ce1bc.PNG",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\f0518f9a-907f-4517-8590-2322c44ce1bc.PNG",
       "PackagePath": "staticwebassets\\images\\f0518f9a-907f-4517-8590-2322c44ce1bc.PNG"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\f1e8fdec-3d31-4b5b-99ed-1dd7d5285952.jpg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\f1e8fdec-3d31-4b5b-99ed-1dd7d5285952.jpg",
       "PackagePath": "staticwebassets\\images\\f1e8fdec-3d31-4b5b-99ed-1dd7d5285952.jpg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\f602d01d-3967-4e8a-b9f5-051f89d91f71.png",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\f602d01d-3967-4e8a-b9f5-051f89d91f71.png",
       "PackagePath": "staticwebassets\\images\\f602d01d-3967-4e8a-b9f5-051f89d91f71.png"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\fa5b74c7-c557-49e5-82b9-78f914ae810d.jpeg",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\images\\fa5b74c7-c557-49e5-82b9-78f914ae810d.jpeg",
       "PackagePath": "staticwebassets\\images\\fa5b74c7-c557-49e5-82b9-78f914ae810d.jpeg"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\README.md",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\README.md",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\README.md"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\AbortController.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\AbortController.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\AbortController.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\AbortController.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\AbortController.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\AbortController.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\AccessTokenHttpClient.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\AccessTokenHttpClient.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\AccessTokenHttpClient.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\AccessTokenHttpClient.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\AccessTokenHttpClient.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\AccessTokenHttpClient.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DefaultHttpClient.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DefaultHttpClient.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\DefaultHttpClient.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DefaultHttpClient.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DefaultHttpClient.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\DefaultHttpClient.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DefaultReconnectPolicy.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DefaultReconnectPolicy.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\DefaultReconnectPolicy.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DefaultReconnectPolicy.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DefaultReconnectPolicy.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\DefaultReconnectPolicy.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DynamicImports.browser.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DynamicImports.browser.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\DynamicImports.browser.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DynamicImports.browser.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DynamicImports.browser.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\DynamicImports.browser.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DynamicImports.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DynamicImports.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\DynamicImports.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DynamicImports.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\DynamicImports.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\DynamicImports.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Errors.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Errors.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\Errors.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Errors.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Errors.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\Errors.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\FetchHttpClient.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\FetchHttpClient.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\FetchHttpClient.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\FetchHttpClient.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\FetchHttpClient.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\FetchHttpClient.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HandshakeProtocol.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HandshakeProtocol.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\HandshakeProtocol.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HandshakeProtocol.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HandshakeProtocol.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\HandshakeProtocol.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HeaderNames.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HeaderNames.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\HeaderNames.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HeaderNames.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HeaderNames.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\HeaderNames.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HttpClient.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HttpClient.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\HttpClient.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HttpClient.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HttpClient.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\HttpClient.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HttpConnection.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HttpConnection.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\HttpConnection.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HttpConnection.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HttpConnection.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\HttpConnection.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HubConnection.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HubConnection.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\HubConnection.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HubConnection.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HubConnection.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\HubConnection.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HubConnectionBuilder.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HubConnectionBuilder.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\HubConnectionBuilder.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HubConnectionBuilder.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\HubConnectionBuilder.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\HubConnectionBuilder.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IConnection.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IConnection.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\IConnection.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IConnection.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IConnection.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\IConnection.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IHttpConnectionOptions.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IHttpConnectionOptions.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\IHttpConnectionOptions.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IHttpConnectionOptions.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IHttpConnectionOptions.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\IHttpConnectionOptions.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IHubProtocol.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IHubProtocol.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\IHubProtocol.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IHubProtocol.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IHubProtocol.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\IHubProtocol.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\ILogger.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\ILogger.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\ILogger.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\ILogger.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\ILogger.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\ILogger.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IRetryPolicy.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IRetryPolicy.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\IRetryPolicy.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IRetryPolicy.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IRetryPolicy.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\IRetryPolicy.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IStatefulReconnectOptions.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IStatefulReconnectOptions.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\IStatefulReconnectOptions.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IStatefulReconnectOptions.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\IStatefulReconnectOptions.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\IStatefulReconnectOptions.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\ITransport.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\ITransport.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\ITransport.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\ITransport.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\ITransport.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\ITransport.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\JsonHubProtocol.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\JsonHubProtocol.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\JsonHubProtocol.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\JsonHubProtocol.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\JsonHubProtocol.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\JsonHubProtocol.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Loggers.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Loggers.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\Loggers.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Loggers.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Loggers.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\Loggers.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\LongPollingTransport.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\LongPollingTransport.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\LongPollingTransport.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\LongPollingTransport.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\LongPollingTransport.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\LongPollingTransport.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\MessageBuffer.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\MessageBuffer.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\MessageBuffer.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\MessageBuffer.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\MessageBuffer.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\MessageBuffer.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Polyfills.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Polyfills.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\Polyfills.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Polyfills.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Polyfills.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\Polyfills.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\ServerSentEventsTransport.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\ServerSentEventsTransport.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\ServerSentEventsTransport.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\ServerSentEventsTransport.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\ServerSentEventsTransport.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\ServerSentEventsTransport.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Stream.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Stream.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\Stream.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Stream.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Stream.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\Stream.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Subject.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Subject.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\Subject.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Subject.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Subject.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\Subject.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\TextMessageFormat.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\TextMessageFormat.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\TextMessageFormat.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\TextMessageFormat.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\TextMessageFormat.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\TextMessageFormat.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Utils.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Utils.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\Utils.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Utils.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\Utils.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\Utils.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\WebSocketTransport.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\WebSocketTransport.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\WebSocketTransport.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\WebSocketTransport.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\WebSocketTransport.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\WebSocketTransport.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\XhrHttpClient.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\XhrHttpClient.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\XhrHttpClient.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\XhrHttpClient.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\XhrHttpClient.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\XhrHttpClient.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\browser-index.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\browser-index.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\browser-index.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\browser-index.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\browser-index.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\browser-index.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\index.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\index.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\index.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\index.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\cjs\\index.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\cjs\\index.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\AbortController.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\AbortController.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\AbortController.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\AbortController.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\AbortController.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\AbortController.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\AbortController.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\AbortController.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\AbortController.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\AccessTokenHttpClient.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\AccessTokenHttpClient.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\AccessTokenHttpClient.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\AccessTokenHttpClient.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\AccessTokenHttpClient.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\AccessTokenHttpClient.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\AccessTokenHttpClient.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\AccessTokenHttpClient.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\AccessTokenHttpClient.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DefaultHttpClient.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DefaultHttpClient.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\DefaultHttpClient.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DefaultHttpClient.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DefaultHttpClient.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\DefaultHttpClient.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DefaultHttpClient.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DefaultHttpClient.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\DefaultHttpClient.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DefaultReconnectPolicy.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DefaultReconnectPolicy.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\DefaultReconnectPolicy.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DefaultReconnectPolicy.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DefaultReconnectPolicy.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\DefaultReconnectPolicy.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DefaultReconnectPolicy.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DefaultReconnectPolicy.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\DefaultReconnectPolicy.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.browser.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.browser.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.browser.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.browser.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.browser.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.browser.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.browser.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.browser.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.browser.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\DynamicImports.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Errors.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Errors.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Errors.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Errors.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Errors.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Errors.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Errors.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Errors.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Errors.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\FetchHttpClient.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\FetchHttpClient.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\FetchHttpClient.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\FetchHttpClient.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\FetchHttpClient.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\FetchHttpClient.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\FetchHttpClient.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\FetchHttpClient.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\FetchHttpClient.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HandshakeProtocol.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HandshakeProtocol.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HandshakeProtocol.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HandshakeProtocol.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HandshakeProtocol.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HandshakeProtocol.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HandshakeProtocol.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HandshakeProtocol.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HandshakeProtocol.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HeaderNames.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HeaderNames.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HeaderNames.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HeaderNames.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HeaderNames.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HeaderNames.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HeaderNames.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HeaderNames.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HeaderNames.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HttpClient.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HttpClient.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HttpClient.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HttpClient.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HttpClient.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HttpClient.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HttpClient.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HttpClient.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HttpClient.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HttpConnection.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HttpConnection.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HttpConnection.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HttpConnection.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HttpConnection.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HttpConnection.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HttpConnection.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HttpConnection.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HttpConnection.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HubConnection.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HubConnection.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HubConnection.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HubConnection.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HubConnection.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HubConnection.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HubConnection.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HubConnection.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HubConnection.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HubConnectionBuilder.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HubConnectionBuilder.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HubConnectionBuilder.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HubConnectionBuilder.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HubConnectionBuilder.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HubConnectionBuilder.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HubConnectionBuilder.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\HubConnectionBuilder.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\HubConnectionBuilder.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IConnection.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IConnection.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IConnection.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IConnection.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IConnection.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IConnection.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IConnection.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IConnection.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IConnection.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IHttpConnectionOptions.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IHttpConnectionOptions.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IHttpConnectionOptions.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IHttpConnectionOptions.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IHttpConnectionOptions.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IHttpConnectionOptions.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IHttpConnectionOptions.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IHttpConnectionOptions.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IHttpConnectionOptions.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IHubProtocol.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IHubProtocol.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IHubProtocol.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IHubProtocol.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IHubProtocol.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IHubProtocol.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IHubProtocol.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IHubProtocol.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IHubProtocol.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ILogger.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ILogger.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\ILogger.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ILogger.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ILogger.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\ILogger.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ILogger.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ILogger.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\ILogger.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IRetryPolicy.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IRetryPolicy.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IRetryPolicy.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IRetryPolicy.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IRetryPolicy.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IRetryPolicy.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IRetryPolicy.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IRetryPolicy.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IRetryPolicy.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IStatefulReconnectOptions.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IStatefulReconnectOptions.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IStatefulReconnectOptions.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IStatefulReconnectOptions.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IStatefulReconnectOptions.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IStatefulReconnectOptions.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IStatefulReconnectOptions.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\IStatefulReconnectOptions.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\IStatefulReconnectOptions.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ITransport.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ITransport.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\ITransport.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ITransport.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ITransport.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\ITransport.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ITransport.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ITransport.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\ITransport.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\JsonHubProtocol.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\JsonHubProtocol.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\JsonHubProtocol.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\JsonHubProtocol.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\JsonHubProtocol.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\JsonHubProtocol.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\JsonHubProtocol.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\JsonHubProtocol.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\JsonHubProtocol.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Loggers.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Loggers.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Loggers.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Loggers.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Loggers.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Loggers.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Loggers.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Loggers.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Loggers.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\LongPollingTransport.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\LongPollingTransport.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\LongPollingTransport.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\LongPollingTransport.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\LongPollingTransport.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\LongPollingTransport.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\LongPollingTransport.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\LongPollingTransport.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\LongPollingTransport.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\MessageBuffer.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\MessageBuffer.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\MessageBuffer.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\MessageBuffer.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\MessageBuffer.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\MessageBuffer.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\MessageBuffer.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\MessageBuffer.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\MessageBuffer.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Polyfills.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Polyfills.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Polyfills.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Polyfills.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Polyfills.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Polyfills.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Polyfills.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Polyfills.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Polyfills.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ServerSentEventsTransport.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ServerSentEventsTransport.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\ServerSentEventsTransport.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ServerSentEventsTransport.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ServerSentEventsTransport.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\ServerSentEventsTransport.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ServerSentEventsTransport.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\ServerSentEventsTransport.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\ServerSentEventsTransport.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Stream.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Stream.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Stream.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Stream.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Stream.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Stream.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Stream.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Stream.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Stream.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Subject.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Subject.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Subject.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Subject.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Subject.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Subject.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Subject.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Subject.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Subject.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\TextMessageFormat.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\TextMessageFormat.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\TextMessageFormat.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\TextMessageFormat.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\TextMessageFormat.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\TextMessageFormat.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\TextMessageFormat.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\TextMessageFormat.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\TextMessageFormat.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Utils.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Utils.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Utils.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Utils.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Utils.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Utils.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Utils.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\Utils.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\Utils.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\WebSocketTransport.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\WebSocketTransport.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\WebSocketTransport.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\WebSocketTransport.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\WebSocketTransport.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\WebSocketTransport.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\WebSocketTransport.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\WebSocketTransport.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\WebSocketTransport.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\XhrHttpClient.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\XhrHttpClient.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\XhrHttpClient.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\XhrHttpClient.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\XhrHttpClient.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\XhrHttpClient.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\XhrHttpClient.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\XhrHttpClient.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\XhrHttpClient.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\browser-index.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\browser-index.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\browser-index.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\browser-index.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\browser-index.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\browser-index.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\browser-index.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\browser-index.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\browser-index.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\index.d.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\index.d.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\index.d.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\index.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\index.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\index.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\index.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\esm\\index.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\esm\\index.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\webworker\\signalr.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\webworker\\signalr.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\webworker\\signalr.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\webworker\\signalr.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\webworker\\signalr.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\webworker\\signalr.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\webworker\\signalr.min.js",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\webworker\\signalr.min.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\webworker\\signalr.min.js"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\webworker\\signalr.min.js.map",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\webworker\\signalr.min.js.map",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\webworker\\signalr.min.js.map"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\package.json",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\package.json",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\package.json"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\AbortController.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\AbortController.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\AbortController.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\AccessTokenHttpClient.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\AccessTokenHttpClient.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\AccessTokenHttpClient.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\DefaultHttpClient.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\DefaultHttpClient.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\DefaultHttpClient.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\DefaultReconnectPolicy.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\DefaultReconnectPolicy.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\DefaultReconnectPolicy.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\DynamicImports.browser.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\DynamicImports.browser.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\DynamicImports.browser.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\DynamicImports.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\DynamicImports.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\DynamicImports.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\Errors.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\Errors.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\Errors.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\FetchHttpClient.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\FetchHttpClient.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\FetchHttpClient.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\HandshakeProtocol.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\HandshakeProtocol.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\HandshakeProtocol.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\HeaderNames.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\HeaderNames.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\HeaderNames.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\HttpClient.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\HttpClient.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\HttpClient.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\HttpConnection.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\HttpConnection.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\HttpConnection.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\HubConnection.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\HubConnection.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\HubConnection.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\HubConnectionBuilder.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\HubConnectionBuilder.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\HubConnectionBuilder.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\IConnection.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\IConnection.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\IConnection.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\IHttpConnectionOptions.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\IHttpConnectionOptions.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\IHttpConnectionOptions.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\IHubProtocol.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\IHubProtocol.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\IHubProtocol.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\ILogger.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\ILogger.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\ILogger.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\IRetryPolicy.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\IRetryPolicy.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\IRetryPolicy.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\IStatefulReconnectOptions.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\IStatefulReconnectOptions.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\IStatefulReconnectOptions.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\ITransport.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\ITransport.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\ITransport.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\JsonHubProtocol.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\JsonHubProtocol.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\JsonHubProtocol.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\Loggers.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\Loggers.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\Loggers.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\LongPollingTransport.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\LongPollingTransport.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\LongPollingTransport.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\MessageBuffer.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\MessageBuffer.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\MessageBuffer.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\Polyfills.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\Polyfills.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\Polyfills.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\ServerSentEventsTransport.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\ServerSentEventsTransport.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\ServerSentEventsTransport.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\Stream.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\Stream.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\Stream.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\Subject.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\Subject.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\Subject.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\TextMessageFormat.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\TextMessageFormat.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\TextMessageFormat.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\Utils.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\Utils.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\Utils.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\WebSocketTransport.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\WebSocketTransport.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\WebSocketTransport.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\XhrHttpClient.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\XhrHttpClient.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\XhrHttpClient.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\browser-index.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\browser-index.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\browser-index.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\index.ts",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\index.ts",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\index.ts"
     },
     {
-      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\third-party-notices.txt",
+      "Id": "C:\\Users\\borau\\Desktop\\mentalIlness\\BilConnect\\BilConnect\\wwwroot\\lib\\microsoft\\signalr\\src\\third-party-notices.txt",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\third-party-notices.txt"
     },
     {
