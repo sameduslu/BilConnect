@@ -1,4 +1,4 @@
-﻿using BilConnect.Data.Services;
+using BilConnect.Data.Services;
 using BilConnect.Data.Static;
 using BilConnect.Data.ViewModels;
 using BilConnect.Models;
@@ -24,8 +24,7 @@ namespace BilConnect.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var data = await _service.GetAllAsync(null, n => n.ownerClub);
-            //var data = new List<ClubEvent>();
+            var data = await _service.GetAllAsync(n => n.ownerClub);
             return View(data);
         }
 
@@ -65,28 +64,6 @@ namespace BilConnect.Controllers
             {
                 ModelState.AddModelError("photoUpload", "Please upload a photo.");
             }
-
-            //if (clubEvent.GE250_251Status == false)
-            //{
-            //    ModelState.Remove("GE250_251Points");
-            //}
-
-            //if (!ModelState.IsValid)
-            //{
-
-            //    foreach (var modelStateKey in ModelState.Keys)
-            //    {
-            //        var modelStateVal = ModelState[modelStateKey];
-            //        foreach (var error in modelStateVal.Errors)
-            //        {
-            //            // Log these details or return them in the response
-            //            var errorMessage = error.ErrorMessage;
-            //            // You can log this or return it as part of your response
-            //        }
-            //    }
-
-            //    return View(clubEvent);
-            //}
 
             await _service.AddNewClubEventAsync(clubEvent);
             return RedirectToAction(nameof(Index));
