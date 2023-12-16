@@ -4,7 +4,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="ProcessCreate">
+        <form asp-action="ProcessCreate" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Place" class="control-label"></label>
@@ -46,10 +46,18 @@
                 <input asp-for="quota" class="form-control" />
                 <span asp-validation-for="quota" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @* <div class="form-group">
                 <label asp-for="ImageURL" class="control-label"></label>
                 <input asp-for="ImageURL" class="form-control" />
                 <span asp-validation-for="ImageURL" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label for="photoUpload">Upload Photo</label>
+                <input type="file" name="photoUpload" class="form-control" accept="image/*" />
+                @if (ViewData.ModelState["photoUpload"] != null && ViewData.ModelState["photoUpload"].Errors.Count > 0)
+                {
+                    <span class="text-danger">@ViewData.ModelState["photoUpload"].Errors[0].ErrorMessage</span>
+                }
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

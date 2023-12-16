@@ -19,7 +19,7 @@ using System.Text.Json;
 
 namespace BilConnect.Controllers.PostsControllers
 {
-    [Authorize(Roles = UserRoles.Admin + "," + UserRoles.User)]
+    [Authorize(Roles = UserRoles.Admin + "," + UserRoles.User + "," + UserRoles.ClubAccount)]
 
     public class PostsController : Controller
     {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FVL8XheNruGJxPOlLBxqsfnStUZX5tPgbZPt5ytq7LQ=",
+  "Hash": "fUO3ltY9Ft8GcM5HTkQ8jCH3zygxJcjALHdPymP1yYo=",
   "Source": "BilConnect",
   "BasePath": "_content/BilConnect",
   "Mode": "Default",
@@ -587,6 +587,25 @@
       "OriginalItemSpec": "wwwroot\\images\\40c46ec2-b84e-4a61-ba5a-3ffadc40a3cf.jpg"
     },
     {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\4562b93c-e604-465b-a7b8-dd90069cbb5c.png",
+      "SourceId": "BilConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\",
+      "BasePath": "_content/BilConnect",
+      "RelativePath": "images/4562b93c-e604-465b-a7b8-dd90069cbb5c.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\4562b93c-e604-465b-a7b8-dd90069cbb5c.png"
+    },
+    {
       "Identity": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\47b990ad-75cb-41b4-a365-dba33658443c.jpg",
       "SourceId": "BilConnect",
       "SourceType": "Discovered",
@@ -948,6 +967,25 @@
       "OriginalItemSpec": "wwwroot\\images\\804192c1-003d-49f5-92d0-4dd95594dd5c.PNG"
     },
     {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\8048ac14-dbad-4821-8d22-a27dacd16d82.png",
+      "SourceId": "BilConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\",
+      "BasePath": "_content/BilConnect",
+      "RelativePath": "images/8048ac14-dbad-4821-8d22-a27dacd16d82.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8048ac14-dbad-4821-8d22-a27dacd16d82.png"
+    },
+    {
       "Identity": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\81e070cf-f6c5-4501-8162-382771507078.PNG",
       "SourceId": "BilConnect",
       "SourceType": "Discovered",
@@ -1195,6 +1233,25 @@
       "OriginalItemSpec": "wwwroot\\images\\933110ab-99ef-48ae-87f9-acb01cc54e66.PNG"
     },
     {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\95e49cc3-5e1f-47b4-b348-e2123b759c11.jpg",
+      "SourceId": "BilConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\",
+      "BasePath": "_content/BilConnect",
+      "RelativePath": "images/95e49cc3-5e1f-47b4-b348-e2123b759c11.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\95e49cc3-5e1f-47b4-b348-e2123b759c11.jpg"
+    },
+    {
       "Identity": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\a00d14fe-1163-425a-a658-76e15413ddb4.PNG",
       "SourceId": "BilConnect",
       "SourceType": "Discovered",
@@ -1250,6 +1307,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\a159fa00-b590-4ed4-b524-2bbdf1158a0b.PNG"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\a7a2666d-84a9-4753-b5a0-b28005e6dd6e.jpg",
+      "SourceId": "BilConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\",
+      "BasePath": "_content/BilConnect",
+      "RelativePath": "images/a7a2666d-84a9-4753-b5a0-b28005e6dd6e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a7a2666d-84a9-4753-b5a0-b28005e6dd6e.jpg"
     },
     {
       "Identity": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\a7eb24f2-0e2a-42ae-acfb-8643a3c2c232.PNG",
@@ -1689,6 +1765,25 @@
       "OriginalItemSpec": "wwwroot\\images\\dddf683f-2d54-456d-a84f-abad9ba1a111.jpg"
     },
     {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\e52da8ad-de99-4905-9503-02a662fc08af.jpg",
+      "SourceId": "BilConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\",
+      "BasePath": "_content/BilConnect",
+      "RelativePath": "images/e52da8ad-de99-4905-9503-02a662fc08af.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\e52da8ad-de99-4905-9503-02a662fc08af.jpg"
+    },
+    {
       "Identity": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\e6cd9973-ad16-49a0-b7eb-33d24386edb8.png",
       "SourceId": "BilConnect",
       "SourceType": "Discovered",
@@ -1706,6 +1801,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\e6cd9973-ad16-49a0-b7eb-33d24386edb8.png"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\e89c3b41-a4ac-40f2-91c3-f6a770b28727.jpg",
+      "SourceId": "BilConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\",
+      "BasePath": "_content/BilConnect",
+      "RelativePath": "images/e89c3b41-a4ac-40f2-91c3-f6a770b28727.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\e89c3b41-a4ac-40f2-91c3-f6a770b28727.jpg"
     },
     {
       "Identity": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\ea85a33a-a39f-4bd2-b65b-2eedeb5f10d1.PNG",

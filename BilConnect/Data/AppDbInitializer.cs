@@ -28,6 +28,8 @@ namespace Bilconnect_First_Version.data
                     await roleManager.CreateAsync(new IdentityRole(UserRoles.Admin));
                 if (!await roleManager.RoleExistsAsync(UserRoles.User))
                     await roleManager.CreateAsync(new IdentityRole(UserRoles.User));
+                if (!await roleManager.RoleExistsAsync(UserRoles.ClubAccount))
+                    await roleManager.CreateAsync(new IdentityRole(UserRoles.ClubAccount));
 
                 //Users
                 var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
@@ -92,6 +94,21 @@ namespace Bilconnect_First_Version.data
                     };
                     await userManager.CreateAsync(newAppUser, "TaylorSwift13?");
                     await userManager.AddToRoleAsync(newAppUser, UserRoles.User);
+                }
+
+                string appUserEmail4 = "bilkentacm@ug.bilkent.edu.tr";
+                var appUser4 = await userManager.FindByEmailAsync(appUserEmail4);
+                if (appUser4 == null)
+                {
+                    var newAppUser = new ApplicationUser()
+                    {
+                        FullName = "Bilkent ACM",
+                        UserName = "bilkentacm@ug.bilkent.edu.tr",
+                        Email = appUserEmail4,
+                        EmailConfirmed = true
+                    };
+                    await userManager.CreateAsync(newAppUser, "Taytay*13");
+                    await userManager.AddToRoleAsync(newAppUser, UserRoles.ClubAccount);
                 }
             }
         }

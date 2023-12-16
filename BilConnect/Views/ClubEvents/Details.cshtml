@@ -32,7 +32,7 @@
             @Html.DisplayNameFor(model => model.ownerClub)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ownerClub.Id)
+            @Html.DisplayFor(model => model.ownerClub.FullName)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Description)
@@ -58,16 +58,16 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Place)
         </dd>
-        <dt class = "col-sm-2">
+        @* <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.ImageURL)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ImageURL)
-        </dd>
-       @*  <div class="form-group text-center">
+        </dd> *@
+        <div class="form-group text-center">
             <img id="ProfilePicturePreview" src="@Model.ImageURL" alt="Profile Picture"
                  style="width: 150px; height: 150px; object-fit: cover;" class="border-info rounded-circle" />
-        </div> *@
+        </div>
     </dl>
 </div>
 <div>

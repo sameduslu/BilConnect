@@ -26,6 +26,11 @@ else
                 <li><a class="dropdown-item" asp-controller="Account" asp-action="SelfPosts"><i class="bi bi-list"></i> Your Posts</a></li>
                 <li><a class="dropdown-item" asp-controller="Account" asp-action="SelfReports"><i class="bi bi-list"></i> Your Reports</a></li>
             }
+            @if (User.IsInRole("ClubAccount"))
+            {
+                <li><a class="dropdown-item" asp-controller="Account" asp-action="SelfClubEvents"><i class="bi bi-list"></i> Your Club Events</a></li>
+                <li><a class="dropdown-item" asp-controller="Account" asp-action="SelfReports"><i class="bi bi-list"></i> Your Reports</a></li>
+            }
             @if (User.IsInRole("Admin"))
             {
                 <li><a class="dropdown-item" asp-controller="Account" asp-action="Users"><i class="bi bi-people"></i> Users</a></li>

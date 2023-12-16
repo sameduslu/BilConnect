@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace BilConnect.Controllers
 {
-    [Authorize(Roles = UserRoles.Admin + "," + UserRoles.User)]
+    [Authorize(Roles = UserRoles.Admin + "," + UserRoles.User + "," + UserRoles.ClubAccount)]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

@@ -48,23 +48,23 @@ namespace BilConnect.Controllers
         {
             clubEvent.ownerClubId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            //if (photoUpload != null && photoUpload.Length > 0)
-            //{
-            //    var imageName = Guid.NewGuid().ToString() + Path.GetExtension(photoUpload.FileName); // Generate a unique name
-            //    var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "images", imageName); // Save to /wwwroot/images/
+            if (photoUpload != null && photoUpload.Length > 0)
+            {
+                var imageName = Guid.NewGuid().ToString() + Path.GetExtension(photoUpload.FileName); // Generate a unique name
+                var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "images", imageName); // Save to /wwwroot/images/
 
-            //    using (var stream = new FileStream(imagePath, FileMode.Create))
-            //    {
-            //        await photoUpload.CopyToAsync(stream);
-            //    }
+                using (var stream = new FileStream(imagePath, FileMode.Create))
+                {
+                    await photoUpload.CopyToAsync(stream);
+                }
 
-            //    clubEvent.ImageURL = Url.Content("~/images/" + imageName); // Update the ImageURL property
-            //}
+                clubEvent.ImageURL = Url.Content("~/images/" + imageName); // Update the ImageURL property
+            }
 
-            //else
-            //{
-            //    ModelState.AddModelError("photoUpload", "Please upload a photo.");
-            //}
+            else
+            {
+                ModelState.AddModelError("photoUpload", "Please upload a photo.");
+            }
 
             //if (clubEvent.GE250_251Status == false)
             //{

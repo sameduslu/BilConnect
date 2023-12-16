@@ -22,6 +22,54 @@ namespace BilConnect.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BilConnect.Data.ViewModels.NewClubEventVM", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("GE250_251Points")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("GE250_251Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ImageURL")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Place")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("endTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ownerClubId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("quota")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("startTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ownerClubId");
+
+                    b.ToTable("NewClubEventVM");
+                });
+
             modelBuilder.Entity("BilConnect.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
@@ -517,6 +565,15 @@ namespace BilConnect.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.ToTable("TravellingPost", (string)null);
+                });
+
+            modelBuilder.Entity("BilConnect.Data.ViewModels.NewClubEventVM", b =>
+                {
+                    b.HasOne("BilConnect.Models.ApplicationUser", "ownerClub")
+                        .WithMany()
+                        .HasForeignKey("ownerClubId");
+
+                    b.Navigation("ownerClub");
                 });
 
             modelBuilder.Entity("BilConnect.Models.Chat", b =>
