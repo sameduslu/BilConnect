@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231216202529_init")]
-    partial class init
+    [Migration("20231216213929_celalmal")]
+    partial class celalmal
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -99,6 +99,12 @@ namespace BilConnect.Migrations
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageURL")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsSuspended")
+                        .HasColumnType("bit");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");

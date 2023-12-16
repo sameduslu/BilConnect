@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using BilConnect.Data.Static;
 using BilConnect.Data.ViewModels;
-using Microsoft.EntityFrameworkCore;
 using BilConnect.Data.Services;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;

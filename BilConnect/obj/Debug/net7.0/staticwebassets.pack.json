@@ -1,20 +1,24 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BilConnect.bundle.scp.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BilConnect.bundle.scp.css",
       "PackagePath": "staticwebassets\\BilConnect.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\icons\\bilconnect.ico",
       "PackagePath": "staticwebassets\\icons\\bilconnect.ico"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\01ae7023-e6e7-40da-83e9-bcd07cdf4e2a.png",
+      "PackagePath": "staticwebassets\\images\\01ae7023-e6e7-40da-83e9-bcd07cdf4e2a.png"
     },
     {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\0558fc70-85bb-4d6a-bc1c-e6ea2da5a947.jpg",
@@ -73,6 +77,10 @@
       "PackagePath": "staticwebassets\\images\\25cc4c88-3615-4afb-9656-b25697e30e03.PNG"
     },
     {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\26967e6a-02cf-4371-bf3a-07e8f4edf735.jpg",
+      "PackagePath": "staticwebassets\\images\\26967e6a-02cf-4371-bf3a-07e8f4edf735.jpg"
+    },
+    {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\277088dc-3317-4f5a-b8c9-4f5d24cf90d8.jpg",
       "PackagePath": "staticwebassets\\images\\277088dc-3317-4f5a-b8c9-4f5d24cf90d8.jpg"
     },
@@ -115,6 +123,22 @@
     {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\40c46ec2-b84e-4a61-ba5a-3ffadc40a3cf.jpg",
       "PackagePath": "staticwebassets\\images\\40c46ec2-b84e-4a61-ba5a-3ffadc40a3cf.jpg"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\4562b93c-e604-465b-a7b8-dd90069cbb5c.png",
+      "PackagePath": "staticwebassets\\images\\4562b93c-e604-465b-a7b8-dd90069cbb5c.png"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\47b990ad-75cb-41b4-a365-dba33658443c.jpg",
+      "PackagePath": "staticwebassets\\images\\47b990ad-75cb-41b4-a365-dba33658443c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\481e558a-949f-4660-ade5-f6e2d91c3e89.jpg",
+      "PackagePath": "staticwebassets\\images\\481e558a-949f-4660-ade5-f6e2d91c3e89.jpg"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\524826d7-451f-4922-a5a7-d178ff37ef24.jpg",
+      "PackagePath": "staticwebassets\\images\\524826d7-451f-4922-a5a7-d178ff37ef24.jpg"
     },
     {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\53930e6b-c791-4e56-92dd-951ebf97beac.jpg",
@@ -165,6 +189,10 @@
       "PackagePath": "staticwebassets\\images\\61b243d3-7e37-41e4-bc1b-bc4d06dc66f6.jpg"
     },
     {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\68226b2e-4787-46f7-9a7e-76f79fc8cbef.jpg",
+      "PackagePath": "staticwebassets\\images\\68226b2e-4787-46f7-9a7e-76f79fc8cbef.jpg"
+    },
+    {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\7024bc5c-f425-4d5a-85ea-ac1d1abc98aa.PNG",
       "PackagePath": "staticwebassets\\images\\7024bc5c-f425-4d5a-85ea-ac1d1abc98aa.PNG"
     },
@@ -189,6 +217,10 @@
       "PackagePath": "staticwebassets\\images\\804192c1-003d-49f5-92d0-4dd95594dd5c.PNG"
     },
     {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\8048ac14-dbad-4821-8d22-a27dacd16d82.png",
+      "PackagePath": "staticwebassets\\images\\8048ac14-dbad-4821-8d22-a27dacd16d82.png"
+    },
+    {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\81e070cf-f6c5-4501-8162-382771507078.PNG",
       "PackagePath": "staticwebassets\\images\\81e070cf-f6c5-4501-8162-382771507078.PNG"
     },
@@ -199,6 +231,10 @@
     {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\83306c47-2fa7-4ba9-93db-23ec43047337.PNG",
       "PackagePath": "staticwebassets\\images\\83306c47-2fa7-4ba9-93db-23ec43047337.PNG"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\840a2869-d1ab-4e41-9d8e-8a21c8f73b5c.png",
+      "PackagePath": "staticwebassets\\images\\840a2869-d1ab-4e41-9d8e-8a21c8f73b5c.png"
     },
     {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\84c09762-01ee-48ae-9c87-f63cdb1a0f02.jpg",
@@ -237,6 +273,10 @@
       "PackagePath": "staticwebassets\\images\\933110ab-99ef-48ae-87f9-acb01cc54e66.PNG"
     },
     {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\95e49cc3-5e1f-47b4-b348-e2123b759c11.jpg",
+      "PackagePath": "staticwebassets\\images\\95e49cc3-5e1f-47b4-b348-e2123b759c11.jpg"
+    },
+    {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\a00d14fe-1163-425a-a658-76e15413ddb4.PNG",
       "PackagePath": "staticwebassets\\images\\a00d14fe-1163-425a-a658-76e15413ddb4.PNG"
     },
@@ -247,6 +287,10 @@
     {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\a159fa00-b590-4ed4-b524-2bbdf1158a0b.PNG",
       "PackagePath": "staticwebassets\\images\\a159fa00-b590-4ed4-b524-2bbdf1158a0b.PNG"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\a7a2666d-84a9-4753-b5a0-b28005e6dd6e.jpg",
+      "PackagePath": "staticwebassets\\images\\a7a2666d-84a9-4753-b5a0-b28005e6dd6e.jpg"
     },
     {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\a7eb24f2-0e2a-42ae-acfb-8643a3c2c232.PNG",
@@ -301,6 +345,14 @@
       "PackagePath": "staticwebassets\\images\\c434dc0c-597e-43fe-98cb-7cebef7cfeab.jpg"
     },
     {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\c43c265a-6e53-4660-9b51-d38cc98d590a.jpg",
+      "PackagePath": "staticwebassets\\images\\c43c265a-6e53-4660-9b51-d38cc98d590a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\c79365dd-5d2f-4e86-8fb6-f0ed9732b9a9.png",
+      "PackagePath": "staticwebassets\\images\\c79365dd-5d2f-4e86-8fb6-f0ed9732b9a9.png"
+    },
+    {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\c7aeaec9-3983-4ec6-86a6-169cda40164b.jpg",
       "PackagePath": "staticwebassets\\images\\c7aeaec9-3983-4ec6-86a6-169cda40164b.jpg"
     },
@@ -325,6 +377,10 @@
       "PackagePath": "staticwebassets\\images\\d0972b5a-b7ff-40bb-a7dc-8b4c8631a1ff.jfif"
     },
     {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\d1434416-6ade-4ba0-9ca5-16985796a650.jpg",
+      "PackagePath": "staticwebassets\\images\\d1434416-6ade-4ba0-9ca5-16985796a650.jpg"
+    },
+    {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\d5a1e21b-fcd2-4488-9000-7dbca7584d37.PNG",
       "PackagePath": "staticwebassets\\images\\d5a1e21b-fcd2-4488-9000-7dbca7584d37.PNG"
     },
@@ -345,8 +401,16 @@
       "PackagePath": "staticwebassets\\images\\dddf683f-2d54-456d-a84f-abad9ba1a111.jpg"
     },
     {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\e52da8ad-de99-4905-9503-02a662fc08af.jpg",
+      "PackagePath": "staticwebassets\\images\\e52da8ad-de99-4905-9503-02a662fc08af.jpg"
+    },
+    {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\e6cd9973-ad16-49a0-b7eb-33d24386edb8.png",
       "PackagePath": "staticwebassets\\images\\e6cd9973-ad16-49a0-b7eb-33d24386edb8.png"
+    },
+    {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\e89c3b41-a4ac-40f2-91c3-f6a770b28727.jpg",
+      "PackagePath": "staticwebassets\\images\\e89c3b41-a4ac-40f2-91c3-f6a770b28727.jpg"
     },
     {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\ea85a33a-a39f-4bd2-b65b-2eedeb5f10d1.PNG",
@@ -373,235 +437,239 @@
       "PackagePath": "staticwebassets\\images\\fa5b74c7-c557-49e5-82b9-78f914ae810d.jpeg"
     },
     {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\fb24ce69-c610-4f4d-bd10-d9dfd7ec775c.png",
+      "PackagePath": "staticwebassets\\images\\fb24ce69-c610-4f4d-bd10-d9dfd7ec775c.png"
+    },
+    {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Bilkent\\Bilkent_CS\\CS319\\BilConnect\\BilConnect\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

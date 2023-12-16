@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BilConnect.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class celaladamsın : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,7 +30,10 @@ namespace BilConnect.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    IsSuspended = table.Column<bool>(type: "bit", nullable: false),
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Abbrevation = table.Column<string>(type: "nvarchar(6)", maxLength: 6, nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -155,6 +158,61 @@ namespace BilConnect.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ClubEvents",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    startTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    endTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    quota = table.Column<int>(type: "int", nullable: false),
+                    ownerClubId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    GE250_251Points = table.Column<int>(type: "int", nullable: true),
+                    GE250_251Status = table.Column<bool>(type: "bit", nullable: false),
+                    Place = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ClubEvents", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ClubEvents_AspNetUsers_ownerClubId",
+                        column: x => x.ownerClubId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "NewClubEventVM",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ownerClubId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    Place = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    startTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    endTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    GE250_251Points = table.Column<int>(type: "int", nullable: true),
+                    GE250_251Status = table.Column<bool>(type: "bit", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    quota = table.Column<int>(type: "int", nullable: false),
+                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_NewClubEventVM", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_NewClubEventVM_AspNetUsers_ownerClubId",
+                        column: x => x.ownerClubId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -476,6 +534,11 @@ namespace BilConnect.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ClubEvents_ownerClubId",
+                table: "ClubEvents",
+                column: "ownerClubId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Messages_ChatId",
                 table: "Messages",
                 column: "ChatId");
@@ -484,6 +547,11 @@ namespace BilConnect.Migrations
                 name: "IX_Messages_SenderUserId",
                 table: "Messages",
                 column: "SenderUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_NewClubEventVM_ownerClubId",
+                table: "NewClubEventVM",
+                column: "ownerClubId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PostReports_ReportedPostId",
@@ -523,6 +591,9 @@ namespace BilConnect.Migrations
                 name: "BorrowingPost");
 
             migrationBuilder.DropTable(
+                name: "ClubEvents");
+
+            migrationBuilder.DropTable(
                 name: "DonationPosts");
 
             migrationBuilder.DropTable(
@@ -536,6 +607,9 @@ namespace BilConnect.Migrations
 
             migrationBuilder.DropTable(
                 name: "Messages");
+
+            migrationBuilder.DropTable(
+                name: "NewClubEventVM");
 
             migrationBuilder.DropTable(
                 name: "PetAdoptionPost");

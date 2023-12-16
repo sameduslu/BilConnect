@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231216154755_suspend")]
-    partial class suspend
+    [Migration("20231216213816_celaladamsın")]
+    partial class celaladamsın
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,10 +25,62 @@ namespace BilConnect.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BilConnect.Data.ViewModels.NewClubEventVM", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("GE250_251Points")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("GE250_251Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ImageURL")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Place")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("endTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ownerClubId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("quota")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("startTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ownerClubId");
+
+                    b.ToTable("NewClubEventVM");
+                });
+
             modelBuilder.Entity("BilConnect.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Abbrevation")
+                        .HasMaxLength(6)
+                        .HasColumnType("nvarchar(6)");
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
@@ -46,6 +98,9 @@ namespace BilConnect.Migrations
 
                     b.Property<string>("FullName")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageURL")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsSuspended")
@@ -125,6 +180,56 @@ namespace BilConnect.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Chats");
+                });
+
+            modelBuilder.Entity("BilConnect.Models.ClubEvent", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("GE250_251Points")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("GE250_251Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ImageURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Place")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("endTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ownerClubId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("quota")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("startTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ownerClubId");
+
+                    b.ToTable("ClubEvents");
                 });
 
             modelBuilder.Entity("BilConnect.Models.Message", b =>
@@ -471,6 +576,15 @@ namespace BilConnect.Migrations
                     b.ToTable("TravellingPost", (string)null);
                 });
 
+            modelBuilder.Entity("BilConnect.Data.ViewModels.NewClubEventVM", b =>
+                {
+                    b.HasOne("BilConnect.Models.ApplicationUser", "ownerClub")
+                        .WithMany()
+                        .HasForeignKey("ownerClubId");
+
+                    b.Navigation("ownerClub");
+                });
+
             modelBuilder.Entity("BilConnect.Models.Chat", b =>
                 {
                     b.HasOne("BilConnect.Models.ApplicationUser", "Receiver")
@@ -496,6 +610,17 @@ namespace BilConnect.Migrations
                     b.Navigation("RelatedPost");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BilConnect.Models.ClubEvent", b =>
+                {
+                    b.HasOne("BilConnect.Models.ApplicationUser", "ownerClub")
+                        .WithMany("ClubEvents")
+                        .HasForeignKey("ownerClubId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("ownerClub");
                 });
 
             modelBuilder.Entity("BilConnect.Models.Message", b =>
@@ -672,6 +797,8 @@ namespace BilConnect.Migrations
 
             modelBuilder.Entity("BilConnect.Models.ApplicationUser", b =>
                 {
+                    b.Navigation("ClubEvents");
+
                     b.Navigation("Messages");
 
                     b.Navigation("PostReports");
