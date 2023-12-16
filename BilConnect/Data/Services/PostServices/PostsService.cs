@@ -4,6 +4,8 @@ using BilConnect.Data.Enums;
 using BilConnect.Data.ViewModels.PostViewModels;
 using BilConnect.Models;
 using BilConnect.Models.PostModels;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
@@ -41,7 +43,6 @@ namespace BilConnect.Data.Services.PostServices
 
             return post; // This will be the correct type (SellingPost, DonationPost, etc.)
         }
-
 
         public async Task UpdatePostAsync(NewPostVM data)
         {

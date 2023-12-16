@@ -37,7 +37,6 @@ namespace BilConnect.Controllers.PostsControllers
             var data = await _service.GetAllAsync(n => n.User);
             return View(data);
         }
-
         public async Task<IActionResult> Details(int id)
         {
             var postDetails = await _service.GetPostByIdAsync(id);
