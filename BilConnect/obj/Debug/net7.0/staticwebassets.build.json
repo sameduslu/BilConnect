@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vQ6QK57G6aesXp00onAbHJQlpWIERlgz1QsfQ+4QD3M=",
+  "Hash": "w/GN3LYqDanoLbb6xdLhcn0HLNa4zCiO/qrifq8JKo0=",
   "Source": "BilConnect",
   "BasePath": "_content/BilConnect",
   "Mode": "Default",
@@ -542,6 +542,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\8c0ded52-fe25-448e-ab2e-f4dd79ff61ca.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\92a524e7-66be-4fca-9791-e89bcf93922f.jpg",
+      "SourceId": "BilConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\",
+      "BasePath": "_content/BilConnect",
+      "RelativePath": "images/92a524e7-66be-4fca-9791-e89bcf93922f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\92a524e7-66be-4fca-9791-e89bcf93922f.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\96fdf730-5f64-444f-a624-5e373df26120.jpg",
+      "SourceId": "BilConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\",
+      "BasePath": "_content/BilConnect",
+      "RelativePath": "images/96fdf730-5f64-444f-a624-5e373df26120.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\96fdf730-5f64-444f-a624-5e373df26120.jpg"
     },
     {
       "Identity": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\wwwroot\\images\\a9b627c1-c813-41a8-9e1f-e7fecf2776fd.jpg",
