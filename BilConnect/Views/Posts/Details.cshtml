@@ -115,6 +115,10 @@
     .next {
         right: 10px;
     }
+
+    .expand-height {
+        height: fit-content;
+    }
 </style>
 
 <div class="container">
@@ -125,14 +129,12 @@
                     <h1>Details</h1>
                 </div>
                 <div class="row">
+                    <div class="col text-center">
+                        <h1 style="word-wrap: break-word;"><small>@Model.Title</small></h1>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-md-8 offset-2">
-
-                        <div class="row">
-                            <div class="col text-center">
-                                <h1><small>@Model.Title</small></h1>
-                            </div>
-                        </div>
-
                         @if ((Model.AdditionalImages != null && Model.AdditionalImages.Any()) || Model.ImageURL != null)
                         {
                             <div class="row">
@@ -159,7 +161,7 @@
 
                         <div class="form-group">
                             <label asp-for="Description" class="control-label"></label>
-                            <input asp-for="Description" class="form-control" disabled />
+                            <textarea asp-for="Description" class="form-control" disabled></textarea>
                             <span asp-validation-for="Description" class="text-danger"></span>
                         </div>
 
@@ -171,7 +173,7 @@
 
                         <div class="form-group">
                             <label asp-for="PostDate" class="control-label">Post Date</label>
-                            <input asp-for="PostDate" class="form-control" value="@Model.PostDate" disabled />
+                            <input asp-for="PostDate" class="form-control" disabled />
                             <span asp-validation-for="PostDate" class="text-danger"></span>
                         </div>
 
@@ -235,7 +237,7 @@
                         else if (Model is PetAdoptionPost petAdoptionPost)
                         {
                             <div class="form-group">
-                                <label>Event Time</label>
+                                <label>Vaccination Status</label>
                                 <input class="form-control" value="@petAdoptionPost.IsFullyVaccinated" disabled />
                             </div>
 
@@ -247,17 +249,17 @@
                         else if (Model is TravellingPost travellingPost)
                         {
                             <div class="form-group">
-                                <label>Origin</label>
+                                <label>Departs From</label>
                                 <input class="form-control" value="@travellingPost.Origin" disabled />
                             </div>
 
                             <div class="form-group">
-                                <label>Destinatione</label>
+                                <label>Travels To</label>
                                 <input class="form-control" value="@travellingPost.Destination" disabled />
                             </div>
 
                             <div class="form-group">
-                                <label>TravelTime</label>
+                                <label>Departing Time</label>
                                 <input class="form-control" value="@travellingPost.TravelTime" disabled />
                             </div>
 

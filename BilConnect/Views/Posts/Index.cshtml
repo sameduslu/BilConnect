@@ -293,71 +293,81 @@
         <input type="text" class="search-input" id="searchQuery" placeholder="Search posts..." maxlength="100">
     </div>
     <div class="row">
-        @foreach (var item in Model)
+        @if (Model == null || !Model.Any())
         {
-            <div class="col-md-4 col-sm-6 mb-4">
-                <a href="@Url.Action("Details", new { id = item.Id })" class="text-decoration-none">
-                    <div class="post-card" data-title="@item.Title" data-post-type="@item.GetType()">
-                        <div class="post-card-header">
-                            @item.Title
-                        </div>
-                        <img src="@item.ImageURL" alt="@item.Title" class="post-img">
-                        <div class="post-card-body">
-                            <div class="post-info">
-                                <p class="info-item">
-                                    <i class="material-icons">person_outline</i>
-                                    <span>Author: @item.User.FullName</span>
-                                </p>
-                                <p class="info-item">
-                                    <i class="material-icons">event</i>
-                                    <span>Date: @item.PostDate.ToLocalTime().ToString("dd MMM yyyy")</span>
-                                </p>
+            <p>There are no active posts in the system.</p>
+        }
+        else
+        {
+            <div id="noMatchMessage" style="display: none;">
+                <p>There are no posts that match the description.</p>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <a href="@Url.Action("Details", new { id = item.Id })" class="text-decoration-none">
+                        <div class="post-card" data-title="@item.Title" data-post-type="@item.GetType()">
+                            <div class="post-card-header">
+                                @item.Title
+                            </div>
+                            <img src="@item.ImageURL" alt="@item.Title" class="post-img">
+                            <div class="post-card-body">
+                                <div class="post-info">
+                                    <p class="info-item">
+                                        <i class="material-icons">person_outline</i>
+                                        <span>Author: @item.User.FullName</span>
+                                    </p>
+                                    <p class="info-item">
+                                        <i class="material-icons">event</i>
+                                        <span>Date: @item.PostDate.ToLocalTime().ToString("dd MMM yyyy")</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="post-card-footer">
+                                @if (item.UserId != User.FindFirstValue(ClaimTypes.NameIdentifier))
+                                {
+                                    @if (item is SellingPost sellingPost)
+                                    {
+                                        <a class="btn btn-secondary" asp-action="BuyItem" asp-controller="Posts" asp-route-id="@item.Id">Buy for @sellingPost.Price TL</a>
+                                    }
+                                    else if (item is DonationPost donationPost)
+                                    {
+                                        <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Volunteer</a>
+                                    }
+                                    else if (item is BorrowingPost borrowingPost)
+                                    {
+                                        <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Borrow</a>
+                                    }
+                                    else if (item is EventTicketPost eventTicketPost)
+                                    {
+                                        <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Buy Event Ticket</a>
+                                    }
+                                    else if (item is FoundItemPost foundItemPost)
+                                    {
+                                        <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Learn Details</a>
+                                    }
+                                    else if (item is LostItemPost lostItemPost)
+                                    {
+                                        <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Give Information</a>
+                                    }
+                                    else if (item is PetAdoptionPost petAdoptionPost)
+                                    {
+                                        <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Adopt Pet</a>
+                                    }
+                                    else if (item is TravellingPost travellingPost)
+                                    {
+                                        <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Travel Together</a>
+                                    }
+                                }
+                                else
+                                {
+                                    <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">See Details of Your Post</a>
+                                }
                             </div>
                         </div>
-                        <div class="post-card-footer">
-                            @if (item.UserId != User.FindFirstValue(ClaimTypes.NameIdentifier))
-                            {
-                                @if (item is SellingPost sellingPost)
-                                {
-                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-controller="Posts" asp-route-id="@item.Id">Buy for @sellingPost.Price TL</a>
-                                }
-                                else if (item is DonationPost donationPost)
-                                {
-                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Volunteer</a>
-                                }
-                                else if (item is BorrowingPost borrowingPost)
-                                {
-                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Borrow</a>
-                                }
-                                else if (item is EventTicketPost eventTicketPost)
-                                {
-                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Buy Event Ticket</a>
-                                }
-                                else if (item is FoundItemPost foundItemPost)
-                                {
-                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Learn Details</a>
-                                }
-                                else if (item is LostItemPost lostItemPost)
-                                {
-                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Give Information</a>
-                                }
-                                else if (item is PetAdoptionPost petAdoptionPost)
-                                {
-                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Adopt Pet</a>
-                                }
-                                else if (item is TravellingPost travellingPost)
-                                {
-                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Travel Together</a>
-                                }
-                            }
-                            else
-                            {
-                                    <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">See Details of Your Post</a>
-                            }
-                        </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
+            }
         }
     </div>
 </div>
@@ -371,10 +381,26 @@
                 const post = col.querySelector('.post-card');
                 const title = post.getAttribute('data-title').toLowerCase();
 
+                found = false;
                 if (searchTerm === '' || title.includes(searchTerm)) {
                     col.style.display = ''; // ...
+                    found = true;
                 } else {
                     col.style.display = 'none'; // Hide the post column
+                }
+
+                // Display a message when no posts match the search term
+                if (!found) {
+                    console.log("Here");
+                    const noMatchMessage = document.getElementById('noMatchMessage');
+                    if (noMatchMessage) {
+                        noMatchMessage.style.display = 'block'; // Show the message
+                    }
+                } else {
+                    const noMatchMessage = document.getElementById('noMatchMessage');
+                    if (noMatchMessage) {
+                        noMatchMessage.style.display = 'none'; // Hide the message if posts are found
+                    }
                 }
             });
         });

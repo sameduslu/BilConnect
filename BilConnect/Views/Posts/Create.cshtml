@@ -138,19 +138,19 @@
                             <div id="borrowingPostFields" class="conditional-fields" style="display:none">
                                 <!-- Price field -->
                                 <div class="form-group">
-                                    <label asp-for="PriceS" class="control-label"></label>
+                                    <label asp-for="PriceB" class="control-label"></label>
                                     <div class="input-group">
                                         <!-- Wrap input and addon in an input-group -->
-                                        <input asp-for="PriceS" class="form-control" />
+                                        <input asp-for="PriceB" class="form-control" />
                                         <span class="input-group-text">TL</span> <!-- Addon with "TL" text -->
                                     </div>
-                                    <span asp-validation-for="PriceS" class="text-danger"></span>
+                                    <span asp-validation-for="PriceB" class="text-danger"></span>
                                 </div>
 
 
                                 <!-- Return Date field -->
                                 <div class="form-group">
-                                    <label asp-for="ReturnDate" class="control-label"></label>
+                                    <label asp-for="ReturnDate" class="control-label">Return Date</label>
                                     <input asp-for="ReturnDate" class="form-control" type="text" />
                                     <span asp-validation-for="ReturnDate" class="text-danger"></span>
                                 </div>
@@ -160,27 +160,27 @@
                             <div id="eventTicketPostFields" class="conditional-fields" style="display:none">
                                 <!-- Event Time field -->
                                 <div class="form-group">
-                                    <label asp-for="EventTime" class="control-label"></label>
+                                    <label asp-for="EventTime" class="control-label">Event Time</label>
                                     <input asp-for="EventTime" class="form-control" type="text" />
                                     <span asp-validation-for="EventTime" class="text-danger"></span>
                                 </div>
 
                                 <!-- Event Place field -->
                                 <div class="form-group">
-                                    <label asp-for="EventPlace" class="control-label"></label>
+                                    <label asp-for="EventPlace" class="control-label">Event Place</label>
                                     <input asp-for="EventPlace" class="form-control" />
                                     <span asp-validation-for="EventPlace" class="text-danger"></span>
                                 </div>
 
                                 <!-- Price field -->
                                 <div class="form-group">
-                                    <label asp-for="PriceS" class="control-label"></label>
+                                    <label asp-for="PriceE" class="control-label"></label>
                                     <div class="input-group">
                                         <!-- Wrap input and addon in an input-group -->
-                                        <input asp-for="PriceS" class="form-control" />
+                                        <input asp-for="PriceE" class="form-control" />
                                         <span class="input-group-text">TL</span> <!-- Addon with "TL" text -->
                                     </div>
-                                    <span asp-validation-for="PriceS" class="text-danger"></span>
+                                    <span asp-validation-for="PriceE" class="text-danger"></span>
                                 </div>
 
                             </div>
@@ -199,7 +199,7 @@
                             <div id="petAdoptionPostFields" class="conditional-fields" style="display:none">
                                 <!-- IsFullyVaccinated field -->
                                 <div class="form-group">
-                                    <label asp-for="IsFullyVaccinated" class="control-label"></label>
+                                    <label asp-for="IsFullyVaccinated" class="control-label">Vaccination Status</label>
                                     <select asp-for="IsFullyVaccinated" class="form-control">
                                         <option value="">Select Vaccination Status</option>
                                         <option value="Yes">Yes</option>
@@ -210,7 +210,7 @@
 
                                 <!-- AgeInMonths field -->
                                 <div class="form-group">
-                                    <label asp-for="AgeInMonths" class="control-label"></label>
+                                    <label asp-for="AgeInMonths" class="control-label">Age (In Months)</label>
                                     <input asp-for="AgeInMonths" class="form-control" type="number" />
                                     <span asp-validation-for="AgeInMonths" class="text-danger"></span>
                                 </div>
@@ -220,37 +220,41 @@
                             <div id="travellingPostFields" class="conditional-fields" style="display:none">
                                 <!-- Origin field -->
                                 <div class="form-group">
-                                    <label asp-for="Origin" class="control-label"></label>
+                                    <label asp-for="Origin" class="control-label">Departs From</label>
                                     <input asp-for="Origin" class="form-control" />
                                     <span asp-validation-for="Origin" class="text-danger"></span>
                                 </div>
 
                                 <!-- Destination field -->
                                 <div class="form-group">
-                                    <label asp-for="Destination" class="control-label"></label>
+                                    <label asp-for="Destination" class="control-label">Travels To</label>
                                     <input asp-for="Destination" class="form-control" />
                                     <span asp-validation-for="Destination" class="text-danger"></span>
                                 </div>
 
                                 <!-- TravelTime field -->
                                 <div class="form-group">
-                                    <label asp-for="TravelTime" class="control-label"></label>
+                                    <label asp-for="TravelTime" class="control-label">Departing Time</label>
                                     <input asp-for="TravelTime" class="form-control" type="text" />
                                     <span asp-validation-for="TravelTime" class="text-danger"></span>
                                 </div>
 
-                                <!-- Price field -->
                                 <div class="form-group">
-                                    <label asp-for="PriceS" class="control-label"></label>
+                                    <label asp-for="PriceT" class="control-label"></label>
                                     <div class="input-group">
                                         <!-- Wrap input and addon in an input-group -->
-                                        <input asp-for="PriceS" class="form-control" />
+                                        <input asp-for="PriceT" class="form-control" />
                                         <span class="input-group-text">TL</span> <!-- Addon with "TL" text -->
                                     </div>
-                                    <span asp-validation-for="PriceS" class="text-danger"></span>
+                                    <span asp-validation-for="PriceT" class="text-danger"></span>
                                 </div>
 
-
+                                <!-- Quota field -->
+                                <div class="form-group">
+                                    <label asp-for="Quota" class="control-label">Quota</label>
+                                    <input asp-for="Quota" class="form-control" type="text" />
+                                    <span asp-validation-for="Quota" class="text-danger"></span>
+                                </div>
                             </div>
 
                             <!-- Submit Button -->
