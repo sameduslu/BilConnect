@@ -13,11 +13,11 @@
     }
 </style>
 
-<h4>NewClubEventVM</h4>
+<h4>Edit Club Event</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="ProcessEdit">
+        <form asp-action="ProcessEdit" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
@@ -36,9 +36,9 @@
                 <span asp-validation-for="startTime" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="endTime" class="control-label"></label>
-                <input asp-for="endTime" class="form-control" />
-                <span asp-validation-for="endTime" class="text-danger"></span>
+                <label asp-for="Duration" class="control-label"></label>
+                <input asp-for="Duration" class="form-control" />
+                <span asp-validation-for="Duration" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="GE250_251Points" class="control-label"></label>
@@ -60,10 +60,18 @@
                 <input asp-for="quota" class="form-control" />
                 <span asp-validation-for="quota" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @* <div class="form-group">
                 <label asp-for="ImageURL" class="control-label"></label>
                 <input asp-for="ImageURL" class="form-control" />
                 <span asp-validation-for="ImageURL" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label for="photoUpload">Upload Photo</label>
+                <input type="file" name="photoUpload" class="form-control" accept="image/*" />
+                @if (ViewData.ModelState["photoUpload"] != null && ViewData.ModelState["photoUpload"].Errors.Count > 0)
+                {
+                    <span class="text-danger">@ViewData.ModelState["photoUpload"].Errors[0].ErrorMessage</span>
+                }
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

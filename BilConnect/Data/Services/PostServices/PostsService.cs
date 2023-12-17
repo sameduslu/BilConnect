@@ -60,6 +60,7 @@ namespace BilConnect.Data.Services.PostServices
             dbPost.PostDate = data.PostDate;
             dbPost.PostStatus = data.PostStatus;
             dbPost.UserId = data.UserId;
+            dbPost.AdditionalImages = data.AdditionalImages;
 
             // Handle specific properties based on PostType
             if (data.PostType == PostType.SellingPost && dbPost is SellingPost sellingPost)

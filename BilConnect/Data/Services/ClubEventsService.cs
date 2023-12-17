@@ -32,7 +32,7 @@ namespace BilConnect.Data.Services
                 Place = clubEventVM.Place,
                 Description = clubEventVM.Description,
                 startTime = clubEventVM.startTime,
-                endTime = clubEventVM.endTime,
+                Duration = clubEventVM.Duration,
                 GE250_251Points = clubEventVM.GE250_251Points,
                 GE250_251Status = clubEventVM.GE250_251Status,
                 Name = clubEventVM.Name,
@@ -65,7 +65,7 @@ namespace BilConnect.Data.Services
             clubEvent.Place = clubEventVM.Place;
             clubEvent.Description = clubEventVM.Description;
             clubEvent.startTime = clubEventVM.startTime;
-            clubEvent.endTime = clubEventVM.endTime;
+            clubEvent.Duration = clubEventVM.Duration;
             clubEvent.GE250_251Points = clubEventVM.GE250_251Points;
             clubEvent.GE250_251Status = clubEventVM.GE250_251Status;
             clubEvent.Name = clubEventVM.Name;

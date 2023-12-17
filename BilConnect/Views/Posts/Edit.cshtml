@@ -3,7 +3,7 @@
 @model NewPostVM
 
 @{
-    ViewData["Title"] = "Update Edit";
+    ViewData["Title"] = "Post Edit";
 }
 
 <style>
@@ -67,7 +67,7 @@
 
                 <div class="row">
                     <div class="col-md-8 offset-2">
-                        <form asp-action="Edit">
+                        <form asp-action="Edit" method="post" enctype="multipart/form-data">
                             <input type="hidden" asp-for="Id" />
                             <input type="hidden" asp-for="UserId" />
                             <input type="hidden" asp-for="PostDate" />
@@ -76,11 +76,11 @@
                                 <img width="100%" id="ImageUrlPreview" />
                             </div>
 
-                            <div class="form-group">
+                            @* <div class="form-group">
                                 <label asp-for="ImageURL" class="control-label"></label>
                                 <input asp-for="ImageURL" class="form-control" />
                                 <span asp-validation-for="ImageURL" class="text-danger"></span>
-                            </div>
+                            </div> *@
 
                             <div class="form-group">
                                 <label asp-for="Title" class="control-label"></label>
@@ -91,15 +91,6 @@
                                 <label asp-for="Description" class="control-label"></label>
                                 <input asp-for="Description" class="form-control" />
                                 <span asp-validation-for="Description" class="text-danger"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="photoUpload">Upload Photo</label>
-                                <input type="file" name="photoUpload" class="form-control" accept="image/*" language="en" title="Select a File" />
-                                @if (ViewData.ModelState["photoUpload"] != null && ViewData.ModelState["photoUpload"].Errors.Count > 0)
-                                {
-                                    <span class="text-danger">@ViewData.ModelState["photoUpload"].Errors[0].ErrorMessage</span>
-                                }
                             </div>
 
 
@@ -215,6 +206,24 @@
                                     <span asp-validation-for="PriceT" class="text-danger"></span>
                                 </div>
                             }
+
+                            <div class="form-group">
+                                <label for="photoUpload">Upload New Cover Photo</label>
+                                <input type="file" name="photoUpload" class="form-control" accept="image/*" language="en" title="Select a File" />
+                                @if (ViewData.ModelState["photoUpload"] != null && ViewData.ModelState["photoUpload"].Errors.Count > 0)
+                                {
+                                    <span class="text-danger">@ViewData.ModelState["photoUpload"].Errors[0].ErrorMessage</span>
+                                }
+                            </div>
+
+                            <div class="form-group">
+                                <label for="additionalImagesUpload">Upload Additional Images To Append</label>
+                                <input type="file" name="additionalImagesUpload" class="form-control" accept="image/*" multiple />
+                                @if (ViewData.ModelState["additionalImagesUpload"] != null && ViewData.ModelState["additionalImagesUpload"].Errors.Count > 0)
+                                {
+                                    <span class="text-danger">@ViewData.ModelState["additionalImagesUpload"].Errors[0].ErrorMessage</span>
+                                }
+                            </div>
 
                             <div class="form-group">
                                 <input type="submit" value="Update" class="btn btn-outline-success float-right" />
