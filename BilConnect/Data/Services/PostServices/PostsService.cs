@@ -60,15 +60,51 @@ namespace BilConnect.Data.Services.PostServices
             dbPost.PostDate = data.PostDate;
             dbPost.PostStatus = data.PostStatus;
             dbPost.UserId = data.UserId;
+            dbPost.AdditionalImages = data.AdditionalImages;
 
             // Handle specific properties based on PostType
             if (data.PostType == PostType.SellingPost && dbPost is SellingPost sellingPost)
             {
                 sellingPost.Price = data.PriceS ?? 0; // Ensure Price is not null, or handle accordingly
             }
+            else if (data.PostType == PostType.BorrowingPost && dbPost is BorrowingPost borrowingPost)
+            {
+                borrowingPost.ReturnDate = data.ReturnDateB;
+            }
             else if (data.PostType == PostType.DonationPost && dbPost is DonationPost donationPost)
             {
-                // Update DonationPost specific properties if any
+        
+            }else if(data.PostType == PostType.EventTicketPost && dbPost is EventTicketPost eventTicketPost)
+            {
+                eventTicketPost.EventTime = data.EventTime;
+                eventTicketPost.EventPlace = data.EventPlace;
+                eventTicketPost.Price = data.PriceE ?? 0;
+            }
+            else if(data.PostType == PostType.FoundItemPost && dbPost is FoundItemPost foundItemPost)
+            {
+                
+            }
+            else if (data.PostType == PostType.LostItemPost && dbPost is LostItemPost lostItemPost)
+            {
+                lostItemPost.Place = data.Place;
+            }
+            else if (data.PostType == PostType.PetAdoptionPost && dbPost is PetAdoptionPost petAdoptionPost)
+            {
+                petAdoptionPost.IsFullyVaccinated = data.IsFullyVaccinated;
+                petAdoptionPost.AgeInMonths = data.AgeInMonths ?? 0;
+            }
+            else if (data.PostType == PostType.RentingPost && dbPost is RentingPost rentingPost)
+            {
+                rentingPost.Price = data.PriceB ?? 0;
+                rentingPost.ReturnDate = data.ReturnDate;
+            }
+            else if (data.PostType == PostType.TravellingPost && dbPost is TravellingPost travellingPost)
+            {
+                travellingPost.Origin = data.Origin;
+                travellingPost.Destination = data.Destination;
+                travellingPost.TravelTime = data.TravelTime;
+                travellingPost.Price = data.PriceT ?? 0;
+                travellingPost.Quota = data.Quota ?? 0;
             }
 
             await _context.SaveChangesAsync();

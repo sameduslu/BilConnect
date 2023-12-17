@@ -1,7 +1,8 @@
 ﻿@model ApplicationUser
 
 @{
-    ViewData["Title"] = "List of Posts";
+    ViewData["Title"] = "List of Your Club Events";
+    ((List<ClubEvent>)Model.ClubEvents).Sort();
 }
 
 <style>
@@ -166,7 +167,7 @@
                                     </p>
                                     <p class="info-item">
                                         <i class="material-icons">event</i>
-                                        <span>End Time: @item.endTime</span>
+                                        <span>Duration: @item.Duration mins</span>
                                     </p>
                                     <p class="info-item">
                                         <i class="material-icons">event</i>

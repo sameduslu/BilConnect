@@ -30,9 +30,15 @@ namespace BilConnect.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime?>("CreationTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Duration")
+                        .HasColumnType("int");
 
                     b.Property<int?>("GE250_251Points")
                         .HasColumnType("int");
@@ -51,9 +57,6 @@ namespace BilConnect.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("endTime")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("ownerClubId")
                         .HasColumnType("nvarchar(450)");
 
@@ -61,6 +64,7 @@ namespace BilConnect.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("startTime")
+                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -187,9 +191,15 @@ namespace BilConnect.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Duration")
+                        .HasColumnType("int");
 
                     b.Property<int?>("GE250_251Points")
                         .HasColumnType("int");
@@ -208,9 +218,6 @@ namespace BilConnect.Migrations
                     b.Property<string>("Place")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("endTime")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("ownerClubId")
                         .IsRequired()
@@ -471,12 +478,8 @@ namespace BilConnect.Migrations
                 {
                     b.HasBaseType("BilConnect.Models.PostModels.Post");
 
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
-
-                    b.Property<string>("ReturnDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("ReturnDate")
+                        .HasColumnType("datetime2");
 
                     b.ToTable("BorrowingPost", (string)null);
                 });
@@ -496,9 +499,8 @@ namespace BilConnect.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EventTime")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("EventTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<double>("Price")
                         .HasColumnType("float");
@@ -538,6 +540,19 @@ namespace BilConnect.Migrations
                     b.ToTable("PetAdoptionPost", (string)null);
                 });
 
+            modelBuilder.Entity("BilConnect.Models.PostModels.RentingPost", b =>
+                {
+                    b.HasBaseType("BilConnect.Models.PostModels.Post");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime?>("ReturnDate")
+                        .HasColumnType("datetime2");
+
+                    b.ToTable("RentingPost", (string)null);
+                });
+
             modelBuilder.Entity("BilConnect.Models.PostModels.SellingPost", b =>
                 {
                     b.HasBaseType("BilConnect.Models.PostModels.Post");
@@ -566,9 +581,8 @@ namespace BilConnect.Migrations
                     b.Property<int>("Quota")
                         .HasColumnType("int");
 
-                    b.Property<string>("TravelTime")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("TravelTime")
+                        .HasColumnType("datetime2");
 
                     b.ToTable("TravellingPost", (string)null);
                 });
@@ -770,6 +784,15 @@ namespace BilConnect.Migrations
                     b.HasOne("BilConnect.Models.PostModels.Post", null)
                         .WithOne()
                         .HasForeignKey("BilConnect.Models.PostModels.PetAdoptionPost", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.RentingPost", b =>
+                {
+                    b.HasOne("BilConnect.Models.PostModels.Post", null)
+                        .WithOne()
+                        .HasForeignKey("BilConnect.Models.PostModels.RentingPost", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

@@ -2,10 +2,21 @@
 @model IEnumerable<PostReport>
 
 @{
-    ViewData["Title"] = "List of Posts";
+    ViewData["Title"] = "List of Reports";
 }
 
 <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* WhatsApp font style */
+        margin: 0;
+        padding: 0;
+        background: rgb(240,224,209);
+        background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
     /* Added CSS for square images */
     .img-square {
         width: 150px; /* Set the width of the image */
@@ -26,18 +37,13 @@
         {
             @if (item.Status == BilConnect.Data.Enums.PostReportStatus.Waiting)
             {
-                <div class="col-md-4 col-xs-6 border-primary mb-3 fixed-size-container">
-                    <div class="card mb-3 fixed-size-card" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-12">
-                                <div class="card-header text-white bg-info">
-                                    <h5 class="card-title">
-                                        Report for @item.ReportedPost.Title
-                                        <a class="text-white float-right"><i class="bi bi-pencil-square"></i></a>
-                                    </h5>
-                                </div>
-                            </div>
+                <a class="text-decoration-none">
+                    <div class="post-card" data-title="@item.ReportedPost.Title" data-post-type="@item.GetType()">
+                        <div class="post-card-header">
+                            @item.ReportedPost.Title
+                        </div>
 
+                        <div class="post-card-body">
                             <div class="col-md-6">
                                 <img src="@item.ReportedPost.ImageURL" class="img-square fixed-size-image" alt="@item.ReportedPost.Title">
                             </div>
@@ -49,18 +55,18 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="card-footer d-flex justify-content-between">
-                                    <a class="btn btn-success btn-lg" asp-action="Details" asp-route-id="@item.Id" aria-label="Show Details">
-                                        <i class="bi bi-eye-fill align-middle"></i> Show Details
-                                    </a>
-                                </div>
-                            </div>
+                        </div>
+
+                        <div class="post-card-footer">
+                            <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">Show Details</a>
                         </div>
                     </div>
-                </div>
+                </a>
             }
-
         }
+    }
+    else
+    {
+        
     }
 </div>

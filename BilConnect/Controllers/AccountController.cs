@@ -12,6 +12,7 @@ using System.Net.Mail;
 using BilConnect.Data.Services.PostServices;
 using BilConnect.Data.Enums;
 using Microsoft.Extensions.Hosting.Internal;
+using Microsoft.EntityFrameworkCore;
 
 namespace BilConnect.Controllers
 {
@@ -74,7 +75,7 @@ namespace BilConnect.Controllers
                 var result = await _signInManager.PasswordSignInAsync(user, loginVM.Password, false, lockoutOnFailure: true);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Posts");
+                    return RedirectToAction("Index", "Home");
                 }
 
                 //Locked account
@@ -443,5 +444,39 @@ namespace BilConnect.Controllers
             return View(model);
         }
 
+
+        public async Task<IActionResult> ListUsers()
+        {
+            var allUsers = await _userManager.Users.ToListAsync();
+            var adminUsers = new List<ApplicationUser>();
+            var clubAccountUsers = new List<ApplicationUser>();
+            var regularUsers = new List<ApplicationUser>();
+
+            foreach (var user in allUsers)
+            {
+                var roles = await _userManager.GetRolesAsync(user);
+                if (roles.Contains(UserRoles.Admin))
+                {
+                    adminUsers.Add(user);
+                }
+                else if (roles.Contains(UserRoles.ClubAccount))
+                {
+                    clubAccountUsers.Add(user);
+                }
+                else
+                {
+                    regularUsers.Add(user);
+                }
+            }
+
+            var viewModel = new UsersViewModel
+            {
+                AdminUsers = adminUsers,
+                ClubAccountUsers = clubAccountUsers,
+                RegularUsers = regularUsers
+            };
+
+            return View(viewModel);
+        }
     }
 }

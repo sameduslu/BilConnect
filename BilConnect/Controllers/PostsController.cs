@@ -19,7 +19,7 @@ using System.Text.Json;
 
 namespace BilConnect.Controllers.PostsControllers
 {
-    [Authorize(Roles = UserRoles.Admin + "," + UserRoles.User + "," + UserRoles.ClubAccount)]
+    [Authorize(Roles = UserRoles.Admin + "," + UserRoles.User)]
 
     public class PostsController : Controller
     {
@@ -112,20 +112,32 @@ namespace BilConnect.Controllers.PostsControllers
             }
 
             // Bypass Price validation for non-selling posts
-            if (post.PostType != PostType.SellingPost && post.PostType != PostType.BorrowingPost && post.PostType != PostType.EventTicketPost && post.PostType != PostType.TravellingPost)
+            if (post.PostType != PostType.SellingPost && post.PostType != PostType.RentingPost && post.PostType != PostType.EventTicketPost && post.PostType != PostType.TravellingPost)
             {
                 ModelState.Remove("Price");
             }
 
-            if (post.PostType != PostType.BorrowingPost)
+            if (post.PostType != PostType.SellingPost)
+            {
+                ModelState.Remove("PriceS");
+            }
+
+            if (post.PostType != PostType.RentingPost)
             {
                 ModelState.Remove("ReturnDate");
+                ModelState.Remove("PriceB");
+            }
+
+            if (post.PostType != PostType.BorrowingPost)
+            {
+                ModelState.Remove("ReturnDateB");
             }
 
             if (post.PostType != PostType.EventTicketPost)
             {
                 ModelState.Remove("EventTime");
                 ModelState.Remove("EventPlace");
+                ModelState.Remove("PriceE");
             }
 
             if (post.PostType != PostType.LostItemPost)
@@ -133,20 +145,20 @@ namespace BilConnect.Controllers.PostsControllers
                 ModelState.Remove("Place");
             }
 
-            if (post.PostType != PostType.LostItemPost)
+            if (post.PostType != PostType.PetAdoptionPost)
             {
                 ModelState.Remove("IsFullyVaccinated");
                 ModelState.Remove("AgeInMonths");
             }
 
-            if (post.PostType != PostType.LostItemPost)
+            if (post.PostType != PostType.TravellingPost)
             {
                 ModelState.Remove("Origin");
                 ModelState.Remove("Destination");
                 ModelState.Remove("TravelTime");
                 ModelState.Remove("Quota");
+                ModelState.Remove("PriceT");
             }
-
 
             if (!ModelState.IsValid)
             {   
@@ -214,20 +226,20 @@ namespace BilConnect.Controllers.PostsControllers
                     PostType = PostType.DonationPost
                 };
             }
-            else if (postDetails is BorrowingPost borrowingPost)
+            else if (postDetails is RentingPost rentingPost)
             {
                 response = new NewPostVM
                 {
-                    Id = borrowingPost.Id,
-                    Title = borrowingPost.Title,
-                    Description = borrowingPost.Description,
-                    ImageURL = borrowingPost.ImageURL,
-                    PostDate = borrowingPost.PostDate,
-                    PostStatus = borrowingPost.PostStatus,
-                    UserId = borrowingPost.UserId,
-                    PostType = PostType.BorrowingPost,
-                    PriceB = borrowingPost.Price,
-                    ReturnDate = borrowingPost.ReturnDate,
+                    Id = rentingPost.Id,
+                    Title = rentingPost.Title,
+                    Description = rentingPost.Description,
+                    ImageURL = rentingPost.ImageURL,
+                    PostDate = rentingPost.PostDate,
+                    PostStatus = rentingPost.PostStatus,
+                    UserId = rentingPost.UserId,
+                    PostType = PostType.RentingPost,
+                    PriceB = rentingPost.Price,
+                    ReturnDate = rentingPost.ReturnDate,
                 };
             }
             else if (postDetails is EventTicketPost eventTicketPost)
@@ -325,15 +337,88 @@ namespace BilConnect.Controllers.PostsControllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, NewPostVM post)
+        public async Task<IActionResult> Edit(int id, NewPostVM post, IFormFile? photoUpload, List<IFormFile>? additionalImagesUpload)
         {
+            var postDetails = await _service.GetByIdAsync(id);
+            post.AdditionalImages = postDetails.AdditionalImages;
+            post.ImageURL = postDetails.ImageURL;
+            if (postDetails is SellingPost)
+            {
+                post.PostType = PostType.SellingPost;
+            }
+            else if (postDetails is DonationPost)
+            {
+                post.PostType = PostType.DonationPost;
+            }
+            else if (postDetails is RentingPost)
+            {
+                post.PostType = PostType.RentingPost;
+            }
+            else if (postDetails is BorrowingPost)
+            {
+                post.PostType = PostType.BorrowingPost;
+            }
+            else if (postDetails is EventTicketPost)
+            {
+                post.PostType = PostType.EventTicketPost;
+            }
+            else if (postDetails is FoundItemPost)
+            {
+                post.PostType = PostType.FoundItemPost;
+            }
+            else if (postDetails is LostItemPost)
+            { 
+                post.PostType = PostType.LostItemPost;
+            }
+            else if (postDetails is PetAdoptionPost)
+            {
+                post.PostType = PostType.PetAdoptionPost;
+            }
+            else if (postDetails is TravellingPost)
+            {
+                post.PostType = PostType.TravellingPost;
+            }
+            if (photoUpload != null && photoUpload.Length > 0)
+            {
+                var imageName = Guid.NewGuid().ToString() + Path.GetExtension(photoUpload.FileName); // Generate a unique name
+                var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "images", imageName); // Save to /wwwroot/images/
+
+                using (var stream = new FileStream(imagePath, FileMode.Create))
+                {
+                    await photoUpload.CopyToAsync(stream);
+                }
+                post.AdditionalImages.Add(post.ImageURL);
+                post.ImageURL = Url.Content("~/images/" + imageName); // Update the ImageURL property
+            }      
+            
+
+            // Handle additional images
+            if (additionalImagesUpload != null && additionalImagesUpload.Count > 0)
+            {
+                foreach (var file in additionalImagesUpload)
+                {
+                    if (file.Length > 0)
+                    {
+                        var imageName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                        var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "images", imageName);
+
+                        using (var stream = new FileStream(imagePath, FileMode.Create))
+                        {
+                            await file.CopyToAsync(stream);
+                        }
+
+                        post.AdditionalImages.Add(Url.Content("~/images/" + imageName));
+                    }
+                }
+            }
+
             if (id != post.Id) return View("NotFound");
             if (!ModelState.IsValid)
             {
                 return View(post);
             }
             await _service.UpdatePostAsync(post);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("SelfPosts", "Account");
         }
 
         [HttpPost]
@@ -342,7 +427,7 @@ namespace BilConnect.Controllers.PostsControllers
             var postDetails = await _service.GetByIdAsync(id);
             if (postDetails == null) return View("NotFound");
             await _service.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("SelfPosts", "Account");
         }
 
         public async Task<IActionResult> Suspend(int id)

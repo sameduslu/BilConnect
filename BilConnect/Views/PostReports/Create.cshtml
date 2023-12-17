@@ -3,13 +3,26 @@
 @model NewPostReportVM
 
 @{
-    ViewData["Title"] = "Add a new post";
+    ViewData["Title"] = "Add a new report";
 }
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* WhatsApp font style */
+        margin: 0;
+        padding: 0;
+        background: rgb(240,224,209);
+        background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+</style>
 
 <div class="row text">
     <div class="col-md-8 offset-2">
         <p>
-            <h1>Add a New Post</h1>
+            <h1>Add a New Report</h1>
         </p>
         <div class="row">
             <div class="col-md-8 offset-2">

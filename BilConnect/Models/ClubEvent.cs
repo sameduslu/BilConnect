@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BilConnect.Models
 {
-    public class ClubEvent : IEntityBase
+    public class ClubEvent : IEntityBase, IComparable<ClubEvent>
     {
         [Key]
         public int Id { get; set; }
@@ -16,8 +16,9 @@ namespace BilConnect.Models
         public DateTime? startTime { get; set; }
         [DisplayName ("Ending Time")]
         [DataType(DataType.DateTime)]
-        public DateTime? endTime { get; set; }
+        public int Duration { get; set; }
         [DisplayName("Quota")]
+        [Range(0, 1000, ErrorMessage = "Quota must be an integer between 0 - 1000.")]
         public int quota { get; set; }
         [ForeignKey("ownerClubId")]
         public string ownerClubId { get; set; }
@@ -31,6 +32,13 @@ namespace BilConnect.Models
         public string Place {  get; set; }
         [DisplayName("Image URL")]
         public string ImageURL { get; set; }
+        public DateTime CreationTime { get; set; }
+
+        public int CompareTo (ClubEvent clubEvent)
+        {
+            if(clubEvent == null) return 1;
+            return clubEvent.CreationTime.CompareTo(CreationTime);
+        }
         
     }
 }

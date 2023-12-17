@@ -2,7 +2,6 @@
 {
     public class BorrowingPost : Post
     {
-        public double Price { get; set; }
-        public string ReturnDate { get; set; }
+        public DateTime? ReturnDate { get; set; }
     }
 }
