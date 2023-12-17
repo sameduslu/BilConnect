@@ -2,7 +2,6 @@ using BilConnect.Data;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using Microsoft.EntityFrameworkCore;
 using Bilconnect_First_Version.data;
-using BilConnect.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using BilConnect.Data.Services;
@@ -10,6 +9,7 @@ using BilConnect.Data.Services.PostServices;
 using BilConnect.Data.Services.ReportServices;
 using BilConnect.Hubs;
 using System;
+using BilConnect.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

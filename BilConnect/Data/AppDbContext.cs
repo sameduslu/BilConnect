@@ -1,3 +1,4 @@
+using BilConnect.Data.ViewModels;
 using BilConnect.Models;
 using BilConnect.Models.PostModels;
 using BilConnect.Models.ReportModels;
@@ -6,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Reflection.Emit;
-using BilConnect.Data.ViewModels;
+
 
 namespace BilConnect.Data
 {
@@ -90,7 +91,7 @@ namespace BilConnect.Data
         public DbSet<Chat> Chats { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<ClubEvent> ClubEvents { get; set; }
-        public DbSet<BilConnect.Data.ViewModels.NewClubEventVM> NewClubEventVM { get; set; } = default!;
+        public DbSet<NewClubEventVM> NewClubEventVM { get; set; } = default!;
 
 
     }

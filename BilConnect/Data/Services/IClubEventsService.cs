@@ -1,8 +1,6 @@
 ﻿using BilConnect.Data.Base;
 using BilConnect.Data.ViewModels;
-using BilConnect.Data.ViewModels.PostViewModels;
 using BilConnect.Models;
-using BilConnect.Models.PostModels;
 
 namespace BilConnect.Data.Services
 {

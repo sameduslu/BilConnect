@@ -1,7 +1,6 @@
 using BilConnect.Data.Services.ReportServices;
 using BilConnect.Data.ViewModels.PostReportViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace BilConnect.Controllers.ReportsController

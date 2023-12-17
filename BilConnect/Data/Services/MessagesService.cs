@@ -1,9 +1,7 @@
-﻿using BilConnect.Data;
-using BilConnect.Data.Base;
+﻿using BilConnect.Data.Base;
 using BilConnect.Data.ViewModels;
 using BilConnect.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
 
 namespace BilConnect.Data.Services
 {

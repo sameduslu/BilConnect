@@ -1,11 +1,9 @@
-using BilConnect.Data;
 using BilConnect.Data.Base;
 using BilConnect.Data.Enums;
 using BilConnect.Data.ViewModels.PostViewModels;
-using BilConnect.Models;
 using BilConnect.Models.PostModels;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
+
 
 namespace BilConnect.Data.Services.PostServices
 {

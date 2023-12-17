@@ -1,18 +1,14 @@
-using BilConnect.Data;
-using BilConnect.Models;
-using Bilconnect.Data.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using BilConnect.Data.Static;
-using BilConnect.Data.ViewModels;
 using BilConnect.Data.Services;
 using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
-using System.Net.Mail;
 using BilConnect.Data.Services.PostServices;
 using BilConnect.Data.Enums;
-using Microsoft.Extensions.Hosting.Internal;
 using Microsoft.EntityFrameworkCore;
+using BilConnect.Data.ViewModels.AccountViewModels;
+using BilConnect.Data.ViewModels;
+using BilConnect.Models;
 
 namespace BilConnect.Controllers
 {

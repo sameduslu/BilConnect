@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System;
-using BilConnect.Models;
 using Microsoft.AspNetCore.Identity;
 using BilConnect.Data.Static;
+using BilConnect.Models;
 
 namespace Bilconnect_First_Version.data
 {

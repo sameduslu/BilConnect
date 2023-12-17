@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Bilconnect.Data.ViewModels
+namespace BilConnect.Data.ViewModels.AccountViewModels
 {
     public class LoginVM
     {

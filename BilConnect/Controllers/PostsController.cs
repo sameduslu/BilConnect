@@ -1,20 +1,11 @@
 using BilConnect.Data.Enums;
 using BilConnect.Data.Services.PostServices;
 using BilConnect.Data.Static;
-using BilConnect.Data.ViewModels;
 using BilConnect.Data.ViewModels.PostViewModels;
-using BilConnect.Models;
 using BilConnect.Models.PostModels;
-using Bilconnect_First_Version.data;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Hosting;
-using System;
 using System.Security.Claims;
-using Microsoft.AspNetCore.Hosting;
 using System.Text.Json;
 
 namespace BilConnect.Controllers.PostsControllers

@@ -1,12 +1,8 @@
 using BilConnect.Data.Services;
 using BilConnect.Data.Static;
 using BilConnect.Data.ViewModels;
-using BilConnect.Models;
-using BilConnect.Models.PostModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.View;
 using System.Security.Claims;
 
 namespace BilConnect.Controllers

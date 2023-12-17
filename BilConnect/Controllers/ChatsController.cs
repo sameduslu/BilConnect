@@ -2,17 +2,9 @@
 using BilConnect.Data.Static;
 using BilConnect.Data.ViewModels;
 using BilConnect.Models;
-using BilConnect.Models.PostModels;
-using Bilconnect_First_Version.data;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.Extensions.Hosting;
 using System.Security.Claims;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BilConnect.Controllers
 {

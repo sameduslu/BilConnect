@@ -1,16 +1,7 @@
-﻿using Azure.Messaging;
-using BilConnect.Data.Base;
-using BilConnect.Data.Services.PostServices;
+﻿using BilConnect.Data.Base;
 using BilConnect.Data.ViewModels;
 using BilConnect.Models;
-using BilConnect.Models.PostModels;
 using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.View;
-using System.Security.Claims;
 
 namespace BilConnect.Data.Services
 {
