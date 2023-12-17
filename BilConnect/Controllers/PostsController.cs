@@ -31,7 +31,10 @@ namespace BilConnect.Controllers.PostsControllers
             _service = service;
             _hostingEnvironment = hostingEnvironment;
         }
-
+        /*
+         *         * This method is provided by the IPostsService 
+         *                 * interface and retrieves all the posts from the database.
+         *                         * */
         public async Task<IActionResult> Index()
         {
             var data = await _service.GetAllAsync(
@@ -40,7 +43,12 @@ namespace BilConnect.Controllers.PostsControllers
             );
             return View(data);
         }
-
+        /*
+         * _service takes an id argument and retrieves the post details 
+         *  from the database based on the provided id. The method returns a task 
+         *  that represents the asynchronous operation of retrieving the post 
+         *  details.
+         * */
         public async Task<IActionResult> Details(int id)
         {
             var postDetails = await _service.GetPostByIdAsync(id);
@@ -56,6 +64,12 @@ namespace BilConnect.Controllers.PostsControllers
             return View();
         }
 
+        /* It checks if photoUpload is not null and if it has content. If it does, it generates a unique name for the image and
+         * constructs a path to save the image in the "/wwwroot/images/" directory.It updates the ImageURL property of the post
+         * to point to the newly uploaded image. If photoUpload is null or empty, it adds an error to the ModelState indicating
+         * that a photo needs to be uploaded. It checks if additionalImagesUpload is not null and if it has content. If it
+         * does, it iterates over each file in additionalImagesUpload, generates a unique name for each image. It removes certain
+         * properties from ModelState based on the PostType of the post to bypass their validation. */
         [HttpPost]
         public async Task<IActionResult> Create(NewPostVM post, IFormFile photoUpload, List<IFormFile> additionalImagesUpload)
         {
@@ -186,7 +200,13 @@ namespace BilConnect.Controllers.PostsControllers
             await _service.AddNewPostAsync(post);
             return RedirectToAction(nameof(Index));
         }
-
+        /*
+         *         * The Edit(int id) method takes an id argument and retrieves the post details from the database based on the provided id.
+         *                 * The result is assigned to the postDetails variable. An if statement is used to check if the postDetails variable is null.
+         *                         * If it is null, the View("NotFound") method is called, which returns a view named "NotFound". This is used to display an
+         *                                 * error page when the requested post details are not found. If the postDetails variable is not null, for the given PostType,
+         *                                  respective VM is created.
+         *                                                 * */
         public async Task<IActionResult> Edit(int id)
         {
             var postDetails = await _service.GetPostByIdAsync(id);
@@ -351,6 +371,14 @@ namespace BilConnect.Controllers.PostsControllers
             return View(response);
         }
 
+        /*This Edit method in the PostsController class is an asynchronous method that is used to edit a post. 
+         * It takes four parameters: an integer id representing the post's ID, a NewPostVM object post representing
+         * the new post details, an IFormFile object photoUpload representing the main photo to be uploaded, and a
+         * list of IFormFile objects additionalImagesUpload representing additional images to be uploaded. If the 
+         * id does not match the Id property of the post object, it returns a "NotFound" view. If the model state 
+         * is not valid, it returns the post view. if all conditions are met, it updates the post using the service
+         * and redirects to the "SelfPosts" action of the "Account" controller.
+         */
         [HttpPost]
         public async Task<IActionResult> Edit(int id, NewPostVM post, IFormFile? photoUpload, List<IFormFile>? additionalImagesUpload)
         {
@@ -435,7 +463,7 @@ namespace BilConnect.Controllers.PostsControllers
             await _service.UpdatePostAsync(post);
             return RedirectToAction("SelfPosts", "Account");
         }
-
+        // This method takes an id argument and retrieves the post details from the database based on the provided id. Then deletes it.
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
@@ -444,7 +472,6 @@ namespace BilConnect.Controllers.PostsControllers
             await _service.DeleteAsync(id);
             return RedirectToAction("SelfPosts", "Account");
         }
-
         public async Task<IActionResult> Suspend(int id)
         {
             var postDetails = await _service.GetByIdAsync(id);
@@ -472,13 +499,16 @@ namespace BilConnect.Controllers.PostsControllers
             return RedirectToAction("UpdatePostReportsStatus", "PostReports", new { postId = id });
 
         }
-
+        /* The method first retrieves the post details from the service using the provided id.Then, it redirects to the "Index" 
+         * action of the "Chats" controller, passing in the Id and UserId properties of the retrieved post details as route 
+         * values (postId and postOwner respectively). This is used to initiate a chat between the buyer and the owner
+         * of the post. */
         public async Task<IActionResult> BuyItem(int id)
         {
             var postDetails = await _service.GetPostByIdAsync(id);
             return RedirectToAction("Index", "Chats", new { postId = postDetails.Id, postOwner = postDetails.UserId });
         }
-
+        /* Marking post as inactivated by changing post status */
         [HttpPost]
         public async Task<IActionResult> Inactivate(int id)
         {
@@ -492,7 +522,7 @@ namespace BilConnect.Controllers.PostsControllers
 
             return RedirectToAction("SelfPosts", "Account"); // Or redirect to a suitable page
         }
-
+        /* Marking post as activated by changing post status */
         [HttpPost]
         public async Task<IActionResult> Activate(int id)
         {
