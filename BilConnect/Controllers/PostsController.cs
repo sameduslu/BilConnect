@@ -242,6 +242,21 @@ namespace BilConnect.Controllers.PostsControllers
                     ReturnDate = rentingPost.ReturnDate,
                 };
             }
+            else if (postDetails is BorrowingPost borrowingPost)
+            {
+                response = new NewPostVM
+                {
+                    Id = borrowingPost.Id,
+                    Title = borrowingPost.Title,
+                    Description = borrowingPost.Description,
+                    ImageURL = borrowingPost.ImageURL,
+                    PostDate = borrowingPost.PostDate,
+                    PostStatus = borrowingPost.PostStatus,
+                    UserId = borrowingPost.UserId,
+                    PostType = PostType.BorrowingPost,
+                    ReturnDateB = borrowingPost.ReturnDate,
+                };
+            }
             else if (postDetails is EventTicketPost eventTicketPost)
             {
                 response = new NewPostVM
