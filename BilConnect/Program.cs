@@ -42,9 +42,18 @@ builder.Services.AddScoped<IChatsService, ChatsService>();
 builder.Services.AddScoped<IMessagesService, MessagesService>();
 builder.Services.AddScoped<IClubEventsService, ClubEventsService>();
 builder.Services.AddSingleton<IEmailService, SendGridEmailService>();
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<AppDbContext>()
-    .AddDefaultTokenProviders();
+//Security for account sign in
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+{
+    // Lockout settings
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30); // Lockout for 30 minutes
+    options.Lockout.MaxFailedAccessAttempts = 5; // Max 5 access attempts
+    options.Lockout.AllowedForNewUsers = true;
+
+
+})
+.AddEntityFrameworkStores<AppDbContext>()
+.AddDefaultTokenProviders();
 
 
 //Authentication and Authorization

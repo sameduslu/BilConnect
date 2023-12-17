@@ -48,6 +48,8 @@ namespace BilConnect.Controllers
         public IActionResult Login() => View(new LoginVM());
 
         [HttpPost]
+        [ValidateAntiForgeryToken] 
+
         public async Task<IActionResult> Login(LoginVM loginVM)
         {
             if (!ModelState.IsValid) return View(loginVM);
@@ -68,15 +70,20 @@ namespace BilConnect.Controllers
                     return View(loginVM);
                 }
 
-                var passwordCheck = await _userManager.CheckPasswordAsync(user, loginVM.Password);
-                if (passwordCheck)
+                
+                var result = await _signInManager.PasswordSignInAsync(user, loginVM.Password, false, lockoutOnFailure: true);
+                if (result.Succeeded)
                 {
-                    var result = await _signInManager.PasswordSignInAsync(user, loginVM.Password, false, false);
-                    if (result.Succeeded)
-                    {
-                        return RedirectToAction("Index", "Posts");
-                    }
+                    return RedirectToAction("Index", "Posts");
                 }
+
+                //Locked account
+                if (result.IsLockedOut)
+                {
+                    ModelState.AddModelError(string.Empty, "Your account is locked. Please try again later.");
+                    return View(loginVM);
+                }
+                
 
                 // If password check fails
                 TempData["Error"] = "Wrong credentials. Please, try again!";
@@ -109,8 +116,17 @@ namespace BilConnect.Controllers
             var user = await _userManager.FindByEmailAsync(registerVM.EmailAddress);
             if (user != null)
             {
-                TempData["Error"] = "This email address is already in use";
-                return View(registerVM);
+                if (!user.EmailConfirmed)
+                {
+                    // The email is already registered but not confirmed.
+                    return View("EmailInUse");
+                }
+                else
+                {
+                    // The email is already registered and confirmed.
+                    ModelState.AddModelError(string.Empty, "This email address is already in use.");
+                    return View(registerVM);
+                }
             }
 
             var newUser = new ApplicationUser()
@@ -343,5 +359,89 @@ namespace BilConnect.Controllers
 
             return Json(new { success = false, message = "Please upload a photo." });
         }
+
+
+        public IActionResult ForgotPassword() => View();
+
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordVM model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (user != null && await _userManager.IsEmailConfirmedAsync(user))
+                {
+                    // Generate the reset password token
+                    var resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+                    // Create reset password URL
+                    var callbackUrl = Url.Action("ResetPassword", "Account",
+                         new { token = resetToken, email = user.Email }, protocol: HttpContext.Request.Scheme);
+                    // Send email
+                    await _emailService.SendEmailAsync(user.Email, "Reset Password",
+                        $"Please reset your password by clicking here: <a href='{callbackUrl}'>link</a>");
+
+                    // Redirect user to confirm password reset email sent
+                    return RedirectToAction("ForgotPasswordConfirmation", "Account");
+                }
+
+                // If user not exist just dont care and pretend like you send the mail
+                return RedirectToAction("ForgotPasswordConfirmation", "Account");
+            }
+
+            // Error
+            return View(model);
+        }
+
+        public IActionResult ForgotPasswordConfirmation()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult ResetPassword(string token, string email)
+        {
+            if (token == null || email == null)
+            {
+                ModelState.AddModelError("", "Invalid password reset token");
+            }
+            return View(new ResetPasswordVM { Token = token, Email = email });
+        }
+
+        public IActionResult ResetPasswordConfirmation()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]//Security purpose
+        public async Task<IActionResult> ResetPassword(ResetPasswordVM model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                // No need to reveal user does not exist for security
+                return RedirectToAction("ResetPasswordConfirmation");
+            }
+
+            var result = await _userManager.ResetPasswordAsync(user, model.Token, model.Password);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("ResetPasswordConfirmation");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+
+            return View(model);
+        }
+
     }
 }
