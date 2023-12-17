@@ -11518,19 +11518,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\celal\\.nuget\\packages\\": {}
+    "C:\\Users\\90541\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\BilConnect.csproj",
+      "projectUniqueName": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\BilConnect.csproj",
       "projectName": "BilConnect",
-      "projectPath": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\BilConnect.csproj",
-      "packagesPath": "C:\\Users\\celal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\celal\\Documents\\Bilkent University\\CS319\\BilConnect\\BilConnect\\obj\\",
+      "projectPath": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\BilConnect.csproj",
+      "packagesPath": "C:\\Users\\90541\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\celal\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\90541\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -11600,7 +11601,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }
