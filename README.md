@@ -1,11 +1,42 @@
 # BilConnect
 
+## The Trailer
+[Click Here](http://www.youtube.com/watch?v=Yt_V-SsEhOg&t=1s "BilConnect Trailer")
+
 ## Our Team
 [Umut Bora Çakmak](https://github.com/UBoraCakmak)<br>
 [A. Samed Uslu](https://github.com/sameduslu)<br>
 [Murat Çağrı Kara](https://github.com/Murat-Cagri)<br>
 [Celal S. Türkmen](https://github.com/celaltrk)<br>
 [Emre Akgül](https://github.com/Emre-Akgul)<br>
+
+## Build and Execution Instructions
+In order to ease the deployment process, Bilconnect uses Visual Studio, which is a powerful developer tool that you can use to complete the entire development cycle in one place. It is a comprehensive, integrated development environment (IDE) that you can use to write, edit, debug, and build code and then deploy your app. For MacOS, LocalDB is not supported, meaning the configuration needs to be done using a docker container. Build and execution instructions of the project for Windows are shown.
+
+For building and executing Bilconnect:
+1. You need to install Visual Studio if you do not have it installed on your system. For that, official documentation here can be useful.
+2. Similarly, you need to clone the project’s repository from GitHub to your system using “git clone”.
+3. After cloning, enter the folder named BilConnect. Then, open “BilConnect.sln” with Visual Studio. 
+4. Install following packages through Tools > Nuget Package Manager > Manage Nuget Packages for Solution 
+* Microsoft.AspNetCore.Identity.EntityFrameworkCore v7.0.14
+* Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation v7.0.0
+* Microsoft.EntityFrameworkCore.SqlServer v7.0.14
+* Microsoft.EntityFrameworkCore.Tools v7.0.14
+* Microsoft.VisualStudio.Web.CodeGeneration.Design v7.0.11
+
+For sending verification and forgot password emails SendGrid should be used:
+For avoiding this you can use following users:
+* Admin Name = bilconnect-admin     Password = Ataturk1881@
+* User Mail1     =user1@ug.bilkent.edu.tr Password = TaylorSwift13?
+* User Mail2     =user2@ug.bilkent.edu.tr Password = TaylorSwift13?
+* Club Mail       =bilkentacm@ug.bilkent.edu.tr Password = Taytay*13 
+Run the project using the IIS Express option on Visual Studio.
+
+With this, the project using localhost will work. Server deployment of the project is found [here](https://webapi20231112110715.azurewebsites.net).
+
+In case of a database error, if the following first four instructions are done, follow these steps:
+In the SQL Server Object Explorer, using (localdb)\MSSQLLocalDB > Databases > bilconnect-app-db, delete bilconnect-app-db. 
+Write Package Manager Console Update-Database
 
 ## Our Vision
 BilConnect’s vision is a Bilkent Campus that is connected both online and offline.
