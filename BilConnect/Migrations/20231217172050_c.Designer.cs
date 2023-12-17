@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231217163359_init")]
-    partial class init
+    [Migration("20231217172050_c")]
+    partial class c
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

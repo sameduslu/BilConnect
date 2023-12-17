@@ -119,12 +119,13 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Chats" asp-action="Index">Inbox</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="About">About Us</a>
+                            </li>
                         }
                         
                     </ul>
                 </div>
-
-                <a class="nav-link" asp-controller="Home" asp-action="About">About Us</a>
 
                 @await Html.PartialAsync("_Identity")
 
