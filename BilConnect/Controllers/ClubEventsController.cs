@@ -88,7 +88,8 @@ namespace BilConnect.Controllers
                 GE250_251Status = clubEventDetails.GE250_251Status,
                 ImageURL = clubEventDetails.ImageURL,
                 ownerClubId = clubEventDetails.ownerClubId,
-                Place = clubEventDetails.Place
+                Place = clubEventDetails.Place,
+                CreationTime = clubEventDetails.CreationTime
             };
             return View(clubEvent);
         }
@@ -116,7 +117,7 @@ namespace BilConnect.Controllers
                 return View ("Error");
             }
             await _service.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("SelfClubEvents", "Account");
         }
     }
 }

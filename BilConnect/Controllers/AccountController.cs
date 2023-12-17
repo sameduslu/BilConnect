@@ -74,7 +74,7 @@ namespace BilConnect.Controllers
                     var result = await _signInManager.PasswordSignInAsync(user, loginVM.Password, false, false);
                     if (result.Succeeded)
                     {
-                        return RedirectToAction("Index", "Posts");
+                        return RedirectToAction("Index", "Home");
                     }
                 }
 

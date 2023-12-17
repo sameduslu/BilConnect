@@ -110,6 +110,21 @@ namespace Bilconnect_First_Version.data
                     await userManager.CreateAsync(newAppUser, "Taytay*13");
                     await userManager.AddToRoleAsync(newAppUser, UserRoles.ClubAccount);
                 }
+
+                string appUserEmail5 = "bilkentai@ug.bilkent.edu.tr";
+                var appUser5 = await userManager.FindByEmailAsync(appUserEmail5);
+                if (appUser5 == null)
+                {
+                    var newAppUser = new ApplicationUser()
+                    {
+                        FullName = "Bilkent AI",
+                        UserName = "bilkentai@ug.bilkent.edu.tr",
+                        Email = appUserEmail5,
+                        EmailConfirmed = true
+                    };
+                    await userManager.CreateAsync(newAppUser, "Taytay*13");
+                    await userManager.AddToRoleAsync(newAppUser, UserRoles.ClubAccount);
+                }
             }
         }
     }

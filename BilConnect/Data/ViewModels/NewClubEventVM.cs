@@ -19,5 +19,6 @@ namespace BilConnect.Data.ViewModels
         [Range(0, 1000, ErrorMessage = "Quota must be an integer between 0 - 1000.")]
         public int quota { get; set; }
         public string? ImageURL { get; set; }
+        public DateTime? CreationTime { get; set; }
     }
 }

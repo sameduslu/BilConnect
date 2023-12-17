@@ -19,7 +19,7 @@ using System.Text.Json;
 
 namespace BilConnect.Controllers.PostsControllers
 {
-    [Authorize(Roles = UserRoles.Admin + "," + UserRoles.User + "," + UserRoles.ClubAccount)]
+    [Authorize(Roles = UserRoles.Admin + "," + UserRoles.User)]
 
     public class PostsController : Controller
     {
@@ -342,7 +342,7 @@ namespace BilConnect.Controllers.PostsControllers
             var postDetails = await _service.GetByIdAsync(id);
             if (postDetails == null) return View("NotFound");
             await _service.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("SelfPosts", "Account");
         }
 
         public async Task<IActionResult> Suspend(int id)
