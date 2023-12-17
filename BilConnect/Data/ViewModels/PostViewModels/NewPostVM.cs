@@ -41,10 +41,13 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         public double? PriceS { get; set; }
 
         //Borrowing Post
-        public string? ReturnDateB { get; set; } // Consider if you need [Required] based on logic
+        [Required(ErrorMessage = "Return Date is required.")]
+        public string? ReturnDateB { get; set; } 
 
         //Renting Post
-        public string? ReturnDate { get; set; } // Consider if you need [Required] based on logic
+        [Required(ErrorMessage = "Return Date is required.")]
+
+        public string? ReturnDate { get; set; } 
 
         [Display(Name = "Price")]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a non-negative number.")]
@@ -52,9 +55,13 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         public double? PriceB { get; set; }
 
         //EventTicketPost
-        public string? EventTime { get; set; } // Consider if you need [Required] based on logic
+        [Required(ErrorMessage = "Event Time is required.")]
 
-        public string? EventPlace { get; set; } // Consider if you need [Required] based on logic
+        public string? EventTime { get; set; } 
+
+        [Required(ErrorMessage = "Event Place is required.")]
+
+        public string? EventPlace { get; set; } 
 
         [Display(Name = "Price")]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a non-negative number.")]
@@ -62,20 +69,31 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         public double? PriceE { get; set; }
 
         //LostItemPost
-        public string? Place { get; set; } // Consider if you need [Required] based on logic
+        [Required(ErrorMessage = "Place is required.")]
+        public string? Place { get; set; } 
 
         //Pet adoption post
-        public string? IsFullyVaccinated { get; set; } // Consider if you need [Required] based on logic
-        public int? AgeInMonths { get; set; } // Consider if you need [Required] based on logic
+        [Required(ErrorMessage = "Vaccination info is required.")]
+        public string? IsFullyVaccinated { get; set; } 
+
+        [Display(Name = "Age In Months")]
+        [Range(0, 360, ErrorMessage = "Please input a valid age in months.")]
+        public int? AgeInMonths { get; set; } 
 
         //Travelling Post
-        public string? Origin { get; set; } // Consider if you need [Required] based on logic
-        public string? Destination { get; set; } // Consider if you need [Required] based on logic
-        public string? TravelTime { get; set; } // Consider if you need [Required] based on logic
+        [Required(ErrorMessage = "Origin is required.")]
+        public string? Origin { get; set; } 
+
+        [Required(ErrorMessage = "Destination is required.")]
+        public string? Destination { get; set; } 
+
+        [Required(ErrorMessage = "Travel time is required.")]
+
+        public string? TravelTime { get; set; } 
 
 
         [Range(0, double.MaxValue, ErrorMessage = "Quota must be a non-negative number.")]
-        public int? Quota { get; set; } // Consider if you need [Required] based on logic
+        public int? Quota { get; set; }
 
         [Display(Name = "Price")]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a non-negative number.")]
