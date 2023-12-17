@@ -41,6 +41,9 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         public double? PriceS { get; set; }
 
         //Borrowing Post
+        public string? ReturnDateB { get; set; } // Consider if you need [Required] based on logic
+
+        //Renting Post
         public string? ReturnDate { get; set; } // Consider if you need [Required] based on logic
 
         [Display(Name = "Price")]

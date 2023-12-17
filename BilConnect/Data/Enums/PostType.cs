@@ -9,6 +9,7 @@
         FoundItemPost,
         LostItemPost,
         PetAdoptionPost,
-        TravellingPost
+        TravellingPost,
+        RentingPost
     }
 }

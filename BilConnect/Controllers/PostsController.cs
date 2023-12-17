@@ -112,12 +112,12 @@ namespace BilConnect.Controllers.PostsControllers
             }
 
             // Bypass Price validation for non-selling posts
-            if (post.PostType != PostType.SellingPost && post.PostType != PostType.BorrowingPost && post.PostType != PostType.EventTicketPost && post.PostType != PostType.TravellingPost)
+            if (post.PostType != PostType.SellingPost && post.PostType != PostType.RentingPost && post.PostType != PostType.EventTicketPost && post.PostType != PostType.TravellingPost)
             {
                 ModelState.Remove("Price");
             }
 
-            if (post.PostType != PostType.BorrowingPost)
+            if (post.PostType != PostType.RentingPost)
             {
                 ModelState.Remove("ReturnDate");
             }
@@ -214,20 +214,20 @@ namespace BilConnect.Controllers.PostsControllers
                     PostType = PostType.DonationPost
                 };
             }
-            else if (postDetails is BorrowingPost borrowingPost)
+            else if (postDetails is RentingPost rentingPost)
             {
                 response = new NewPostVM
                 {
-                    Id = borrowingPost.Id,
-                    Title = borrowingPost.Title,
-                    Description = borrowingPost.Description,
-                    ImageURL = borrowingPost.ImageURL,
-                    PostDate = borrowingPost.PostDate,
-                    PostStatus = borrowingPost.PostStatus,
-                    UserId = borrowingPost.UserId,
-                    PostType = PostType.BorrowingPost,
-                    PriceB = borrowingPost.Price,
-                    ReturnDate = borrowingPost.ReturnDate,
+                    Id = rentingPost.Id,
+                    Title = rentingPost.Title,
+                    Description = rentingPost.Description,
+                    ImageURL = rentingPost.ImageURL,
+                    PostDate = rentingPost.PostDate,
+                    PostStatus = rentingPost.PostStatus,
+                    UserId = rentingPost.UserId,
+                    PostType = PostType.RentingPost,
+                    PriceB = rentingPost.Price,
+                    ReturnDate = rentingPost.ReturnDate,
                 };
             }
             else if (postDetails is EventTicketPost eventTicketPost)

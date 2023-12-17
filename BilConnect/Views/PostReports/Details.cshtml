@@ -91,16 +91,16 @@
                     {
 
                     }
-                    else if (Model.ReportedPost is BorrowingPost borrowingPost)
+                    else if (Model.ReportedPost is RentingPost rentingPost)
                     {
                         <div class="form-group">
                             <label>Price</label>
-                            <input class="form-control" value="@borrowingPost.Price" readonly />
+                            <input class="form-control" value="@rentingPost.Price" readonly />
                         </div>
 
                         <div class="form-group">
                             <label>Return Date</label>
-                            <input class="form-control" value="@borrowingPost.ReturnDate" readonly />
+                            <input class="form-control" value="@rentingPost.ReturnDate" readonly />
                         </div>
                     }
                     else if (Model.ReportedPost is EventTicketPost eventTicketPost)

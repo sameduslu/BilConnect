@@ -33,15 +33,15 @@ namespace BilConnect.Data.Services.PostServices
             {
                 newPost = new DonationPost();
             }
-            else if (viewModel.PostType == PostType.BorrowingPost)
+            else if (viewModel.PostType == PostType.RentingPost)
             {
-                var borrowingPost = new BorrowingPost
+                var rentingPost = new RentingPost
                 {
                     Price = viewModel.PriceB ?? 0,
                     ReturnDate = viewModel.ReturnDate
                 };
 
-                newPost = borrowingPost;
+                newPost = rentingPost;
             }
             else if (viewModel.PostType == PostType.EventTicketPost)
             {
@@ -90,6 +90,15 @@ namespace BilConnect.Data.Services.PostServices
                 travellingPost.Quota = viewModel.Quota ?? 0;
 
                 newPost = travellingPost;
+            }
+            else if (viewModel.PostType == PostType.BorrowingPost)
+            {
+                var borrowingPost = new BorrowingPost
+                {
+                    ReturnDate = viewModel.ReturnDate
+                };
+
+                newPost = borrowingPost;
             }
             else
             {

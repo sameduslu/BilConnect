@@ -267,9 +267,9 @@
                                     {
                                         <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Volunteer</a>
                                     }
-                                    else if (item is BorrowingPost borrowingPost)
+                                    else if (item is RentingPost rentingPost)
                                     {
-                                        <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Borrow</a>
+                                        <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Rent</a>
                                     }
                                     else if (item is EventTicketPost eventTicketPost)
                                     {

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231217122033_init")]
+    [Migration("20231217153346_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -476,20 +476,6 @@ namespace BilConnect.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("BilConnect.Models.PostModels.BorrowingPost", b =>
-                {
-                    b.HasBaseType("BilConnect.Models.PostModels.Post");
-
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
-
-                    b.Property<string>("ReturnDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.ToTable("BorrowingPost", (string)null);
-                });
-
             modelBuilder.Entity("BilConnect.Models.PostModels.DonationPost", b =>
                 {
                     b.HasBaseType("BilConnect.Models.PostModels.Post");
@@ -545,6 +531,20 @@ namespace BilConnect.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.ToTable("PetAdoptionPost", (string)null);
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.RentingPost", b =>
+                {
+                    b.HasBaseType("BilConnect.Models.PostModels.Post");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<string>("ReturnDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("RentingPost", (string)null);
                 });
 
             modelBuilder.Entity("BilConnect.Models.PostModels.SellingPost", b =>
@@ -729,15 +729,6 @@ namespace BilConnect.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("BilConnect.Models.PostModels.BorrowingPost", b =>
-                {
-                    b.HasOne("BilConnect.Models.PostModels.Post", null)
-                        .WithOne()
-                        .HasForeignKey("BilConnect.Models.PostModels.BorrowingPost", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("BilConnect.Models.PostModels.DonationPost", b =>
                 {
                     b.HasOne("BilConnect.Models.PostModels.Post", null)
@@ -779,6 +770,15 @@ namespace BilConnect.Migrations
                     b.HasOne("BilConnect.Models.PostModels.Post", null)
                         .WithOne()
                         .HasForeignKey("BilConnect.Models.PostModels.PetAdoptionPost", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.RentingPost", b =>
+                {
+                    b.HasOne("BilConnect.Models.PostModels.Post", null)
+                        .WithOne()
+                        .HasForeignKey("BilConnect.Models.PostModels.RentingPost", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

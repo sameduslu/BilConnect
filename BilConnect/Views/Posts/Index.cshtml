@@ -264,8 +264,8 @@
             <label for="DonationPost">Donation Posts</label>
         </div>
         <div class="filter-item">
-            <input type="checkbox" id="BorrowingPost" class="filter-checkbox" onchange="applyFiltersAndSearch()">
-            <label for="BorrowingPost">Borrowing Posts</label>
+            <input type="checkbox" id="RentingPost" class="filter-checkbox" onchange="applyFiltersAndSearch()">
+            <label for="RentingPost">Renting Posts</label>
         </div>
         <div class="filter-item">
             <input type="checkbox" id="EventTicketPost" class="filter-checkbox" onchange="applyFiltersAndSearch()">
@@ -328,9 +328,9 @@
                                 {
                                     <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Volunteer</a>
                                 }
-                                else if (item is BorrowingPost borrowingPost)
+                                else if (item is RentingPost rentingPost)
                                 {
-                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Borrow</a>
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Rent</a>
                                 }
                                 else if (item is EventTicketPost eventTicketPost)
                                 {

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231216223823_midget")]
-    partial class midget
+    [Migration("20231217155148_addBorrow")]
+    partial class addBorrow
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,9 @@ namespace BilConnect.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("CreationTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -189,6 +192,9 @@ namespace BilConnect.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -474,9 +480,6 @@ namespace BilConnect.Migrations
                 {
                     b.HasBaseType("BilConnect.Models.PostModels.Post");
 
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
-
                     b.Property<string>("ReturnDate")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -539,6 +542,20 @@ namespace BilConnect.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.ToTable("PetAdoptionPost", (string)null);
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.RentingPost", b =>
+                {
+                    b.HasBaseType("BilConnect.Models.PostModels.Post");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<string>("ReturnDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("RentingPost", (string)null);
                 });
 
             modelBuilder.Entity("BilConnect.Models.PostModels.SellingPost", b =>
@@ -773,6 +790,15 @@ namespace BilConnect.Migrations
                     b.HasOne("BilConnect.Models.PostModels.Post", null)
                         .WithOne()
                         .HasForeignKey("BilConnect.Models.PostModels.PetAdoptionPost", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BilConnect.Models.PostModels.RentingPost", b =>
+                {
+                    b.HasOne("BilConnect.Models.PostModels.Post", null)
+                        .WithOne()
+                        .HasForeignKey("BilConnect.Models.PostModels.RentingPost", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

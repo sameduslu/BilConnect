@@ -79,8 +79,9 @@
                                 <label asp-for="PostType" class="control-label">Post Type</label>
                                 <select asp-for="PostType" class="form-control" id="PostType">
                                     <option value="@PostType.SellingPost">Selling Post</option>
-                                    <option value="@PostType.DonationPost">Donation Post</option>
                                     <option value="@PostType.BorrowingPost">Borrowing Post</option>
+                                    <option value="@PostType.DonationPost">Donation Post</option>
+                                    <option value="@PostType.RentingPost">Renting Post</option>
                                     <option value="@PostType.EventTicketPost">Event Ticket Post</option>
                                     <option value="@PostType.FoundItemPost">Found Item Post</option>
                                     <option value="@PostType.LostItemPost">Lost Item Post</option>
@@ -134,8 +135,8 @@
                             </div>
 
 
-                            <!-- Borrowing Post Fields -->
-                            <div id="borrowingPostFields" class="conditional-fields" style="display:none">
+                            <!-- Renting Post Fields -->
+                            <div id="rentingPostFields" class="conditional-fields" style="display:none">
                                 <!-- Price field -->
                                 <div class="form-group">
                                     <label asp-for="PriceB" class="control-label"></label>
@@ -257,6 +258,16 @@
                                 </div>
                             </div>
 
+                            <!-- Borrowing Post Fields -->
+                            <div id="borrowingPostFields" class="conditional-fields" style="display:none">
+                                <!-- Return Date field -->
+                                <div class="form-group">
+                                    <label asp-for="ReturnDateB" class="control-label">Return Date</label>
+                                    <input asp-for="ReturnDateB" class="form-control" type="text" />
+                                    <span asp-validation-for="ReturnDateB" class="text-danger"></span>
+                                </div>
+                            </div>
+
                             <!-- Submit Button -->
                             <div class="form-group">
                                 <input type="submit" value="Create" class="btn btn-secondary" />
@@ -282,8 +293,8 @@
 
                 if (selectedType === '@(PostType.SellingPost)') {
                     $('#sellingPostFields').show();
-                } else if (selectedType === '@(PostType.BorrowingPost)') {
-                    $('#borrowingPostFields').show();
+                } else if (selectedType === '@(PostType.RentingPost)') {
+                    $('#rentingPostFields').show();
                 } else if (selectedType === '@(PostType.EventTicketPost)') {
                     $('#eventTicketPostFields').show();
                 } else if (selectedType === '@(PostType.LostItemPost)') {
@@ -292,6 +303,8 @@
                     $('#petAdoptionPostFields').show();
                 } else if (selectedType === '@(PostType.TravellingPost)') {
                     $('#travellingPostFields').show();
+                } else if (selectedType === '@(PostType.BorrowingPost)') {
+                    $('#borrowingPostFields').show();
                 }
 
             }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BilConnect.Migrations
 {
     /// <inheritdoc />
-    public partial class midget : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -175,7 +175,8 @@ namespace BilConnect.Migrations
                     GE250_251Points = table.Column<int>(type: "int", nullable: true),
                     GE250_251Status = table.Column<bool>(type: "bit", nullable: false),
                     Place = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -203,7 +204,8 @@ namespace BilConnect.Migrations
                     GE250_251Status = table.Column<bool>(type: "bit", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     quota = table.Column<int>(type: "int", nullable: false),
-                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreationTime = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -238,25 +240,6 @@ namespace BilConnect.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "BorrowingPost",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false),
-                    Price = table.Column<double>(type: "float", nullable: false),
-                    ReturnDate = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_BorrowingPost", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_BorrowingPost_Posts_Id",
-                        column: x => x.Id,
-                        principalTable: "Posts",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -406,6 +389,25 @@ namespace BilConnect.Migrations
                     table.ForeignKey(
                         name: "FK_PostReports_Posts_ReportedPostId",
                         column: x => x.ReportedPostId,
+                        principalTable: "Posts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "RentingPost",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<double>(type: "float", nullable: false),
+                    ReturnDate = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RentingPost", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_RentingPost_Posts_Id",
+                        column: x => x.Id,
                         principalTable: "Posts",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -588,9 +590,6 @@ namespace BilConnect.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "BorrowingPost");
-
-            migrationBuilder.DropTable(
                 name: "ClubEvents");
 
             migrationBuilder.DropTable(
@@ -616,6 +615,9 @@ namespace BilConnect.Migrations
 
             migrationBuilder.DropTable(
                 name: "PostReports");
+
+            migrationBuilder.DropTable(
+                name: "RentingPost");
 
             migrationBuilder.DropTable(
                 name: "SellingPosts");

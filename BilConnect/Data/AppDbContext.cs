@@ -76,13 +76,13 @@ namespace BilConnect.Data
             // Configure the SellingPost to be a separate table
             modelBuilder.Entity<SellingPost>().ToTable("SellingPosts");
             modelBuilder.Entity<DonationPost>().ToTable("DonationPosts");
-            modelBuilder.Entity<BorrowingPost>().ToTable("BorrowingPost");
+            modelBuilder.Entity<RentingPost>().ToTable("RentingPost");
             modelBuilder.Entity<EventTicketPost>().ToTable("EventTicketPost");
             modelBuilder.Entity<FoundItemPost>().ToTable("FoundItemPost");
             modelBuilder.Entity<LostItemPost>().ToTable("LostItemPost");
             modelBuilder.Entity<PetAdoptionPost>().ToTable("PetAdoptionPost");
             modelBuilder.Entity<TravellingPost>().ToTable("TravellingPost");
-
+            modelBuilder.Entity<BorrowingPost>().ToTable("BorrowingPost");
         }
 
         public DbSet<Post> Posts { get; set; }
