@@ -38,7 +38,9 @@ namespace BilConnect.Controllers
             _hostingEnvironment = hostingEnvironment;
         }
 
-
+        /*
+         * This method returns all the users from the database.
+         */
         public async Task<IActionResult> Users()
         {
             var users = await _service.GetAllAsync();
@@ -50,7 +52,11 @@ namespace BilConnect.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken] 
-
+        /* It attempts to find a user with the email address provided in the loginVM object. If no user is found, 
+         * it sets an error message in TempData and returns the login view. If a user is found, it checks if the 
+         * user's email is confirmed. If it's not, it sets an error message in TempData and returns the login view.
+         * In any shape or form if sign in fails, it sets an error message in TempData and returns the login view.
+         */
         public async Task<IActionResult> Login(LoginVM loginVM)
         {
             if (!ModelState.IsValid) return View(loginVM);
@@ -98,8 +104,11 @@ namespace BilConnect.Controllers
 
         public IActionResult Register() => View(new RegisterVM());
 
-
-
+        /* generates a callback URL using the Url.Action method. The callback URL is constructed with the "ConfirmEmail" 
+         * action in the "Account" controller, and includes the email and token parameters. _emailService.SendEmailAsync
+         * method to send the email. The SendEmailAsync method takes the email parameter as the recipient's email address,
+         * "Confirm Your Email" as the email subject, and a formatted string as the email body
+         */
         private async Task SendEmailConfirmationAsync(string email, string token)
         {
             var callbackUrl = Url.Action("ConfirmEmail", "Account",
@@ -107,8 +116,16 @@ namespace BilConnect.Controllers
             await _emailService.SendEmailAsync(email, "Confirm Your Email",
                                                $"Please confirm your account by clicking the following link: <a href='{callbackUrl}'>Confirm Email</a>.");
         }
-
-
+        /* It attempts to find a user with the email address provided in the registerVM object. 
+         * If a user is found and their email is not confirmed, it returns a view named "EmailInUse". 
+         * If the user's email is confirmed, it adds an error to the ModelState and returns the 
+         * registration view with the current registerVM object. If no user is found, it creates a 
+         * new ApplicationUser object with the details provided in the registerVM object and attempts
+         * to create a new user with these details and the password provided in the registerVM object.
+        * If the user creation is successful, it adds the new user to the "User" role, generates an 
+        * email confirmation token for the new user, sends an email confirmation with this token, and 
+        * redirects to a page named "CheckYourEmail"
+        */
         [HttpPost]
         public async Task<IActionResult> Register(RegisterVM registerVM)
         {
@@ -165,7 +182,13 @@ namespace BilConnect.Controllers
         }
 
 
-
+        /* 
+         *         * The ConfirmEmail method takes the email and token parameters. It attempts to find a user with the email address 
+         *                 * provided in the email parameter. If no user is found, it returns a view named "VerificationError". If a user is 
+         *                         * found, it attempts to confirm the user's email with the token provided in the token parameter. If the email 
+         *                                 * confirmation is successful, it returns a view named "VerificationSuccess". If the email confirmation fails, 
+         *                                         * it returns a view named "VerificationError".
+         *                                                 * */
         [HttpGet]
         public async Task<IActionResult> ConfirmEmail(string email, string token)
         {
@@ -184,6 +207,10 @@ namespace BilConnect.Controllers
             return View("VerificationError");
         }
 
+        
+         /* The Logout method calls the SignOutAsync method of the SignInManager class to sign out the user. 
+         * It then redirects the user to the "Index" action of the "Home" controller.
+         * */
         [HttpPost]
         public async Task<IActionResult> Logout()
         {
@@ -196,7 +223,11 @@ namespace BilConnect.Controllers
             return View();
         }
 
-
+         
+         /* The SelfPosts method retrieves the current user's ID from the User object. It then calls the GetByIdAsync method 
+          * of the application users service to retrieve the user's details and posts. If the user or their posts are not found, 
+          * it returns a view named "NotFound". If the user and their posts are found, it returns a view with the userWithPosts 
+          * object as the model.*/
         public async Task<IActionResult> SelfPosts()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); 
@@ -211,6 +242,12 @@ namespace BilConnect.Controllers
             return View(userWithPosts);
         }
 
+        /* 
+         * The SelfClubEvents method retrieves the current user's ID from the User object. It then calls the GetByIdAsync method of the 
+         * application users service to retrieve the user's details and club events. If the user or their club events are not found, 
+         *  it returns a view named "NotFound". If the user and their club events are found, it returns a view with the 
+         *  userWithClubEvents object as the model.
+         *  */
         public async Task<IActionResult> SelfClubEvents()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -223,7 +260,12 @@ namespace BilConnect.Controllers
 
             return View(userWithClubEvents);
         }
-
+        /* 
+         * The SelfReports method retrieves the current user's ID from the User object. It then calls the GetByIdAsync method of the 
+         * application users service to retrieve the user's details and reports. If the user or their reports are not found, 
+         * it returns a view named "NotFound". If the user and their reports are found, it returns a view with the 
+         * userWithReports object as the model.
+         * */
         public async Task<IActionResult> SelfReports()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Get the current user's ID
@@ -237,14 +279,16 @@ namespace BilConnect.Controllers
 
             return View(userWithPosts); 
         }
-
-
         public IActionResult CheckYourEmail()
         {
             return View();
         }
 
-
+        /*
+         * If a user is found, it sets the IsSuspended property of the user to true, indicating that the user is suspended.
+         * It then attempts to update the user in the database with the UpdateAsync method of the _userManager object. If 
+         * the update is successful, it redirects to the "Users" action. This is a view that lists all users.
+        */
         public async Task<IActionResult> SuspendUser(string userId)
         {
             var user = await _userManager.FindByIdAsync(userId);
@@ -265,7 +309,11 @@ namespace BilConnect.Controllers
             // Handle errors here
             return View("Error"); // Replace with appropriate error handling
         }
-
+        /*
+         * If a user is found, it sets the IsSuspended property of the user to false, indicating that the user is unsuspended.
+         * It then attempts to update the user in the database with the UpdateAsync method of the _userManager object. If 
+         * the update is successful, it redirects to the "Users" action. This could be a view that lists all users.
+         * */
         public async Task<IActionResult> UnsuspendUser(string userId)
         {
             var user = await _userManager.FindByIdAsync(userId);
@@ -287,7 +335,13 @@ namespace BilConnect.Controllers
             return View("Error"); // Replace with appropriate error handling
         }
 
-
+        /*
+         *         * The Profile method takes the id parameter. If the id parameter is null, it retrieves the current user's ID from the User object. 
+         *                 * If the id parameter is not null, it sets the userId variable to the id parameter. It then attempts to find a user with the ID 
+         *                         * provided in the userId variable. If no user is found, it returns a view named "Error". If a user is found, it calls the 
+         *                                 * GetAllAsync method of the posts service to retrieve all posts made by the user. It then creates a UserProfileVM object with 
+         *                                         * the user and posts retrieved from the database. It then returns a view with the userProfileVM object as the model.
+         *                                                 * */
         public async Task<IActionResult> Profile(string? id)
         {
             string userId;
@@ -325,7 +379,12 @@ namespace BilConnect.Controllers
 
             return View(viewModel);
         }
-
+        /*
+         *         * The UpdateProfile method takes the id parameter. If the id parameter is null, it retrieves the current user's ID from the User object. 
+         *                 * If the id parameter is not null, it sets the userId variable to the id parameter. It then attempts to find a user with the ID provided 
+         *                         * in the userId variable. If no user is found, it returns a view named "Error". If a user is found, it creates a UserProfileVM object with 
+         *                                 * the user retrieved from the database. It then returns a view with the userProfileVM object as the model.
+         *                                         * */
         [HttpPost]
         public async Task<IActionResult> UpdateProfilePicture(IFormFile photoUpload)
         {
@@ -363,7 +422,12 @@ namespace BilConnect.Controllers
 
 
         public IActionResult ForgotPassword() => View();
-
+        /*
+         *         * The ForgotPassword method takes the model parameter. If the ModelState is not valid, it returns the ForgotPassword view with the model as the model. 
+         *                 * If the ModelState is valid, it attempts to find a user with the email address provided in the model. If no user is found, it returns the ForgotPasswordConfirmation view. 
+         *                         * If a user is found, it generates a password reset token for the user and creates a callback URL with the token and email address. It then sends an email to the user with the callback URL. 
+         *                                 * It then redirects to the ForgotPasswordConfirmation action of the Account controller.
+         *                                         * */
         [HttpPost]
         public async Task<IActionResult> ForgotPassword(ForgotPasswordVM model)
         {
@@ -399,6 +463,10 @@ namespace BilConnect.Controllers
             return View();
         }
 
+        /*
+         * The ResetPassword method takes the token and email parameters. If the token or email parameters are null, it adds an error to the ModelState and returns the ResetPassword view with the model. 
+         * If the token and email parameters are not null, it creates a ResetPasswordVM object with the token and email parameters. It then returns the ResetPassword view with the resetPasswordVM object as the model.
+         * */
         [HttpGet]
         public IActionResult ResetPassword(string token, string email)
         {
@@ -408,12 +476,17 @@ namespace BilConnect.Controllers
             }
             return View(new ResetPasswordVM { Token = token, Email = email });
         }
-
+        
         public IActionResult ResetPasswordConfirmation()
         {
             return View();
         }
-
+        /*
+         *         * The ResetPassword method takes the model parameter. If the ModelState is not valid, it returns the ResetPassword view with the model as the model. 
+         *                 * If the ModelState is valid, it attempts to find a user with the email address provided in the model. If no user is found, it returns the ResetPasswordConfirmation view. 
+         *                         * If a user is found, it attempts to reset the user's password with the token and password provided in the model. If the password reset is successful, it returns the ResetPasswordConfirmation view. 
+         *                                 * If the password reset fails, it adds an error to the ModelState and returns the ResetPassword view with the model as the model.
+         *                                         * */
         [HttpPost]
         [ValidateAntiForgeryToken]//Security purpose
         public async Task<IActionResult> ResetPassword(ResetPasswordVM model)
@@ -444,7 +517,11 @@ namespace BilConnect.Controllers
             return View(model);
         }
 
-
+        /*
+         *         * The ListUsers method retrieves all users from the database. It then creates three lists of users: adminUsers, clubAccountUsers, and regularUsers. 
+         *                 * It then loops through all users and adds them to the appropriate list based on their role. It then creates a UsersViewModel object with the three lists. 
+         *                         * It then returns the ListUsers view with the usersViewModel object as the model.
+         *                                 * */
         public async Task<IActionResult> ListUsers()
         {
             var allUsers = await _userManager.Users.ToListAsync();
@@ -478,13 +555,21 @@ namespace BilConnect.Controllers
 
             return View(viewModel);
         }
-
+        /*
+         * The ChangePassword method returns the ChangePassword view.
+         *  */
         public IActionResult ChangePassword()
         {
             var model = new ChangePasswordVM();
             return View();
         }
-
+        /*
+         * The ChangePassword method takes the model parameter. If the ModelState is not valid, it returns the ChangePassword view with the model as the model. 
+         *  If the ModelState is valid, it attempts to find the current user with the GetUserAsync method of the _userManager object. 
+         *  If no user is found, it redirects to the Login action of the Account controller. If a user is found, it attempts to change the user's password with the ChangePasswordAsync method of the _userManager object. 
+         *  If the password change is successful, it refreshes the user's sign-in cookie with the RefreshSignInAsync method of the _signInManager object. It then redirects to the Index action of the Home controller. 
+         *  If the password change fails, it adds an error to the ModelState and returns the ChangePassword view with the model as the model.
+         *  */
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ChangePassword(ChangePasswordVM model)
