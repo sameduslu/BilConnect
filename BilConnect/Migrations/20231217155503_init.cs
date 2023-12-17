@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BilConnect.Migrations
 {
     /// <inheritdoc />
-    public partial class midget : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -168,14 +168,15 @@ namespace BilConnect.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     startTime = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    endTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Duration = table.Column<int>(type: "int", nullable: false),
                     quota = table.Column<int>(type: "int", nullable: false),
                     ownerClubId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     GE250_251Points = table.Column<int>(type: "int", nullable: true),
                     GE250_251Status = table.Column<bool>(type: "bit", nullable: false),
                     Place = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -197,13 +198,14 @@ namespace BilConnect.Migrations
                     ownerClubId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     Place = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    startTime = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    endTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    startTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Duration = table.Column<int>(type: "int", nullable: false),
                     GE250_251Points = table.Column<int>(type: "int", nullable: true),
                     GE250_251Status = table.Column<bool>(type: "bit", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     quota = table.Column<int>(type: "int", nullable: false),
-                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreationTime = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {

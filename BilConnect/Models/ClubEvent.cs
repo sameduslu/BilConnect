@@ -16,8 +16,9 @@ namespace BilConnect.Models
         public DateTime? startTime { get; set; }
         [DisplayName ("Ending Time")]
         [DataType(DataType.DateTime)]
-        public DateTime? endTime { get; set; }
+        public int Duration { get; set; }
         [DisplayName("Quota")]
+        [Range(0, 1000, ErrorMessage = "Quota must be an integer between 0 - 1000.")]
         public int quota { get; set; }
         [ForeignKey("ownerClubId")]
         public string ownerClubId { get; set; }

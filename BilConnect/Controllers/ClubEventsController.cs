@@ -65,10 +65,24 @@ namespace BilConnect.Controllers
                 ModelState.AddModelError("photoUpload", "Please upload a photo.");
             }
 
+            if (!ModelState.IsValid)
+            {
+                foreach (var modelStateKey in ModelState.Keys)
+                {
+                    var modelStateVal = ModelState[modelStateKey];
+                    foreach (var error in modelStateVal.Errors)
+                    {
+                        // Log these details or return them in the response
+                        var errorMessage = error.ErrorMessage;
+                        // You can log this or return it as part of your response
+                    }
+                }
+                return View("Create", clubEvent);
+            }
+
             await _service.AddNewClubEventAsync(clubEvent);
             return RedirectToAction(nameof(Index));
         }
-
         public async Task<IActionResult> Edit (int id)
         {
             var clubEventDetails = await _service.GetByIdAsync(id);
@@ -80,7 +94,7 @@ namespace BilConnect.Controllers
                 Id = clubEventDetails.Id,
                 quota = clubEventDetails.quota,
                 startTime = clubEventDetails.startTime,
-                endTime = clubEventDetails.endTime,
+                Duration = clubEventDetails.Duration,
                 ownerClub = clubEventDetails.ownerClub,
                 Name = clubEventDetails.Name,
                 Description = clubEventDetails.Description,
@@ -94,19 +108,37 @@ namespace BilConnect.Controllers
             return View(clubEvent);
         }
 
-        public async Task<IActionResult> ProcessEdit (int id, NewClubEventVM clubEvent)
+        public async Task<IActionResult> ProcessEdit (int id, NewClubEventVM clubEvent, IFormFile? photoUpload)
         {
+            if (photoUpload != null && photoUpload.Length > 0)
+            {
+                var imageName = Guid.NewGuid().ToString() + Path.GetExtension(photoUpload.FileName); // Generate a unique name
+                var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "images", imageName); // Save to /wwwroot/images/
+
+                using (var stream = new FileStream(imagePath, FileMode.Create))
+                {
+                    await photoUpload.CopyToAsync(stream);
+                }
+
+                clubEvent.ImageURL = Url.Content("~/images/" + imageName); // Update the ImageURL property
+            }
+            else
+            {
+                var clubEventDetails = await _service.GetByIdAsync(id);
+                clubEvent.ImageURL = clubEventDetails.ImageURL;
+            }
             if (id != clubEvent.Id)
             {
                 return View ("Error");
             }
+            //ModelState.Remove("photoUpload");
             if (!ModelState.IsValid)
             {
-                return View (clubEvent);
+                return View ("Edit", clubEvent);
             }
             clubEvent.ownerClubId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             await _service.UpdateClubEventAsync (clubEvent);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("SelfClubEvents", "Account");
         }
 
         public async Task<IActionResult> Delete (int id)

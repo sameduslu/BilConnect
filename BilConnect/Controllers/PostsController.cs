@@ -325,15 +325,52 @@ namespace BilConnect.Controllers.PostsControllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, NewPostVM post)
+        public async Task<IActionResult> Edit(int id, NewPostVM post, IFormFile? photoUpload, List<IFormFile>? additionalImagesUpload)
         {
+            var postDetails = await _service.GetByIdAsync(id);
+            post.AdditionalImages = postDetails.AdditionalImages;
+            post.ImageURL = postDetails.ImageURL;
+            if (photoUpload != null && photoUpload.Length > 0)
+            {
+                var imageName = Guid.NewGuid().ToString() + Path.GetExtension(photoUpload.FileName); // Generate a unique name
+                var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "images", imageName); // Save to /wwwroot/images/
+
+                using (var stream = new FileStream(imagePath, FileMode.Create))
+                {
+                    await photoUpload.CopyToAsync(stream);
+                }
+                post.AdditionalImages.Add(post.ImageURL);
+                post.ImageURL = Url.Content("~/images/" + imageName); // Update the ImageURL property
+            }      
+            
+
+            // Handle additional images
+            if (additionalImagesUpload != null && additionalImagesUpload.Count > 0)
+            {
+                foreach (var file in additionalImagesUpload)
+                {
+                    if (file.Length > 0)
+                    {
+                        var imageName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                        var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "images", imageName);
+
+                        using (var stream = new FileStream(imagePath, FileMode.Create))
+                        {
+                            await file.CopyToAsync(stream);
+                        }
+
+                        post.AdditionalImages.Add(Url.Content("~/images/" + imageName));
+                    }
+                }
+            }
+
             if (id != post.Id) return View("NotFound");
             if (!ModelState.IsValid)
             {
                 return View(post);
             }
             await _service.UpdatePostAsync(post);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("SelfPosts", "Account");
         }
 
         [HttpPost]

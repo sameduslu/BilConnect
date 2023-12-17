@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231217122033_init")]
+    [Migration("20231217155503_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -40,6 +40,9 @@ namespace BilConnect.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Duration")
+                        .HasColumnType("int");
+
                     b.Property<int?>("GE250_251Points")
                         .HasColumnType("int");
 
@@ -57,9 +60,6 @@ namespace BilConnect.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("endTime")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("ownerClubId")
                         .HasColumnType("nvarchar(450)");
 
@@ -67,6 +67,7 @@ namespace BilConnect.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("startTime")
+                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -200,6 +201,9 @@ namespace BilConnect.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Duration")
+                        .HasColumnType("int");
+
                     b.Property<int?>("GE250_251Points")
                         .HasColumnType("int");
 
@@ -217,9 +221,6 @@ namespace BilConnect.Migrations
                     b.Property<string>("Place")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("endTime")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("ownerClubId")
                         .IsRequired()
