@@ -68,6 +68,21 @@ Users can engage with messages by liking or disliking them, influencing their vi
 ##### Personalized Feed: 
 The platform offers a personalized feed highlighting popular and controversial comments from the past 24 hours, fostering engagement within the community.
 
+## Build and Execution Instructions
+In order to ease the deployment process, Bilconnect uses Visual Studio, which is a powerful developer tool that you can use to complete the entire development cycle in one place. It is a comprehensive, integrated development environment (IDE) that you can use to write, edit, debug, and build code and then deploy your app. For MacOS, LocalDB is not supported, meaning the configuration needs to be done using a docker container. Build and execution instructions of the project for Windows are shown.
+
+For building and executing Bilconnect:
+1. You need to install Visual Studio if you do not have it installed on your system. For that, official documentation [here](https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022) can be useful.
+2. Similarly, you need to clone the project’s repository from GitHub to your system using “git clone”.
+3. After cloning, enter the folder named BilConnect. Then, open “BilConnect.sln” with Visual Studio. 
+4. Using Tools > Nuget Packet Manager > Package Manager Console, write the Package Manager Console Add-Migration <migration_name>
+5. Stop the project by pressing Shift+F5 in Visual Studio.
+
+With these steps, the project will work on localhost. Server deployment of the project can be found [here](https://www.futuredeployedlink.gov/).
+
+In case of a database error, if the following first four instructions are done, follow these steps:
+1. In the SQL Server Object Explorer, using (localdb)\MSSQLLocalDB > Databases > bilconnect-app-db, delete bilconnect-app-db. 
+2. Write Package Manager Console Update-Database
 
 ## Selling Points
 Bilconnect is specifically designed for Bilkent University's campus. Since the platform is exclusively for the Bilkent community, there's a high level of trust. Users know they are interacting with fellow students or staff, reducing the risk of scams or fraud. In addition, exclusiveness allows faster transaction times, and even better, there is no need to worry about shipping and delivery fees. 
