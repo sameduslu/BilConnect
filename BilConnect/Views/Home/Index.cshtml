@@ -7,25 +7,26 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
         padding: 0;
+        background: rgb(240,224,209);
         background: linear-gradient(180deg, rgba(240,224,209,1) 0%, rgba(249,175,105,1) 100%);
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
         min-height: 100vh;
+        align-content: center;
     }
 
-    .logo {
-        max-width: 400px; /* Adjust the size as needed */
-        margin-bottom: 50px;
+    .welcome-text {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333; /* Choose a color that fits your design */
+        margin-top: 20px;
     }
 
     .video-container {
         position: relative;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        padding-top: 25px;
-        height: 0;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 aspect ratio */
     }
 
         .video-container iframe {
@@ -36,14 +37,10 @@
             height: 100%;
         }
 </style>
+<div class="welcome-text">
+    <p>Welcome to BilConnect!</p>
+</div>
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/Yt_V-SsEhOg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<div class="text-center">
-    <!-- <img src="~/staticimages/Bilconnectlogo.jpg" alt="BilConnect Logo" class="logo">-->
-
-    <p>WELCOME TO BILCONNECT</p>
-
-
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/Yt_V-SsEhOg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
 </div>

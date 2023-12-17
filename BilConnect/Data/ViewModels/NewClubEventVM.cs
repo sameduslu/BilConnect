@@ -27,7 +27,7 @@ namespace BilConnect.Data.ViewModels
 
         [DisplayName("Starting Time")]
         [DataType(DataType.DateTime)]
-        [Required(ErrorMessage = "Starting Time is required.")]
+        [Required(ErrorMessage = "Starting time is required.")]
         [ValidateDateRangeForClubEvents]
         public DateTime? startTime { get; set; }
 
@@ -43,8 +43,7 @@ namespace BilConnect.Data.ViewModels
         public int? GE250_251Points { get; set; }
 
 
-        [DisplayName("Will GE250/251 Points Will Be Given")]
-        [Required(ErrorMessage = "GE250/251 Status is required.")]
+        [DisplayName("Will GE250/251 Points Be Given")]
         public bool GE250_251Status { get; set; }
 
 
@@ -61,6 +60,7 @@ namespace BilConnect.Data.ViewModels
 
 
         [DisplayName("Image")]
+        [Required(ErrorMessage = "Image is required.")]
         public string? ImageURL { get; set; }
         public DateTime? CreationTime { get; set; }
     }

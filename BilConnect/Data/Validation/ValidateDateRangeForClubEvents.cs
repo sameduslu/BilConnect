@@ -7,7 +7,14 @@ namespace BilConnect.Data.Validation
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
+            if(value == null)
+            {
+                return ValidationResult.Success;
+            }
+            
             DateTime dt = (DateTime)value;
+
+            
 
             if (dt >= DateTime.Now.AddDays(1))
             {

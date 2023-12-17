@@ -29,6 +29,7 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         //User
         public string? UserId { get; set; }
 
+        [Display(Name = "Post Type")]
         [Required(ErrorMessage = "Post Type is required.")]
         public PostType PostType { get; set; }
 
@@ -42,16 +43,17 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         public double? PriceS { get; set; }
 
         //Borrowing Post
+        [Display(Name = "Return Date")]
         [ValidateDateRangeForBorrowingPosts]
         [Required]
-        public DateTime? ReturnDateB { get; set; } 
+        public DateTime? ReturnDateB { get; set; }
 
         //Renting Post
+        [Display(Name = "Return Date")]
         [ValidateDateRangeForBorrowingPosts]
         [Required]
         public DateTime? ReturnDate { get; set; } 
 
-        public string? ReturnDate { get; set; } 
 
         [Display(Name = "Price")]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a non-negative number.")]
@@ -59,14 +61,14 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         public double? PriceB { get; set; }
 
         //EventTicketPost
+        [Display(Name = "Event Time")]
         [ValidateDateRangeForEventTicketPosts]
         [Required]
         public DateTime? EventTime { get; set; }
 
-        public string? EventPlace { get; set; } // Consider if you need [Required] based on logic
 
+        [Display(Name = "Event Place")]
         [Required(ErrorMessage = "Event Place is required.")]
-
         public string? EventPlace { get; set; } 
 
         [Display(Name = "Price")]
@@ -76,9 +78,10 @@ namespace BilConnect.Data.ViewModels.PostViewModels
 
         //LostItemPost
         [Required(ErrorMessage = "Place is required.")]
-        public string? Place { get; set; } 
+        public string? Place { get; set; }
 
         //Pet adoption post
+        [Display(Name = "Is Fully Vaccinated")]
         [Required(ErrorMessage = "Vaccination info is required.")]
         public string? IsFullyVaccinated { get; set; } 
 
@@ -86,25 +89,30 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         [Range(0, 360, ErrorMessage = "Please input a valid age in months.")]
         public int? AgeInMonths { get; set; } 
 
+
+
         //Travelling Post
         [Required(ErrorMessage = "Origin is required.")]
-        public string? Origin { get; set; } 
-        public string? Origin { get; set; } 
-        public string? Destination { get; set; }
+        public string? Origin { get; set; }
+
+
+        [Display(Name = "Travel Time")]
         [ValidateDateRangeForTravellingPosts]
-        [Required]
+        [Required(ErrorMessage = "Travel time is required.")]
         public DateTime? TravelTime { get; set; }
+
+
+
 
         [Required(ErrorMessage = "Destination is required.")]
         public string? Destination { get; set; } 
 
-        [Required(ErrorMessage = "Travel time is required.")]
-
-        public string? TravelTime { get; set; } 
 
 
         [Range(0, double.MaxValue, ErrorMessage = "Quota must be a non-negative number.")]
         public int? Quota { get; set; }
+
+
 
         [Display(Name = "Price")]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a non-negative number.")]
