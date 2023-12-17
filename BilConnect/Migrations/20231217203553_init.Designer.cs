@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231217193639_init")]
+    [Migration("20231217203553_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -50,7 +50,6 @@ namespace BilConnect.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("ImageURL")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
