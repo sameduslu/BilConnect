@@ -1,5 +1,4 @@
 using BilConnect.Data;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using Microsoft.EntityFrameworkCore;
 using Bilconnect_First_Version.data;
 using Microsoft.AspNetCore.Identity;

@@ -10,9 +10,11 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Title is required.")]
+        [StringLength(100, ErrorMessage = "The title must be less than 100 characters.")]
         public string Title { get; set; }
 
         [Required(ErrorMessage = "Description is required.")]
+        [StringLength(2000, ErrorMessage = "The description must be less than 2000 characters.")]
         public string Description { get; set; }
 
         public string? ImageURL { get; set; }
@@ -69,6 +71,7 @@ namespace BilConnect.Data.ViewModels.PostViewModels
 
         [Display(Name = "Event Place")]
         [Required(ErrorMessage = "Event Place is required.")]
+        [StringLength(1000, ErrorMessage = "The event place must be less than 1000 characters.")]
         public string? EventPlace { get; set; } 
 
         [Display(Name = "Price")]
@@ -78,6 +81,7 @@ namespace BilConnect.Data.ViewModels.PostViewModels
 
         //LostItemPost
         [Required(ErrorMessage = "Place is required.")]
+        [StringLength(1000, ErrorMessage = "The event place must be less than 1000 characters.")]
         public string? Place { get; set; }
 
         //Pet adoption post
@@ -93,6 +97,7 @@ namespace BilConnect.Data.ViewModels.PostViewModels
 
         //Travelling Post
         [Required(ErrorMessage = "Origin is required.")]
+        [StringLength(1000, ErrorMessage = "The origin must be less than 1000 characters.")]
         public string? Origin { get; set; }
 
 
@@ -105,6 +110,7 @@ namespace BilConnect.Data.ViewModels.PostViewModels
 
 
         [Required(ErrorMessage = "Destination is required.")]
+        [StringLength(1000, ErrorMessage = "The destination must be less than 1000 characters.")]
         public string? Destination { get; set; } 
 
 

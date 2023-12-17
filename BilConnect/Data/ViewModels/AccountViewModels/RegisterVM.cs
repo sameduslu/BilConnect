@@ -10,6 +10,7 @@ namespace BilConnect.Data.ViewModels
     {
         [Display(Name = "Full name")]
         [Required(ErrorMessage = "Full name is required")]
+        [StringLength(100, MinimumLength = 4, ErrorMessage = "Full name must be between 4 and 100 characters.")]
         public string FullName { get; set; }
 
         [Display(Name = "Email address")]
