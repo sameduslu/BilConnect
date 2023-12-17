@@ -1,4 +1,5 @@
 using BilConnect.Data.Static;
+using BilConnect.Data.ViewModels;
 using BilConnect.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -31,5 +32,19 @@ namespace BilConnect.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+        public IActionResult About()
+        {
+            var teamMembers = new List<DeveloperInfoViewModel>
+            {
+                new DeveloperInfoViewModel { Name = "Emre Akgül", Email = "emre.akgul@ug.bilkent.edu.tr", Cellphone = "541 714 24 85", LinkedInProfile = "https://www.linkedin.com/in/AkgulEmre/" },
+                // Add more team members here
+            };
+
+            return View(teamMembers);
+        }
+
+
     }
 }

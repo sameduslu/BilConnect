@@ -1,0 +1,14 @@
+﻿@using BilConnect.Data.ViewModels
+@model List<DeveloperInfoViewModel>
+
+<h2>Our Development Team</h2>
+
+@foreach (var member in Model)
+{
+    <div>
+        <h3>@member.Name</h3>
+        <p>Email: <a href="mailto:@member.Email">@member.Email</a></p>
+        <p>Cellphone: @member.Cellphone</p>
+        <p>LinkedIn: <a href="@member.LinkedInProfile" target="_blank">Profile</a></p>
+    </div>
+}

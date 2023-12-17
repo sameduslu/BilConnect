@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mpXGvWJsC7jRtSIKWlqkaP8UQZez+GgPcLFua/+mZ9Y=",
+  "Hash": "sVUA1kVpHvGPl5ymAz+00ol0cYGUEndJjdDLzdWPef8=",
   "Source": "BilConnect",
   "BasePath": "_content/BilConnect",
   "Mode": "Default",
@@ -1749,6 +1749,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\8c0ded52-fe25-448e-ab2e-f4dd79ff61ca.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\8cb08975-5bec-4321-a543-a28912a9484b.jfif",
+      "SourceId": "BilConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\",
+      "BasePath": "_content/BilConnect",
+      "RelativePath": "images/8cb08975-5bec-4321-a543-a28912a9484b.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8cb08975-5bec-4321-a543-a28912a9484b.jfif"
     },
     {
       "Identity": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\images\\8f2d5798-40ba-40df-bbcd-c5eb66a402e9.PNG",
