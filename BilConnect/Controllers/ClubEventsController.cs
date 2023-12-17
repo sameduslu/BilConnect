@@ -65,6 +65,11 @@ namespace BilConnect.Controllers
                 ModelState.AddModelError("photoUpload", "Please upload a photo.");
             }
 
+            if(clubEvent.GE250_251Status == false)
+            {
+                ModelState.Remove("GE250_251Points");
+            }
+
             if (!ModelState.IsValid)
             {
                 foreach (var modelStateKey in ModelState.Keys)
@@ -130,6 +135,10 @@ namespace BilConnect.Controllers
             if (id != clubEvent.Id)
             {
                 return View ("Error");
+            }
+            if (clubEvent.GE250_251Status == false)
+            {
+                ModelState.Remove("GE250_251Points");
             }
             //ModelState.Remove("photoUpload");
             if (!ModelState.IsValid)
