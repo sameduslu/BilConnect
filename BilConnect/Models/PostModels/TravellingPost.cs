@@ -6,7 +6,7 @@
 
         public string Destination { get; set; }
 
-        public string TravelTime { get; set; }
+        public DateTime? TravelTime { get; set; }
 
         public double Price { get; set; }
 

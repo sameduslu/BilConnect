@@ -247,7 +247,7 @@ namespace BilConnect.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    ReturnDate = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ReturnDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -315,7 +315,7 @@ namespace BilConnect.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    EventTime = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EventTime = table.Column<DateTime>(type: "datetime2", nullable: true),
                     EventPlace = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Price = table.Column<double>(type: "float", nullable: false)
                 },
@@ -418,7 +418,7 @@ namespace BilConnect.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
                     Price = table.Column<double>(type: "float", nullable: false),
-                    ReturnDate = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ReturnDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -456,7 +456,7 @@ namespace BilConnect.Migrations
                     Id = table.Column<int>(type: "int", nullable: false),
                     Origin = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Destination = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TravelTime = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TravelTime = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Price = table.Column<double>(type: "float", nullable: false),
                     Quota = table.Column<int>(type: "int", nullable: false)
                 },

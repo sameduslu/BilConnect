@@ -478,9 +478,8 @@ namespace BilConnect.Migrations
                 {
                     b.HasBaseType("BilConnect.Models.PostModels.Post");
 
-                    b.Property<string>("ReturnDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("ReturnDate")
+                        .HasColumnType("datetime2");
 
                     b.ToTable("BorrowingPost", (string)null);
                 });
@@ -500,9 +499,8 @@ namespace BilConnect.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EventTime")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("EventTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<double>("Price")
                         .HasColumnType("float");
@@ -549,9 +547,8 @@ namespace BilConnect.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
-                    b.Property<string>("ReturnDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("ReturnDate")
+                        .HasColumnType("datetime2");
 
                     b.ToTable("RentingPost", (string)null);
                 });
@@ -584,9 +581,8 @@ namespace BilConnect.Migrations
                     b.Property<int>("Quota")
                         .HasColumnType("int");
 
-                    b.Property<string>("TravelTime")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("TravelTime")
+                        .HasColumnType("datetime2");
 
                     b.ToTable("TravellingPost", (string)null);
                 });

@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using BilConnect.Data.Enums;
+using BilConnect.Data.Validation;
 
 namespace BilConnect.Data.ViewModels.PostViewModels
 {
@@ -41,10 +42,14 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         public double? PriceS { get; set; }
 
         //Borrowing Post
-        public string? ReturnDateB { get; set; } // Consider if you need [Required] based on logic
+        [ValidateDateRangeForBorrowingPosts]
+        [Required]
+        public DateTime? ReturnDateB { get; set; } 
 
         //Renting Post
-        public string? ReturnDate { get; set; } // Consider if you need [Required] based on logic
+        [ValidateDateRangeForBorrowingPosts]
+        [Required]
+        public DateTime? ReturnDate { get; set; } 
 
         [Display(Name = "Price")]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a non-negative number.")]
@@ -52,9 +57,11 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         public double? PriceB { get; set; }
 
         //EventTicketPost
-        public string? EventTime { get; set; } // Consider if you need [Required] based on logic
+        [ValidateDateRangeForEventTicketPosts]
+        [Required]
+        public DateTime? EventTime { get; set; }
 
-        public string? EventPlace { get; set; } // Consider if you need [Required] based on logic
+        public string? EventPlace { get; set; }
 
         [Display(Name = "Price")]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a non-negative number.")]
@@ -62,20 +69,22 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         public double? PriceE { get; set; }
 
         //LostItemPost
-        public string? Place { get; set; } // Consider if you need [Required] based on logic
+        public string? Place { get; set; }
 
         //Pet adoption post
-        public string? IsFullyVaccinated { get; set; } // Consider if you need [Required] based on logic
-        public int? AgeInMonths { get; set; } // Consider if you need [Required] based on logic
+        public string? IsFullyVaccinated { get; set; } 
+        public int? AgeInMonths { get; set; }
 
         //Travelling Post
-        public string? Origin { get; set; } // Consider if you need [Required] based on logic
-        public string? Destination { get; set; } // Consider if you need [Required] based on logic
-        public string? TravelTime { get; set; } // Consider if you need [Required] based on logic
+        public string? Origin { get; set; } 
+        public string? Destination { get; set; }
+        [ValidateDateRangeForTravellingPosts]
+        [Required]
+        public DateTime? TravelTime { get; set; }
 
 
         [Range(0, double.MaxValue, ErrorMessage = "Quota must be a non-negative number.")]
-        public int? Quota { get; set; } // Consider if you need [Required] based on logic
+        public int? Quota { get; set; } 
 
         [Display(Name = "Price")]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a non-negative number.")]
