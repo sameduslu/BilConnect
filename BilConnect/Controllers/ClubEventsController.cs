@@ -139,7 +139,7 @@ namespace BilConnect.Controllers
                 return View ("Error");
             }
             await _service.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("SelfClubEvents", "Account");
         }
     }
 }

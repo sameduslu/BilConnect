@@ -342,7 +342,7 @@ namespace BilConnect.Controllers.PostsControllers
             var postDetails = await _service.GetByIdAsync(id);
             if (postDetails == null) return View("NotFound");
             await _service.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("SelfPosts", "Account");
         }
 
         public async Task<IActionResult> Suspend(int id)
