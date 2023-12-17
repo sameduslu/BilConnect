@@ -40,6 +40,11 @@ namespace BilConnect.Controllers
 
         public async Task<IActionResult> Create ()
         {
+            if (!User.IsInRole("ClubAccount"))
+            {
+                return View("NotAuthorized");
+            }
+
             return View();
         }
 
@@ -63,6 +68,11 @@ namespace BilConnect.Controllers
             else
             {
                 ModelState.AddModelError("photoUpload", "Please upload a photo.");
+            }
+
+            if(clubEvent.GE250_251Status == false)
+            {
+                ModelState.Remove("GE250_251Points");
             }
 
             if (!ModelState.IsValid)
@@ -130,6 +140,10 @@ namespace BilConnect.Controllers
             if (id != clubEvent.Id)
             {
                 return View ("Error");
+            }
+            if (clubEvent.GE250_251Status == false)
+            {
+                ModelState.Remove("GE250_251Points");
             }
             //ModelState.Remove("photoUpload");
             if (!ModelState.IsValid)

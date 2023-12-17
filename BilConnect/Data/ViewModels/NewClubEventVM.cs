@@ -60,7 +60,6 @@ namespace BilConnect.Data.ViewModels
 
 
         [DisplayName("Image")]
-        [Required(ErrorMessage = "Image is required.")]
         public string? ImageURL { get; set; }
         public DateTime? CreationTime { get; set; }
     }

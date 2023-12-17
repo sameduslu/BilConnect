@@ -46,16 +46,29 @@ namespace BilConnect.Controllers
         }
 
 
-        public IActionResult Login() => View(new LoginVM());
+        public IActionResult Login()
+        {
+            // Redirect the user if already logged in
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            return View(new LoginVM());
+        }
+            
+  
 
         [HttpPost]
         [ValidateAntiForgeryToken] 
 
         public async Task<IActionResult> Login(LoginVM loginVM)
         {
+            
+
             if (!ModelState.IsValid) return View(loginVM);
 
             var user = await _userManager.FindByEmailAsync(loginVM.EmailAddress);
+
             if (user != null)
             {
                 if (!user.EmailConfirmed)
@@ -96,9 +109,16 @@ namespace BilConnect.Controllers
             return View(loginVM);
         }
 
-        public IActionResult Register() => View(new RegisterVM());
+        public IActionResult Register() {
+            // Redirect the user if already logged in
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
 
+            return View(new RegisterVM());
 
+        }
 
         private async Task SendEmailConfirmationAsync(string email, string token)
         {
@@ -112,6 +132,13 @@ namespace BilConnect.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterVM registerVM)
         {
+
+            // Redirect the user if already logged in
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
             if (!ModelState.IsValid) return View(registerVM);
 
             var user = await _userManager.FindByEmailAsync(registerVM.EmailAddress);
@@ -447,6 +474,12 @@ namespace BilConnect.Controllers
 
         public async Task<IActionResult> ListUsers()
         {
+
+            if (!User.IsInRole("Admin"))
+            {
+                return View("NotAuthorized");
+            }
+
             var allUsers = await _userManager.Users.ToListAsync();
             var adminUsers = new List<ApplicationUser>();
             var clubAccountUsers = new List<ApplicationUser>();
