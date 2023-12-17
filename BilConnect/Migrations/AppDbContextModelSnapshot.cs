@@ -47,6 +47,7 @@ namespace BilConnect.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("ImageURL")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")

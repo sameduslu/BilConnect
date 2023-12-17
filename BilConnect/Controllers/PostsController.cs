@@ -189,7 +189,7 @@ namespace BilConnect.Controllers.PostsControllers
 
         public async Task<IActionResult> Edit(int id)
         {
-            var postDetails = await _service.GetByIdAsync(id);
+            var postDetails = await _service.GetPostByIdAsync(id);
             if (postDetails == null)
             {
                 return View("NotFound");

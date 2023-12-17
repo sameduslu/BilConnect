@@ -155,69 +155,55 @@
         @foreach (var item in Model)
         {
             <div class="col-md-4 col-sm-6 mb-4">
-                <a href="@Url.Action("Details", new { id = item.Id })" class="text-decoration-none">
-                    <div class="post-card" data-title="@item.Name">
-                        <div class="post-card-header">
-                            @item.Name
-                        </div>
-                        <img src="@item.ImageURL" alt="@item.Name" class="post-img">
-                        <div class="post-card-body">
-                            <div class="post-info">
-                                <p class="info-item">
-                                    <i class="material-icons">event</i>
-                                    <span>Description: @item.Description</span>
-                                </p>
-                                <p class="info-item">
-                                    <i class="material-icons">event</i>
-                                    <span>Start Time: @item.startTime</span>
-                                </p>
-                                <p class="info-item">
-                                    <i class="material-icons">event</i>
-                                    <span>Duration: @item.Duration mins</span>
-                                </p>
-                                <p class="info-item">
-                                    <i class="material-icons">event</i>
-                                    @if (item.GE250_251Status)
-                                    {
-                                        <span>GE250/251: YES</span>
-                                    }
-                                    else
-                                    {
-                                        <span>GE250/251: NO</span>
-                                    }
-                                    
-                                </p>
-                                @if (@item.GE250_251Status)
+                <div class="post-card" data-title="@item.Name">
+                    <div class="post-card-header">
+                        @item.Name
+                    </div>
+                    <img src="@item.ImageURL" alt="@item.Name" class="post-img">
+                    <div class="post-card-body">
+                        <div class="post-info">
+                            <p class="info-item">
+                                <i class="material-icons">event</i>
+                                <span>Description: @item.Description</span>
+                            </p>
+                            <p class="info-item">
+                                <i class="material-icons">event</i>
+                                <span>Start Time: @item.startTime</span>
+                            </p>
+                            <p class="info-item">
+                                <i class="material-icons">event</i>
+                                <span>Duration: @item.Duration mins</span>
+                            </p>
+                            <p class="info-item">
+                                <i class="material-icons">event</i>
+                                @if (item.GE250_251Status)
                                 {
-                                    <p class="info-item">
-                                        <i class="material-icons">event</i>
-                                        <span>Points: @item.GE250_251Points</span>
-                                    </p>
-                                }                                
-                                <p class="info-item">
-                                    <i class="material-icons">people</i>
-                                    <span>Quota: @item.quota</span>
-                                </p>
-                                <p class="info-item">
-                                    <i class="material-icons">person</i>
-                                    <span>Organizing Club: @item.ownerClub.FullName</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="post-card-footer">
-                            
-                            <a asp-controller="ClubEvents" asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Details</a>
-                           
-                       @*      @if (User.IsInRole("ClubAccount"))
+                                    <span>GE250/251: YES</span>
+                                }
+                                else
+                                {
+                                    <span>GE250/251: NO</span>
+                                }
+                                    
+                            </p>
+                            @if (@item.GE250_251Status)
                             {
-                                <a asp-controller="ClubEvents" asp-action="Edit" class="btn btn-primary">Edit</a>
-                               
-                                <a asp-controller="ClubEvents" asp-action="Delete" class="btn btn-danger">Delete</a>
-                                
-                            } *@
+                                <p class="info-item">
+                                    <i class="material-icons">event</i>
+                                    <span>Points: @item.GE250_251Points</span>
+                                </p>
+                            }                                
+                            <p class="info-item">
+                                <i class="material-icons">people</i>
+                                <span>Quota: @item.quota</span>
+                            </p>
+                            <p class="info-item">
+                                <i class="material-icons">person</i>
+                                <span>Organizing Club: @item.ownerClub.FullName</span>
+                            </p>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         }
     </div>

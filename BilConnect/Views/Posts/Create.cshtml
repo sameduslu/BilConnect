@@ -21,7 +21,7 @@
 
     .container {
         width: 100%;
-        height: 100vh;
+        margin-top: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -125,13 +125,15 @@
 
                             <!-- Selling  Post Fields -->
                             <div id="sellingPostFields" class="conditional-fields" style="display:none">
-                                <label asp-for="PriceS" class="control-label"></label>
-                                <div class="input-group">
-                                    <!-- Wrap input and addon in an input-group -->
-                                    <input asp-for="PriceS" class="form-control" />
-                                    <span class="input-group-text">TL</span> <!-- Addon with "TL" text -->
+                                <div class="form-group">
+                                    <label asp-for="PriceS" class="control-label"></label>
+                                    <div class="input-group">
+                                        <!-- Wrap input and addon in an input-group -->
+                                        <input asp-for="PriceS" class="form-control" />
+                                        <span class="input-group-text">TL</span> <!-- Addon with "TL" text -->
+                                    </div>
+                                    <span asp-validation-for="PriceS" class="text-danger"></span>
                                 </div>
-                                <span asp-validation-for="PriceS" class="text-danger"></span>
                             </div>
 
 
@@ -278,7 +280,7 @@
             </div>
         </div>
     </div>
-</>
+</div>
 
 @section Scripts {
     @{
