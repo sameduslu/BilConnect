@@ -1,5 +1,10 @@
 ﻿@model IEnumerable<BilConnect.Models.ClubEvent>
 
+@{
+    ViewData["Title"] = "List of Club Events";
+    ((List<ClubEvent>)Model).Sort();
+}
+
 @* @if (User.IsInRole("ClubAccount"))
 {
     <p>

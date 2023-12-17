@@ -37,7 +37,8 @@ namespace BilConnect.Data.Services
                 GE250_251Status = clubEventVM.GE250_251Status,
                 Name = clubEventVM.Name,
                 quota = clubEventVM.quota,
-                ImageURL = clubEventVM.ImageURL
+                ImageURL = clubEventVM.ImageURL,
+                CreationTime = DateTime.Now
             };            
 
             await _context.ClubEvents.AddAsync(clubEvent);

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BilConnect.Models
 {
-    public class ClubEvent : IEntityBase
+    public class ClubEvent : IEntityBase, IComparable<ClubEvent>
     {
         [Key]
         public int Id { get; set; }
@@ -31,6 +31,13 @@ namespace BilConnect.Models
         public string Place {  get; set; }
         [DisplayName("Image URL")]
         public string ImageURL { get; set; }
+        public DateTime CreationTime { get; set; }
+
+        public int CompareTo (ClubEvent clubEvent)
+        {
+            if(clubEvent == null) return 1;
+            return clubEvent.CreationTime.CompareTo(CreationTime);
+        }
         
     }
 }

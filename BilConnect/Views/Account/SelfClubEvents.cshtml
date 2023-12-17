@@ -1,7 +1,8 @@
 ﻿@model ApplicationUser
 
 @{
-    ViewData["Title"] = "List of Posts";
+    ViewData["Title"] = "List of Your Club Events";
+    ((List<ClubEvent>)Model.ClubEvents).Sort();
 }
 
 <style>
