@@ -95,7 +95,7 @@ namespace BilConnect.Data.Services.PostServices
             {
                 var borrowingPost = new BorrowingPost
                 {
-                    ReturnDate = viewModel.ReturnDate
+                    ReturnDate = viewModel.ReturnDateB
                 };
 
                 newPost = borrowingPost;
