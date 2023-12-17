@@ -2189,6 +2189,10 @@
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\src\\third-party-notices.txt"
     },
     {
+      "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\staticimages\\Bilconnectlogo.jpg",
+      "PackagePath": "staticwebassets\\staticimages\\Bilconnectlogo.jpg"
+    },
+    {
       "Id": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\staticimages\\emptyprofilephoto.webp",
       "PackagePath": "staticwebassets\\staticimages\\emptyprofilephoto.webp"
     },

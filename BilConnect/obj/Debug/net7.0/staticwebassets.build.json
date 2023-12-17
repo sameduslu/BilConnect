@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+YaxlXW0flKREeNc81e0cdlkuP/UuRzc0gCe1jSBhi4=",
+  "Hash": "kUCk+pgQcMxO4WYg7qq7VI3+jCiqLuWpQ7ujmsGUgEw=",
   "Source": "BilConnect",
   "BasePath": "_content/BilConnect",
   "Mode": "Default",
@@ -9331,6 +9331,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\microsoft\\signalr\\src\\XhrHttpClient.ts"
+    },
+    {
+      "Identity": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\staticimages\\Bilconnectlogo.jpg",
+      "SourceId": "BilConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\",
+      "BasePath": "_content/BilConnect",
+      "RelativePath": "staticimages/Bilconnectlogo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\staticimages\\Bilconnectlogo.jpg"
     },
     {
       "Identity": "C:\\Users\\90541\\Documents\\Bilkent-Connect\\BilConnect\\wwwroot\\staticimages\\emptyprofilephoto.webp",
