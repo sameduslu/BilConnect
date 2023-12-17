@@ -21,7 +21,7 @@
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         overflow: hidden;
-        height: 620px; /* Fixed height */
+        height: 650px; /* Fixed height */
         display: flex;
         flex-direction: column;
         justify-content: space-between; /* Distributes space inside the card */
@@ -149,7 +149,7 @@
             @foreach (var item in Model.ClubEvents)
             {
                 <div class="col-md-4 col-sm-6 mb-4">
-                    <a href="@Url.Action("Details", new { id = item.Id })" class="text-decoration-none">
+                   
                         <div class="post-card" data-title="@item.Name">
                             <div class="post-card-header">
                                 @item.Name
@@ -168,6 +168,10 @@
                                     <p class="info-item">
                                         <i class="material-icons">event</i>
                                         <span>Duration: @item.Duration mins</span>
+                                    </p>
+                                    <p class="info-item">
+                                        <i class="material-icons">event</i>
+                                        <span>Place: @item.Place</span>
                                     </p>
                                     <p class="info-item">
                                         <i class="material-icons">event</i>
@@ -205,7 +209,7 @@
                                 <a asp-controller="ClubEvents" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
                             </div>
                         </div>
-                    </a>
+                    
                 </div>
             }
         }
