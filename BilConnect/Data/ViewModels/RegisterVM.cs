@@ -14,8 +14,7 @@ namespace BilConnect.Data.ViewModels
 
         [Display(Name = "Email address")]
         [Required(ErrorMessage = "Email address is required")]
-        //[RegularExpression(@"^[a-zA-Z0-9._%+-]+@ug.bilkent\.edu\.tr$", ErrorMessage = "Bilkent email is mandatory.")]
-
+        [RegularExpression(@"^[a-zA-Z0-9._%+-]+(@[a-zA-Z]+\.)*bilkent\.edu\.tr$", ErrorMessage = "Valid Bilkent email is mandatory.")]
         public string EmailAddress { get; set; }
 
         [Required]
