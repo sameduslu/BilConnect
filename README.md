@@ -1,5 +1,8 @@
 # BilConnect
 
+## BilConnect Trailer
+[![BilConnect Trailer](https://img.youtube.com/vi/Yt_V-SsEhOg/0.jpg)](https://www.youtube.com/watch?v=Yt_V-SsEhOg "BilConnect Trailer")
+
 ## Our Team
 [Umut Bora Çakmak](https://github.com/UBoraCakmak)<br>
 [A. Samed Uslu](https://github.com/sameduslu)<br>
