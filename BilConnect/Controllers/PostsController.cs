@@ -117,15 +117,27 @@ namespace BilConnect.Controllers.PostsControllers
                 ModelState.Remove("Price");
             }
 
+            if (post.PostType != PostType.SellingPost)
+            {
+                ModelState.Remove("PriceS");
+            }
+
             if (post.PostType != PostType.RentingPost)
             {
                 ModelState.Remove("ReturnDate");
+                ModelState.Remove("PriceB");
+            }
+
+            if (post.PostType != PostType.BorrowingPost)
+            {
+                ModelState.Remove("ReturnDateB");
             }
 
             if (post.PostType != PostType.EventTicketPost)
             {
                 ModelState.Remove("EventTime");
                 ModelState.Remove("EventPlace");
+                ModelState.Remove("PriceE");
             }
 
             if (post.PostType != PostType.LostItemPost)
@@ -133,20 +145,20 @@ namespace BilConnect.Controllers.PostsControllers
                 ModelState.Remove("Place");
             }
 
-            if (post.PostType != PostType.LostItemPost)
+            if (post.PostType != PostType.PetAdoptionPost)
             {
                 ModelState.Remove("IsFullyVaccinated");
                 ModelState.Remove("AgeInMonths");
             }
 
-            if (post.PostType != PostType.LostItemPost)
+            if (post.PostType != PostType.TravellingPost)
             {
                 ModelState.Remove("Origin");
                 ModelState.Remove("Destination");
                 ModelState.Remove("TravelTime");
                 ModelState.Remove("Quota");
+                ModelState.Remove("PriceT");
             }
-
 
             if (!ModelState.IsValid)
             {   
@@ -228,6 +240,21 @@ namespace BilConnect.Controllers.PostsControllers
                     PostType = PostType.RentingPost,
                     PriceB = rentingPost.Price,
                     ReturnDate = rentingPost.ReturnDate,
+                };
+            }
+            else if (postDetails is BorrowingPost borrowingPost)
+            {
+                response = new NewPostVM
+                {
+                    Id = borrowingPost.Id,
+                    Title = borrowingPost.Title,
+                    Description = borrowingPost.Description,
+                    ImageURL = borrowingPost.ImageURL,
+                    PostDate = borrowingPost.PostDate,
+                    PostStatus = borrowingPost.PostStatus,
+                    UserId = borrowingPost.UserId,
+                    PostType = PostType.BorrowingPost,
+                    ReturnDateB = borrowingPost.ReturnDate,
                 };
             }
             else if (postDetails is EventTicketPost eventTicketPost)
@@ -330,6 +357,42 @@ namespace BilConnect.Controllers.PostsControllers
             var postDetails = await _service.GetByIdAsync(id);
             post.AdditionalImages = postDetails.AdditionalImages;
             post.ImageURL = postDetails.ImageURL;
+            if (postDetails is SellingPost)
+            {
+                post.PostType = PostType.SellingPost;
+            }
+            else if (postDetails is DonationPost)
+            {
+                post.PostType = PostType.DonationPost;
+            }
+            else if (postDetails is RentingPost)
+            {
+                post.PostType = PostType.RentingPost;
+            }
+            else if (postDetails is BorrowingPost)
+            {
+                post.PostType = PostType.BorrowingPost;
+            }
+            else if (postDetails is EventTicketPost)
+            {
+                post.PostType = PostType.EventTicketPost;
+            }
+            else if (postDetails is FoundItemPost)
+            {
+                post.PostType = PostType.FoundItemPost;
+            }
+            else if (postDetails is LostItemPost)
+            { 
+                post.PostType = PostType.LostItemPost;
+            }
+            else if (postDetails is PetAdoptionPost)
+            {
+                post.PostType = PostType.PetAdoptionPost;
+            }
+            else if (postDetails is TravellingPost)
+            {
+                post.PostType = PostType.TravellingPost;
+            }
             if (photoUpload != null && photoUpload.Length > 0)
             {
                 var imageName = Guid.NewGuid().ToString() + Path.GetExtension(photoUpload.FileName); // Generate a unique name

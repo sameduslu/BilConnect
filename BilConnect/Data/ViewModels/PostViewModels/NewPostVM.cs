@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using BilConnect.Data.Enums;
+using BilConnect.Data.Validation;
 
 namespace BilConnect.Data.ViewModels.PostViewModels
 {
@@ -41,11 +42,14 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         public double? PriceS { get; set; }
 
         //Borrowing Post
-        [Required(ErrorMessage = "Return Date is required.")]
-        public string? ReturnDateB { get; set; } 
+        [ValidateDateRangeForBorrowingPosts]
+        [Required]
+        public DateTime? ReturnDateB { get; set; } 
 
         //Renting Post
-        [Required(ErrorMessage = "Return Date is required.")]
+        [ValidateDateRangeForBorrowingPosts]
+        [Required]
+        public DateTime? ReturnDate { get; set; } 
 
         public string? ReturnDate { get; set; } 
 
@@ -55,9 +59,11 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         public double? PriceB { get; set; }
 
         //EventTicketPost
-        [Required(ErrorMessage = "Event Time is required.")]
+        [ValidateDateRangeForEventTicketPosts]
+        [Required]
+        public DateTime? EventTime { get; set; }
 
-        public string? EventTime { get; set; } 
+        public string? EventPlace { get; set; } // Consider if you need [Required] based on logic
 
         [Required(ErrorMessage = "Event Place is required.")]
 
@@ -83,6 +89,11 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         //Travelling Post
         [Required(ErrorMessage = "Origin is required.")]
         public string? Origin { get; set; } 
+        public string? Origin { get; set; } 
+        public string? Destination { get; set; }
+        [ValidateDateRangeForTravellingPosts]
+        [Required]
+        public DateTime? TravelTime { get; set; }
 
         [Required(ErrorMessage = "Destination is required.")]
         public string? Destination { get; set; } 

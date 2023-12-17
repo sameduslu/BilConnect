@@ -1,8 +1,10 @@
 @using BilConnect.Data.Enums;
+@using BilConnect.Models.PostModels;
 @model ApplicationUser
 
 @{
     ViewData["Title"] = "List of Posts";
+    ((List<Post>)Model.Posts).Sort();
 }
 
 <style>

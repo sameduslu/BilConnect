@@ -9,11 +9,13 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BilConnect
 build_property.RootNamespace = BilConnect
-build_property.ProjectDir = C:\Users\90541\Documents\Bilkent-Connect\BilConnect\
+build_property.ProjectDir = C:\Users\lenovo\Desktop\Bilkent\Bilkent_CS\CS319\BilConnect\BilConnect\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\90541\Documents\Bilkent-Connect\BilConnect
+build_property.MSBuildProjectDirectory = C:\Users\lenovo\Desktop\Bilkent\Bilkent_CS\CS319\BilConnect\BilConnect
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/ChangePassword.cshtml]
@@ -24,71 +26,71 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGVja1lvdXJFbWFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/EmailInUse.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Account/EmailInUse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFbWFpbEluVXNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/ForgotPassword.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/ForgotPasswordConfirmation.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Account/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/ListUsers.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Account/ListUsers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMaXN0VXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/Login.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/Profile.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Account/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/Register.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/ResetPassword.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/ResetPasswordConfirmation.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Account/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/SelfClubEvents.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Account/SelfClubEvents.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTZWxmQ2x1YkV2ZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/SelfPosts.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Account/SelfPosts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTZWxmUG9zdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/SelfReports.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Account/SelfReports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTZWxmUmVwb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/VerificationError.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Account/VerificationError.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWZXJpZmljYXRpb25FcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Account/VerificationSuccess.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Account/VerificationSuccess.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWZXJpZmljYXRpb25TdWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Chats/Index.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Chats/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Chats/Room.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Chats/Room.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdHNcUm9vbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/ClubEvents/Create.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/ClubEvents/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2x1YkV2ZW50c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
@@ -96,98 +98,98 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2x1YkV2ZW50c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/ClubEvents/Index.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/ClubEvents/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2x1YkV2ZW50c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Home/About.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Home/Index.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Home/Privacy.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/PostReports/Create.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/PostReports/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFJlcG9ydHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/PostReports/Delete.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/PostReports/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFJlcG9ydHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/PostReports/Details.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/PostReports/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFJlcG9ydHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/PostReports/Edit.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/PostReports/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFJlcG9ydHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/PostReports/Index.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/PostReports/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFJlcG9ydHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/PostReports/Reject.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/PostReports/Reject.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFJlcG9ydHNcUmVqZWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Posts/Create.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Posts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Posts/Details.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Posts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Posts/Edit.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Posts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Posts/Index.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Posts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Posts/Suspend.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Posts/Suspend.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcU3VzcGVuZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Shared/Error.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Shared/NotFound.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Shared/NotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5vdEZvdW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Shared/_CreateClubEvent.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Shared/_CreateClubEvent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DcmVhdGVDbHViRXZlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Shared/_CreatePost.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Shared/_CreatePost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DcmVhdGVQb3N0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Shared/_Identity.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Shared/_Identity.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9JZGVudGl0eS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/_ViewImports.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/_ViewStart.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90541/Documents/Bilkent-Connect/BilConnect/Views/Shared/_Layout.cshtml]
+[C:/Users/lenovo/Desktop/Bilkent/Bilkent_CS/CS319/BilConnect/BilConnect/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-xgzpi7gxzx
