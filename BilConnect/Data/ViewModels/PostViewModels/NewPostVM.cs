@@ -10,7 +10,7 @@ namespace BilConnect.Data.ViewModels.PostViewModels
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Title is required.")]
-        [StringLength(100, ErrorMessage = "The title must be less than 100 characters.")]
+        [StringLength(20, ErrorMessage = "The title must be less than 100 characters.")]
         public string Title { get; set; }
 
         [Required(ErrorMessage = "Description is required.")]
