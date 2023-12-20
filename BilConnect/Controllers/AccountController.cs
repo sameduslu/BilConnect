@@ -323,7 +323,7 @@ namespace BilConnect.Controllers
             if (result.Succeeded)
             {
                 // Optionally add logic here to notify the user of suspension
-                return RedirectToAction("Users");
+                return RedirectToAction("ListUsers");
             }
 
             // Handle errors here
@@ -348,7 +348,7 @@ namespace BilConnect.Controllers
             if (result.Succeeded)
             {
                 // Optionally add logic here to notify the user of unsuspension
-                return RedirectToAction("Users");
+                return RedirectToAction("ListUsers");
             }
 
             // Handle errors here

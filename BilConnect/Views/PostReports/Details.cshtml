@@ -122,14 +122,14 @@
                     }
                     else if (Model.ReportedPost is FoundItemPost foundItemPost)
                     {
-
+                        <div class="form-group">
+                            <label>Place</label>
+                            <input class="form-control" value="@foundItemPost.Place" readonly />
+                        </div>
                     }
                     else if (Model.ReportedPost is LostItemPost lostItemPost)
                     {
-                        <div class="form-group">
-                            <label>Place</label>
-                            <input class="form-control" value="@lostItemPost.Place" readonly />
-                        </div>
+                        
                     }
                     else if (Model.ReportedPost is PetAdoptionPost petAdoptionPost)
                     {

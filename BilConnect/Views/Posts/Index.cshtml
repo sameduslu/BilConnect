@@ -356,6 +356,10 @@
                                 {
                                     <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Travel Together</a>
                                 }
+                                else if (item is BorrowingPost borrowingPost)
+                                {
+                                    <a class="btn btn-secondary" asp-action="BuyItem" asp-route-id="@item.Id">Borrow Item</a>
+                                }
                             }
                             else
                             {

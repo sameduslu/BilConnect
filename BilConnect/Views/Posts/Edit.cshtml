@@ -152,16 +152,15 @@
                             }
                             else if (Model.PostType == PostType.FoundItemPost)
                             {
-
-                            }
-                            else if (Model.PostType == PostType.LostItemPost)
-                            {
                                 <!-- Place field -->
                                 <div class="form-group">
                                     <label asp-for="Place" class="control-label"></label>
                                     <input asp-for="Place" class="form-control" />
                                     <span asp-validation-for="Place" class="text-danger"></span>
                                 </div>
+                            }
+                            else if (Model.PostType == PostType.LostItemPost)
+                            {                                
                             }
                             else if (Model.PostType == PostType.PetAdoptionPost)
                             {

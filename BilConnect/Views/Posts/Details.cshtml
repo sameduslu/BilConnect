@@ -225,14 +225,14 @@
                         }
                         else if (Model is FoundItemPost foundItemPost)
                         {
-
+                            <div class="form-group">
+                                <label>Place</label>
+                                <input class="form-control" value="@foundItemPost.Place" disabled />
+                            </div>
                         }
                         else if (Model is LostItemPost lostItemPost)
                         {
-                            <div class="form-group">
-                                <label>Place</label>
-                                <input class="form-control" value="@lostItemPost.Place" disabled />
-                            </div>
+                            
                         }
                         else if (Model is PetAdoptionPost petAdoptionPost)
                         {

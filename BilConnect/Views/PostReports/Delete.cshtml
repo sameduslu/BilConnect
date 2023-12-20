@@ -119,14 +119,14 @@
                     }
                     else if (Model.ReportedPost is FoundItemPost foundItemPost)
                     {
-
+                        <div class="form-group">
+                            <label>Place</label>
+                            <input class="form-control" value="@foundItemPost.Place" readonly />
+                        </div>
                     }
                     else if (Model.ReportedPost is LostItemPost lostItemPost)
                     {
-                        <div class="form-group">
-                            <label>Place</label>
-                            <input class="form-control" value="@lostItemPost.Place" readonly />
-                        </div>
+                        
                     }
                     else if (Model.ReportedPost is PetAdoptionPost petAdoptionPost)
                     {
@@ -167,7 +167,11 @@
                             <input class="form-control" value="@travellingPost.Quota" readonly />
                         </div>
                     }
+                    <form asp-action="Delete" method="post">
+                        <input type="hidden" asp-for="@Model.Id" />
 
+                        <button type="submit" class="btn btn-danger">Confirm Delete</button>
+                    </form>
                 }
             </div>
         </div>

@@ -46,26 +46,26 @@ namespace BilConnect.Data.Services.PostServices
             else if (viewModel.PostType == PostType.EventTicketPost)
             {
                 var eventTicketPost = new EventTicketPost
-                {   
+                {
                     EventTime = viewModel.EventTime,
                     EventPlace = viewModel.EventPlace,
                     Price = viewModel.PriceE ?? 0
                 };
 
-                
+
 
                 newPost = eventTicketPost;
             }
             else if (viewModel.PostType == PostType.FoundItemPost)
             {
-                newPost = new FoundItemPost();
-            }
-            else if (viewModel.PostType == PostType.LostItemPost)
-            {
-                newPost = new LostItemPost
+                newPost = new FoundItemPost()
                 {
                     Place = viewModel.Place
                 };
+            }
+            else if (viewModel.PostType == PostType.LostItemPost)
+            {
+                newPost = new LostItemPost();
             }
             else if (viewModel.PostType == PostType.PetAdoptionPost)
             {

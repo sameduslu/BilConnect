@@ -80,11 +80,11 @@ namespace BilConnect.Data.Services.PostServices
             }
             else if(data.PostType == PostType.FoundItemPost && dbPost is FoundItemPost foundItemPost)
             {
-                
+                foundItemPost.Place = data.Place;
             }
             else if (data.PostType == PostType.LostItemPost && dbPost is LostItemPost lostItemPost)
             {
-                lostItemPost.Place = data.Place;
+                
             }
             else if (data.PostType == PostType.PetAdoptionPost && dbPost is PetAdoptionPost petAdoptionPost)
             {

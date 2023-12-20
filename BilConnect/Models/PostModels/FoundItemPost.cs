@@ -2,6 +2,6 @@
 {
     public class FoundItemPost : Post
     {
-
+        public string Place { get; set; }
     }
 }

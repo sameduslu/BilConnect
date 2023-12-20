@@ -145,7 +145,7 @@ namespace BilConnect.Controllers.PostsControllers
                 ModelState.Remove("PriceE");
             }
 
-            if (post.PostType != PostType.LostItemPost)
+            if (post.PostType != PostType.FoundItemPost)
             {
                 ModelState.Remove("Place");
             }
@@ -297,6 +297,7 @@ namespace BilConnect.Controllers.PostsControllers
                     PostStatus = foundItemPost.PostStatus,
                     UserId = foundItemPost.UserId,
                     PostType = PostType.FoundItemPost,
+                    Place = foundItemPost.Place
                 };
             }
             else if (postDetails is LostItemPost lostItemPost)
@@ -310,8 +311,7 @@ namespace BilConnect.Controllers.PostsControllers
                     PostDate = lostItemPost.PostDate,
                     PostStatus = lostItemPost.PostStatus,
                     UserId = lostItemPost.UserId,
-                    PostType = PostType.LostItemPost,
-                    Place = lostItemPost.Place,
+                    PostType = PostType.LostItemPost,                
 
                 };
             }
@@ -444,6 +444,53 @@ namespace BilConnect.Controllers.PostsControllers
                         post.AdditionalImages.Add(Url.Content("~/images/" + imageName));
                     }
                 }
+            }
+            if (post.PostType != PostType.SellingPost && post.PostType != PostType.RentingPost && post.PostType != PostType.EventTicketPost && post.PostType != PostType.TravellingPost)
+            {
+                ModelState.Remove("Price");
+            }
+
+            if (post.PostType != PostType.SellingPost)
+            {
+                ModelState.Remove("PriceS");
+            }
+
+            if (post.PostType != PostType.RentingPost)
+            {
+                ModelState.Remove("ReturnDate");
+                ModelState.Remove("PriceB");
+            }
+
+            if (post.PostType != PostType.BorrowingPost)
+            {
+                ModelState.Remove("ReturnDateB");
+            }
+
+            if (post.PostType != PostType.EventTicketPost)
+            {
+                ModelState.Remove("EventTime");
+                ModelState.Remove("EventPlace");
+                ModelState.Remove("PriceE");
+            }
+
+            if (post.PostType != PostType.FoundItemPost)
+            {
+                ModelState.Remove("Place");
+            }
+
+            if (post.PostType != PostType.PetAdoptionPost)
+            {
+                ModelState.Remove("IsFullyVaccinated");
+                ModelState.Remove("AgeInMonths");
+            }
+
+            if (post.PostType != PostType.TravellingPost)
+            {
+                ModelState.Remove("Origin");
+                ModelState.Remove("Destination");
+                ModelState.Remove("TravelTime");
+                ModelState.Remove("Quota");
+                ModelState.Remove("PriceT");
             }
 
             if (id != post.Id) return View("NotFound");
